@@ -1,0 +1,9 @@
+@mixin background-img(){
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin hero-background($height){
+    @include background-img();
+    height: $height;
+}
