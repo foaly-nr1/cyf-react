@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react'
+import {
+  About
+} from '../pages/About'
+import { Banner } from '../components/Banner'
 
-import '../App.css';
-import Banner from '../components/Banner';
-
-class Home extends Component {
-  render() {
-    return (
-      <div className="Home">
-        <div className="App-intro">
-          <Banner />
-          <div className="row">
-          <div className="col-sm-8 col-sm-offset-2 section-description">
+export const Home = () => (
+  <div className="Home">
+    <div className="App-intro">
+      <Banner />
+      <div className="row">
+        <div className="col-sm-8 col-sm-offset-2 section-description">
           <p>We are a non-profit organisation supporting refugees with the dream of becoming developers.</p>
           <p>In their journey of interrupted lives, unfinished studies and integration challenges, many asylum seekers and refugees
           yearn to update their tech skills, but lack learning opportunities. <strong>We want to change this.</strong></p>
@@ -22,13 +21,12 @@ class Home extends Component {
           For all other inquiries please contact us at <a href="mailto:contact@codeyourfuture.co" title="Contact us">contact@codeyourfuture.co</a>
           <br /><br />
           </p>
-          </div>
-          </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+    <About />
+  </div>
+)
 
 export default Home;
 
