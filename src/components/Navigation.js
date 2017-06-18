@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   Link
 } from 'react-router-dom';
 import {
   Nav,
-  Navbar,
-  NavItem
+  Navbar
 } from "react-bootstrap"
 
 import cyflogo from '../img/cyf_brand.png';
@@ -24,45 +23,49 @@ const cyflogoStyle = {
   height: '50px'
 }
 
-class Navigation extends Component {
-  render() {
-    return (
-      <Navbar collapseOnSelect>
-        <Navbar.Header>
-          <img src={cyflogo} style={cyflogoStyle} alt="logo" />
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-        <Nav pullRight>
-          <NavItem eventKey={1}>
-            <Link to="/students">Students</Link>
-          </NavItem>
-          <NavItem eventKey={2}>
-            <Link to="/volunteers">Volunteers</Link>
-          </NavItem>
-          <NavItem eventKey={3}>
-            <Link to="/partners">Partners</Link>
-          </NavItem>
-          <NavItem eventKey={4} className="scroll">
-            <Link to="index.html#about-us">About us</Link>
-          </NavItem>
-          <NavItem className="nav-icon" href="https://www.facebook.com/codeyourfuture.co" target="_blank">
-            <img src={fblogo} style={logoStyle} alt="facebook"/>
-          </NavItem>
-          <NavItem className="nav-icon" href="https://twitter.com/CodeYourFuture_" target="_blank">
-            <img src={twitterlogo} style={logoStyle} alt="twitter"/>
-          </NavItem>
-          <NavItem className="nav-icon" href="https://www.linkedin.com/company/codeyourfuture" target="_blank">
-            <img src={linkedinlogo} style={logoStyle} alt="linkedin"/>
-          </NavItem>
-            <NavItem className="nav-icon" href="mailto:contact@codeyourfuture.co" title="Contact us">
-              <img src={emaillogo} style={logoStyle} alt="email"/>
-          </NavItem>
-        </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    );
-  }
-}
-
-export default Navigation;
+export const Navigation = () => (
+  <Navbar collapseOnSelect>
+    <Navbar.Header>
+      <Link to="/">
+        <img src={cyflogo} style={cyflogoStyle} alt="logo" />
+      </Link>
+      <Navbar.Toggle />
+    </Navbar.Header>
+    <Navbar.Collapse>
+    <Nav pullRight>
+      <li>
+        <Link to="/students">Students</Link>
+      </li>
+      <li>
+        <Link to="/volunteers">Volunteers</Link>
+      </li>
+      <li>
+        <Link to="/partners">Partners</Link>
+      </li>
+      <li className="scroll">
+        <Link to="/about">About us</Link>
+      </li>
+      <li className="nav-icon">
+        <Link to="https://www.facebook.com/codeyourfuture.co" target="_blank">
+          <img src={fblogo} style={logoStyle} alt="facebook"/>
+        </Link>
+      </li>
+      <li className="nav-icon">
+        <Link to="https://twitter.com/CodeYourFuture_" target="_blank">
+          <img src={twitterlogo} style={logoStyle} alt="twitter"/>
+        </Link>
+      </li>
+      <li className="nav-icon">
+        <Link to="https://www.linkedin.com/company/codeyourfuture" target="_blank">
+          <img src={linkedinlogo} style={logoStyle} alt="linkedin"/>
+        </Link>
+      </li>
+      <li className="nav-icon">
+        <Link to="mailto:contact@codeyourfuture.co" title="Contact us">
+          <img src={emaillogo} style={logoStyle} alt="email"/>
+        </Link>
+      </li>
+    </Nav>
+    </Navbar.Collapse>
+  </Navbar>
+);
