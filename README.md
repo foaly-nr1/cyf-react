@@ -4,8 +4,6 @@
 __NOTE__: Currently reactifying the old repo, instructions not up to date
 
 
-[![CircleCI](https://circleci.com/gh/Code-Your-Future/code-your-future-web/tree/master.svg?style=svg&circle-token=b43e2591c0bb4c09883aa92396ed557616245dd0)](https://circleci.com/gh/Code-Your-Future/code-your-future-web/tree/master)
-
 ## Requirements
 
 - node
@@ -13,9 +11,8 @@ __NOTE__: Currently reactifying the old repo, instructions not up to date
 ## Setup
 
 ```bash
-$ npm install
-$ gulp rebuild # to build index to ./build folder
-$ gulp watch # automatically rebuild when source is modified
+$ yarn start # start development env
+$ yarn build # to build index to ./public
 ```
 
 ## Present
