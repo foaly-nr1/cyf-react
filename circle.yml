@@ -1,0 +1,10 @@
+machine:
+  node:
+    version: 6.11.0
+dependencies:
+  override:
+    - npm install yarn
+    - yarn install
+test:
+  override:
+    - yarn test
