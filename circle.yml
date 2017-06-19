@@ -8,3 +8,10 @@ dependencies:
 test:
   override:
     - yarn test
+deployment:
+  staging:
+    branch: staging
+    commands:
+      - npm install yarn
+      - yarn build
+      - ./deploy.sh staging
