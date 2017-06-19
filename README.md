@@ -18,7 +18,6 @@ $ yarn build # to build index to ./public
 ## Present
 
 To present merge your changes to `demo` branch. CI will build and then deploy it to GitHub pages (check web-static-[demo,staging,production] repos):
-- [demo.codeyourfuture.co](http://demo.codeyourfuture.co)
 
 Currently, there is only one release candidate branch `staging` accessible on:
 - [staging.codeyourfuture.co](http://staging.codeyourfuture.co)
