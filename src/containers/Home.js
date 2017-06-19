@@ -2,7 +2,9 @@ import React from 'react'
 import {
   About
 } from '../pages/About'
+import { AsSeen } from '../components/AsSeen'
 import { Banner } from '../components/Banner'
+
 
 export const Home = () => (
   <div className="Home">
@@ -25,6 +27,7 @@ export const Home = () => (
       </div>
     </div>
     <About />
+    <AsSeen />
   </div>
 )
 
