@@ -9,6 +9,7 @@ import {
 import Home from './containers/Home'
 import { Volunteers } from './pages/Volunteers'
 import { Students } from './pages/Students'
+import { Events } from './pages/Events'
 import { Partners } from './pages/Partners'
 import { Apply } from './pages/Apply'
 
@@ -23,6 +24,7 @@ ReactDOM.render(
     <div>
       <Navigation />
       <Route exact path="/" component={Home}/>
+      <Route path="/events" component={Events}/>
       <Route path="/students" component={Students}/>
       <Route path="/volunteers" component={Volunteers}/>
       <Route path="/apply/:form_type" component={Apply}/>
