@@ -12,6 +12,7 @@ import { Students } from './pages/Students'
 import { Events } from './pages/Events'
 import { Partners } from './pages/Partners'
 import { Apply } from './pages/Apply'
+import { MeetTheTeam } from './pages/MeetTheTeam'
 
 import { Navigation } from './components/Navigation'
 import { Footer } from './components/Footer'
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route path="/volunteers" component={Volunteers}/>
       <Route path="/apply/:form_type" component={Apply}/>
       <Route path="/partners" component={Partners}/>
+      <Route path="/meet-the-team" component={MeetTheTeam}/>
       <Footer />
     </div>
   </Router>,

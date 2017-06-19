@@ -42,9 +42,9 @@ export const Navigation = () => (
       <li>
         <Link to="/partners">Partners</Link>
       </li>
-      {/*<li className="scroll">
-        <Link to="/about">About us</Link>
-      </li>*/}
+      <li>
+        <Link to="/meet-the-team">Meet the team</Link>
+      </li>
       <li className="nav-icon">
         <Link to="https://www.facebook.com/codeyourfuture.co" target="_blank">
           <img src={fblogo} style={logoStyle} alt="facebook"/>
