@@ -1,11 +1,8 @@
-import React from 'react';
-import {
-  Link
-} from 'react-router-dom';
-import {
-  Nav,
-  Navbar
-} from "react-bootstrap"
+import React from 'react'
+
+import { Link } from 'react-router-dom'
+
+import { Nav, Navbar } from "react-bootstrap"
 
 import cyflogo from '../img/cyf_brand.png';
 import fblogo from '../img/ico/fb_logo.svg';
@@ -34,6 +31,9 @@ export const Navigation = () => (
     <Navbar.Collapse>
     <Nav pullRight>
       <li>
+        <Link to="/events">Events</Link>
+      </li>
+      <li>
         <Link to="/students">Students</Link>
       </li>
       <li>
@@ -42,9 +42,9 @@ export const Navigation = () => (
       <li>
         <Link to="/partners">Partners</Link>
       </li>
-      <li className="scroll">
+      {/*<li className="scroll">
         <Link to="/about">About us</Link>
-      </li>
+      </li>*/}
       <li className="nav-icon">
         <Link to="https://www.facebook.com/codeyourfuture.co" target="_blank">
           <img src={fblogo} style={logoStyle} alt="facebook"/>
