@@ -20,7 +20,7 @@ echo "$BRANCH.codeyourfuture.co" > ./public/CNAME
 ##
 git clone git@github.com:Code-Your-Future/$REPO_NAME.git
 cd $REPO_NAME
-git rm ./*
+git rm -r ./*
 cp -a ../public/* .
 git config --global user.email "admin@codeyourfuture.co"
 git config --global user.name "Automated bot"
