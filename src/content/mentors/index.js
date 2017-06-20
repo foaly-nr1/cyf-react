@@ -42,7 +42,7 @@ const mentors = [
     firstName: 'Simon',
     lastName: 'Legg',
     photo: simon,
-    title: 'Javascript'
+    title: 'Javascript and Final Project'
   },
 
   {
