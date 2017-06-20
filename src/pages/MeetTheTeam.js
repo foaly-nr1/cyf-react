@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 import { TopSection } from '../components/TopSection';
 import { MentorCard } from '../components/MentorCard';
 
@@ -11,7 +13,7 @@ const Intro = (
     </p>
 
     <div className="section-bottom-link">
-      <a className="big-link-3 btn" href="/volunteers">Become a volunteer</a>
+      <Link className="big-link-3 btn" to="/volunteers">Become a volunteer</Link>
     </div>
   </section>
 );
