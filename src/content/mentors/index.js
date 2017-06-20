@@ -75,7 +75,7 @@ const mentors = [
 
   {
     firstName: 'Will',
-    lastName: '',
+    lastName: 'Wright',
     photo: will,
     title: 'HTML, CSS & Javascript'
   }

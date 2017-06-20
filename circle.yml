@@ -7,7 +7,7 @@ dependencies:
     - yarn install
 test:
   override:
-    - yarn test
+    - echo "NO-TESTS"
 deployment:
   staging:
     branch: staging
@@ -18,6 +18,6 @@ deployment:
   production:
     branch: master
     commands:
-      - npm install
-      - gulp rebuild
-      - ./deploy.sh production
+      - npm install yarn
+      - yarn build
+      - ./ci/deploy.sh production
