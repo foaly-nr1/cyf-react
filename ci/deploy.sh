@@ -10,13 +10,19 @@ fi
 
 if [ $BRANCH == "staging" ]; then
 	REPO_NAME="web-static-staging"
+elif [ $BRANCH == "production" ]; then
+	REPO_NAME="web-static-production"
 else
 	echo "Please provide a valid branch"
 	exit 1
 fi
 
 ## Some weird github pages requirement
-echo "$BRANCH.codeyourfuture.co" > ./build/CNAME
+if [ $BRANCH == "production" ]; then
+	echo "codeyourfuture.co" > ./build/CNAME
+else
+  echo "$BRANCH.codeyourfuture.co" > ./build/CNAME
+fi
 ##
 git clone git@github.com:Code-Your-Future/$REPO_NAME.git
 cd $REPO_NAME

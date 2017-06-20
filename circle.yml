@@ -15,3 +15,9 @@ deployment:
       - npm install yarn
       - yarn build
       - ./ci/deploy.sh staging
+  production:
+    branch: master
+    commands:
+      - npm install
+      - gulp rebuild
+      - ./deploy.sh production
