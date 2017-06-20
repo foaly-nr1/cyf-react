@@ -10,7 +10,7 @@ export const TopSection = ({title, content}) => {
             <div className="divider-1">
               <span></span>
             </div>
-            <div>{content ? content : 'Oops, did not get content'}</div>
+            <div>{content ? content : ''}</div>
           </div>
         </div>
       </div>

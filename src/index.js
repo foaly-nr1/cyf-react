@@ -11,6 +11,7 @@ import { Volunteers } from './pages/Volunteers'
 import { Students } from './pages/Students'
 import { Events } from './pages/Events'
 import { Partners } from './pages/Partners'
+import { About } from './pages/About'
 import { Apply } from './pages/Apply'
 import { MeetTheTeam } from './pages/MeetTheTeam'
 
@@ -25,6 +26,7 @@ ReactDOM.render(
     <div>
       <Navigation />
       <Route exact path="/" component={Home}/>
+      <Route path="/about" component={About}/>
       <Route path="/events" component={Events}/>
       <Route path="/students" component={Students}/>
       <Route path="/volunteers" component={Volunteers}/>
