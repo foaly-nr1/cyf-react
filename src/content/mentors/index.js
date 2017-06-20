@@ -42,11 +42,7 @@ const mentors = [
     firstName: 'Simon',
     lastName: 'Legg',
     photo: simon,
-<<<<<<< HEAD
-    title: 'Javascript'
-=======
     title: 'Javascript and Final Project'
->>>>>>> staging
   },
 
   {
