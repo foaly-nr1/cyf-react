@@ -27,6 +27,20 @@ const mentors = [
   },
 
   {
+    firstName: 'Bex',
+    lastName: 'Bolton',
+    photo: bex,
+    title: 'Javascript & NodeJS'
+  },
+
+  {
+    firstName: 'Claudia',
+    lastName: 'Matosa',
+    photo: claudia,
+    title: 'HTML, CSS & React'
+  },
+
+  {
     firstName: 'James',
     lastName: 'Wright',
     photo: james,
