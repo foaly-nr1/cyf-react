@@ -2,7 +2,8 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-import { Nav, Navbar } from "react-bootstrap"
+import { Nav, Navbar, NavItem } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import cyflogo from '../img/cyf_brand.png';
 import fblogo from '../img/ico/fb_logo.svg';
@@ -20,6 +21,7 @@ const cyflogoStyle = {
   height: '50px'
 }
 
+
 export const Navigation = () => (
   <Navbar collapseOnSelect>
     <Navbar.Header>
@@ -30,44 +32,44 @@ export const Navigation = () => (
     </Navbar.Header>
     <Navbar.Collapse>
     <Nav pullRight>
-      {/*<li>
+      {/*<NavItem>
         <Link to="/events">Events</Link>
       </li>*/}
-      <li>
-        <Link to="/about">About</Link>
-      </li>
-      <li>
-        <Link to="/students">Students</Link>
-      </li>
-      <li>
-        <Link to="/volunteers">Volunteers</Link>
-      </li>
-      <li>
-        <Link to="/partners">Partners</Link>
-      </li>
-      <li>
-        <Link to="/meet-the-team">Meet the team</Link>
-      </li>
-      <li className="nav-icon">
-        <Link to="https://www.facebook.com/codeyourfuture.co" target="_blank">
+      <LinkContainer to="/about">
+        <NavItem eventKey={1}>About</NavItem>
+      </LinkContainer>
+      <LinkContainer to="/students">
+      <NavItem>Students</NavItem>
+    </LinkContainer>
+     <LinkContainer to="/volunteers">
+      <NavItem>Volunteers</NavItem>
+    </LinkContainer>
+     <LinkContainer to="/partners">
+      <NavItem>Partners</NavItem>
+    </LinkContainer>
+     <LinkContainer to="/meet-the-team">
+      <NavItem>Meet the team</NavItem>
+    </LinkContainer>
+     <LinkContainer to="https://www.facebook.com/codeyourfuture.co" target="_blank">
+     <NavItem className="nav-icon">
           <img src={fblogo} style={logoStyle} alt="facebook"/>
-        </Link>
-      </li>
-      <li className="nav-icon">
-        <Link to="https://twitter.com/CodeYourFuture_" target="_blank">
+     </NavItem>
+    </LinkContainer>
+     <LinkContainer to="https://twitter.com/CodeYourFuture_" target="_blank">
+     <NavItem className="nav-icon">
           <img src={twitterlogo} style={logoStyle} alt="twitter"/>
-        </Link>
-      </li>
-      <li className="nav-icon">
-        <Link to="https://www.linkedin.com/company/codeyourfuture" target="_blank">
+     </NavItem>
+    </LinkContainer>
+     <LinkContainer to="https://www.linkedin.com/company/codeyourfuture" target="_blank">
+     <NavItem className="nav-icon">
           <img src={linkedinlogo} style={logoStyle} alt="linkedin"/>
-        </Link>
-      </li>
-      <li className="nav-icon">
-        <Link to="mailto:contact@codeyourfuture.co" title="Contact us">
+     </NavItem>
+    </LinkContainer>
+     <LinkContainer to="mailto:contact@codeyourfuture.co" title="Contact us">
+     <NavItem className="nav-icon">
           <img src={emaillogo} style={logoStyle} alt="email"/>
-        </Link>
-      </li>
+     </NavItem>
+    </LinkContainer>
     </Nav>
     </Navbar.Collapse>
   </Navbar>
