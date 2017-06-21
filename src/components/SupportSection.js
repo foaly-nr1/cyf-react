@@ -1,5 +1,9 @@
 import React from 'react'
-const SupportSection = () => (
+import codeIcon from '../content/icons/code.svg';
+import conferenceHallIcon from '../content/icons/conference-hall.svg';
+import laptopIcon from '../content/icons/laptop.svg';
+
+export const SupportSection = () => (
   <div className="section-container">
     <div className="container">
       <div className="row">
@@ -10,9 +14,15 @@ const SupportSection = () => (
           <h3 className="text-left">We are looking for</h3>
           <br />
           <ul className="text-left">
-            <li><span className="list-icon"><img src="img/ico/conference-hall-black.svg" /></span>Space</li>
-            <li><span className="list-icon"><img src="img/ico/code.svg" /></span>Mentors (Javascript)</li>
-            <li><span className="list-icon"><img src="img/ico/laptop.svg" /></span>Used Laptops</li>
+            <li>
+              <span className="list-icon"><img src={conferenceHallIcon} alt="Space"/></span>Space
+            </li>
+            <li>
+              <span className="list-icon"><img src={codeIcon} alt="Mentors" /></span>Mentors (Javascript)
+            </li>
+            <li>
+              <span className="list-icon"><img src={laptopIcon} alt="Used Laptops" /></span>Used Laptops
+            </li>
           </ul>
         </div>
       </div>
