@@ -19,7 +19,7 @@ $ yarn build # to build index to ./public
 
 ## Present
 
-To present merge your changes to `demo` branch. CI will build and then deploy it to GitHub pages (check web-static-[demo,staging,production] repos):
+To present merge your changes to `staging` branch. CI will build and then deploy it to GitHub pages (check web-static-[staging,production] repos):
 
 Currently, there is only one release candidate branch `staging` accessible on:
 - [staging.codeyourfuture.co](http://staging.codeyourfuture.co)
@@ -35,16 +35,15 @@ To get access to Trello `admin[at]codeyourfuture.co`, or let us know on Slack an
 To contribute please follow instructions:
 
 1. select a task from `Todo` list, assign your name and move the task to `In Progress` list.
-- create a new branch and apply your changes
-- (optional) to discuss your changes, you can merge your branch to `demo` branch and see your changes [demo environment](demo-codeyourfuture.s3-website-us-west-2.amazonaws.com)
-- when you are finished, merge your branch to `staging` branch
-- Then, submit a PR from `staging` to `master` for review and move the task to `In Review` list (currently, we have only one review environment, so if you see another PR make sure its safe to merge to `staging`)
+- checkout `staging` and pull the latest changes
+- create a new branch from `staging`, named after your task
+- when you're finished, submit a PR to the `staging` branch for review and move the task to `In Review` list (currently, we have only one review environment, so if you see another PR make sure its safe to merge to `staging`)
 - the code is approved by adding _LGTM_ to comment
 - after the PR is approved the reviewer, or contributor merges PR
+- after merging and a successful deploy, get someone to review the page in the (staging environment)[staging.codeyourfuture.co], to make sure that everything works
+- Then, submit a PR from `staging` to `master`
 - when the PR is merged to master, automatic build on CircleCI deploys the website
 - briefly look on the web to see your changes are fine; [http://codeyourfuture.co/](http://codeyourfuture.co/)
 - move task fro in `Review` to `Done`
 
 Thank you.
-
-Minor change to the README to test.
