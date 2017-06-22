@@ -12,7 +12,7 @@ export const Students = () => {
       including HTML/CSS, JavaScript and backend technologies. We’ll complement
       the training with workshops on modern software methodologies and job interview practices.</p>
 
-    <p>Our 6-month web development programme follows the success of our affiliate organisation in Amsterdam,
+    <p>Our 6-month web development programme follows the success of our affiliate organisation in Amsterdam,&nbsp;
       <Link to="http://hackyourfuture.net" target="_blank" rel="noopener noreferrer">
         HackYourFuture
       </Link>, where over 50% of the graduates have found technical jobs.</p>
