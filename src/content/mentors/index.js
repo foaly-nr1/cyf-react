@@ -8,6 +8,7 @@ import bex from './photos/bex.jpg';
 import claudia from './photos/claudia.jpg';
 import nate from './photos/nate.jpg';
 import will from './photos/will.jpg';
+import rob from './photos/rob.jpg';
 
 const mentors = [
   {
@@ -78,6 +79,13 @@ const mentors = [
     lastName: 'Wright',
     photo: will,
     title: 'HTML, CSS & Javascript'
+  },
+
+  {
+    firstName: 'Rob',
+    lastName: 'Gelb',
+    photo: rob,
+    title: 'Employment, Company Links'
   }
 ];
 
