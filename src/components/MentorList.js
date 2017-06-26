@@ -12,9 +12,7 @@ const Mentors = styled.section`
 `;
 
 const Mentor = styled(MentorCard)`
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 48%;
+  flex: 0 0 48%;
 
   @media (min-width: ${mediaQueries.sm}) {
     flex-basis: 30%;
@@ -24,13 +22,19 @@ const Mentor = styled(MentorCard)`
 const CallToActionContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex: 1 1 auto;
-  padding: 2em 2em 8em 3em;
+  align-items: flex-start;
+  flex: 0 0 48%;
+
+  @media (min-width: ${mediaQueries.sm}) {
+    flex-basis: 30%;
+  }
 `;
 
 const CallToAction = styled(Link)`
   white-space: normal;
+  font-size: 1.2em;
+  line-height: 1.3;
+  margin-top: 33%;
 `;
 
 export const MentorList = () => (
