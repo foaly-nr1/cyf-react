@@ -21,6 +21,26 @@ const cyflogoStyle = {
   height: '50px'
 }
 
+const handleLink = (link) => {
+  let URL='';
+  switch (link.target.alt) {
+    case "facebook":
+      URL="https://www.facebook.com/codeyourfuture.co"
+      break;
+    case "twitter":
+      URL="https://twitter.com/CodeYourFuture_"
+      break;
+    case "linkedin":
+      URL="https://www.linkedin.com/company/codeyourfuture"
+      break;
+    case "email":
+      URL="mailto:contact@codeyourfuture.co"
+      break;
+    default:
+      break;
+  }
+  window.open(URL, "_blank");
+}
 
 export const Navigation = () => (
   <Navbar collapseOnSelect>
@@ -50,26 +70,34 @@ export const Navigation = () => (
      <LinkContainer to="/meet-the-team">
       <NavItem>Meet the team</NavItem>
     </LinkContainer>
-     <LinkContainer to="https://www.facebook.com/codeyourfuture.co" target="_blank">
      <NavItem className="nav-icon">
-          <img src={fblogo} style={logoStyle} alt="facebook"/>
+       <img
+         src={fblogo}
+         style={logoStyle}
+         alt="facebook"
+         onClick={handleLink.bind(this)}/>
      </NavItem>
-    </LinkContainer>
-     <LinkContainer to="https://twitter.com/CodeYourFuture_" target="_blank">
      <NavItem className="nav-icon">
-          <img src={twitterlogo} style={logoStyle} alt="twitter"/>
+       <img
+         src={twitterlogo}
+         style={logoStyle}
+         alt="twitter"
+         onClick={handleLink.bind(this)}/>
      </NavItem>
-    </LinkContainer>
-     <LinkContainer to="https://www.linkedin.com/company/codeyourfuture" target="_blank">
      <NavItem className="nav-icon">
-          <img src={linkedinlogo} style={logoStyle} alt="linkedin"/>
+       <img
+         src={linkedinlogo}
+         style={logoStyle}
+         alt="linkedin"
+         onClick={handleLink.bind(this)}/>
      </NavItem>
-    </LinkContainer>
-     <LinkContainer to="mailto:contact@codeyourfuture.co" title="Contact us">
      <NavItem className="nav-icon">
-          <img src={emaillogo} style={logoStyle} alt="email"/>
+       <img
+         src={emaillogo}
+         style={logoStyle}
+         alt="email"
+         onClick={handleLink.bind(this)}/>
      </NavItem>
-    </LinkContainer>
     </Nav>
     </Navbar.Collapse>
   </Navbar>
