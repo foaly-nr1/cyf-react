@@ -21,9 +21,9 @@ const cyflogoStyle = {
   height: '50px'
 }
 
-const handleLink = (link) => {
+const handleLink = (linkName) => {
   let URL='';
-  switch (link.target.alt) {
+  switch (linkName) {
     case "facebook":
       URL="https://www.facebook.com/codeyourfuture.co"
       break;
@@ -36,6 +36,8 @@ const handleLink = (link) => {
     case "email":
       URL="mailto:contact@codeyourfuture.co"
       break;
+    case 1:
+      return;
     default:
       break;
   }
@@ -51,7 +53,7 @@ export const Navigation = () => (
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
-    <Nav pullRight>
+    <Nav pullRight onSelect={handleLink.bind(this)}>
       {/*<NavItem>
         <Link to="/events">Events</Link>
       </li>*/}
@@ -59,44 +61,44 @@ export const Navigation = () => (
         <NavItem eventKey={1}>About</NavItem>
       </LinkContainer>
       <LinkContainer to="/students">
-      <NavItem>Students</NavItem>
+      <NavItem eventKey={1}>Students</NavItem>
     </LinkContainer>
      <LinkContainer to="/volunteers">
-      <NavItem>Volunteers</NavItem>
+      <NavItem eventKey={1}>Volunteers</NavItem>
     </LinkContainer>
      <LinkContainer to="/partners">
-      <NavItem>Partners</NavItem>
+      <NavItem  eventKey={1}>Partners</NavItem>
     </LinkContainer>
      <LinkContainer to="/meet-the-team">
-      <NavItem>Meet the team</NavItem>
+      <NavItem  eventKey={1}>Meet the team</NavItem>
     </LinkContainer>
-     <NavItem className="nav-icon">
+     <NavItem className="nav-icon" eventKey={"facebook"}>
        <img
          src={fblogo}
          style={logoStyle}
          alt="facebook"
-         onClick={handleLink.bind(this)}/>
+         />
      </NavItem>
-     <NavItem className="nav-icon">
+     <NavItem className="nav-icon" eventKey={"twitter"}>
        <img
          src={twitterlogo}
          style={logoStyle}
          alt="twitter"
-         onClick={handleLink.bind(this)}/>
+         />
      </NavItem>
-     <NavItem className="nav-icon">
+     <NavItem className="nav-icon" eventKey={"linkedin"}>
        <img
          src={linkedinlogo}
          style={logoStyle}
          alt="linkedin"
-         onClick={handleLink.bind(this)}/>
+         />
      </NavItem>
-     <NavItem className="nav-icon">
+     <NavItem className="nav-icon" eventKey={"email"}>
        <img
          src={emaillogo}
          style={logoStyle}
          alt="email"
-         onClick={handleLink.bind(this)}/>
+         />
      </NavItem>
     </Nav>
     </Navbar.Collapse>
