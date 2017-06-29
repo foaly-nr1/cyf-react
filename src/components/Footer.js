@@ -1,9 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const scrollToTop = () => {
-  document.location.href = "#top";
-}
 
 export const Footer = () => (
   <div className="section-container">
@@ -13,9 +10,9 @@ export const Footer = () => (
       <div className="row">
         <div className="col-sm-12">
           <div className="scroll-to-top">
-            <i
-              className="fa fa-chevron-up"
-              onClick={scrollToTop.bind(this)} />
+            <a href="#top">
+            <i className="fa fa-chevron-up" />
+            </a>
           </div>
         </div>
       </div>
