@@ -30,8 +30,8 @@ export const AsSeen = () => (
           </Link>
       </div>
       <div className="col-sm-3">
-          <Link href="https://www.newsdeeply.com/refugees/articles/2016/10/19/welcome-to-londons-refugee-coding-school"
-            to="_blank"
+          <Link to="https://www.newsdeeply.com/refugees/articles/2016/10/19/welcome-to-londons-refugee-coding-school"
+            target="_blank"
             rel="noopener noreferrer">
             <div className="icon--large">
               <img src="img/media-logos/refugees-deeply.jpeg" alt="Refugees Deeply" />
