@@ -13,13 +13,6 @@ const renderNewStudentForm = () => {
 }
 
 export default class Apply extends Component {
-  componentDidMount() {
-    const formWrapper = document.querySelector('.pipedriveWebform');
-
-    if (formWrapper) {
-      formWrapper.style.background = 'red';
-    }
-  }
   render() {
 
     const { form_type } = this.props.match.params;
