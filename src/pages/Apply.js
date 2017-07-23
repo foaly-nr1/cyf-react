@@ -43,9 +43,9 @@ export default class Apply extends Component {
       case "mentor":
         formURL = mentorsForm.URL
         break;
-      case "student":
-        formURL = StudentForm.URL
-        break;
+      // case "student":
+      //   formURL = StudentForm.URL
+      //   break;
       default:
         break;
     }
