@@ -11,7 +11,7 @@ import { Students } from './pages/Students'
 import { Events } from './pages/Events'
 import { Partners } from './pages/Partners'
 import { About } from './pages/About'
-import { Apply } from './pages/Apply'
+import Apply from './pages/Apply'
 import { MeetTheTeam } from './pages/MeetTheTeam'
 
 import { Navigation } from './components/Navigation'
