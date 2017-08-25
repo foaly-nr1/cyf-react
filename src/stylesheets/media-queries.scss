@@ -17,7 +17,7 @@
         @include background-img();
     }
     .student-hero-wrap{
-        background: url(../img/students/students-group-768.jpg);
+        background: url(../img/students/students-group.jpg);
         @include hero-background(30em);
     }
 
@@ -48,7 +48,7 @@
     }
 
     .student-hero-wrap{
-        background: url(../img/students/students-group-320.png);
+        background: url(../img/students/students-group.jpg);
         @include hero-background(19em);
     }
 
