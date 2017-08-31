@@ -15,10 +15,12 @@
   "devDependencies": {
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-15": "^1.0.1",
+    "prettier": "^1.6.1",
     "react-scripts": "1.0.7",
     "react-test-renderer": "^15.6.1"
   },
   "scripts": {
+    "format": "prettier --write \"src/**/*.js\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
