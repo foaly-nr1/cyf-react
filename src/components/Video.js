@@ -6,11 +6,11 @@ export const Video = () => (
         <div className="row">
             <iframe 
               title="CodeYourFuture graduate Ehmed shares his story"
-              width="560"
-              height="315"
+              width="853"
+              height="480"
               src="https://www.youtube.com/embed/LpQUHt2N6rY?rel=0&amp;showinfo=0"
-              frameborder="0"
-              allowfullscreen>
+              frameBorder="0"
+              allowFullScreen>
             </iframe>
       </div>
     </div>
