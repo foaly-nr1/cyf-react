@@ -36,6 +36,9 @@ const handleLink = (linkName) => {
     case "email":
       URL="mailto:contact@codeyourfuture.co"
       break;
+    case "blog":
+      URL="https://medium.com/@CodeYourFuture"
+      break;
     case 1:
       return;
     default:
@@ -72,6 +75,9 @@ export const Navigation = () => (
      <LinkContainer to="/meet-the-team">
       <NavItem  eventKey={1}>Meet the team</NavItem>
     </LinkContainer>
+    <NavItem className="nav-icon" eventKey={"blog"}>
+       Blog
+     </NavItem>
      <NavItem className="nav-icon" eventKey={"facebook"}>
        <img
          src={fblogo}
