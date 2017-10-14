@@ -10,12 +10,12 @@ describe('LogoListItem', () => {
   }
 
   it('renders a div with a className logo-list-item', () => {
-    const logoListItem = shallow(<LogoListItem />)
+    const logoListItem = shallow(<LogoListItem {...props} />)
     expect(logoListItem.hasClass('logo-list-item')).toEqual(true)
   })
 
   it('renders an a tag with an image', () => {
-    const logoListItem = shallow(<LogoListItem />)
+    const logoListItem = shallow(<LogoListItem {...props}/>)
     expect(logoListItem.find('a').find('img')).toHaveLength(1)
   })
 
