@@ -1,36 +1,36 @@
-import React from 'react'
-import { shallow } from 'enzyme'
-import LogoListItem from './LogoListItem'
+import React from 'react';
+import { shallow } from 'enzyme';
+import LogoListItem from './LogoListItem';
 
 describe('LogoListItem', () => {
   const props = {
     href: 'a-company-url',
     src: 'logoImageSource.png',
     alt: 'alternateName'
-  }
+  };
 
   it('renders a div with a className logo-list-item', () => {
-    const logoListItem = shallow(<LogoListItem {...props} />)
-    expect(logoListItem.hasClass('logo-list-item')).toEqual(true)
-  })
+    const logoListItem = shallow(<LogoListItem {...props} />);
+    expect(logoListItem.hasClass('logo-list-item')).toEqual(true);
+  });
 
   it('renders an a tag with an image', () => {
-    const logoListItem = shallow(<LogoListItem {...props}/>)
-    expect(logoListItem.find('a').find('img')).toHaveLength(1)
-  })
+    const logoListItem = shallow(<LogoListItem {...props}/>);
+    expect(logoListItem.find('a').find('img')).toHaveLength(1);
+  });
 
   it('renders an a tag with a link to a company url', () => {
-    const logoListItem = shallow(<LogoListItem {...props} />)
-    expect(logoListItem.find('a').prop('href')).toEqual(props.href)
+    const logoListItem = shallow(<LogoListItem {...props} />);
+    expect(logoListItem.find('a').prop('href')).toEqual(props.href);
   })
 
   it('renders an image from a specified source', () => {
-    const logoListItem = shallow(<LogoListItem {...props} />)
-    expect(logoListItem.find('a').find('img').prop('src')).toEqual(props.src)
-  })
+    const logoListItem = shallow(<LogoListItem {...props} />);
+    expect(logoListItem.find('a').find('img').prop('src')).toEqual(props.src);
+  });
 
   it('renders an image with an alternate name', () => {
-    const logoListItem = shallow(<LogoListItem {...props} />)
-    expect(logoListItem.find('a').find('img').prop('alt')).toEqual(props.alt)
-  })
-})
+    const logoListItem = shallow(<LogoListItem {...props} />);
+    expect(logoListItem.find('a').find('img').prop('alt')).toEqual(props.alt);
+  });
+});

@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const LogoListItem = ({ href, src, alt }) => (
   <div className="logo-list-item col-sm-4 col-md-4">
@@ -7,7 +7,7 @@ const LogoListItem = ({ href, src, alt }) => (
       <img src={src} alt={alt} />
     </a>
   </div>
-)
+);
 
 LogoListItem.propTypes = {
   href: PropTypes.string.isRequired,
@@ -15,4 +15,4 @@ LogoListItem.propTypes = {
   alt: PropTypes.string.isRequired
 };
 
-export default LogoListItem
+export default LogoListItem;
