@@ -2,12 +2,6 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import LogoListItem from './LogoListItem'
 
-// configure enzyme
-// TODO: move to a separate file
-import { configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-15'
-configure({ adapter: new Adapter() })
-
 describe('LogoListItem', () => {
   const props = {
     href: 'a-company-url',
