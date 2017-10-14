@@ -14,7 +14,12 @@ const LogoList = ({ partners }) => (
 );
 
 LogoList.propTypes = {
-  partners: PropTypes.array.isRequired
+  partners: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
+  })).isRequired
 };
 
 export default LogoList;
