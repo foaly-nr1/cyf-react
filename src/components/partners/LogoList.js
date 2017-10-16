@@ -11,14 +11,14 @@ const renderLogoListItem = (partner, grid) => (
     grid={grid} />
 );
 
-const LogoList = ({partners}) => (
+const LogoList = ({ partners }) => (
   <div className="logo-list">
     {partners.map(partner => {
-      if (partner.featured) {
-        return renderLogoListItem(partner, 'col-sm-10 col-sm-offset-1 ticketmaster-wrap');
-      } else {
-        return renderLogoListItem(partner, 'col-sm-4 col-md-4');
-      }
+      const grid = partner.featured
+        ? 'col-sm-10 col-sm-offset-1 ticketmaster-wrap'
+        : 'col-sm-4 col-md-4';
+
+      return renderLogoListItem(partner, grid);
     })}
   </div>
 );
