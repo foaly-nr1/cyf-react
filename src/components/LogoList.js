@@ -4,7 +4,9 @@ import LogoListItem from './LogoListItem';
 
 const LogoList = ({ partners }) => (
   <div className="logo-list">
-    {partners.map(partner => <LogoListItem
+    {partners
+      .filter(partner => !partner.featured)
+      .map(partner => <LogoListItem
       key={partner.id}
       href={partner.url}
       src={partner.logo}
@@ -19,6 +21,7 @@ LogoList.propTypes = {
     name: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     logo: PropTypes.string.isRequired,
+    featured: PropTypes.bool.isRequired
   })).isRequired
 };
 

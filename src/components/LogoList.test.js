@@ -7,16 +7,25 @@ describe('LogoList', () => {
   const props = {
     partners: [
       {
-        id: 'company1',
-        name: 'Company 1',
-        url: 'url-to-company-1',
-        logo: 'logoForCompany1.png',
+        id: 'featuredCompany',
+        name: 'Featured Company',
+        url: 'url-to-featured-company',
+        logo: 'logoForFeaturedCompany.png',
+        featured: true
       },
       {
-        id: 'company2',
-        name: 'Company 2',
-        url: 'url-to-company-2',
-        logo: 'logoForCompany2.png',
+        id: 'nonFeaturedCompany1',
+        name: 'Non-featured Company 1',
+        url: 'url-to-non-featured-company-1',
+        logo: 'logoForNonFeaturedCompany1.png',
+        featured: false
+      },
+      {
+        id: 'nonFeaturedCompany2',
+        name: 'Non-featured Company 2',
+        url: 'url-to-non-featured-company-2',
+        logo: 'logoForNonFeaturedCompany2.png',
+        featured: false
       }
     ]
   };
@@ -26,19 +35,22 @@ describe('LogoList', () => {
     expect(logoList.hasClass('logo-list')).toEqual(true);
   });
 
-  it('renders the right number of LogoListItem', () => {
+  it('renders LogoListItem only for non-featured companies', () => {
     const logoList = shallow(<LogoList {...props}/>);
-    expect(logoList.find(LogoListItem)).toHaveLength(props.partners.length);
+    const nonFeaturedPartners = props.partners.filter(partner => !partner.featured)
+
+    expect(logoList.find(LogoListItem)).toHaveLength(nonFeaturedPartners.length);
   });
 
   it('passes the right props to LogoListItem', () => {
     const logoList = shallow(<LogoList {...props}/>);
     const logoListItems = logoList.find(LogoListItem);
+    const nonFeaturedPartners = props.partners.filter(partner => !partner.featured)
 
     logoListItems.forEach((item, index) => {
-      expect(item.prop('alt')).toEqual(props.partners[index].name)
-      expect(item.prop('href')).toEqual(props.partners[index].url)
-      expect(item.prop('src')).toEqual(props.partners[index].logo)
+      expect(item.prop('alt')).toEqual(nonFeaturedPartners[index].name)
+      expect(item.prop('href')).toEqual(nonFeaturedPartners[index].url)
+      expect(item.prop('src')).toEqual(nonFeaturedPartners[index].logo)
     });
   });
 });
