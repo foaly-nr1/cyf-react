@@ -17,7 +17,7 @@ describe('LogoListItem', () => {
   });
 
   it('renders a div with a className and the right grids', () => {
-    const expectedClassName = `logo-list-item ${props.grid}`
+    const expectedClassName = `logo-list-item ${props.grid}`;
     expect(logoListItem.prop('className')).toEqual(expectedClassName);
   });
 

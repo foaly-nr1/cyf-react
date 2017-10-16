@@ -11,13 +11,13 @@ const LogoListItem = ({ href, src, alt, grid }) => {
       </a>
     </div>
   );
-}
+};
 
 LogoListItem.propTypes = {
   href: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  grid: PropTypes.string.isRequired,
+  grid: PropTypes.string.isRequired
 };
 
 export default LogoListItem;

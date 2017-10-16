@@ -4,32 +4,6 @@ import { PartnerLogos } from './PartnerLogos';
 import LogoList from './LogoList';
 
 describe('PartnerLogos', () => {
-  const propsa = {
-    partners: [
-      {
-        id: 'featuredCompany',
-        name: 'Featured Company',
-        url: 'url-to-featured-company',
-        logo: 'logoForFeaturedCompany.png',
-        featured: true
-      },
-      {
-        id: 'nonFeaturedCompany1',
-        name: 'Non-featured Company 1',
-        url: 'url-to-non-featured-company-1',
-        logo: 'logoForNonFeaturedCompany1.png',
-        featured: false
-      },
-      {
-        id: 'nonFeaturedCompany2',
-        name: 'Non-featured Company 2',
-        url: 'url-to-non-featured-company-2',
-        logo: 'logoForNonFeaturedCompany2.png',
-        featured: false
-      }
-    ]
-  };
-
   const props = {
     partners: {
       sectionOne: [
@@ -57,26 +31,26 @@ describe('PartnerLogos', () => {
           url: 'url-to-non-featured-company-1',
           logo: 'logoForNonFeaturedCompany1.png',
           featured: false
-        },
-      ],
-    },
+        }
+      ]
+    }
   };
 
   let partnerLogos;
-  const sections = Object.keys(props.partners)
+  const sections = Object.keys(props.partners);
 
   beforeEach(() => {
-    partnerLogos = shallow(<PartnerLogos {...props} />)
+    partnerLogos = shallow(<PartnerLogos {...props} />);
   });
 
   it('renders a LogoList for each section of partners', () => {
-    expect(partnerLogos.find(LogoList)).toHaveLength(sections.length)
+    expect(partnerLogos.find(LogoList)).toHaveLength(sections.length);
   });
 
   sections.forEach(section => {
     it(`passes the right props to ${section}'s LogoList`, () => {
-      const sectionDiv = partnerLogos.find(`.partners__${section}`)
-      expect(sectionDiv.find(LogoList).prop('partners')).toEqual(props.partners[section])
-    })
-  })
+      const sectionDiv = partnerLogos.find(`.partners__${section}`);
+      expect(sectionDiv.find(LogoList).prop('partners')).toEqual(props.partners[section]);
+    });
+  });
 });
