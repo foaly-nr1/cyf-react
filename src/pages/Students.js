@@ -18,7 +18,7 @@ export const Students = () => {
       </Link>, where over 50% of the graduates have found technical jobs.</p>
 
     <div className="section-bottom-link">
-      <Link className="big-link-3 btn scroll" to="/about">Find out more</Link>
+      <a className="big-link-3 btn scroll" href="#requirements">Find out more</a>
     </div>
   </div>
 )
@@ -30,7 +30,7 @@ return (
   <div id="info" className="block-2-container section-container">
     <div className="container">
       <div className="row">
-        <div className="col-sm-6 col-md-6 block-2-box">
+        <div id="requirements" className="col-sm-6 col-md-6 block-2-box">
           <h3>Requirements</h3>
           <ul className="text-left">
             <li>Live in the UK</li>
