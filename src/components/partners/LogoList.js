@@ -2,20 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LogoListItem from './LogoListItem';
 
-const renderLogoListItem = (partner) => (
+const renderLogoListItem = (partner, grid) => (
   <LogoListItem
     key={partner.id}
     href={partner.url}
     src={partner.logo}
     alt={partner.name}
-    grid='col-sm-4 col-md-4' />
-)
+    grid={grid} />
+);
 
-const LogoList = ({ partners }) => (
+const LogoList = ({partners}) => (
   <div className="logo-list">
-    {partners
-      .filter(partner => !partner.featured)
-      .map(partner => renderLogoListItem(partner))}
+    {partners.map(partner => {
+      if (partner.featured) {
+        return renderLogoListItem(partner, 'col-sm-10 col-sm-offset-1 ticketmaster-wrap');
+      } else {
+        return renderLogoListItem(partner, 'col-sm-4 col-md-4');
+      }
+    })}
   </div>
 );
 
@@ -25,8 +29,8 @@ LogoList.propTypes = {
     name: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     logo: PropTypes.string.isRequired,
-    featured: PropTypes.bool.isRequired,
-  })).isRequired,
+    featured: PropTypes.bool.isRequired
+  })).isRequired
 };
 
 export default LogoList;

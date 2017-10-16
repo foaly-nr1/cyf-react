@@ -31,7 +31,6 @@ describe('LogoList', () => {
   };
 
   let logoList;
-  const nonFeaturedPartners = props.partners.filter(partner => !partner.featured);
 
   beforeEach(() => {
     logoList = shallow(<LogoList {...props} />);
@@ -41,18 +40,24 @@ describe('LogoList', () => {
     expect(logoList.hasClass('logo-list')).toEqual(true);
   });
 
-  it('renders LogoListItem only for non-featured companies', () => {
-    expect(logoList.find(LogoListItem)).toHaveLength(nonFeaturedPartners.length);
+  it('renders LogoListItem featured and non-featured companies', () => {
+    expect(logoList.find(LogoListItem)).toHaveLength(props.partners.length);
   });
 
   it('passes the right props to LogoListItem', () => {
     const logoListItems = logoList.find(LogoListItem);
 
     logoListItems.forEach((item, index) => {
-      expect(item.prop('alt')).toEqual(nonFeaturedPartners[index].name);
-      expect(item.prop('href')).toEqual(nonFeaturedPartners[index].url);
-      expect(item.prop('src')).toEqual(nonFeaturedPartners[index].logo);
-      expect(item.prop('grid')).toEqual('col-sm-4 col-md-4');
+      const partner = props.partners[index];
+      expect(item.prop('alt')).toEqual(partner.name);
+      expect(item.prop('href')).toEqual(partner.url);
+      expect(item.prop('src')).toEqual(partner.logo);
+
+      if (partner.featured) {
+        expect(item.prop('grid')).toEqual('col-sm-10 col-sm-offset-1 ticketmaster-wrap');
+      } else {
+        expect(item.prop('grid')).toEqual('col-sm-4 col-md-4');
+      }
     });
   });
 });
