@@ -1,4 +1,3 @@
-import cititec from './logos/cititec.png';
 import pipedrive from './logos/pipedrive.png';
 import ticketmaster from './logos/ticketmaster.png';
 import github from './logos/github.png';
@@ -11,12 +10,6 @@ const partners = {
     logo: ticketmaster,
   },
 
-  cititec: {
-    name: 'Cititec',
-    url: 'http://www.cititec.com',
-    logo: cititec,
-  },
-  
   pipedrive: {
     name: 'Pipedrive',
     url: 'http://www.pipedrive.com',
