@@ -28,15 +28,19 @@ describe('PartnerLogos', () => {
         featured: false
       }
     ]
-  }
+  };
+
+  let partnerLogos;
+
+  beforeEach(() => {
+    partnerLogos = shallow(<PartnerLogos {...props} />)
+  });
 
   it('renders a LogoList', () => {
-    const partnerLogos = shallow(<PartnerLogos {...props} />)
     expect(partnerLogos.find(LogoList)).toHaveLength(1)
   });
 
   it('passes the partners as a props to LogoList', () => {
-    const partnerLogos = shallow(<PartnerLogos {...props} />)
     expect(partnerLogos.find(LogoList).prop('partners')).toEqual(props.partners)
-  })
+  });
 });

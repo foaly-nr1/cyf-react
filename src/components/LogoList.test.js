@@ -30,27 +30,28 @@ describe('LogoList', () => {
     ]
   };
 
+  let logoList;
+  const nonFeaturedPartners = props.partners.filter(partner => !partner.featured);
+
+  beforeEach(() => {
+    logoList = shallow(<LogoList {...props} />);
+  });
+
   it('renders a div with a className logo-list', () => {
-    const logoList = shallow(<LogoList {...props} />);
     expect(logoList.hasClass('logo-list')).toEqual(true);
   });
 
   it('renders LogoListItem only for non-featured companies', () => {
-    const logoList = shallow(<LogoList {...props}/>);
-    const nonFeaturedPartners = props.partners.filter(partner => !partner.featured)
-
     expect(logoList.find(LogoListItem)).toHaveLength(nonFeaturedPartners.length);
   });
 
   it('passes the right props to LogoListItem', () => {
-    const logoList = shallow(<LogoList {...props}/>);
     const logoListItems = logoList.find(LogoListItem);
-    const nonFeaturedPartners = props.partners.filter(partner => !partner.featured)
 
     logoListItems.forEach((item, index) => {
-      expect(item.prop('alt')).toEqual(nonFeaturedPartners[index].name)
-      expect(item.prop('href')).toEqual(nonFeaturedPartners[index].url)
-      expect(item.prop('src')).toEqual(nonFeaturedPartners[index].logo)
+      expect(item.prop('alt')).toEqual(nonFeaturedPartners[index].name);
+      expect(item.prop('href')).toEqual(nonFeaturedPartners[index].url);
+      expect(item.prop('src')).toEqual(nonFeaturedPartners[index].logo);
     });
   });
 });
