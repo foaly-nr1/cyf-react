@@ -7,7 +7,8 @@ const renderLogoListItem = (partner) => (
     key={partner.id}
     href={partner.url}
     src={partner.logo}
-    alt={partner.name}/>
+    alt={partner.name}
+    grid='col-sm-4 col-md-4' />
 )
 
 const LogoList = ({ partners }) => (
@@ -24,8 +25,8 @@ LogoList.propTypes = {
     name: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     logo: PropTypes.string.isRequired,
-    featured: PropTypes.bool.isRequired
-  })).isRequired
+    featured: PropTypes.bool.isRequired,
+  })).isRequired,
 };
 
 export default LogoList;

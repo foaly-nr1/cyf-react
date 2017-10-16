@@ -52,6 +52,7 @@ describe('LogoList', () => {
       expect(item.prop('alt')).toEqual(nonFeaturedPartners[index].name);
       expect(item.prop('href')).toEqual(nonFeaturedPartners[index].url);
       expect(item.prop('src')).toEqual(nonFeaturedPartners[index].logo);
+      expect(item.prop('grid')).toEqual('col-sm-4 col-md-4');
     });
   });
 });

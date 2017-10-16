@@ -6,7 +6,8 @@ describe('LogoListItem', () => {
   const props = {
     href: 'a-company-url',
     src: 'logoImageSource.png',
-    alt: 'alternateName'
+    alt: 'alternateName',
+    grid: 'grid'
   };
 
   let logoListItem;
@@ -15,8 +16,9 @@ describe('LogoListItem', () => {
     logoListItem = shallow(<LogoListItem {...props} />);
   });
 
-  it('renders a div with a className logo-list-item', () => {
-    expect(logoListItem.hasClass('logo-list-item')).toEqual(true);
+  it('renders a div with a className and the right grids', () => {
+    const expectedClassName = `logo-list-item ${props.grid}`
+    expect(logoListItem.prop('className')).toEqual(expectedClassName);
   });
 
   it('renders an a tag with an image', () => {
@@ -31,7 +33,7 @@ describe('LogoListItem', () => {
     expect(logoListItem.find('a').find('img').prop('src')).toEqual(props.src);
   });
 
-  it('renders an image with an alternate name', () => {
+  it('renders an image with a name', () => {
     expect(logoListItem.find('a').find('img').prop('alt')).toEqual(props.alt);
   });
 });
