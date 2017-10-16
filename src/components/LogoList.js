@@ -2,16 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LogoListItem from './LogoListItem';
 
+const renderLogoListItem = (partner) => (
+  <LogoListItem
+    key={partner.id}
+    href={partner.url}
+    src={partner.logo}
+    alt={partner.name}/>
+)
+
 const LogoList = ({ partners }) => (
   <div className="logo-list">
     {partners
       .filter(partner => !partner.featured)
-      .map(partner => <LogoListItem
-      key={partner.id}
-      href={partner.url}
-      src={partner.logo}
-      alt={partner.name}/>
-    )}
+      .map(partner => renderLogoListItem(partner))}
   </div>
 );
 
