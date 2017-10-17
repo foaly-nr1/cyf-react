@@ -1644,6 +1644,15 @@ img[alt*="Slack"] {
 @media (max-width: 767px) {
   [class*='partners__'] {
     max-width: 95%;
+    margin-top: 40px;
+  }
+
+  [class*='partners__general'] {
+    margin-top: 0;
+  }
+
+  .partners h2 {
+    font-size: 28px;
   }
 
   .logo-list-item a {
