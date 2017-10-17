@@ -15,7 +15,7 @@ const LogoList = ({ partners }) => (
   <div className="logo-list">
     {partners.map(partner => {
       const additionalClass = partner.featured
-        ? 'col-xs-12 col-sm-10 col-sm-offset-1 featured'
+        ? 'col-xs-12 featured'
         : '';
 
       return renderLogoListItem(partner, additionalClass);

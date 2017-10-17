@@ -54,7 +54,7 @@ describe('LogoList', () => {
       expect(item.prop('src')).toEqual(partner.logo);
 
       if (partner.featured) {
-        expect(item.prop('additionalClass')).toEqual('col-xs-12 col-sm-10 col-sm-offset-1 featured');
+        expect(item.prop('additionalClass')).toEqual('col-xs-12 featured');
       } else {
         expect(item.prop('additionalClass')).toEqual('');
       }

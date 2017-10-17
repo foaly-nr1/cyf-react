@@ -1615,21 +1615,17 @@ pre code {
   margin-top: 10px;
 }
 
-.logo-list-item {
-  text-align: center;
-  font: 0/0 a;
-}
-
-.logo-list-item a {
-  line-height: 100px;
+.logo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-list-item img {
-  vertical-align: middle;
-  display: inline-block;
   max-width: 200px;
   max-height: 100px;
-  margin: 10px 0;
+  margin: 10px;
 }
 
 .logo-list-item.featured img {
