@@ -17,7 +17,7 @@ describe('LogoListItem', () => {
   });
 
   it('renders a div with a className and additionalClass', () => {
-    const expectedClassName = `logo-list-item col-xs-12 ${props.additionalClass}`;
+    const expectedClassName = `logo-list-item ${props.additionalClass}`;
     expect(logoListItem.prop('className')).toEqual(expectedClassName);
   });
 

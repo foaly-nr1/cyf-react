@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const LogoListItem = ({ href, src, alt, additionalClass }) => {
-  const className = `logo-list-item col-xs-12 ${additionalClass}`;
+  const className = `logo-list-item ${additionalClass}`;
 
   return (
     <div className={className}>

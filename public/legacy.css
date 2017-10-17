@@ -1616,10 +1616,17 @@ pre code {
 }
 
 .logo-list-item {
-  float: left;
+  text-align: center;
+  font: 0/0 a;
+}
+
+.logo-list-item a {
+  line-height: 100px;
 }
 
 .logo-list-item img {
+  vertical-align: middle;
+  display: inline-block;
   max-width: 200px;
   max-height: 100px;
   margin: 10px 0;
@@ -1641,8 +1648,13 @@ img[alt*="Slack"] {
     max-width: 95%;
   }
 
+  .logo-list-item a {
+    line-height: 50px;
+  }
+
   .logo-list-item img {
     max-width: 200px;
+    max-height: 70px;
   }
 
   .logo-list-item.featured img {
@@ -1651,7 +1663,11 @@ img[alt*="Slack"] {
   }
 
   img[alt*="GitHub"] {
-    max-width: 150px;
+    max-width: 140px;
+  }
+
+  img[alt*="Pipedrive"] {
+    max-width: 160px;
   }
 }
 
