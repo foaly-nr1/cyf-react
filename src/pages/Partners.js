@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { TopSection } from '../components/TopSection';
-import { PartnerLogos } from '../components/PartnerLogos';
+import { PartnerLogos } from '../components/partners/PartnerLogos';
 import { Support } from '../components/Support';
+import partners from '../content/partners';
 
 const PartnersText = (
   <div>
@@ -19,7 +20,7 @@ const PartnersText = (
 export const Partners = () => (
   <div>
     <TopSection title="Partner with us" content={PartnersText}/>
-    <PartnerLogos />
+    <PartnerLogos partners={partners} />
     <Support />
   </div>
 );
