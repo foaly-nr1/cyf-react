@@ -54,9 +54,9 @@ describe('LogoList', () => {
       expect(item.prop('src')).toEqual(partner.logo);
 
       if (partner.featured) {
-        expect(item.prop('grid')).toEqual('col-sm-10 col-sm-offset-1 ticketmaster-wrap');
+        expect(item.prop('additionalClass')).toEqual('featured');
       } else {
-        expect(item.prop('grid')).toEqual('col-sm-4 col-md-4');
+        expect(item.prop('additionalClass')).toEqual('');
       }
     });
   });

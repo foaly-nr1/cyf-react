@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LogoListItem from './LogoListItem';
 
-const renderLogoListItem = (partner, grid) => (
+const renderLogoListItem = (partner, additionalClass) => (
   <LogoListItem
     key={partner.id}
     href={partner.url}
     src={partner.logo}
     alt={partner.name}
-    grid={grid} />
+    additionalClass={additionalClass} />
 );
 
 const LogoList = ({ partners }) => (
   <div className="logo-list">
     {partners.map(partner => {
-      const grid = partner.featured
-        ? 'col-sm-10 col-sm-offset-1 ticketmaster-wrap'
-        : 'col-sm-4 col-md-4';
+      const additionalClass = partner.featured
+        ? 'featured'
+        : '';
 
-      return renderLogoListItem(partner, grid);
+      return renderLogoListItem(partner, additionalClass);
     })}
   </div>
 );
