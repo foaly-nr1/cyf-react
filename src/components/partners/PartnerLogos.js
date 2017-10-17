@@ -5,12 +5,12 @@ const renderLogoListSections = (partners) => {
   return Object.keys(partners).map(section => {
     const className = `container partners__${section}`
     const sectionLabel = section === 'tech'
-      ? 'Tech Supporters'
-      : section;
+      ? '< Tech Supporters />'
+      : `< ${section} />`;
 
     return (
       <div key={section} className={className}>
-        <h3>{sectionLabel}</h3>
+        <h2>{sectionLabel}</h2>
         <div className="divider-1">
           <span></span>
         </div>
