@@ -13,7 +13,7 @@ describe('PartnerLogos', () => {
           url: 'url-to-featured-company',
           logo: 'logoForFeaturedCompany.png',
           featured: true
-        },
+        }
       ],
       sectionTwo: [
         {
@@ -22,7 +22,7 @@ describe('PartnerLogos', () => {
           url: 'url-to-non-featured-company-1',
           logo: 'logoForNonFeaturedCompany1.png',
           featured: false
-        },
+        }
       ],
       sectionThree: [
         {
@@ -50,7 +50,9 @@ describe('PartnerLogos', () => {
   sections.forEach(section => {
     it(`passes the right props to ${section}'s LogoList`, () => {
       const sectionDiv = partnerLogos.find(`.partners__${section}`);
-      expect(sectionDiv.find(LogoList).prop('partners')).toEqual(props.partners[section]);
+      expect(sectionDiv.find(LogoList).prop('partners')).toEqual(
+        props.partners[section]
+      );
     });
   });
 });

@@ -3,7 +3,7 @@ import ticketmaster from './logos/ticketmaster.png';
 import github from './logos/github.png';
 import geckoboard from './logos/geckoboard.png';
 import slack from './logos/slack.png';
-import kinningParkComplex from'./logos/kinningparkcomplex.png';
+import kinningParkComplex from './logos/kinningparkcomplex.png';
 import coop from './logos/coop.png';
 
 const partners = {

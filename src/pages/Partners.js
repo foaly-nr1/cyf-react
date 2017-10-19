@@ -29,7 +29,7 @@ const PartnersText = (
 
 export const Partners = () => (
   <div>
-    <TopSection title="Partner with us" content={PartnersText}/>
+    <TopSection title="Partner with us" content={PartnersText} />
     <PartnerLogos partners={partners} />
     <Support />
   </div>
