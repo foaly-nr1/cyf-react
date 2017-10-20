@@ -30,10 +30,20 @@ describe('LogoListItem', () => {
   });
 
   it('renders an image from a specified source', () => {
-    expect(logoListItem.find('a').find('img').prop('src')).toEqual(props.src);
+    expect(
+      logoListItem
+        .find('a')
+        .find('img')
+        .prop('src')
+    ).toEqual(props.src);
   });
 
   it('renders an image with a name', () => {
-    expect(logoListItem.find('a').find('img').prop('alt')).toEqual(props.alt);
+    expect(
+      logoListItem
+        .find('a')
+        .find('img')
+        .prop('alt')
+    ).toEqual(props.alt);
   });
 });

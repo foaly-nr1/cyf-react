@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^4.3.0",
+    "moment": "^2.19.1",
     "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
@@ -15,10 +17,12 @@
   "devDependencies": {
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-15": "^1.0.1",
+    "prettier": "^1.6.1",
     "react-scripts": "1.0.7",
     "react-test-renderer": "^15.6.1"
   },
   "scripts": {
+    "format": "prettier --write \"src/**/*.js\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
