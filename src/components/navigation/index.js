@@ -31,8 +31,8 @@ const handleLink = linkName => {
     case 'linkedin':
       URL = 'https://www.linkedin.com/company/codeyourfuture';
       break;
-    case 'email':
-      URL = 'mailto:contact@codeyourfuture.co';
+    case "email":
+      URL="mailto:contact@codeyourfuture.io"
       break;
     case 'blog':
       URL = 'https://medium.com/@CodeYourFuture';

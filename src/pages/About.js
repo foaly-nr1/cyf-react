@@ -34,6 +34,8 @@ const AboutText = (
       </Link>
       <br />
       <br />
+    For all other inquiries please contact us at <Link to="mailto:contact@codeyourfuture.io" title="Contact us">contact@codeyourfuture.io</Link>
+    <br /><br />
     </p>
   </div>
 );
