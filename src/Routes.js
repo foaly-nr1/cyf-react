@@ -12,6 +12,7 @@ import { Partners } from './pages/Partners';
 import { About } from './pages/About';
 import Apply from './pages/Apply';
 import { MeetTheTeam } from './pages/MeetTheTeam';
+import { Donate } from './pages/Donate';
 
 import Navigation from './components/navigation';
 import Footer from './components/footer';
@@ -30,6 +31,7 @@ export const Routes = () => (
       <Route exact path="/apply/:form_type" component={Apply} />
       <Route exact path="/partners" component={Partners} />
       <Route exact path="/meet-the-team" component={MeetTheTeam} />
+      <Route exact path="/donate" component={Donate} />
       <Footer />
     </div>
   </Router>
