@@ -17,6 +17,7 @@
   "devDependencies": {
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-15": "^1.0.1",
+    "enzyme-to-json": "^3.2.0",
     "prettier": "^1.6.1",
     "react-scripts": "1.0.7",
     "react-test-renderer": "^15.6.1"
@@ -26,6 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:jest": "jest",
     "eject": "react-scripts eject"
   }
 }

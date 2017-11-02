@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const WhatWeTeach = () => (
+const WhatWeTeach = () => (
   <div className="section-container section-container-gray">
     <div className="container">
       <div className="row">
@@ -50,3 +50,5 @@ export const WhatWeTeach = () => (
     </div>
   </div>
 );
+
+export default WhatWeTeach;

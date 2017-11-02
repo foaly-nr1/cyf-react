@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import '../stylesheets/index.scss';
+import '../../stylesheets/index.scss';
 //TODO: change hrefs to react-bootstrap links
-export const Banner = () => (
+const Banner = () => (
   <div className="page-title">
     <div className="page-title-text">
       <h1>Coding School for Refugees</h1>
@@ -24,3 +24,5 @@ export const Banner = () => (
     </div>
   </div>
 );
+
+export default Banner;

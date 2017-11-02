@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Video = () => (
+const Video = () => (
   <div className="section-container section-container-gray">
     <div className="container">
       <div className="row">
@@ -19,3 +19,5 @@ export const Video = () => (
     </div>
   </div>
 );
+
+export default Video;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const AsSeen = () => (
+const AsSeen = () => (
   <div className="container">
     <div className="row">
       <div className="col-sm-6 col-md-6">
@@ -63,3 +63,5 @@ export const AsSeen = () => (
     </div>
   </div>
 );
+
+export default AsSeen;
