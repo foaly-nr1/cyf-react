@@ -1,349 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Banner Component renders 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Banner />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": null,
-    "nodeType": "host",
-    "props": Object {
-      "children": <div
-        className="page-title-text"
+<div
+  className="page-title"
 >
-        <h1>
-                Coding School for Refugees
-        </h1>
-        <p>
-                Learn to code and find a job
-        </p>
-        <div
-                className="page-title-bottom-link"
-        >
-                <Link
-                        className="big-link-2 btn"
-                        replace={false}
-                        to="students"
-                >
-                        Apply Now
-                </Link>
-                <Link
-                        className="big-link-2 btn"
-                        rel="noopener noreferrer"
-                        replace={false}
-                        target="_blank"
-                        to="volunteers"
-                >
-                        Become a volunteer
-                </Link>
-        </div>
-</div>,
-      "className": "page-title",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": null,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <h1>
-            Coding School for Refugees
-</h1>,
-          <p>
-            Learn to code and find a job
-</p>,
-          <div
-            className="page-title-bottom-link"
->
-            <Link
-                        className="big-link-2 btn"
-                        replace={false}
-                        to="students"
-            >
-                        Apply Now
-            </Link>
-            <Link
-                        className="big-link-2 btn"
-                        rel="noopener noreferrer"
-                        replace={false}
-                        target="_blank"
-                        to="volunteers"
-            >
-                        Become a volunteer
-            </Link>
-</div>,
-        ],
-        "className": "page-title-text",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Coding School for Refugees",
-          },
-          "ref": null,
-          "rendered": "Coding School for Refugees",
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Learn to code and find a job",
-          },
-          "ref": null,
-          "rendered": "Learn to code and find a job",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <Link
-                className="big-link-2 btn"
-                replace={false}
-                to="students"
->
-                Apply Now
-</Link>,
-              <Link
-                className="big-link-2 btn"
-                rel="noopener noreferrer"
-                replace={false}
-                target="_blank"
-                to="volunteers"
->
-                Become a volunteer
-</Link>,
-            ],
-            "className": "page-title-bottom-link",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Apply Now",
-                "className": "big-link-2 btn",
-                "replace": false,
-                "to": "students",
-              },
-              "ref": null,
-              "rendered": "Apply Now",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Become a volunteer",
-                "className": "big-link-2 btn",
-                "rel": "noopener noreferrer",
-                "replace": false,
-                "target": "_blank",
-                "to": "volunteers",
-              },
-              "ref": null,
-              "rendered": "Become a volunteer",
-              "type": [Function],
-            },
-          ],
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": null,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="page-title-text"
->
-          <h1>
-                    Coding School for Refugees
-          </h1>
-          <p>
-                    Learn to code and find a job
-          </p>
-          <div
-                    className="page-title-bottom-link"
-          >
-                    <Link
-                              className="big-link-2 btn"
-                              replace={false}
-                              to="students"
-                    >
-                              Apply Now
-                    </Link>
-                    <Link
-                              className="big-link-2 btn"
-                              rel="noopener noreferrer"
-                              replace={false}
-                              target="_blank"
-                              to="volunteers"
-                    >
-                              Become a volunteer
-                    </Link>
-          </div>
-</div>,
-        "className": "page-title",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h1>
-              Coding School for Refugees
-</h1>,
-            <p>
-              Learn to code and find a job
-</p>,
-            <div
-              className="page-title-bottom-link"
->
-              <Link
-                            className="big-link-2 btn"
-                            replace={false}
-                            to="students"
-              >
-                            Apply Now
-              </Link>
-              <Link
-                            className="big-link-2 btn"
-                            rel="noopener noreferrer"
-                            replace={false}
-                            target="_blank"
-                            to="volunteers"
-              >
-                            Become a volunteer
-              </Link>
-</div>,
-          ],
-          "className": "page-title-text",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": null,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Coding School for Refugees",
-            },
-            "ref": null,
-            "rendered": "Coding School for Refugees",
-            "type": "h1",
-          },
-          Object {
-            "instance": null,
-            "key": null,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Learn to code and find a job",
-            },
-            "ref": null,
-            "rendered": "Learn to code and find a job",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": null,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <Link
-                  className="big-link-2 btn"
-                  replace={false}
-                  to="students"
->
-                  Apply Now
-</Link>,
-                <Link
-                  className="big-link-2 btn"
-                  rel="noopener noreferrer"
-                  replace={false}
-                  target="_blank"
-                  to="volunteers"
->
-                  Become a volunteer
-</Link>,
-              ],
-              "className": "page-title-bottom-link",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "Apply Now",
-                  "className": "big-link-2 btn",
-                  "replace": false,
-                  "to": "students",
-                },
-                "ref": null,
-                "rendered": "Apply Now",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "Become a volunteer",
-                  "className": "big-link-2 btn",
-                  "rel": "noopener noreferrer",
-                  "replace": false,
-                  "target": "_blank",
-                  "to": "volunteers",
-                },
-                "ref": null,
-                "rendered": "Become a volunteer",
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactFifteenAdapter {
-      "options": Object {
-        "supportPrevContextArgumentOfComponentDidUpdate": true,
-      },
-    },
-  },
-}
+  <div
+    className="page-title-text"
+  >
+    <h1>
+      Coding School for Refugees
+    </h1>
+    <p>
+      Learn to code and find a job
+    </p>
+    <div
+      className="page-title-bottom-link"
+    >
+      <Link
+        className="big-link-2 btn"
+        replace={false}
+        to="students"
+      >
+        Apply Now
+      </Link>
+      <Link
+        className="big-link-2 btn"
+        rel="noopener noreferrer"
+        replace={false}
+        target="_blank"
+        to="volunteers"
+      >
+        Become a volunteer
+      </Link>
+    </div>
+  </div>
+</div>
 `;
