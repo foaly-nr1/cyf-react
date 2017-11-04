@@ -2,7 +2,7 @@ import React from 'react';
 import * as firebase from 'firebase';
 import { Link } from 'react-router-dom';
 
-export class AuthLogin extends React.Component {
+class AuthLogin extends React.Component {
   constructor(props) {
     super(props);
 
@@ -92,3 +92,5 @@ AuthLogin.defaultProps = {
   admin: false,
   onAuth: () => {}
 };
+
+export default AuthLogin;

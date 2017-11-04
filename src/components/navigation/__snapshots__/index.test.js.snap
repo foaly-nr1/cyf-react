@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Component renders 1`] = `
+<Uncontrolled(Navbar)
+  bsStyle="default"
+  collapseOnSelect={true}
+>
+  <NavbarHeader>
+    <Link
+      replace={false}
+      to="/"
+    >
+      <img
+        alt="logo"
+        src="cyf_brand.png"
+        style={
+          Object {
+            "height": "50px",
+            "width": "158px",
+          }
+        }
+      />
+    </Link>
+    <NavbarToggle />
+  </NavbarHeader>
+  <NavbarCollapse>
+    <Nav
+      bsClass="nav"
+      justified={false}
+      onSelect={[Function]}
+      pullLeft={false}
+      pullRight={true}
+      stacked={false}
+    >
+      <LinkContainer
+        activeClassName="active"
+        exact={false}
+        replace={false}
+        strict={false}
+        to="/about"
+      >
+        <NavItem
+          active={false}
+          disabled={false}
+          eventKey={1}
+        >
+          About
+        </NavItem>
+      </LinkContainer>
+      <LinkContainer
+        activeClassName="active"
+        exact={false}
+        replace={false}
+        strict={false}
+        to="/students"
+      >
+        <NavItem
+          active={false}
+          disabled={false}
+          eventKey={1}
+        >
+          Students
+        </NavItem>
+      </LinkContainer>
+      <LinkContainer
+        activeClassName="active"
+        exact={false}
+        replace={false}
+        strict={false}
+        to="/volunteers"
+      >
+        <NavItem
+          active={false}
+          disabled={false}
+          eventKey={1}
+        >
+          Volunteers
+        </NavItem>
+      </LinkContainer>
+      <LinkContainer
+        activeClassName="active"
+        exact={false}
+        replace={false}
+        strict={false}
+        to="/events"
+      >
+        <NavItem
+          active={false}
+          disabled={false}
+          eventKey={1}
+        >
+          Events
+        </NavItem>
+      </LinkContainer>
+      <LinkContainer
+        activeClassName="active"
+        exact={false}
+        replace={false}
+        strict={false}
+        to="/partners"
+      >
+        <NavItem
+          active={false}
+          disabled={false}
+          eventKey={1}
+        >
+          Partners
+        </NavItem>
+      </LinkContainer>
+      <LinkContainer
+        activeClassName="active"
+        exact={false}
+        replace={false}
+        strict={false}
+        to="/meet-the-team"
+      >
+        <NavItem
+          active={false}
+          disabled={false}
+          eventKey={1}
+        >
+          Meet the team
+        </NavItem>
+      </LinkContainer>
+      <NavItem
+        active={false}
+        className="nav-icon"
+        disabled={false}
+        eventKey="blog"
+      >
+        Blog
+      </NavItem>
+      <NavItem
+        active={false}
+        className="nav-icon"
+        disabled={false}
+        eventKey="facebook"
+      >
+        <img
+          alt="facebook"
+          src="fb_logo.svg"
+          style={
+            Object {
+              "height": "21px",
+              "width": "20px",
+            }
+          }
+        />
+      </NavItem>
+      <NavItem
+        active={false}
+        className="nav-icon"
+        disabled={false}
+        eventKey="twitter"
+      >
+        <img
+          alt="twitter"
+          src="twitter-silhouette.svg"
+          style={
+            Object {
+              "height": "21px",
+              "width": "20px",
+            }
+          }
+        />
+      </NavItem>
+      <NavItem
+        active={false}
+        className="nav-icon"
+        disabled={false}
+        eventKey="linkedin"
+      >
+        <img
+          alt="linkedin"
+          src="linkedin-logo.svg"
+          style={
+            Object {
+              "height": "21px",
+              "width": "20px",
+            }
+          }
+        />
+      </NavItem>
+      <NavItem
+        active={false}
+        className="nav-icon"
+        disabled={false}
+        eventKey="email"
+      >
+        <img
+          alt="email"
+          src="email-icon.svg"
+          style={
+            Object {
+              "height": "21px",
+              "width": "20px",
+            }
+          }
+        />
+      </NavItem>
+    </Nav>
+  </NavbarCollapse>
+</Uncontrolled(Navbar)>
+`;

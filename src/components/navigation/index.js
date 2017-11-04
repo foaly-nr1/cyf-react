@@ -1,15 +1,13 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
-
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-import cyflogo from '../img/cyf_brand.png';
-import fblogo from '../img/ico/fb_logo.svg';
-import twitterlogo from '../img/ico/twitter-silhouette.svg';
-import linkedinlogo from '../img/ico/linkedin-logo.svg';
-import emaillogo from '../img/ico/email-icon.svg';
+import cyflogo from '../../img/cyf_brand.png';
+import fblogo from '../../img/ico/fb_logo.svg';
+import twitterlogo from '../../img/ico/twitter-silhouette.svg';
+import linkedinlogo from '../../img/ico/linkedin-logo.svg';
+import emaillogo from '../../img/ico/email-icon.svg';
 
 const logoStyle = {
   width: '20px',
@@ -47,7 +45,7 @@ const handleLink = linkName => {
   window.open(URL, '_blank');
 };
 
-export const Navigation = () => (
+const Navigation = () => (
   <Navbar collapseOnSelect>
     <Navbar.Header>
       <Link to="/">
@@ -94,3 +92,5 @@ export const Navigation = () => (
     </Navbar.Collapse>
   </Navbar>
 );
+
+export default Navigation;
