@@ -14,7 +14,7 @@ import Apply from './pages/Apply';
 import { MeetTheTeam } from './pages/MeetTheTeam';
 
 import { Navigation } from './components/Navigation';
-import { Footer } from './components/Footer';
+import Footer from './components/footer';
 
 export const Routes = () => (
   <Router>
