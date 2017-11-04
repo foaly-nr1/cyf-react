@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import TopSection from '../components/top-section';
-import { BottomSection } from '../components/BottomSection';
+import BottomSection from '../components/bottom-section';
 
 export const Volunteers = () => {
   const volunteersText = (

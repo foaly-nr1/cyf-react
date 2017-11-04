@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const BottomSection = ({ link, linkText }) => (
+const BottomSection = ({ link, linkText }) => (
   <div className="section-bottom-link">
     <Link
       className="big-link-3 btn"
@@ -13,3 +13,5 @@ export const BottomSection = ({ link, linkText }) => (
     </Link>
   </div>
 );
+
+export default BottomSection;
