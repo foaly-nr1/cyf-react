@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TopSection from '../components/top-section';
-import { MentorList } from '../components/MentorList';
+import MentorList from '../components/mentor-list';
 
 const Intro = (
   <section id="intro">

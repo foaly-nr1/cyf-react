@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MentorList Component renders correctly 1`] = `
+<styled.section
+  id="mentors"
+>
+  <Styled(MentorCard)
+    firstName="Germán"
+    key="39029a72-8038-4200-a869-fdf7133b84b6"
+    lastName="Bencci"
+    photo="german.jpg"
+    title="Organiser"
+  />
+  <Styled(MentorCard)
+    firstName="Mozafar"
+    key="2c3b7dd1-5875-4440-b385-7f13d0335b12"
+    lastName="Haider"
+    photo="mozafar.jpg"
+    title="Scotland Organiser & React"
+  />
+  <Styled(MentorCard)
+    firstName="Kash"
+    key="598ece43-cef5-43e6-a96a-dda2083e4e3a"
+    lastName="Karimi"
+    photo="kash.jpg"
+    title="Javascript & React"
+  />
+  <Styled(MentorCard)
+    firstName="Amit"
+    key="ae286ac9-62fe-4440-8afd-ab323613eb64"
+    lastName="Shah"
+    photo="amit.jpg"
+    title="Javascript and Final Project"
+  />
+  <Styled(MentorCard)
+    firstName="Simon"
+    key="45cd9d82-4d20-43be-9ff0-2fcd03493a6c"
+    lastName="Legg"
+    photo="simon.jpg"
+    title="Javascript and Final Project"
+  />
+  <Styled(MentorCard)
+    firstName="Bex"
+    key="d5bd4e56-891d-4c72-bcf4-9126a1c50f98"
+    lastName="Bolton"
+    photo="bex.jpg"
+    title="Javascript & NodeJS"
+  />
+  <Styled(MentorCard)
+    firstName="Claudia"
+    key="64ce897d-a233-4743-8485-ef1bc5e5e15c"
+    lastName="Matosa"
+    photo="claudia.jpg"
+    title="HTML, CSS & React"
+  />
+  <Styled(MentorCard)
+    firstName="James"
+    key="8b8aac95-fa7a-4fb6-97d1-8c46d6ce732e"
+    lastName="Wright"
+    photo="james.png"
+    title="NodeJS and Databases"
+  />
+  <Styled(MentorCard)
+    firstName="Nate"
+    key="4c0276c5-307a-467a-9903-c7bdd7ee20c0"
+    lastName="Wright"
+    photo="nate.jpg"
+    title="HTML & CSS"
+  />
+  <Styled(MentorCard)
+    firstName="Will"
+    key="66be523a-d62d-40df-a707-793dd21af2ba"
+    lastName="Wright"
+    photo="will.jpg"
+    title="HTML, CSS & Javascript"
+  />
+  <Styled(MentorCard)
+    firstName="Rob"
+    key="a610878d-4c4e-4b84-9fd3-2e6da52471be"
+    lastName="Gelb"
+    photo="rob.jpg"
+    title="Employment, Company Links"
+  />
+  <styled.div>
+    <Styled(Link)
+      className="big-link-3 btn"
+      to="/volunteers"
+    >
+      Become a volunteer
+    </Styled(Link)>
+  </styled.div>
+</styled.section>
+`;

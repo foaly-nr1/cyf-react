@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import MentorCard from './mentor-card';
-import mentors from '../content/mentors';
-import mediaQueries from '../variables/media-queries';
+import uuidV4 from 'uuid/v4';
+import MentorCard from '../mentor-card';
+import mentors from '../../content/mentors';
+import mediaQueries from '../../variables/media-queries';
 
 const Mentors = styled.section`
   display: flex;
@@ -37,9 +38,9 @@ const CallToAction = styled(Link)`
   margin-top: 33%;
 `;
 
-export const MentorList = () => (
+const MentorList = () => (
   <Mentors id="mentors">
-    {mentors.map(mentor => <Mentor {...mentor} />)}
+    {mentors.map(mentor => <Mentor key={uuidV4()} {...mentor} />)}
 
     <CallToActionContainer>
       <CallToAction className="big-link-3 btn" to="/volunteers">
@@ -48,3 +49,5 @@ export const MentorList = () => (
     </CallToActionContainer>
   </Mentors>
 );
+
+export default MentorList;
