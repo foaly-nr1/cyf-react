@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { AuthLogin } from '../components/AuthLogin';
-import { TopSection } from '../components/TopSection';
+import TopSection from '../components/top-section';
 
 class Event extends React.Component {
   constructor(props) {

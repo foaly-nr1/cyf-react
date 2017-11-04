@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopSection renders correctly 1`] = `
+<div
+  className="section-container top-section"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-8 col-sm-offset-2 section-description"
+      >
+        <h2>
+          Test title
+        </h2>
+        <div
+          className="divider-1"
+        >
+          <span />
+        </div>
+        <div>
+          <p>
+            Testing 1 2 3!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

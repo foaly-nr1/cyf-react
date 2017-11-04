@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TopSection } from '../components/TopSection';
+import TopSection from '../components/top-section';
 import { MentorList } from '../components/MentorList';
 
 const Intro = (

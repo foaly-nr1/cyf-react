@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AuthLogin } from '../components/AuthLogin';
-import { TopSection } from '../components/TopSection';
+import TopSection from '../components/top-section';
 import { EventSummary } from '../components/EventSummary';
 
 export class Events extends React.Component {
