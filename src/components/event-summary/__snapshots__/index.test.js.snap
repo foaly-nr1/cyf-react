@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventSummary renders correctly 1`] = `
+<ul
+  className="no-bullet"
+  style={
+    Object {
+      "borderBottom": "1px solid #ddd",
+      "paddingBottom": "10px",
+      "paddingLeft": 0,
+    }
+  }
+>
+  <div
+    className="row grouped_events"
+  >
+    <div
+      className="event"
+    >
+      <h4
+        className="small-9 medium-10 columns"
+      >
+        <div
+          className="title"
+        >
+          <Link
+            replace={false}
+            to="/events/EVENTID101"
+          >
+            Hacknight
+          </Link>
+           at 
+          <Link
+            replace={false}
+            to="/events/EVENTID101"
+          >
+            Red Badger
+          </Link>
+        </div>
+      </h4>
+      <div
+        className="small-9 medium-10 columns"
+      >
+        Nov 5th, 12:00 pm
+      </div>
+      <div
+        className="small-9 medium-10 columns"
+      >
+        Work on CYF tickets
+      </div>
+    </div>
+  </div>
+</ul>
+`;

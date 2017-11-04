@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { AuthLogin } from '../components/AuthLogin';
 import TopSection from '../components/top-section';
-import { EventSummary } from '../components/EventSummary';
+import EventSummary from '../components/event-summary';
 
 export class Events extends React.Component {
   constructor(props) {
@@ -54,6 +54,7 @@ export class Events extends React.Component {
           />
 
           <div className="col-sm-4 col-sm-offset-4 section-description">
+            {console.log(this.state.events)}
             {Array.reverse(this.state.events).map(event => (
               <EventSummary key={event.id} {...event} />
             ))}
