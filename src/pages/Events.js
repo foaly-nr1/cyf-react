@@ -54,7 +54,6 @@ export class Events extends React.Component {
           />
 
           <div className="col-sm-4 col-sm-offset-4 section-description">
-            {console.log(this.state.events)}
             {Array.reverse(this.state.events).map(event => (
               <EventSummary key={event.id} {...event} />
             ))}
