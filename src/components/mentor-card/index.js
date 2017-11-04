@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Mentor = styled.div`margin-bottom: 2em;`;
+const Mentor = styled.div`
+  margin-bottom: 2em;
+`;
 
-const Photo = styled.img`max-width: 100%;`;
+const Photo = styled.img`
+  max-width: 100%;
+`;
 
-const Name = styled.h4`margin-bottom: 0.2em;`;
+const Name = styled.h4`
+  margin-bottom: 0.2em;
+`;
 
 const FirstName = styled.span`
   &::before,
@@ -24,15 +30,11 @@ const FirstName = styled.span`
   }
 `;
 
-const Title = styled.div`color: gray;`;
+const Title = styled.div`
+  color: gray;
+`;
 
-export const MentorCard = ({
-  className,
-  firstName,
-  lastName,
-  photo,
-  title
-}) => (
+const MentorCard = ({ className, firstName, lastName, photo, title }) => (
   <Mentor className={className}>
     <Photo src={photo} alt={`${firstName} ${lastName}`} />
 
@@ -45,3 +47,5 @@ export const MentorCard = ({
     <Title>{title}</Title>
   </Mentor>
 );
+
+export default MentorCard;

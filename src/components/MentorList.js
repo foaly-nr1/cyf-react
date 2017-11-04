@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { MentorCard } from './MentorCard';
+import MentorCard from './mentor-card';
 import mentors from '../content/mentors';
 import mediaQueries from '../variables/media-queries';
 
