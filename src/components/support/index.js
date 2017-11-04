@@ -1,9 +1,9 @@
 import React from 'react';
-import codeIcon from '../content/icons/code.svg';
-import conferenceHallIcon from '../content/icons/conference-hall.svg';
-import laptopIcon from '../content/icons/laptop.svg';
+import codeIcon from '../../content/icons/code.svg';
+import conferenceHallIcon from '../../content/icons/conference-hall.svg';
+import laptopIcon from '../../content/icons/laptop.svg';
 
-export const Support = () => (
+const Support = () => (
   <div className="section-container">
     <div className="container">
       <div className="row">
@@ -35,3 +35,5 @@ export const Support = () => (
     </div>
   </div>
 );
+
+export default Support;
