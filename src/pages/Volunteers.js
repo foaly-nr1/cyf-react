@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { TopSection } from '../components/TopSection';
-import { BottomSection } from '../components/BottomSection';
+import TopSection from '../components/top-section';
+import BottomSection from '../components/bottom-section';
 
 export const Volunteers = () => {
   const volunteersText = (

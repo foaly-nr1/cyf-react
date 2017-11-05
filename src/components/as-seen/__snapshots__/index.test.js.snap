@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AsSeen renders 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-6 col-md-6"
+    >
+      <h2>
+        As seen in
+      </h2>
+      <div
+        className="divider-1"
+      >
+        <span />
+      </div>
+      <br />
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <Outlet
+      alt="Wired"
+      key="img/media-logos/wired.svg"
+      src="img/media-logos/wired.svg"
+      url="http://www.wired.co.uk/article/codeyourfuture-refugee-coding-school"
+    />
+    <Outlet
+      alt="UNHCR"
+      key="img/media-logos/unhcr.png"
+      src="img/media-logos/unhcr.png"
+      url="http://www.unhcr.org/news/stories/2017/1/586e420c7/volunteers-train-refugees-to-crack-into-london-tech-industry.html"
+    />
+    <Outlet
+      alt="Refugees Deeply"
+      key="img/media-logos/refugees-deeply.jpeg"
+      src="img/media-logos/refugees-deeply.jpeg"
+      url="https://www.newsdeeply.com/refugees/articles/2016/10/19/welcome-to-londons-refugee-coding-school"
+    />
+    <Outlet
+      alt="BBC"
+      key="img/media-logos/BBC.svg"
+      src="img/media-logos/BBC.svg"
+      url="http://www.bbc.co.uk/programmes/p04yzrrg"
+    />
+  </div>
+</div>
+`;

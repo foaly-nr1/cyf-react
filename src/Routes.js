@@ -13,8 +13,8 @@ import { About } from './pages/About';
 import Apply from './pages/Apply';
 import { MeetTheTeam } from './pages/MeetTheTeam';
 
-import { Navigation } from './components/Navigation';
-import { Footer } from './components/Footer';
+import Navigation from './components/navigation';
+import Footer from './components/footer';
 
 export const Routes = () => (
   <Router>

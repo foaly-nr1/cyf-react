@@ -1,7 +1,7 @@
 import React from 'react';
-import { AuthLogin } from '../components/AuthLogin';
+import AuthLogin from '../components/auth-login';
 import { Button, ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
-import { TopSection } from '../components/TopSection';
+import TopSection from '../components/top-section';
 
 const COLOR = { color: '#555' };
 

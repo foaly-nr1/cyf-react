@@ -1,8 +1,8 @@
 import React from 'react';
-import { AsSeen } from '../components/AsSeen';
-import { Banner } from '../components/Banner';
-import { WhatWeTeach } from '../components/WhatWeTeach';
-import { Video } from '../components/Video';
+import AsSeen from '../components/as-seen';
+import Banner from '../components/banner';
+import WhatWeTeach from '../components/what-we-teach';
+import Video from '../components/video';
 
 export const Home = () => (
   <div className="Home">

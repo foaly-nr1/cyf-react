@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video Component renders 1`] = `
+<div
+  className="section-container section-container-gray"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="embed-responsive embed-responsive-16by9"
+      >
+        <iframe
+          allowFullScreen={true}
+          className="embed-responsive-item"
+          frameBorder="0"
+          height="480"
+          src="https://www.youtube.com/embed/LpQUHt2N6rY?rel=0&showinfo=0"
+          title="CodeYourFuture graduate Ehmed shares his story"
+          width="853"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

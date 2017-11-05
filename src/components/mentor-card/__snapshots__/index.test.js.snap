@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MentorCard Component renders correctly 1`] = `
+<styled.div>
+  <styled.img
+    alt="Germán Bencci"
+    src="german.jpg"
+  />
+  <styled.h4>
+    <styled.span>
+      Germán
+    </styled.span>
+    <span>
+      Bencci
+    </span>
+  </styled.h4>
+  <styled.div>
+    Organiser
+  </styled.div>
+</styled.div>
+`;

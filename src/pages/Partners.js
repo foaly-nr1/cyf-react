@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { TopSection } from '../components/TopSection';
+import TopSection from '../components/top-section';
 import { PartnerLogos } from '../components/partners/PartnerLogos';
-import { Support } from '../components/Support';
+import Support from '../components/support';
 import partners from '../content/partners';
 
 const PartnersText = (

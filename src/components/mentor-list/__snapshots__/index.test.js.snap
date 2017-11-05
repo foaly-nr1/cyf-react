@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MentorList Component renders correctly 1`] = `
+<styled.section
+  id="mentors"
+>
+  <Styled(MentorCard)
+    firstName="Germán"
+    key="1"
+    lastName="Bencci"
+    photo="german.jpg"
+    title="Organiser"
+  />
+  <Styled(MentorCard)
+    firstName="Mozafar"
+    key="1"
+    lastName="Haider"
+    photo="mozafar.jpg"
+    title="Scotland Organiser & React"
+  />
+  <Styled(MentorCard)
+    firstName="Kash"
+    key="1"
+    lastName="Karimi"
+    photo="kash.jpg"
+    title="Javascript & React"
+  />
+  <Styled(MentorCard)
+    firstName="Amit"
+    key="1"
+    lastName="Shah"
+    photo="amit.jpg"
+    title="Javascript and Final Project"
+  />
+  <Styled(MentorCard)
+    firstName="Simon"
+    key="1"
+    lastName="Legg"
+    photo="simon.jpg"
+    title="Javascript and Final Project"
+  />
+  <Styled(MentorCard)
+    firstName="Bex"
+    key="1"
+    lastName="Bolton"
+    photo="bex.jpg"
+    title="Javascript & NodeJS"
+  />
+  <Styled(MentorCard)
+    firstName="Claudia"
+    key="1"
+    lastName="Matosa"
+    photo="claudia.jpg"
+    title="HTML, CSS & React"
+  />
+  <Styled(MentorCard)
+    firstName="James"
+    key="1"
+    lastName="Wright"
+    photo="james.png"
+    title="NodeJS and Databases"
+  />
+  <Styled(MentorCard)
+    firstName="Nate"
+    key="1"
+    lastName="Wright"
+    photo="nate.jpg"
+    title="HTML & CSS"
+  />
+  <Styled(MentorCard)
+    firstName="Will"
+    key="1"
+    lastName="Wright"
+    photo="will.jpg"
+    title="HTML, CSS & Javascript"
+  />
+  <Styled(MentorCard)
+    firstName="Rob"
+    key="1"
+    lastName="Gelb"
+    photo="rob.jpg"
+    title="Employment, Company Links"
+  />
+  <styled.div>
+    <Styled(Link)
+      className="big-link-3 btn"
+      to="/volunteers"
+    >
+      Become a volunteer
+    </Styled(Link)>
+  </styled.div>
+</styled.section>
+`;

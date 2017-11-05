@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AuthLogin } from '../components/AuthLogin';
-import { TopSection } from '../components/TopSection';
-import { EventSummary } from '../components/EventSummary';
+import AuthLogin from '../components/auth-login';
+import TopSection from '../components/top-section';
+import EventSummary from '../components/event-summary';
 
 export class Events extends React.Component {
   constructor(props) {
