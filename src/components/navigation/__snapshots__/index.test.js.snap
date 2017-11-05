@@ -82,21 +82,6 @@ exports[`Navigation Component renders 1`] = `
         exact={false}
         replace={false}
         strict={false}
-        to="/events"
-      >
-        <NavItem
-          active={false}
-          disabled={false}
-          eventKey={1}
-        >
-          Events
-        </NavItem>
-      </LinkContainer>
-      <LinkContainer
-        activeClassName="active"
-        exact={false}
-        replace={false}
-        strict={false}
         to="/partners"
       >
         <NavItem
