@@ -66,9 +66,9 @@ export const Navigation = () => (
         <LinkContainer to="/volunteers">
           <NavItem eventKey={1}>Volunteers</NavItem>
         </LinkContainer>
-        <LinkContainer to="/events">
+        {/* <LinkContainer to="/events">
           <NavItem eventKey={1}>Events</NavItem>
-        </LinkContainer>
+        </LinkContainer> */}
         <LinkContainer to="/partners">
           <NavItem eventKey={1}>Partners</NavItem>
         </LinkContainer>

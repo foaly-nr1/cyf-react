@@ -61,7 +61,7 @@ export class Events extends React.Component {
             <AuthLogin admin={true}>
               <Link className="big-link-3 btn" to="/event/create">
                 Create New Event
-              </Link>
+              </Link>         
             </AuthLogin>
           </div>
         </div>
