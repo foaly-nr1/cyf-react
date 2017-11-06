@@ -2,7 +2,9 @@
 
 # dependencies
 /node_modules
-/functions/node_modules
+/lambda/node_modules
+/lambda/test-POST.yml
+/lambda/.serverless
 
 # IDEs
 .idea/
