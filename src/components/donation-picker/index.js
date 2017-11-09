@@ -40,7 +40,6 @@ class DonationPicker extends React.Component {
   };
 
   onTokenSuccess = token => {
-    console.log('Token captured...', token);
     if (this.props.onTokenCapture) {
       this.props.onTokenCapture(token.id, this.state.amount);
     }

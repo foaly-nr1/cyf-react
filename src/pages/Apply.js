@@ -1,34 +1,80 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'react-emotion';
+import {
+  StudentApplicationForm,
+} from 'components';
+import { pipedriveApi } from 'api';
 
-const renderNewStudentForm = () => {
-  return (
-    <div>
-      <h3>Student Application</h3>
-      <div
-        className="pipedriveWebForms"
-        data-pd-webforms="https://pipedrivewebforms.com/form/6ac7f54a829b720f215a51e2b2066ca71464438"
-      />
-    </div>
-  );
-};
+const Container = styled('div')`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
 
 export default class Apply extends Component {
-  render() {
-    const { form_type } = this.props.match.params;
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      country: '',
+      city: '',
+      refugee: '',
+      programming: '',
+      phone: '',
+      motivation: '',
+      errorMessage: '',
+    };
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
 
+  onChange(field) {
+    return (event) => {
+      event.preventDefault();
+      this.setState({ [field]: event.target.value });
+    };
+  }
+
+  onSubmit() {
+    const data = {
+      name: this.state.name,
+      email: this.state.email,
+      country: this.state.country,
+      city: this.state.city,
+      refugee: this.state.refugee,
+      programming: this.state.programming,
+      phone: this.state.phone,
+      motivation: this.state.motivation,
+    };
+
+    pipedriveApi.addStudent(data)
+      .then(() => {
+        this.props.history.push('/apply/success/student');
+      })
+      .catch(() => {
+        this.setState({
+          errorMessage: 'Woops! Sorry, there was an error while handling your application. Please try again later.'
+        });
+      });
+  }
+
+  getFormUrl() {
     const volunteersForm = {
-      URL: 'https://cyf.typeform.com/to/ah1IJ8'
+      URL: 'https://cyf.typeform.com/to/ah1IJ8',
     };
     const mentorsForm = {
-      URL: 'https://cyf.typeform.com/to/Cx23Wk'
+      URL: 'https://cyf.typeform.com/to/Cx23Wk',
     };
     // Temporarily removing student typeform to use pipedrive form
     // const StudentForm = {
-    //   URL: "https://cyf.typeform.com/to/DmL54Y"
+      //   URL: "https://cyf.typeform.com/to/DmL54Y"
     // }
 
     let formURL = '';
-    switch (form_type) {
+    switch (this.props.match.params.formType) {
       case 'volunteer':
         formURL = volunteersForm.URL;
         break;
@@ -41,12 +87,29 @@ export default class Apply extends Component {
       default:
         break;
     }
+    return formURL;
+  }
+
+  render() {
+    const { formType } = this.props.match.params;
 
     return (
-      <div className="section-container top-section">
-        <div className="container">
-          {form_type === 'student' ? (
-            renderNewStudentForm()
+      <Container>
+        {
+          formType === 'student' ? (
+            <StudentApplicationForm
+              name={this.state.name}
+              email={this.state.email}
+              country={this.state.country}
+              city={this.state.city}
+              refugee={this.state.refugee}
+              programming={this.state.programming}
+              phone={this.state.phone}
+              motivation={this.state.motivation}
+              errorMessage={this.state.errorMessage}
+              onChange={this.onChange}
+              onSubmit={this.onSubmit}
+            />
           ) : (
             <iframe
               id="typeform-full"
@@ -54,11 +117,16 @@ export default class Apply extends Component {
               width="100%"
               height="100%"
               frameBorder="0"
-              src={formURL}
+              src={this.getFormUrl()}
             />
-          )}
-        </div>
-      </div>
+          )
+        }
+      </Container>
     );
   }
 }
+
+Apply.propTypes = {
+  match: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+};
