@@ -1,4 +1,7 @@
-'use strict';
-const stripe = require('./functions/stripe');
+import stripe from './functions/stripe';
+import pipedrive from './functions/pipedrive/pipedrive';
 
-module.exports.stripe = stripe;
+export {
+  stripe,
+  pipedrive,
+};
