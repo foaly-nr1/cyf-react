@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import registerServiceWorker from './registerServiceWorker';
-import { Routes } from './Routes';
+import Routes from './Routes';
 
 import * as firebase from 'firebase';
 
