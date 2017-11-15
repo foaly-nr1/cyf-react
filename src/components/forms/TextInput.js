@@ -6,6 +6,7 @@ import {
   FormControl,
   FormGroup,
 } from 'react-bootstrap';
+import ValidationErrors from './ValidationErrors';
 
 const StyledFormGroup = styled(FormGroup)`
   display: flex;
@@ -24,23 +25,37 @@ const TextInput = props => (
     {props.label && <StyledControlLabel>{props.label}</StyledControlLabel>}
     <FormControl
       componentClass="input"
-      onChange={props.onChange}
+      type={props.type}
+      onChange={event => props.onChange(event.target.value)}
       placeholder={props.placeholder}
       value={props.value}
+      style={{
+        color: 'black',
+        fontSize: '1.75rem',
+        fontWeight: 500,
+      }}
+      onBlur={event => props.onBlur(event.target.value)}
     />
+    <ValidationErrors errors={props.errors} />
   </StyledFormGroup>
 );
 
 TextInput.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string.isRequired,
+  type: PropTypes.string,
   placeholder: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  onBlur: PropTypes.func,
+  errors: PropTypes.arrayOf(PropTypes.string),
 };
 
 TextInput.defaultProps = {
+  type: 'text',
   label: '',
   placeholder: '',
+  errors: [],
+  onBlur: () => {},
 };
 
 export default TextInput;

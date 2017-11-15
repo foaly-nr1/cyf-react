@@ -6,6 +6,8 @@ import {
 } from 'components';
 import { Persist } from 'react-persist';
 import { pipedriveApi } from 'api';
+import { Validator, checks } from 'form-validation';
+import rules from './Apply.validation.js';
 
 const Container = styled('div')`
   display: flex;
@@ -32,37 +34,51 @@ export default class Apply extends Component {
     super(props);
     this.state = initialState;
     this.onChange = this.onChange.bind(this);
+    this.onBlur = this.onBlur.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    // Construct form validation for this component given
+    // the rules object defined in `rules`.
+    this.validator = new Validator(rules, this);
   }
 
   onChange(field) {
-    return (event) => {
-      event.preventDefault();
-      this.setState({ [field]: event.target.value });
+    return (value) => {
+      this.validator.validateSingleField(field, 'onChange', value);
+      if (field === 'phone') {
+        if (!checks.isNumeric(value)) return;
+      }
+      this.setState({ [field]: value });
     };
   }
 
-  onSubmit() {
-    const data = {
-      name: this.state.name,
-      email: this.state.email,
-      country: this.state.country,
-      city: this.state.city,
-      refugee: this.state.refugee,
-      programming: this.state.programming,
-      phone: this.state.phone,
-      motivation: this.state.motivation,
-    };
+  onBlur(field) {
+    return value => this.validator.validateSingleField(field, 'onBlur', value);
+  }
 
-    pipedriveApi.addStudent(data)
-      .then(() => {
-        this.props.history.push('/apply/success/student');
-      })
-      .catch(() => {
-        this.setState({
-          errorMessage: 'Woops! Sorry, there was an error while handling your application. Please try again later.'
+  onSubmit() {
+    if (this.validator.validateAllFields('onSubmit')) {
+      const data = {
+        name: this.state.name,
+        email: this.state.email,
+        country: this.state.country,
+        city: this.state.city,
+        refugee: this.state.refugee,
+        programming: this.state.programming,
+        phone: this.state.phone,
+        motivation: this.state.motivation,
+      };
+
+      pipedriveApi.addStudent(data)
+        .then(() => {
+          this.setState(initialState);
+          this.props.history.push('/apply/success/student');
+        })
+        .catch(() => {
+          this.setState({
+            submitMessage: 'Woops! Sorry, there was an error while handling your application. Please try again later.',
+          });
         });
-      });
+    }
   }
 
   getFormUrl() {
@@ -116,9 +132,11 @@ export default class Apply extends Component {
               programming={this.state.programming}
               phone={this.state.phone}
               motivation={this.state.motivation}
-              errorMessage={this.state.errorMessage}
+              submitMessage={this.state.submitMessage}
               onChange={this.onChange}
+              onBlur={this.onBlur}
               onSubmit={this.onSubmit}
+              validationErrors={this.state.validationErrors}
             />
           ) : (
             <iframe
