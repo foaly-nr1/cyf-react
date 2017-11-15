@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.17.0",
     "babel-plugin-emotion": "^8.0.9",
+    "country-list": "^1.1.0",
     "emotion": "^8.0.9",
     "firebase": "^4.3.0",
     "moment": "^2.19.1",

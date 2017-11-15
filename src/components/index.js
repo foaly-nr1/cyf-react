@@ -1,9 +1,10 @@
 import StudentApplicationForm from './student-application';
-import { TextAreaInput, RadioInput, TextInput } from './forms';
+import { DropdownInput, TextAreaInput, RadioInput, TextInput } from './forms';
 
 export {
   StudentApplicationForm,
   TextAreaInput,
   RadioInput,
   TextInput,
+  DropdownInput,
 };

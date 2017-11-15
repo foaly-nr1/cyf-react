@@ -5,9 +5,12 @@ import {
   TextAreaInput,
   RadioInput,
   TextInput,
+  DropdownInput,
 } from 'components';
 import { Button } from 'react-bootstrap';
+import Countries from 'country-list';
 
+const countries = Countries();
 
 const FormOuterContainer = styled('div')`
   display: flex;
@@ -59,7 +62,6 @@ const StudentApplicationForm = props => (
       <span>
         Please fill out the form below so we can proceed with your application.
       </span>
-      {/* <FormInnerContainer /> */}
       <Form>
         <TextInput
           label="What is your name? (First and Last Name) *"
@@ -73,11 +75,12 @@ const StudentApplicationForm = props => (
           value={props.email}
           placeholder="example@example.com"
         />
-        <TextInput
+        <DropdownInput
           label="Where are you from? *"
           onChange={props.onChange('country')}
           value={props.country}
-          placeholder="Your country of country..."
+          items={countries.getNames()}
+          errors={props.validationErrors.country}
         />
         <TextInput
           label="In what city do you live? *"
