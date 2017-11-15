@@ -4,6 +4,7 @@ import styled from 'react-emotion';
 import {
   StudentApplicationForm,
 } from 'components';
+import { Persist } from 'react-persist';
 import { pipedriveApi } from 'api';
 
 const Container = styled('div')`
@@ -13,20 +14,23 @@ const Container = styled('div')`
   width: 100%;
 `;
 
+const initialState = {
+  name: '',
+  email: '',
+  country: '',
+  city: '',
+  refugee: '',
+  programming: '',
+  phone: '',
+  motivation: '',
+  submitMessage: '',
+  validationErrors: {},
+};
+
 export default class Apply extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: '',
-      email: '',
-      country: '',
-      city: '',
-      refugee: '',
-      programming: '',
-      phone: '',
-      motivation: '',
-      errorMessage: '',
-    };
+    this.state = initialState;
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -95,6 +99,12 @@ export default class Apply extends Component {
 
     return (
       <Container>
+        <Persist
+          name="student-application-form"
+          data={this.state}
+          debounce={500}
+          onMount={data => this.setState(data)}
+        />
         {
           formType === 'student' ? (
             <StudentApplicationForm
