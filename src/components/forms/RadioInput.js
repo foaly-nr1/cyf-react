@@ -6,6 +6,7 @@ import {
   ToggleButtonGroup,
   ToggleButton,
 } from 'react-bootstrap';
+import ValidationErrors from './ValidationErrors';
 
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)`
   margin: 20px 0 20px 0;
@@ -28,7 +29,8 @@ const RadioInput = props => (
     {
       props.choices.map(choice => (
         <StyledToggleButton
-          onChange={props.onChange}
+          onChange={event => props.onChange(event.target.value)}
+          onBlur={event => props.onBlur(event.target.value)}
           checked={props.checked === choice.value}
           value={choice.value}
           key={choice.value}
@@ -38,6 +40,7 @@ const RadioInput = props => (
         </StyledToggleButton>
       ))
     }
+    <ValidationErrors errors={props.errors} />
   </StyledToggleButtonGroup>
 );
 
@@ -49,11 +52,16 @@ RadioInput.propTypes = {
   })).isRequired,
   checked: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  onBlur: PropTypes.func,
+  errors: PropTypes.arrayOf(PropTypes.string),
 };
 
 RadioInput.defaultProps = {
   label: '',
   checked: '',
+  onBlur: () => {},
+  errors: [],
 };
+
 
 export default RadioInput;

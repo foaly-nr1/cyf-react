@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import {
   ControlLabel,
-  FormControl,
+  DropdownButton,
   FormGroup,
+  MenuItem,
 } from 'react-bootstrap';
 import ValidationErrors from './ValidationErrors';
 
@@ -20,42 +21,35 @@ const StyledControlLabel = styled(ControlLabel)`
   margin-bottom: 20px;
 `;
 
-const TextInput = props => (
+const DropdownInput = props => (
   <StyledFormGroup>
     {props.label && <StyledControlLabel>{props.label}</StyledControlLabel>}
-    <FormControl
-      componentClass="input"
-      type={props.type}
-      onChange={event => props.onChange(event.target.value)}
-      placeholder={props.placeholder}
-      value={props.value}
-      style={{
-        color: 'black',
-        fontSize: '1.75rem',
-        fontWeight: 500,
-      }}
-      onBlur={event => props.onBlur(event.target.value)}
-    />
+    <DropdownButton
+      onSelect={props.onChange}
+      title={props.value || 'Your country'}
+      id="dropdown-basic-1"
+    >
+      {props.items.map(item => (
+        <MenuItem key={item} eventKey={item}>
+          {item}
+        </MenuItem>
+      ))}
+    </DropdownButton>
     <ValidationErrors errors={props.errors} />
   </StyledFormGroup>
 );
 
-TextInput.propTypes = {
+DropdownInput.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string.isRequired,
-  type: PropTypes.string,
-  placeholder: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  onBlur: PropTypes.func,
+  items: PropTypes.array.isRequired,
   errors: PropTypes.arrayOf(PropTypes.string),
 };
 
-TextInput.defaultProps = {
-  type: 'text',
+DropdownInput.defaultProps = {
   label: '',
-  placeholder: '',
   errors: [],
-  onBlur: () => {},
 };
 
-export default TextInput;
+export default DropdownInput;
