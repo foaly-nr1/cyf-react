@@ -1,0 +1,18 @@
+{
+    "resource": "/",
+    "path": "/database",
+    "httpMethod": "POST",
+    "body": {
+        "type": "addStudent",
+        "data": {
+            "name": "james",
+            "email": "james@james.com",
+            "phone": "010101010101",
+            "country": "Angola",
+            "city": "London",
+            "refugee": "No",
+            "programming": "Some",
+            "motivation": "Hello I'm motivated."
+        }
+    }
+}

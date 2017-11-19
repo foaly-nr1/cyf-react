@@ -1,5 +1,13 @@
 service: cyf
 
+# Use serverless-webpack plugin to transpile ES6/ES7
+plugins:
+  - serverless-webpack
+
+# Enable auto-packing of external modules
+custom:
+  webpackIncludeModules: true
+
 provider:
   name: aws
   runtime: nodejs6.10
@@ -12,11 +20,10 @@ provider:
       Resource: '*'
 
 functions:
-
   donate:
     handler: handler.stripe
-    environment: ${file(env.yml):${opt:stage}}
-    description: Handles Stripe requests
+    environment: ${file(env.donate.yml):${opt:stage}}
+    description: Handles Stripe requests.
     events:
       - http:
           path: donate
@@ -32,3 +39,23 @@ functions:
               - X-Amz-Security-Token
               - X-Amz-User-Agent
               - Access-Control-Allow-Origin
+
+  pipedrive:
+    handler: handler.pipedrive
+    environment: ${file(env.pipedrive.yml):${opt:stage}}
+    description: Handles reading and writting the PipeDrive account.
+    events:
+          - http:
+              path: database
+              method: POST
+              integration: lambda
+              cors:
+                origin: '*'
+                headers:
+                  - Content-Type
+                  - X-Amz-Date
+                  - Authorization
+                  - X-Api-Key
+                  - X-Amz-Security-Token
+                  - X-Amz-User-Agent
+                  - Access-Control-Allow-Origin

@@ -1,9 +1,19 @@
-const AWS = require('aws-sdk');
-const ssm = new AWS.SSM({ region: 'eu-west-1' });
+import Aws from 'aws-sdk';
 
-exports.getParameter = (name) => new Promise((resolve, reject) => {
-  ssm.getParameters({ Names: [name], WithDecryption: true }, (err, data) => {
-    if (err) return reject(err);
-    return resolve(data['Parameters'][0]['Value'])
+const ssm = new Aws.SSM({ region: 'eu-west-1' });
+
+const getSSMParameter = name => (
+  new Promise((resolve, reject) => {
+    ssm.getParameters(
+      {
+        Names: [name],
+        WithDecryption: true,
+      },
+      (err, data) => (
+        err ? reject(err) : resolve(data.Parameters[0].Value)
+      ),
+    );
   })
-});
+);
+
+export default getSSMParameter;

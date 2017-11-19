@@ -1,34 +1,104 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'react-emotion';
+import {
+  StudentApplicationForm,
+} from 'components';
+import { Persist } from 'react-persist';
+import { pipedriveApi } from 'api';
+import { Validator, checks } from 'form-validation';
+import rules from './Apply.validation.js';
+import scrollToElement from 'scroll-to-element';
 
-const renderNewStudentForm = () => {
-  return (
-    <div>
-      <h3>Student Application</h3>
-      <div
-        className="pipedriveWebForms"
-        data-pd-webforms="https://pipedrivewebforms.com/form/6ac7f54a829b720f215a51e2b2066ca71464438"
-      />
-    </div>
-  );
+const Container = styled('div')`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
+
+const initialState = {
+  name: '',
+  email: '',
+  country: '',
+  city: '',
+  refugee: '',
+  programming: '',
+  phone: '',
+  motivation: '',
+  submitMessage: '',
+  validationErrors: {},
 };
 
 export default class Apply extends Component {
-  render() {
-    const { form_type } = this.props.match.params;
+  constructor(props) {
+    super(props);
+    this.state = initialState;
+    this.onChange = this.onChange.bind(this);
+    this.onBlur = this.onBlur.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    // Construct form validation for this component given
+    // the rules object defined in `rules`.
+    this.validator = new Validator(rules, this);
+  }
 
+  onChange(field) {
+    return (value) => {
+      this.validator.validateSingleField(field, 'onChange', value);
+      if (field === 'phone') {
+        if (!checks.isNumeric(value)) return;
+        if (value.length > 15) return;
+      }
+      this.setState({ [field]: value });
+    };
+  }
+
+  onBlur(field) {
+    return value => this.validator.validateSingleField(field, 'onBlur', value);
+  }
+
+  onSubmit() {
+    if (this.validator.validateAllFields('onSubmit')) {
+      const data = {
+        name: this.state.name,
+        email: this.state.email,
+        country: this.state.country,
+        city: this.state.city,
+        refugee: this.state.refugee,
+        programming: this.state.programming,
+        phone: this.state.phone,
+        motivation: this.state.motivation,
+      };
+
+      pipedriveApi.addStudent(data)
+        .then(() => {
+          this.setState(initialState);
+          this.props.history.push('/apply/success/student');
+        })
+        .catch(() => {
+          this.setState({
+            submitMessage: 'Woops! Sorry, there was an error while handling your application. Please try again later.',
+          });
+        });
+    } else {
+      scrollToElement('.title', { align: 'top' });
+    }
+  }
+
+  getFormUrl() {
     const volunteersForm = {
-      URL: 'https://cyf.typeform.com/to/ah1IJ8'
+      URL: 'https://cyf.typeform.com/to/ah1IJ8',
     };
     const mentorsForm = {
-      URL: 'https://cyf.typeform.com/to/Cx23Wk'
+      URL: 'https://cyf.typeform.com/to/Cx23Wk',
     };
     // Temporarily removing student typeform to use pipedrive form
     // const StudentForm = {
-    //   URL: "https://cyf.typeform.com/to/DmL54Y"
+      //   URL: "https://cyf.typeform.com/to/DmL54Y"
     // }
 
     let formURL = '';
-    switch (form_type) {
+    switch (this.props.match.params.formType) {
       case 'volunteer':
         formURL = volunteersForm.URL;
         break;
@@ -41,12 +111,37 @@ export default class Apply extends Component {
       default:
         break;
     }
+    return formURL;
+  }
+
+  render() {
+    const { formType } = this.props.match.params;
 
     return (
-      <div className="section-container top-section">
-        <div className="container">
-          {form_type === 'student' ? (
-            renderNewStudentForm()
+      <Container>
+        <Persist
+          name="student-application-form"
+          data={this.state}
+          debounce={500}
+          onMount={data => this.setState(data)}
+        />
+        {
+          formType === 'student' ? (
+            <StudentApplicationForm
+              name={this.state.name}
+              email={this.state.email}
+              country={this.state.country}
+              city={this.state.city}
+              refugee={this.state.refugee}
+              programming={this.state.programming}
+              phone={this.state.phone}
+              motivation={this.state.motivation}
+              submitMessage={this.state.submitMessage}
+              onChange={this.onChange}
+              onBlur={this.onBlur}
+              onSubmit={this.onSubmit}
+              validationErrors={this.state.validationErrors}
+            />
           ) : (
             <iframe
               id="typeform-full"
@@ -54,11 +149,16 @@ export default class Apply extends Component {
               width="100%"
               height="100%"
               frameBorder="0"
-              src={formURL}
+              src={this.getFormUrl()}
             />
-          )}
-        </div>
-      </div>
+          )
+        }
+      </Container>
     );
   }
 }
+
+Apply.propTypes = {
+  match: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+};
