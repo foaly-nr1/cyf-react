@@ -7,13 +7,15 @@ const Container = styled('div')`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2rem;
+  text-align: left;
 `;
 
 const ApplySuccess = (props) => {
   let SuccessContent;
   switch (props.match.params.formType) {
     case 'student':
-      SuccessContent = <span>Success! Write a success message and style for Students here.</span>
+      SuccessContent = <span>Many thanks for submitting your application! <br /> <br /> Write to <b>applicants@codeyourfuture.io</b> to notify us of your submission. We will send you instructions for the next steps.</span>
       break;
     case 'mentor':
       SuccessContent = <span>Success! Write a success message and style for Mentors here.</span>

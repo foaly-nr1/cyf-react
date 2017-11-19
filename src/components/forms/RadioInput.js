@@ -8,15 +8,28 @@ import {
 } from 'react-bootstrap';
 import ValidationErrors from './ValidationErrors';
 
+
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)`
   margin: 20px 0 20px 0;
 `;
 
 const StyledToggleButton = styled(ToggleButton)`
+  height: 7rem;
+  display: flex;
+  flex-directon: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const StyledControlLabel = styled(ControlLabel)`
   margin-bottom: 20px;
+  text-align: left;
+`;
+
+const LabelContainer = styled('div')`
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-wight: 500;
 `;
 
 const RadioInput = props => (
@@ -36,7 +49,9 @@ const RadioInput = props => (
           key={choice.value}
           bsStyle={props.checked === choice.value ? 'success' : undefined}
         >
-          {choice.label}
+          <LabelContainer>
+            {choice.label}
+          </LabelContainer>
         </StyledToggleButton>
       ))
     }
