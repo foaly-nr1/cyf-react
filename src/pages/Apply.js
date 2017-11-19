@@ -8,6 +8,7 @@ import { Persist } from 'react-persist';
 import { pipedriveApi } from 'api';
 import { Validator, checks } from 'form-validation';
 import rules from './Apply.validation.js';
+import scrollToElement from 'scroll-to-element';
 
 const Container = styled('div')`
   display: flex;
@@ -46,6 +47,7 @@ export default class Apply extends Component {
       this.validator.validateSingleField(field, 'onChange', value);
       if (field === 'phone') {
         if (!checks.isNumeric(value)) return;
+        if (value.length > 15) return;
       }
       this.setState({ [field]: value });
     };
@@ -78,6 +80,8 @@ export default class Apply extends Component {
             submitMessage: 'Woops! Sorry, there was an error while handling your application. Please try again later.',
           });
         });
+    } else {
+      scrollToElement('.title', { align: 'top' });
     }
   }
 

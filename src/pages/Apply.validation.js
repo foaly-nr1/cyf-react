@@ -24,7 +24,7 @@ const rules = {
   country: [
     {
       check: 'required',
-      errorMessage: 'Please tell us where you are from',
+      errorMessage: 'Please tell us from which country you are from',
       events: ['onSubmit', 'onChange', 'onBlur'],
     },
   ],
@@ -53,19 +53,24 @@ const rules = {
     {
       check: 'isNumeric',
       errorMessage: 'Please enter a valid phone number',
-      events: ['onChange'],
+      events: ['onSubmit', 'onBlur', 'onChange'],
     },
     {
       check: 'required',
-      errorMessage: 'Please enter your phone number',
-      events: ['onSubmit', 'onChange', 'onBlur'],
+      errorMessage: 'Please enter a phone number',
+      events: ['onSubmit', 'onBlur', 'onChange'],
     },
   ],
   motivation: [
     {
-      check: 'minimum300Words',
-      errorMessage: 'Please tell us a bit more about your motivation (300 words)',
+      check: 'required',
+      errorMessage: 'Please tell us about your motivation (100 words)',
       events: ['onSubmit', 'onChange', 'onBlur'],
+    },
+    {
+      check: 'minimum100Words',
+      errorMessage: 'Please tell us a bit more about your motivation (100 words)',
+      events: ['onSubmit', 'onBlur'],
     },
   ],
 };

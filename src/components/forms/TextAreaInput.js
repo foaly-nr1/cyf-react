@@ -27,15 +27,18 @@ const StyledControlLabel = styled(ControlLabel)`
   text-align: left;
 `;
 
-const wordCountSpan = styled('span')`
-  margin: 10px 10px 10px 0;
-  color: red;
+const WordCountContainer = styled('div')`
+  margin: 0 0 5px 0;
+  text-align: left;
 `;
 
 const TextAreaInput = props => (
   <Container>
     <FormGroup>
       {props.label && <StyledControlLabel>{props.label}</StyledControlLabel>}
+      {
+        props.wordCount && <WordCountContainer><span>Number of words: {countWords(props.value)}</span></WordCountContainer>
+      }
       <StyledFormControl
         componentClass="textarea"
         rows="20"
@@ -45,14 +48,11 @@ const TextAreaInput = props => (
         value={props.value}
         style={{
           color: 'black',
-          fontSize: '1.75rem',
+          fontSize: '2rem',
           fontWeight: 500,
         }}
       />
     </FormGroup>
-    {
-      props.wordCount && <wordCountSpan>Number of words: {countWords(props.value)}</wordCountSpan>
-    }
     <ValidationErrors errors={props.errors} />
   </Container>
 );

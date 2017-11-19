@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 
 const ErrorSpan = styled('span')`
   color: red;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 10px 0 10px 0;
 `;
 

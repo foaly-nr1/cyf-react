@@ -49,9 +49,9 @@ const Form = styled('form')`
 `;
 
 
-const SubmitSpan = styled('span')`
+const SubmitErrorSpan = styled('span')`
   color: red;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 20px 0 20px 0;
 `;
 
@@ -59,9 +59,15 @@ const StudentApplicationForm = props => (
   <FormOuterContainer>
     <h3>Student Application</h3>
     <FormInnerContainer>
-      <span>
+      <span className="title">
         Please fill out the form below so we can proceed with your application.
       </span>
+      {
+        Object.keys(props.validationErrors).map(key => props.validationErrors[key].length).some(length => length > 0) &&
+        <SubmitErrorSpan>
+          There are some errors in the form, please correct them before submitting :)
+        </SubmitErrorSpan>
+      }
       <Form>
         <TextInput
           label="What is your name? (First and Last Name) *"
@@ -81,11 +87,12 @@ const StudentApplicationForm = props => (
           type="email"
           errors={props.validationErrors.email}
         />
-        <DropdownInput
+        <TextInput
           label="Where are you from? *"
           onChange={props.onChange('country')}
+          onBlur={props.onBlur('country')}
           value={props.country}
-          items={countries.getNames()}
+          placeholder="e.g. Iran"
           errors={props.validationErrors.country}
         />
         <TextInput
@@ -130,7 +137,7 @@ const StudentApplicationForm = props => (
           errors={props.validationErrors.phone}
         />
         <TextAreaInput
-          label="Why do you want to join CYF and learn programming? (Please write at least 300 words) *"
+          label="Why do you want to join CYF and learn programming? (Please write at least 100 words) *"
           onChange={props.onChange('motivation')}
           onBlur={props.onBlur('motivation')}
           value={props.motivation}
@@ -139,7 +146,7 @@ const StudentApplicationForm = props => (
           errors={props.validationErrors.motivation}
         />
       </Form>
-      {props.submitMessage && <SubmitSpan>{props.submitMessage}</SubmitSpan>}
+      {props.submitMessage && <SubmitErrorSpan>{props.submitMessage}</SubmitErrorSpan>}
       <Button onClick={props.onSubmit}>Submit</Button>
     </FormInnerContainer>
   </FormOuterContainer>

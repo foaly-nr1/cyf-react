@@ -18,6 +18,7 @@ const StyledFormGroup = styled(FormGroup)`
 
 const StyledControlLabel = styled(ControlLabel)`
   margin-bottom: 20px;
+  text-align: left;
 `;
 
 const TextInput = props => (
@@ -31,8 +32,9 @@ const TextInput = props => (
       value={props.value}
       style={{
         color: 'black',
-        fontSize: '1.75rem',
+        fontSize: '2.5rem',
         fontWeight: 500,
+        height: '7rem',
       }}
       onBlur={event => props.onBlur(event.target.value)}
     />
