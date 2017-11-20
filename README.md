@@ -34,7 +34,7 @@ To get access to Trello `admin[at]codeyourfuture.io`, or let us know on Slack an
 
 To contribute please follow instructions:
 
-1. select a task from `Todo` list, assign your name and move the task to `In Progress` list.
+- select a task from `Todo` list, assign your name and move the task to `In Progress` list.
 - checkout `staging` and pull the latest changes
 - create a new branch from `staging`, named after your task
 - when you're finished, submit a PR to the `staging` branch for review and move the task to `In Review` list (currently, we have only one review environment, so if you see another PR make sure its safe to merge to `staging`)
@@ -47,3 +47,7 @@ To contribute please follow instructions:
 - move task fro in `Review` to `Done`
 
 Thank you.
+
+## Backend features using lambdas
+
+Please read [this](./docs/lambdas.md).
