@@ -48,6 +48,6 @@ To contribute please follow instructions:
 
 Thank you.
 
-## Backend features using lambdas
+## Backend features using AWS Lambda
 
 Please read [this](./docs/lambdas.md).
