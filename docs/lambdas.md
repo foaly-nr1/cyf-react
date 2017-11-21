@@ -8,7 +8,7 @@ AWS Lambdas are mainly for two purposes:
 
 In this project, we use `serverless`, a framework that builds, creates and deploys the lambdas for us.
 
-All the code you change in the `/lambda` folder will be deployed by Circle-CI you merge respectively to branches `staging` and `master`.
+All the code you change in the `/lambda` folder will be deployed by Circle-CI when you merge to branches `staging` and `master`.
 
 The serverless environment for those will be respectively `staging` and `production`. You can thus set environment variables as for example in [this file](../lambda/env.pipedrive.yml).
 
