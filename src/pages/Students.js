@@ -69,61 +69,59 @@ export const Students = () => {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="col-sm-6 col-md-6 block-2-box">
+              <h3 className="text-left">Start Learning Now</h3>
+              <p>
+                As part of the selection process, applicants are asked to learn
+                the basics of coding. No previous experience is required!
+              </p>
 
-              <div className="col-sm-6 col-md-6 block-2-box">
-                <h3 className="text-left">Start Learning Now</h3>
-                <p>
-                  As part of the selection process, applicants are asked to
-                  learn the basics of coding. No previous experience is
-                  required!
-                </p>
+              <h4>
+                <strong>From a computer/laptop:</strong>
+              </h4>
+              <ul className="text-left">
+                <li>
+                  Join&nbsp;
+                  <Link
+                    to="https://www.khanacademy.org/computing/computer-programming/html-css"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Khan Academy
+                  </Link>
+                  &nbsp;and complete Intro to HTML/CSS: Making webpages
+                </li>
+                <li>
+                  Join&nbsp;
+                  <Link
+                    to="https://www.freecodecamp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    FreeCodeCamp
+                  </Link>
+                  &nbsp;and complete a minimum of 20 hours on Front End
+                  Development
+                </li>
+              </ul>
 
-                <h4>
-                  <strong>From a computer/laptop:</strong>
-                </h4>
-                <ul className="text-left">
-                  <li>
-                    Join&nbsp;
-                    <Link
-                      to="https://www.khanacademy.org/computing/computer-programming/html-css"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Khan Academy
-                    </Link>
-                    &nbsp;and complete Intro to HTML/CSS: Making webpages
-                  </li>
-                  <li>
-                    Join&nbsp;
-                    <Link
-                      to="https://www.freecodecamp.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      FreeCodeCamp
-                    </Link>
-                    &nbsp;and complete a minimum of 20 hours on Front End
-                    Development
-                  </li>
-                </ul>
-
-                <h4>
-                  <strong>From a smartphone:</strong>
-                </h4>
-                <ul className="text-left">
-                  <li>
-                    Join&nbsp;
-                    <Link
-                      to="https://sololearn.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      SoloLearn app
-                    </Link>
-                    &nbsp;and complete the modules on HTML and CSS Fundamentals
-                  </li>
-                </ul>
-              </div>
+              <h4>
+                <strong>From a smartphone:</strong>
+              </h4>
+              <ul className="text-left">
+                <li>
+                  Join&nbsp;
+                  <Link
+                    to="https://sololearn.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    SoloLearn app
+                  </Link>
+                  &nbsp;and complete the modules on HTML and CSS Fundamentals
+                </li>
+              </ul>
             </div>
           </div>
         </div>
