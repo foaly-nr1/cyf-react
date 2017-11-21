@@ -29,13 +29,11 @@ const AboutText = (
     </p>
     <p>
       For all other inquiries please contact us at{' '}
-      <Link to="mailto:contact@codeyourfuture.co" title="Contact us">
-        contact@codeyourfuture.co
+      <Link to="mailto:contact@codeyourfuture.io" title="Contact us">
+        contact@codeyourfuture.io
       </Link>
       <br />
       <br />
-    For all other inquiries please contact us at <Link to="mailto:contact@codeyourfuture.io" title="Contact us">contact@codeyourfuture.io</Link>
-    <br /><br />
     </p>
   </div>
 );
