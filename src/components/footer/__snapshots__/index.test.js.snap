@@ -50,25 +50,7 @@ exports[`Footer Component renders correctly 1`] = `
                   Alice Rowsome
                 </Link>
               </strong>
-               | Supported with
-               
-              <img
-                alt="LOVE"
-                src="/img/ico/hearts.svg"
-              />
-              by 
-              <strong>
-                <Link
-                  rel="noopener noreferrer"
-                  replace={false}
-                  target="_blank"
-                  to="http://www.hackyourfuture.net"
-                >
-                  HackYourFuture
-                </Link>
-                 | 
-              </strong>
-              Registered charity number 
+               |  Registered charity number 
               <Link
                 rel="noopener noreferrer"
                 replace={false}

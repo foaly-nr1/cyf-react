@@ -28,18 +28,7 @@ const Footer = () => (
                     Alice Rowsome
                   </Link>
                 </strong>
-                &nbsp;|&nbsp;Supported with{' '}
-                <img src="/img/ico/hearts.svg" alt="LOVE" />by&nbsp;
-                <strong>
-                  <Link
-                    to="http://www.hackyourfuture.net"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    HackYourFuture
-                  </Link>&nbsp;|&nbsp;
-                </strong>
-                Registered charity number&nbsp;
+                &nbsp;|&nbsp; Registered charity number&nbsp;
                 <Link
                   to="http://apps.charitycommission.gov.uk/Showcharity/RegisterOfCharities/CharityFramework.aspx?RegisteredCharityNumber=1174929&SubsidiaryNumber=0"
                   target="_blank"
