@@ -10,17 +10,6 @@ import Apply from './Apply';
 import ApplySuccess from './ApplySuccess';
 import { MeetTheTeam } from './MeetTheTeam';
 import { Donate } from './Donate';
+import Home from './Home';
 
-export {
-  Event,
-  ApplySuccess,
-  Apply,
-  Volunteers,
-  Students,
-  CreateEvent,
-  Events,
-  Partners,
-  About,
-  MeetTheTeam,
-  Donate,
-};
+export { Home, Event, ApplySuccess, Apply, Volunteers, Students, CreateEvent, Events, Partners, About, MeetTheTeam, Donate };

@@ -1,28 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route, Router } from 'react-router-dom';
+import history from './lib/history';
 
-import { Home } from './containers/Home';
-import {
-  Event,
-  ApplySuccess,
-  Apply,
-  Volunteers,
-  Students,
-  CreateEvent,
-  Events,
-  Partners,
-  About,
-  MeetTheTeam,
-  Donate,
-} from './pages';
+import { Home, Event, ApplySuccess, Apply, Volunteers, Students, CreateEvent, Events, Partners, About, MeetTheTeam, Donate } from './pages';
 
 import Navigation from './components/navigation';
 import Footer from './components/footer';
+import Callback from './components/callback';
+import { Auth } from './lib/auth';
+
+const auth = new Auth();
+
+const handleAuthentication = (nextState, replace) => {
+  if (/access_token|id_token|error/.test(nextState.location.hash)) {
+    auth.handleAuthentication();
+  }
+};
 
 const Routes = () => (
-  <Router>
+  <Router history={history} component={Home}>
     <div>
-      <Navigation />
+      <Navigation auth={auth} />
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={Events} />
@@ -35,6 +34,13 @@ const Routes = () => (
       <Route exact path="/partners" component={Partners} />
       <Route exact path="/meet-the-team" component={MeetTheTeam} />
       <Route exact path="/donate" component={Donate} />
+      <Route
+        path="/callback"
+        render={(props) => {
+          handleAuthentication(props);
+          return <Callback {...props} />;
+        }}
+      />
       <Footer />
     </div>
   </Router>
