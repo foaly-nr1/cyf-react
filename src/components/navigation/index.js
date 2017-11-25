@@ -52,11 +52,11 @@ const handleLink = (linkName) => {
   window.open(URL, '_blank');
 };
 
-// type Props = {
-//   auth: Object,
-// };
+type Props = {
+  auth: Object,
+};
 
-const Navigation = ({ auth, ...rest }) => (
+const Navigation = ({ auth }: Props) => (
   <Navbar collapseOnSelect>
     <Navbar.Header>
       <Link to="/">

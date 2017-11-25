@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Router } from 'react-router-dom';
 import history from './lib/history';
 
-import { Home, Event, ApplySuccess, Apply, Volunteers, Students, CreateEvent, Events, Partners, About, MeetTheTeam, Donate } from './pages';
+import { Home, Event, ApplySuccess, Apply, Volunteers, Students, Events, Partners, About, MeetTheTeam, Donate } from './pages';
 
 import Auth from './lib/auth';
 import Callback from './components/callback';
@@ -12,7 +12,7 @@ import Navigation from './components/navigation';
 
 const auth = new Auth();
 
-const handleAuthentication = (nextState, replace) => {
+const handleAuthentication = (nextState) => {
   if (/access_token|id_token|error/.test(nextState.location.hash)) {
     auth.handleAuthentication();
   }
@@ -26,7 +26,6 @@ const Routes = () => (
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={Events} />
       <Route exact path="/events/:event_id" component={Event} />
-      {/* <Route exact path="/event/create" component={CreateEvent} /> */}
       <Route exact path="/students" component={Students} />
       <Route exact path="/volunteers" component={Volunteers} />
       <Route exact path="/apply/:formType" component={Apply} />

@@ -15,23 +15,23 @@ const ApplySuccess = (props) => {
   let SuccessContent;
   switch (props.match.params.formType) {
     case 'student':
-      SuccessContent = <span>Many thanks for submitting your application! <br /> <br /> Write to <b>applicants@codeyourfuture.io</b> to notify us of your submission. We will send you instructions for the next steps.</span>
+      SuccessContent = (
+        <span>
+          Many thanks for submitting your application! <br /> <br /> Write to <b>applicants@codeyourfuture.io</b> to notify us of your submission. We will send you instructions for the next steps.
+        </span>
+      );
       break;
     case 'mentor':
-      SuccessContent = <span>Success! Write a success message and style for Mentors here.</span>
+      SuccessContent = <span>Success! Write a success message and style for Mentors here.</span>;
       break;
     case 'volunteer':
-      SuccessContent = <span>Success! Write a success message and style for Volunteers here.</span>
+      SuccessContent = <span>Success! Write a success message and style for Volunteers here.</span>;
       break;
     default:
-      SuccessContent = <span>Your application was successful!</span>
+      SuccessContent = <span>Your application was successful!</span>;
       break;
   }
-  return (
-    <Container>
-      {SuccessContent}
-    </Container>
-  );
+  return <Container>{SuccessContent}</Container>;
 };
 
 ApplySuccess.propTypes = {
