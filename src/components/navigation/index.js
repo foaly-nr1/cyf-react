@@ -52,11 +52,11 @@ const handleLink = (linkName) => {
   window.open(URL, '_blank');
 };
 
-type Props = {
-  auth: Function,
-};
+// type Props = {
+//   auth: Object,
+// };
 
-const Navigation = ({ auth }: Props) => (
+const Navigation = ({ auth, ...rest }) => (
   <Navbar collapseOnSelect>
     <Navbar.Header>
       <Link to="/">
@@ -80,6 +80,7 @@ const Navigation = ({ auth }: Props) => (
             <NavItem eventKey={1}>Events</NavItem>
           </LinkContainer>
         )}
+
         <LinkContainer to="/partners">
           <NavItem eventKey={1}>Partners</NavItem>
         </LinkContainer>
@@ -95,7 +96,7 @@ const Navigation = ({ auth }: Props) => (
         <NavItem className="nav-icon" eventKey="twitter">
           <img src={twitterlogo} style={logoStyle} alt="twitter" />
         </NavItem>
-        <NavItem className="nav-icon" eventKey="linkedin" auth>
+        <NavItem className="nav-icon" eventKey="linkedin">
           <img src={linkedinlogo} style={logoStyle} alt="linkedin" />
         </NavItem>
         <NavItem className="nav-icon" eventKey="email">

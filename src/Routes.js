@@ -26,7 +26,7 @@ const Routes = () => (
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={Events} />
       <Route exact path="/events/:event_id" component={Event} />
-      <Route exact path="/event/create" component={CreateEvent} />
+      {/* <Route exact path="/event/create" component={CreateEvent} /> */}
       <Route exact path="/students" component={Students} />
       <Route exact path="/volunteers" component={Volunteers} />
       <Route exact path="/apply/:formType" component={Apply} />
