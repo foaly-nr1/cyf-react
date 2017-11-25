@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import AuthLogin from '../../components/auth-login';
+// import { Link } from 'react-router-dom';
+// import AuthLogin from '../../components/auth-login';
 import TopSection from '../../components/top-section';
 import EventSummary from '../../components/event-summary';
 
@@ -50,15 +50,7 @@ class Events extends React.Component {
         <div>
           <TopSection title="Events" content="Our current classes are done every Sunday in London and Edinburgh" />
 
-          <div className="col-sm-4 col-sm-offset-4 section-description">
-            {Array.reverse(this.state.events).map(event => <EventSummary key={event.id} {...event} />)}
-
-            <AuthLogin admin>
-              <Link className="big-link-3 btn" to="/event/create">
-                Create New Event
-              </Link>
-            </AuthLogin>
-          </div>
+          <div className="col-sm-4 col-sm-offset-4 section-description">{Array.reverse(this.state.events).map(event => <EventSummary key={event.id} {...event} />)}</div>
         </div>
       </div>
     );

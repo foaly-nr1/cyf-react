@@ -20,6 +20,11 @@ const cyflogoStyle = {
   height: '50px',
 };
 
+const login = {
+  display: 'inline-block',
+  width: '90px',
+};
+
 const handleLink = (linkName) => {
   let URL = '';
   switch (linkName) {
@@ -95,7 +100,7 @@ const Navigation = ({ auth }: Props) => (
         <NavItem className="nav-icon" eventKey="email">
           <img src={emaillogo} style={logoStyle} alt="email" />
         </NavItem>
-        <NavItem>
+        <div style={login}>
           {!auth.isAuthenticated() && (
             <button type="button" onClick={auth.login}>
               Log In
@@ -106,7 +111,7 @@ const Navigation = ({ auth }: Props) => (
               Log Out
             </button>
           )}
-        </NavItem>
+        </div>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
