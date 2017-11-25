@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import {
-  StudentApplicationForm,
-} from 'components';
+import scrollToElement from 'scroll-to-element';
+import { StudentApplicationForm } from 'components';
 import { Persist } from 'react-persist';
 import { pipedriveApi } from 'api';
 import { Validator, checks } from 'form-validation';
 import rules from './Apply.validation.js';
-import scrollToElement from 'scroll-to-element';
 
 const Container = styled('div')`
   display: flex;
@@ -70,7 +68,8 @@ export default class Apply extends Component {
         motivation: this.state.motivation,
       };
 
-      pipedriveApi.addStudent(data)
+      pipedriveApi
+        .addStudent(data)
         .then(() => {
           this.setState(initialState);
           this.props.history.push('/apply/success/student');
@@ -94,7 +93,7 @@ export default class Apply extends Component {
     };
     // Temporarily removing student typeform to use pipedrive form
     // const StudentForm = {
-      //   URL: "https://cyf.typeform.com/to/DmL54Y"
+    //   URL: "https://cyf.typeform.com/to/DmL54Y"
     // }
 
     let formURL = '';
@@ -119,40 +118,26 @@ export default class Apply extends Component {
 
     return (
       <Container>
-        <Persist
-          name="student-application-form"
-          data={this.state}
-          debounce={500}
-          onMount={data => this.setState(data)}
-        />
-        {
-          formType === 'student' ? (
-            <StudentApplicationForm
-              name={this.state.name}
-              email={this.state.email}
-              country={this.state.country}
-              city={this.state.city}
-              refugee={this.state.refugee}
-              programming={this.state.programming}
-              phone={this.state.phone}
-              motivation={this.state.motivation}
-              submitMessage={this.state.submitMessage}
-              onChange={this.onChange}
-              onBlur={this.onBlur}
-              onSubmit={this.onSubmit}
-              validationErrors={this.state.validationErrors}
-            />
-          ) : (
-            <iframe
-              id="typeform-full"
-              title="typeform-full"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              src={this.getFormUrl()}
-            />
-          )
-        }
+        <Persist name="student-application-form" data={this.state} debounce={500} onMount={data => this.setState(data)} />
+        {formType === 'student' ? (
+          <StudentApplicationForm
+            name={this.state.name}
+            email={this.state.email}
+            country={this.state.country}
+            city={this.state.city}
+            refugee={this.state.refugee}
+            programming={this.state.programming}
+            phone={this.state.phone}
+            motivation={this.state.motivation}
+            submitMessage={this.state.submitMessage}
+            onChange={this.onChange}
+            onBlur={this.onBlur}
+            onSubmit={this.onSubmit}
+            validationErrors={this.state.validationErrors}
+          />
+        ) : (
+          <iframe id="typeform-full" title="typeform-full" width="100%" height="100%" frameBorder="0" src={this.getFormUrl()} />
+        )}
       </Container>
     );
   }

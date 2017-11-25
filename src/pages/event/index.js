@@ -1,8 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import AuthLogin from '../components/auth-login';
-import TopSection from '../components/top-section';
+import AuthLogin from '../../components/auth-login';
+import TopSection from '../../components/top-section';
 
 class Event extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Event extends React.Component {
 
     this.state = {
       event: {},
-      user: undefined
+      user: undefined,
     };
   }
 
@@ -23,10 +23,10 @@ class Event extends React.Component {
 
     window.FirebaseInitialized
       .database()
-      .ref('events/' + event_id)
-      .on('value', response => {
+      .ref(`events/${event_id}`)
+      .on('value', (response) => {
         this.setState({
-          event: response.val()
+          event: response.val(),
         });
       });
   }
@@ -40,7 +40,7 @@ class Event extends React.Component {
 
     window.FirebaseInitialized
       .database()
-      .ref('events/' + this.props.match.params.event_id + '/' + type)
+      .ref(`events/${this.props.match.params.event_id}/${type}`)
       .child(this.state.user.uid)
       .set(this.state.user.displayName || this.state.user.email);
   }
@@ -54,7 +54,7 @@ class Event extends React.Component {
 
     window.FirebaseInitialized
       .database()
-      .ref('events/' + this.props.match.params.event_id + '/' + type)
+      .ref(`events/${this.props.match.params.event_id}/${type}`)
       .child(this.state.user.uid)
       .set(null);
   }
@@ -65,12 +65,7 @@ class Event extends React.Component {
 
   render() {
     const {
-      attendees = {},
-      date,
-      description,
-      location,
-      title,
-      mentors = {}
+      attendees = {}, date, description, location, title, mentors = {},
     } = this.state.event;
 
     const { user = {} } = this.state;
@@ -110,21 +105,11 @@ class Event extends React.Component {
             <h4>Are you going?</h4>
 
             <AuthLogin onAuth={this.setUser}>
-              <Link
-                className={attending ? 'btn-success btn' : 'btn'}
-                disabled={attending}
-                to="#"
-                onClick={this.addAttendee}
-              >
+              <Link className={attending ? 'btn-success btn' : 'btn'} disabled={attending} to="#" onClick={this.addAttendee}>
                 Yes
               </Link>
 
-              <Link
-                className={!attending ? 'btn-success btn' : 'btn'}
-                disabled={!attending}
-                to="#"
-                onClick={this.removeAttendee}
-              >
+              <Link className={!attending ? 'btn-success btn' : 'btn'} disabled={!attending} to="#" onClick={this.removeAttendee}>
                 No
               </Link>
             </AuthLogin>

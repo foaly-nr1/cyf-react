@@ -1,15 +1,14 @@
-import { Volunteers } from './Volunteers';
-import { Students } from './Students';
-import Event from './Event';
-import { CreateEvent } from './CreateEvent';
-
-import { Events } from './Events';
-import { Partners } from './Partners';
-import { About } from './About';
-import Apply from './Apply';
-import ApplySuccess from './ApplySuccess';
-import { MeetTheTeam } from './MeetTheTeam';
-import { Donate } from './Donate';
-import Home from './Home';
+import ApplySuccess from './submit-application';
+import About from './about-us';
+import Apply from './apply';
+import CreateEvent from './create-event';
+import Events from './events';
+import Event from './event';
+import Home from './home';
+import Partners from './partners';
+import MeetTheTeam from './team';
+import Donate from './donate';
+import Students from './students';
+import Volunteers from './volunteers';
 
 export { Home, Event, ApplySuccess, Apply, Volunteers, Students, CreateEvent, Events, Partners, About, MeetTheTeam, Donate };

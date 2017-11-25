@@ -34,7 +34,17 @@ const Title = styled.div`
   color: gray;
 `;
 
-const MentorCard = ({ className, firstName, lastName, photo, title }) => (
+type Props = {
+  className: string,
+  firstName: string,
+  lastName: string,
+  photo: string,
+  title: string,
+};
+
+const MentorCard = ({
+  className, firstName, lastName, photo, title }:
+Props) => (
   <Mentor className={className}>
     <Photo src={photo} alt={`${firstName} ${lastName}`} />
 

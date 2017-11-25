@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 import MentorCard from '../mentor-card';
 import mentors from '../../content/mentors';
-import mediaQueries from '../../variables/media-queries';
+import mediaQueries from '../../stylesheets/variables/media-queries';
 
 const Mentors = styled.section`
   display: flex;

@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const LogoListItem = ({ href, src, alt, additionalClass }) => {
+const LogoListItem = ({
+  href, src, alt, additionalClass,
+}) => {
   const className = `logo-list-item ${additionalClass}`;
 
   return (
@@ -17,7 +19,7 @@ LogoListItem.propTypes = {
   href: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  additionalClass: PropTypes.string.isRequired
+  additionalClass: PropTypes.string.isRequired,
 };
 
 export default LogoListItem;

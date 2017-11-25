@@ -1,30 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AuthLogin from '../components/auth-login';
-import TopSection from '../components/top-section';
-import EventSummary from '../components/event-summary';
+import AuthLogin from '../../components/auth-login';
+import TopSection from '../../components/top-section';
+import EventSummary from '../../components/event-summary';
 
-export class Events extends React.Component {
+class Events extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      events: []
+      events: [],
     };
 
     window.FirebaseInitialized
       .database()
       .ref('/events/')
       .once('value')
-      .then(response => {
+      .then((response) => {
         const events = [];
 
         const value = response.val();
 
-        for (let key in value) {
+        for (const key in value) {
           events.push({
             id: key,
-            ...value[key]
+            ...value[key],
           });
         }
 
@@ -48,20 +48,15 @@ export class Events extends React.Component {
     return (
       <div>
         <div>
-          <TopSection
-            title="Events"
-            content="Our current classes are done every Sunday in London and Edinburgh"
-          />
+          <TopSection title="Events" content="Our current classes are done every Sunday in London and Edinburgh" />
 
           <div className="col-sm-4 col-sm-offset-4 section-description">
-            {Array.reverse(this.state.events).map(event => (
-              <EventSummary key={event.id} {...event} />
-            ))}
+            {Array.reverse(this.state.events).map(event => <EventSummary key={event.id} {...event} />)}
 
-            <AuthLogin admin={true}>
+            <AuthLogin admin>
               <Link className="big-link-3 btn" to="/event/create">
                 Create New Event
-              </Link>         
+              </Link>
             </AuthLogin>
           </div>
         </div>
@@ -69,3 +64,5 @@ export class Events extends React.Component {
     );
   }
 }
+
+export default Events;

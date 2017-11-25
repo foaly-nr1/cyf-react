@@ -2,7 +2,7 @@ import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
 import history from '../history';
 
-export class Auth {
+class Auth {
   auth0 = new auth0.WebAuth({
     domain: AUTH_CONFIG.domain,
     clientID: AUTH_CONFIG.clientId,
@@ -41,7 +41,7 @@ export class Auth {
   }
 
   setSession(authResult) {
-    let expiresAt = JSON.stringify(authResult.expiresIn * 1000 + new Date().getTime());
+    const expiresAt = JSON.stringify(authResult.expiresIn * 1000 + new Date().getTime());
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
@@ -57,7 +57,7 @@ export class Auth {
   }
 
   getProfile(cb) {
-    let accessToken = this.getAccessToken();
+    const accessToken = this.getAccessToken();
     this.auth0.client.userInfo(accessToken, (err, profile) => {
       if (profile) {
         this.userProfile = profile;
@@ -75,7 +75,9 @@ export class Auth {
   }
 
   isAuthenticated() {
-    let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
+    const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     return new Date().getTime() < expiresAt;
   }
 }
+
+export default Auth;

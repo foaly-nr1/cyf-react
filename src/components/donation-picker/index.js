@@ -1,28 +1,20 @@
 import React from 'react';
-import {
-  FormControl,
-  InputGroup,
-  FormGroup,
-  ControlLabel,
-  Button,
-  Row,
-  Col
-} from 'react-bootstrap';
+import { FormControl, InputGroup, FormGroup, ControlLabel, Button, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 class DonationPicker extends React.Component {
   propTypes = {
-    onTokenCapture: PropTypes.func
+    onTokenCapture: PropTypes.func,
   };
 
   state = {
     amount: 20,
-    token: null
+    token: null,
   };
 
-  updateAmount = e => {
+  updateAmount = (e) => {
     this.setState({
-      amount: e.target.value
+      amount: e.target.value,
     });
   };
 
@@ -35,11 +27,11 @@ class DonationPicker extends React.Component {
       name: 'CYF',
       description: 'Donation',
       zipCode: true,
-      amount: this.state.amount * 100
+      amount: this.state.amount * 100,
     });
   };
 
-  onTokenSuccess = token => {
+  onTokenSuccess = (token) => {
     if (this.props.onTokenCapture) {
       this.props.onTokenCapture(token.id, this.state.amount);
     }
@@ -53,7 +45,7 @@ class DonationPicker extends React.Component {
         locale: 'auto',
         token: this.onTokenSuccess,
         currency: 'GBP',
-        bitcoin: true
+        bitcoin: true,
       });
     }, 1000);
   }
@@ -68,11 +60,7 @@ class DonationPicker extends React.Component {
               <ControlLabel>How much would you like to give?</ControlLabel>
               <InputGroup>
                 <InputGroup.Addon>&pound;</InputGroup.Addon>
-                <FormControl
-                  type="number"
-                  value={amount}
-                  onChange={this.updateAmount}
-                />
+                <FormControl type="number" value={amount} onChange={this.updateAmount} />
               </InputGroup>
               <FormControl.Feedback />
             </FormGroup>

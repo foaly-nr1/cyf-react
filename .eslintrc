@@ -1,14 +1,13 @@
 {
   "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": ["flowtype"],
   "rules": {
     "react/forbid-prop-types": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-            ".js",
-            ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
     "import/extensions": "off",
@@ -24,9 +23,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": [
-          "src/"
-        ]
+        "paths": ["src/"]
       }
     }
   },

@@ -5,10 +5,10 @@ import history from './lib/history';
 
 import { Home, Event, ApplySuccess, Apply, Volunteers, Students, CreateEvent, Events, Partners, About, MeetTheTeam, Donate } from './pages';
 
-import Navigation from './components/navigation';
-import Footer from './components/footer';
+import Auth from './lib/auth';
 import Callback from './components/callback';
-import { Auth } from './lib/auth';
+import Footer from './components/footer';
+import Navigation from './components/navigation';
 
 const auth = new Auth();
 

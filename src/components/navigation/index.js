@@ -1,6 +1,7 @@
+// @flow
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Nav, Navbar, NavItem, Button } from 'react-bootstrap';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import cyflogo from '../../img/cyf_brand.png';
@@ -45,7 +46,11 @@ const handleLink = (linkName) => {
   window.open(URL, '_blank');
 };
 
-const Navigation = ({ auth }) => (
+type Props = {
+  auth: Function,
+};
+
+const Navigation = ({ auth }: Props) => (
   <Navbar collapseOnSelect>
     <Navbar.Header>
       <Link to="/">
