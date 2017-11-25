@@ -2491,6 +2491,10 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
+eventemitter2@~0.4.13:
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/eventemitter2/-/eventemitter2-0.4.14.tgz#8f61b75cde012b2e9eb284d4545583b5643b61ab"
+
 eventemitter3@1.x.x:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
@@ -2653,6 +2657,14 @@ fbjs@^0.8.16, fbjs@^0.8.5, fbjs@^0.8.9:
     promise "^7.1.1"
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
+
+feature-toggle@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/feature-toggle/-/feature-toggle-0.3.0.tgz#a271d46ba57359cfd020158303f1de73aded5fd4"
+  dependencies:
+    eventemitter2 "~0.4.13"
+    mout "~0.7.1"
+    stampit "~0.6.1"
 
 figures@^2.0.0:
   version "2.0.0"
@@ -4332,6 +4344,14 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
 moment@^2.19.1:
   version "2.19.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.1.tgz#56da1a2d1cbf01d38b7e1afc31c10bcfa1929167"
+
+mout@~0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/mout/-/mout-0.5.0.tgz#ff967566a90f29595e9cb8b6e7800a5b56635583"
+
+mout@~0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/mout/-/mout-0.7.1.tgz#218de2b0880b220d99f4fbaee3fc0c3a5310bda8"
 
 ms@2.0.0:
   version "2.0.0"
@@ -6086,6 +6106,12 @@ sshpk@^1.7.0:
     ecc-jsbn "~0.1.1"
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
+
+stampit@~0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/stampit/-/stampit-0.6.1.tgz#a0c71e65e676a3f79be46c9cfb176b5cb5d935a0"
+  dependencies:
+    mout "~0.5.0"
 
 "statuses@>= 1.3.1 < 2", statuses@~1.3.1:
   version "1.3.1"

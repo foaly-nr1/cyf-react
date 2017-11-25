@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import setFeatures from 'feature-toggle';
 
 import cyflogo from '../../img/cyf_brand.png';
 import fblogo from '../../img/ico/fb_logo.svg';
@@ -100,18 +101,20 @@ const Navigation = ({ auth }: Props) => (
         <NavItem className="nav-icon" eventKey="email">
           <img src={emaillogo} style={logoStyle} alt="email" />
         </NavItem>
-        <div style={login}>
-          {!auth.isAuthenticated() && (
-            <button type="button" onClick={auth.login}>
-              Log In
-            </button>
-          )}
-          {auth.isAuthenticated() && (
-            <button type="button" onClick={auth.logout}>
-              Log Out
-            </button>
-          )}
-        </div>
+        {setFeatures().active('login') && (
+          <div style={login}>
+            {!auth.isAuthenticated() && (
+              <button type="button" onClick={auth.login}>
+                Log In
+              </button>
+            )}
+            {auth.isAuthenticated() && (
+              <button type="button" onClick={auth.logout}>
+                Log Out
+              </button>
+            )}
+          </div>
+        )}
       </Nav>
     </Navbar.Collapse>
   </Navbar>
