@@ -10,7 +10,7 @@ jobs:
           keys:
             - yarn-dependencies-{{ checksum "yarn.lock" }}
       - run:
-          name: Yarn setup
+          name: Install project dependencies
           command: |
             sudo npm install -g yarn
             yarn
@@ -19,9 +19,13 @@ jobs:
           paths:
             - "node_modules"
       - run:
-          name: Test
+          name: Run unit tests
           command: |
             yarn test
+      - run:
+          name: Run Flow
+          command: |
+            yarn flow
       - restore_cache:
           keys:
             - yarn-lambda-dependencies-{{ checksum "lambda/yarn.lock" }}
