@@ -7,18 +7,20 @@ const Students = () => {
   const studentText = (
     <div>
       <p>
-        Welcome to our community. Here, you will learn all the technical skills needed to become a
-        professional developer.
+        Welcome to our community. Here, you will learn all the technical skills
+        needed to become a professional developer.
       </p>
       <p>
-        During the course you will learn the whole web development stack, including HTML/CSS,
-        JavaScript and backend technologies. We’ll complement the training with workshops on modern
-        software methodologies and job interview practices.
+        During the course you will learn the whole web development stack,
+        including HTML/CSS, JavaScript and backend technologies. We’ll
+        complement the training with workshops on modern software methodologies
+        and job interview practices.
       </p>
 
       <p>
-        Our 6-month web development programme has proven a success, where 75% of our graduates
-        eligible to work have found permanent employment in the industry.
+        Our 6-month web development programme has proven a success, where 75% of
+        our graduates eligible to work have found permanent employment in the
+        industry.
       </p>
 
       <div className="section-bottom-link">
@@ -31,7 +33,10 @@ const Students = () => {
 
   return (
     <div>
-      <TopSection title="The beginning of your programming career" content={studentText} />
+      <TopSection
+        title="The beginning of your programming career"
+        content={studentText}
+      />
       <div className="student-hero-wrap" />
 
       <div id="info" className="block-2-container section-container">
@@ -68,8 +73,8 @@ const Students = () => {
             <div className="col-sm-6 col-md-6 block-2-box">
               <h3 className="text-left">Start Learning Now</h3>
               <p>
-                As part of the selection process, applicants are asked to learn the basics of
-                coding. No previous experience is required!
+                As part of the selection process, applicants are asked to learn
+                the basics of coding. No previous experience is required!
               </p>
 
               <h4>
@@ -96,7 +101,8 @@ const Students = () => {
                   >
                     FreeCodeCamp
                   </Link>
-                  &nbsp;and complete a minimum of 20 hours on Front End Development
+                  &nbsp;and complete a minimum of 20 hours on Front End
+                  Development
                 </li>
               </ul>
 
@@ -106,7 +112,11 @@ const Students = () => {
               <ul className="text-left">
                 <li>
                   Join&nbsp;
-                  <Link to="https://sololearn.com" target="_blank" rel="noopener noreferrer">
+                  <Link
+                    to="https://sololearn.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     SoloLearn app
                   </Link>
                   &nbsp;and complete the modules on HTML and CSS Fundamentals

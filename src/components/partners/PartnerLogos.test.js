@@ -47,10 +47,12 @@ describe('PartnerLogos', () => {
     expect(partnerLogos.find(LogoList)).toHaveLength(sections.length);
   });
 
-  sections.forEach((section) => {
+  sections.forEach(section => {
     it(`passes the right props to ${section}'s LogoList`, () => {
       const sectionDiv = partnerLogos.find(`.partners__${section}`);
-      expect(sectionDiv.find(LogoList).prop('partners')).toEqual(props.partners[section]);
+      expect(sectionDiv.find(LogoList).prop('partners')).toEqual(
+        props.partners[section],
+      );
     });
   });
 });

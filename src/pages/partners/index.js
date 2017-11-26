@@ -9,9 +9,10 @@ import partners from '../../content/partners';
 const PartnersText = (
   <div>
     <p>
-      The tech industry is facing a big challenge to find developers to fill the ever increasing
-      number of vacancies. At the same time, asylum seekers and refugees lack the necessary
-      opportunities to update their skills and integrate better in society.
+      The tech industry is facing a big challenge to find developers to fill the
+      ever increasing number of vacancies. At the same time, asylum seekers and
+      refugees lack the necessary opportunities to update their skills and
+      integrate better in society.
     </p>
     <p>Together we’ll help to solve both of these issues.</p>
 

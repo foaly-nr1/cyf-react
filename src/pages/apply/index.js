@@ -41,7 +41,7 @@ export default class Apply extends Component {
   }
 
   onChange(field) {
-    return (value) => {
+    return value => {
       this.validator.validateSingleField(field, 'onChange', value);
       if (field === 'phone') {
         if (!checks.isNumeric(value)) return;
@@ -76,7 +76,8 @@ export default class Apply extends Component {
         })
         .catch(() => {
           this.setState({
-            submitMessage: 'Woops! Sorry, there was an error while handling your application. Please try again later.',
+            submitMessage:
+              'Woops! Sorry, there was an error while handling your application. Please try again later.',
           });
         });
     } else {
@@ -118,7 +119,12 @@ export default class Apply extends Component {
 
     return (
       <Container>
-        <Persist name="student-application-form" data={this.state} debounce={500} onMount={data => this.setState(data)} />
+        <Persist
+          name="student-application-form"
+          data={this.state}
+          debounce={500}
+          onMount={data => this.setState(data)}
+        />
         {formType === 'student' ? (
           <StudentApplicationForm
             name={this.state.name}
@@ -136,7 +142,14 @@ export default class Apply extends Component {
             validationErrors={this.state.validationErrors}
           />
         ) : (
-          <iframe id="typeform-full" title="typeform-full" width="100%" height="100%" frameBorder="0" src={this.getFormUrl()} />
+          <iframe
+            id="typeform-full"
+            title="typeform-full"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            src={this.getFormUrl()}
+          />
         )}
       </Container>
     );

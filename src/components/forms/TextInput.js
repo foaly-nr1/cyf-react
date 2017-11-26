@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import {
-  ControlLabel,
-  FormControl,
-  FormGroup,
-} from 'react-bootstrap';
+import { ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
 import ValidationErrors from './ValidationErrors';
 
 const StyledFormGroup = styled(FormGroup)`

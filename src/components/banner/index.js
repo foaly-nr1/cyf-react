@@ -12,7 +12,12 @@ const Banner = () => (
         <Link to="students" className="big-link-2 btn">
           Apply Now
         </Link>
-        <Link className="big-link-2 btn" to="volunteers" target="_blank" rel="noopener noreferrer">
+        <Link
+          className="big-link-2 btn"
+          to="volunteers"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Become a volunteer
         </Link>
       </div>

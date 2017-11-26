@@ -3,9 +3,10 @@ import React from 'react';
 import LogoList from './LogoList';
 
 const renderLogoListSections = partners =>
-  Object.keys(partners).map((section) => {
+  Object.keys(partners).map(section => {
     const className = `container partners__${section}`;
-    const sectionLabel = section === 'tech' ? '< Tech Supporters />' : `< ${section} />`;
+    const sectionLabel =
+      section === 'tech' ? '< Tech Supporters />' : `< ${section} />`;
 
     return (
       <div key={section} className={className}>

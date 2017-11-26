@@ -8,12 +8,14 @@ const mediaOutlets = [
     alt: 'Wired',
   },
   {
-    url: 'http://www.unhcr.org/news/stories/2017/1/586e420c7/volunteers-train-refugees-to-crack-into-london-tech-industry.html',
+    url:
+      'http://www.unhcr.org/news/stories/2017/1/586e420c7/volunteers-train-refugees-to-crack-into-london-tech-industry.html',
     src: 'img/media-logos/unhcr.png',
     alt: 'UNHCR',
   },
   {
-    url: 'https://www.newsdeeply.com/refugees/articles/2016/10/19/welcome-to-londons-refugee-coding-school',
+    url:
+      'https://www.newsdeeply.com/refugees/articles/2016/10/19/welcome-to-londons-refugee-coding-school',
     src: 'img/media-logos/refugees-deeply.jpeg',
     alt: 'Refugees Deeply',
   },
@@ -50,7 +52,12 @@ const AsSeen = () => (
         <br />
       </div>
     </div>
-    <div className="row">{mediaOutlets && mediaOutlets.map(x => <Outlet key={x.src} src={x.src} url={x.url} alt={x.alt} />)}</div>
+    <div className="row">
+      {mediaOutlets &&
+        mediaOutlets.map(x => (
+          <Outlet key={x.src} src={x.src} url={x.url} alt={x.alt} />
+        ))}
+    </div>
   </div>
 );
 

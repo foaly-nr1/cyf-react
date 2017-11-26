@@ -26,7 +26,7 @@ const login = {
   width: '90px',
 };
 
-const handleLink = (linkName) => {
+const handleLink = linkName => {
   let URL = '';
   switch (linkName) {
     case 'facebook':

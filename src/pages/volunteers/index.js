@@ -8,16 +8,16 @@ const Volunteers = () => {
   const volunteersText = (
     <div>
       <p>
-        Welcome to a community where your knowledge and experience will help to transform the lives
-        of refugees in the UK.
+        Welcome to a community where your knowledge and experience will help to
+        transform the lives of refugees in the UK.
       </p>
       <p>
-        We are looking for experienced web developers (HTML/CSS, JavaScript, Node, Angular, React,
-        Database) to participate in our classes.
+        We are looking for experienced web developers (HTML/CSS, JavaScript,
+        Node, Angular, React, Database) to participate in our classes.
       </p>
       <p>
-        We are also looking for technology managers and entrepreneurs to give workshops on modern
-        software practices and methodologies.
+        We are also looking for technology managers and entrepreneurs to give
+        workshops on modern software practices and methodologies.
       </p>
 
       <div className="section-bottom-link">
@@ -32,9 +32,9 @@ const Volunteers = () => {
       </div>
 
       <p>
-        Or you can become a volunteer and help us support the expansion of the organisation. No
-        matter where you are in the UK, with your help we’ll create a local program to serve local
-        refugee communities.
+        Or you can become a volunteer and help us support the expansion of the
+        organisation. No matter where you are in the UK, with your help we’ll
+        create a local program to serve local refugee communities.
       </p>
 
       <BottomSection link="/apply/volunteer" linkText="Become a Volunteer" />

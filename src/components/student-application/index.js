@@ -57,7 +57,8 @@ const StudentApplicationForm = props => (
         .map(key => props.validationErrors[key].length)
         .some(length => length > 0) && (
         <SubmitErrorSpan>
-          There are some errors in the form, please correct them before submitting :)
+          There are some errors in the form, please correct them before
+          submitting :)
         </SubmitErrorSpan>
       )}
       <Form>
@@ -99,7 +100,10 @@ const StudentApplicationForm = props => (
           label="Are you an asylum seeker/refugee? *"
           onChange={props.onChange('refugee')}
           onBlur={props.onBlur('refugee')}
-          choices={[{ label: 'Yes', value: 'Yes' }, { label: 'No', value: 'No' }]}
+          choices={[
+            { label: 'Yes', value: 'Yes' },
+            { label: 'No', value: 'No' },
+          ]}
           checked={props.refugee}
           errors={props.validationErrors.refugee}
         />
@@ -135,7 +139,9 @@ const StudentApplicationForm = props => (
           errors={props.validationErrors.motivation}
         />
       </Form>
-      {props.submitMessage && <SubmitErrorSpan>{props.submitMessage}</SubmitErrorSpan>}
+      {props.submitMessage && (
+        <SubmitErrorSpan>{props.submitMessage}</SubmitErrorSpan>
+      )}
       <Button onClick={props.onSubmit}>Submit</Button>
     </FormInnerContainer>
   </FormOuterContainer>

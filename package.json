@@ -44,10 +44,12 @@
     "enzyme-to-json": "^3.2.0",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "0.11.1",
@@ -59,6 +61,7 @@
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.5",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.6.1",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
@@ -72,16 +75,23 @@
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
   },
+  "precommit": ["format", "flow"],
   "scripts": {
     "format": "prettier --write \"src/**/*.js\"",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "flow": "flow",
+    "lint": "yarn lint:js",
+    "lint:js": "eslint --fix '**/*.js'"
   },
   "jest": {
     "snapshotSerializers": ["enzyme-to-json/serializer"],
     "collectCoverageFrom": ["src/**/*.{js,jsx}"],
-    "setupFiles": ["<rootDir>/config/polyfills.js", "<rootDir>/config/browserMocks.js"],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/browserMocks.js"
+    ],
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",

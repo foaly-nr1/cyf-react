@@ -69,7 +69,8 @@ const rules = {
     },
     {
       check: 'minimum100Words',
-      errorMessage: 'Please tell us a bit more about your motivation (100 words)',
+      errorMessage:
+        'Please tell us a bit more about your motivation (100 words)',
       events: ['onSubmit', 'onBlur'],
     },
   ],

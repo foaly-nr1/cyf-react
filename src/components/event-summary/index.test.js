@@ -11,10 +11,10 @@ describe('EventSummary', () => {
       location: 'Red Badger',
       mentors: {
         xyz123: 'Matt',
-        abc123: 'Kash'
+        abc123: 'Kash',
       },
       sponsors: 'Red Badger',
-      title: 'Hacknight'
+      title: 'Hacknight',
     };
     expect(shallow(<EventSummary {...event} />)).toMatchSnapshot();
   });

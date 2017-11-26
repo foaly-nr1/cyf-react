@@ -43,8 +43,12 @@ type Props = {
 };
 
 const MentorCard = ({
-  className, firstName, lastName, photo, title }:
-Props) => (
+  className,
+  firstName,
+  lastName,
+  photo,
+  title,
+}: Props) => (
   <Mentor className={className}>
     <Photo src={photo} alt={`${firstName} ${lastName}`} />
 

@@ -48,10 +48,12 @@ const RadioInput = props => (
 
 RadioInput.propTypes = {
   label: PropTypes.string,
-  choices: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.string,
-  })).isRequired,
+  choices: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string,
+    }),
+  ).isRequired,
   checked: PropTypes.string,
   errors: PropTypes.arrayOf(PropTypes.string),
 };

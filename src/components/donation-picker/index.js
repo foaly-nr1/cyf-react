@@ -34,7 +34,7 @@ class DonationPicker extends React.Component {
     }, 1000);
   }
 
-  onTokenSuccess = (token) => {
+  onTokenSuccess = token => {
     if (this.props.onTokenCapture) {
       this.props.onTokenCapture(token.id, this.state.amount);
     }
@@ -54,7 +54,7 @@ class DonationPicker extends React.Component {
     });
   };
 
-  updateAmount = (e) => {
+  updateAmount = e => {
     this.setState({
       amount: e.target.value,
     });
@@ -70,7 +70,11 @@ class DonationPicker extends React.Component {
               <ControlLabel>How much would you like to give?</ControlLabel>
               <InputGroup>
                 <InputGroup.Addon>&pound;</InputGroup.Addon>
-                <FormControl type="number" value={amount} onChange={this.updateAmount} />
+                <FormControl
+                  type="number"
+                  value={amount}
+                  onChange={this.updateAmount}
+                />
               </InputGroup>
               <FormControl.Feedback />
             </FormGroup>

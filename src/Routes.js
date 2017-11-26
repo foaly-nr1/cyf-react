@@ -23,7 +23,7 @@ import Navigation from './components/navigation';
 
 const auth = new Auth();
 
-const handleAuthentication = (nextState) => {
+const handleAuthentication = nextState => {
   if (/access_token|id_token|error/.test(nextState.location.hash)) {
     auth.handleAuthentication();
   }
@@ -46,7 +46,7 @@ const Routes = () => (
       <Route exact path="/donate" component={Donate} />
       <Route
         path="/callback"
-        render={(props) => {
+        render={props => {
           handleAuthentication(props);
           return <Callback {...props} />;
         }}
