@@ -18,8 +18,16 @@ export default (event, context, callback) => {
             source: token,
           })
           .then(() => callback(null, '[200] Payment succesful.'))
-          .catch(error => callback(error, '[400] Error during payment.')),
+          .catch(error => {
+            // eslint-disable-next-line no-console
+            console.error(error);
+            return callback(error, '[400] Error during payment.');
+          }),
       )
-      .catch(error => callback(error, '[400] Error during payment.'));
+      .catch(error => {
+        // eslint-disable-next-line no-console
+        console.error(error);
+        return callback(error, '[400] Error during payment.');
+      });
   }
 };
