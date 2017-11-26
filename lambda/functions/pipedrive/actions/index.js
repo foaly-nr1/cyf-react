@@ -1,5 +1,3 @@
 import addStudent from './addStudent';
 
-export {
-  addStudent,
-};
+export default addStudent;

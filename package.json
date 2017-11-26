@@ -83,7 +83,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "flow": "flow",
     "lint": "yarn lint:js",
-    "lint:js": "eslint --fix '**/*.js'"
+    "lint:js": "eslint '**/*.js'"
   },
   "jest": {
     "snapshotSerializers": ["enzyme-to-json/serializer"],

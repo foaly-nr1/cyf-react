@@ -19,13 +19,14 @@ jobs:
           paths:
             - "node_modules"
       - run:
+          name: Lint project code
+          command: yarn lint:js
+      - run:
           name: Run unit tests
-          command: |
-            yarn test
+          command: yarn test
       - run:
           name: Run Flow
-          command: |
-            yarn flow
+          command: yarn flow
       - restore_cache:
           keys:
             - yarn-lambda-dependencies-{{ checksum "lambda/yarn.lock" }}

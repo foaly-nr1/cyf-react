@@ -28,13 +28,11 @@ const addStudent = (data, pipedrive, callback) => {
 
   return pipedrive.Persons.add(addPersonRequestBody, (error, successData) => {
     if (error) {
-      console.error(error);
       return callback(new Error('[400] Error while adding student.'));
     }
     addDealRequestBody.person_id = successData.id;
-    return pipedrive.Deals.add(addDealRequestBody, (error2) => {
+    return pipedrive.Deals.add(addDealRequestBody, error2 => {
       if (error2) {
-        console.error(error2);
         return callback(new Error('[400] Error while adding student.'));
       }
       return callback(null, '[200] Student added successfully.');

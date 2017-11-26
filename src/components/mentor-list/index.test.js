@@ -3,11 +3,9 @@ import { shallow } from 'enzyme';
 
 import MentorList from './';
 
-jest.mock('uuid', () => {
-  return {
+jest.mock('uuid', () => ({
     v4: jest.fn(() => 1),
-  };
-});
+  }));
 
 describe('MentorList Component', () => {
   it('renders correctly', () => {
