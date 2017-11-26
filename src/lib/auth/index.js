@@ -1,5 +1,6 @@
+/* eslint-disable class-methods-use-this */
 import auth0 from 'auth0-js';
-import { AUTH_CONFIG } from './auth0-variables';
+import AUTH_CONFIG from './auth0-variables';
 import history from '../history';
 
 class Auth {
@@ -34,13 +35,14 @@ class Auth {
         history.replace('/');
       } else if (err) {
         history.replace('/');
+        // eslint-disable-next-line no-console
         console.log(err);
-        alert(`Error: ${err.error}. Check the console for further details.`);
       }
     });
   }
 
   setSession(authResult) {
+    // eslint-disable-next-line
     const expiresAt = JSON.stringify(authResult.expiresIn * 1000 + new Date().getTime());
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);

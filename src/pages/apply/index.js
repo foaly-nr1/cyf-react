@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import scrollToElement from 'scroll-to-element';
+import { Validator, checks } from 'form-validation';
 import { StudentApplicationForm } from 'components';
 import { Persist } from 'react-persist';
-import { pipedriveApi } from 'api';
-import { Validator, checks } from 'form-validation';
+import pipedriveApi from '../../lib/pipedrive';
 import rules from './Apply.validation.js';
 
 const Container = styled('div')`

@@ -1,9 +1,20 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Route, Router } from 'react-router-dom';
 import history from './lib/history';
 
-import { Home, Event, ApplySuccess, Apply, Volunteers, Students, Events, Partners, About, MeetTheTeam, Donate } from './pages';
+import {
+  Home,
+  Event,
+  ApplySuccess,
+  Apply,
+  Volunteers,
+  Students,
+  Events,
+  Partners,
+  About,
+  MeetTheTeam,
+  Donate,
+} from './pages';
 
 import Auth from './lib/auth';
 import Callback from './components/callback';

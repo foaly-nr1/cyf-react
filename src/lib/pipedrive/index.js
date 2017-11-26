@@ -1,5 +1,3 @@
 import pipedriveApi from './pipedriveApi';
 
-export {
-  pipedriveApi,
-};
+export default pipedriveApi;

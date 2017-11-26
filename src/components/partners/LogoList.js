@@ -2,7 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LogoListItem from './LogoListItem';
 
-const renderLogoListItem = (partner, additionalClass) => <LogoListItem key={partner.id} href={partner.url} src={partner.logo} alt={partner.name} additionalClass={additionalClass} />;
+const renderLogoListItem = (partner, additionalClass) => (
+  <LogoListItem
+    key={partner.id}
+    href={partner.url}
+    src={partner.logo}
+    alt={partner.name}
+    additionalClass={additionalClass}
+  />
+);
 
 const LogoList = ({ partners }) => (
   <div className="logo-list">

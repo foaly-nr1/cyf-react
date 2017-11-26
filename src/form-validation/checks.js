@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 // Check: function taking a value and returning a boolean if that value passes a test.
 // Can be used for form validation rules or to restrict the values that a state field
 // can contain (e.g. phone number field should only contain numbers).

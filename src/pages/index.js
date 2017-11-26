@@ -11,4 +11,17 @@ import Donate from './donate';
 import Students from './students';
 import Volunteers from './volunteers';
 
-export { Home, Event, ApplySuccess, Apply, Volunteers, Students, CreateEvent, Events, Partners, About, MeetTheTeam, Donate };
+export {
+  Home,
+  Event,
+  ApplySuccess,
+  Apply,
+  Volunteers,
+  Students,
+  CreateEvent,
+  Events,
+  Partners,
+  About,
+  MeetTheTeam,
+  Donate,
+};

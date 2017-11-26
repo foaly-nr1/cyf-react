@@ -1,6 +1,5 @@
 import checks from './checks';
 
-
 // On construction, transform the rules object setup in the page's validation
 // file for a more efficient lookup.
 const createRulesObject = (rules) => {
@@ -19,7 +18,6 @@ const createRulesObject = (rules) => {
   return rulesObject;
 };
 
-
 // Class to get the two validation functions for a component.
 class Validator {
   // Constructor to bind the instance to the component.
@@ -33,7 +31,7 @@ class Validator {
 
   // Apply a validation rule by setting/unsetting it error message in the component's
   // state and returning the corresponding boolean.
-  _applyRule(rule, field, value) {
+  applyRule(rule, field, value) {
     const state = this.getState();
     let fieldErrors = state.validationErrors[field] && state.validationErrors[field].slice();
     if (!fieldErrors) fieldErrors = [];
@@ -52,13 +50,13 @@ class Validator {
     return passed;
   }
 
-
   // Apply all validation rules for a field/event combination
   // and return false if at least one failed.
   // In practice this is used for onChange/onBlur behaviour.
   validateSingleField(field, event, value) {
     try {
-      const checkResults = this.rulesObject[field][event].map(rule => this._applyRule(rule, field, value));
+      const checkResults = this.rulesObject[field][event].map(rule =>
+        this.applyRule(rule, field, value));
       return checkResults.every(result => result);
     } catch (e) {
       return true;
@@ -71,7 +69,8 @@ class Validator {
   validateAllFields(event) {
     const state = this.getState();
     try {
-      const validationResults = Object.keys(this.rulesObject).map(field => this.validateSingleField(field, event, state[field]));
+      const validationResults = Object.keys(this.rulesObject).map(field =>
+        this.validateSingleField(field, event, state[field]));
       return validationResults.every(result => result);
     } catch (e) {
       return true;

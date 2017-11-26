@@ -59,6 +59,7 @@ RadioInput.propTypes = {
 RadioInput.defaultProps = {
   label: '',
   checked: '',
+  // eslint-disable-next-line
   onBlur: () => {},
   errors: [],
 };

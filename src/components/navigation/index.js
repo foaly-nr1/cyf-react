@@ -65,7 +65,7 @@ const Navigation = ({ auth }: Props) => (
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
-      <Nav pullRight onSelect={handleLink.bind(this)}>
+      <Nav pullRight onSelect={handleLink}>
         <LinkContainer to="/about">
           <NavItem eventKey={1}>About</NavItem>
         </LinkContainer>

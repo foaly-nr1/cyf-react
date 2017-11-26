@@ -1,16 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
-import {
-  TextAreaInput,
-  RadioInput,
-  TextInput,
-  DropdownInput,
-} from 'components';
+import { TextAreaInput, RadioInput, TextInput } from 'components';
 import { Button } from 'react-bootstrap';
-import Countries from 'country-list';
-
-const countries = Countries();
 
 const FormOuterContainer = styled('div')`
   display: flex;
@@ -48,7 +40,6 @@ const Form = styled('form')`
   align-items: flex-start;
 `;
 
-
 const SubmitErrorSpan = styled('span')`
   color: red;
   font-size: 1.7rem;
@@ -62,12 +53,13 @@ const StudentApplicationForm = props => (
       <span className="title">
         Please fill out the form below so we can proceed with your application.
       </span>
-      {
-        Object.keys(props.validationErrors).map(key => props.validationErrors[key].length).some(length => length > 0) &&
+      {Object.keys(props.validationErrors)
+        .map(key => props.validationErrors[key].length)
+        .some(length => length > 0) && (
         <SubmitErrorSpan>
           There are some errors in the form, please correct them before submitting :)
         </SubmitErrorSpan>
-      }
+      )}
       <Form>
         <TextInput
           label="What is your name? (First and Last Name) *"
@@ -107,10 +99,7 @@ const StudentApplicationForm = props => (
           label="Are you an asylum seeker/refugee? *"
           onChange={props.onChange('refugee')}
           onBlur={props.onBlur('refugee')}
-          choices={[
-            { label: 'Yes', value: 'Yes' },
-            { label: 'No', value: 'No' },
-          ]}
+          choices={[{ label: 'Yes', value: 'Yes' }, { label: 'No', value: 'No' }]}
           checked={props.refugee}
           errors={props.validationErrors.refugee}
         />

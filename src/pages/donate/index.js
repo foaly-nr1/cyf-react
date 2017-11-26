@@ -34,16 +34,25 @@ class Donate extends React.Component {
     const { tokenSuccess, tokenError } = this.state;
     const donateText = (
       <div>
-        <p>We are a non-profit organisation supporting refugees with the dream of becoming developers.</p>
+        <p>
+          We are a non-profit organisation supporting refugees with the dream of becoming
+          developers.
+        </p>
         <p>We rely soely on donations, in both time and money to keep this dream alive!</p>
-        <p>By donating below, you can help us continue to run classes, set up job opportunties and XXXX. We accept bitcoin.</p>
+        <p>
+          By donating below, you can help us continue to run classes, set up job opportunties and
+          XXXX. We accept bitcoin.
+        </p>
 
         <div>
           <Row>
             <Col xs={12} md={12}>
               {tokenSuccess && <div>Thank you for your donation!</div>}
-              {tokenError && <div>Sorry, there was a problem processing your donation. Please try again!</div>}
-              {!tokenSuccess && !tokenError && <DonationPicker onTokenCapture={this.onTokenSuccess} />}
+              {tokenError && (
+                <div>Sorry, there was a problem processing your donation. Please try again!</div>
+              )}
+              {!tokenSuccess &&
+                !tokenError && <DonationPicker onTokenCapture={this.onTokenSuccess} />}
             </Col>
           </Row>
         </div>

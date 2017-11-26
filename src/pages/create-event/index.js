@@ -1,4 +1,4 @@
-// // @flow
+// @flow
 // import React from 'react';
 // import AuthLogin from '../../components/auth-login';
 // import { Button, ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
@@ -58,18 +58,51 @@
 //         <AuthLogin>
 //           <div className="col-sm-8 col-sm-offset-2 block-2-box">
 //             <form onSubmit={this.handleSubmit}>
-//               <FieldGroup required name="title" type="text" label="Title (required)" placeholder="Enter text" onChange={this.handleChange} value={this.state.title} />
+//               <FieldGroup
+//                 required
+//                 name="title"
+//                 type="text"
+//                 label="Title (required)"
+//                 placeholder="Enter text"
+//                 onChange={this.handleChange}
+//                 value={this.state.title}
+//               />
 
 //               <FormGroup controlId="description">
 //                 <ControlLabel>Description (required)</ControlLabel>
-//                 <FormControl componentClass="textarea" name="description" onChange={this.handleChange} placeholder="Description..." style={COLOR} value={this.state.description} />
+//                 <FormControl
+//                   componentClass="textarea"
+//                   name="description"
+//                   onChange={this.handleChange}
+//                   placeholder="Description..."
+//                   style={COLOR}
+//                   value={this.state.description}
+//                 />
 //               </FormGroup>
 
-//               <FieldGroup label="When (required)" name="date" onChange={this.handleChange} type="datetime-local" value={this.state.date} />
+//               <FieldGroup
+//                 label="When (required)"
+//                 name="date"
+//                 onChange={this.handleChange}
+//                 type="datetime-local"
+//                 value={this.state.date}
+//               />
 
-//               <FieldGroup label="Where (required)" name="location" onChange={this.handleChange} type="text" value={this.state.location} />
+//               <FieldGroup
+//                 label="Where (required)"
+//                 name="location"
+//                 onChange={this.handleChange}
+//                 type="text"
+//                 value={this.state.location}
+//               />
 
-//               <FieldGroup label="Sponsors" name="sponsors" onChange={this.handleChange} type="text" value={this.state.sponsors} />
+//               <FieldGroup
+//                 label="Sponsors"
+//                 name="sponsors"
+//                 onChange={this.handleChange}
+//                 type="text"
+//                 value={this.state.sponsors}
+//               />
 
 //               <Button type="submit">Create</Button>
 //             </form>
