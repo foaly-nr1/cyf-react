@@ -166,7 +166,6 @@ exports[`Navigation Component renders 1`] = `
       </NavItem>
       <NavItem
         active={false}
-        auth={true}
         className="nav-icon"
         disabled={false}
         eventKey="linkedin"
