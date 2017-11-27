@@ -15,78 +15,78 @@ const mentors = [
     firstName: 'Germán',
     lastName: 'Bencci',
     photo: german,
-    title: 'Organiser'
+    title: 'Organiser',
   },
 
   {
     firstName: 'Mozafar',
     lastName: 'Haider',
     photo: mozafar,
-    title: 'Scotland Organiser & React'
+    title: 'Scotland Organiser & React',
   },
 
   {
     firstName: 'Kash',
     lastName: 'Karimi',
     photo: kash,
-    title: 'Javascript & React'
+    title: 'Javascript & React',
   },
 
   {
     firstName: 'Amit',
     lastName: 'Shah',
     photo: amit,
-    title: 'Javascript and Final Project'
+    title: 'Javascript and Final Project',
   },
 
   {
     firstName: 'Simon',
     lastName: 'Legg',
     photo: simon,
-    title: 'Javascript and Final Project'
+    title: 'Javascript and Final Project',
   },
 
   {
     firstName: 'Bex',
     lastName: 'Bolton',
     photo: bex,
-    title: 'Javascript & NodeJS'
+    title: 'Javascript & NodeJS',
   },
 
   {
     firstName: 'Claudia',
     lastName: 'Matosa',
     photo: claudia,
-    title: 'HTML, CSS & React'
+    title: 'HTML, CSS & React',
   },
 
   {
     firstName: 'James',
     lastName: 'Wright',
     photo: james,
-    title: 'NodeJS and Databases'
+    title: 'NodeJS and Databases',
   },
 
   {
     firstName: 'Nate',
     lastName: 'Wright',
     photo: nate,
-    title: 'HTML & CSS'
+    title: 'HTML & CSS',
   },
 
   {
     firstName: 'Will',
     lastName: 'Wright',
     photo: will,
-    title: 'HTML, CSS & Javascript'
+    title: 'HTML, CSS & Javascript',
   },
 
   {
     firstName: 'Rob',
     lastName: 'Gelb',
     photo: rob,
-    title: 'Employment, Company Links'
-  }
+    title: 'Employment, Company Links',
+  },
 ];
 
 export default mentors;

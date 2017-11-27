@@ -7,7 +7,7 @@ describe('LogoListItem', () => {
     href: 'a-company-url',
     src: 'logoImageSource.png',
     alt: 'alternateName',
-    additionalClass: 'additionalClass'
+    additionalClass: 'additionalClass',
   };
 
   let logoListItem;
@@ -34,7 +34,7 @@ describe('LogoListItem', () => {
       logoListItem
         .find('a')
         .find('img')
-        .prop('src')
+        .prop('src'),
     ).toEqual(props.src);
   });
 
@@ -43,7 +43,7 @@ describe('LogoListItem', () => {
       logoListItem
         .find('a')
         .find('img')
-        .prop('alt')
+        .prop('alt'),
     ).toEqual(props.alt);
   });
 });

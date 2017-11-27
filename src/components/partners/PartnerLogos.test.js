@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PartnerLogos } from './PartnerLogos';
+import PartnerLogos from './PartnerLogos';
 import LogoList from './LogoList';
 
 describe('PartnerLogos', () => {
@@ -12,8 +12,8 @@ describe('PartnerLogos', () => {
           name: 'Featured Company',
           url: 'url-to-featured-company',
           logo: 'logoForFeaturedCompany.png',
-          featured: true
-        }
+          featured: true,
+        },
       ],
       sectionTwo: [
         {
@@ -21,8 +21,8 @@ describe('PartnerLogos', () => {
           name: 'Non-featured Company 1',
           url: 'url-to-non-featured-company-1',
           logo: 'logoForNonFeaturedCompany1.png',
-          featured: false
-        }
+          featured: false,
+        },
       ],
       sectionThree: [
         {
@@ -30,10 +30,10 @@ describe('PartnerLogos', () => {
           name: 'Non-featured Company 1',
           url: 'url-to-non-featured-company-1',
           logo: 'logoForNonFeaturedCompany1.png',
-          featured: false
-        }
-      ]
-    }
+          featured: false,
+        },
+      ],
+    },
   };
 
   let partnerLogos;
@@ -51,7 +51,7 @@ describe('PartnerLogos', () => {
     it(`passes the right props to ${section}'s LogoList`, () => {
       const sectionDiv = partnerLogos.find(`.partners__${section}`);
       expect(sectionDiv.find(LogoList).prop('partners')).toEqual(
-        props.partners[section]
+        props.partners[section],
       );
     });
   });

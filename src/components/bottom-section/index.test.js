@@ -6,8 +6,8 @@ describe('BottomSection', () => {
   it('renders correctly', () => {
     expect(
       shallow(
-        <BottomSection link="/apply/volunteer" linkText="Become a Volunteer" />
-      )
+        <BottomSection link="/apply/volunteer" linkText="Become a Volunteer" />,
+      ),
     ).toMatchSnapshot();
   });
 });

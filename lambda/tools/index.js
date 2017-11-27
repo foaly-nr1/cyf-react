@@ -1,5 +1,4 @@
 import getSSMParameter from './ssm';
 
-export {
-  getSSMParameter,
-};
+/* eslint-disable import/prefer-default-export */
+export { getSSMParameter };

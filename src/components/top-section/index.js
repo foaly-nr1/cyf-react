@@ -1,6 +1,11 @@
 import React from 'react';
 
-const TopSection = ({ title, content }) => (
+type Props = {
+  title: string,
+  content: string,
+};
+
+const TopSection = ({ title, content }: Props) => (
   <div className="section-container top-section">
     <div className="container">
       <div className="row">
@@ -9,7 +14,7 @@ const TopSection = ({ title, content }) => (
           <div className="divider-1">
             <span />
           </div>
-          <div>{content ? content : ''}</div>
+          <div>{content || ''}</div>
         </div>
       </div>
     </div>

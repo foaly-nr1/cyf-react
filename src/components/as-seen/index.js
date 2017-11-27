@@ -5,28 +5,33 @@ const mediaOutlets = [
   {
     url: 'http://www.wired.co.uk/article/codeyourfuture-refugee-coding-school',
     src: 'img/media-logos/wired.svg',
-    alt: 'Wired'
+    alt: 'Wired',
   },
   {
     url:
       'http://www.unhcr.org/news/stories/2017/1/586e420c7/volunteers-train-refugees-to-crack-into-london-tech-industry.html',
     src: 'img/media-logos/unhcr.png',
-    alt: 'UNHCR'
+    alt: 'UNHCR',
   },
   {
     url:
       'https://www.newsdeeply.com/refugees/articles/2016/10/19/welcome-to-londons-refugee-coding-school',
     src: 'img/media-logos/refugees-deeply.jpeg',
-    alt: 'Refugees Deeply'
+    alt: 'Refugees Deeply',
   },
   {
     url: 'http://www.bbc.co.uk/programmes/p04yzrrg',
     src: 'img/media-logos/BBC.svg',
-    alt: 'BBC'
-  }
+    alt: 'BBC',
+  },
 ];
 
-const Outlet = ({ url, src, alt }) => (
+type Props = {
+  url: string,
+  src: string,
+  alt: string,
+};
+const Outlet = ({ url, src, alt }: Props) => (
   <div className="col-sm-3">
     <Link to={url} target="_blank" rel="noopener noreferrer">
       <div className="icon--large">

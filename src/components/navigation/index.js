@@ -1,7 +1,10 @@
+// @flow
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import setFeatures from 'feature-toggle';
+import type { Auth } from '../../types';
 
 import cyflogo from '../../img/cyf_brand.png';
 import fblogo from '../../img/ico/fb_logo.svg';
@@ -11,12 +14,17 @@ import emaillogo from '../../img/ico/email-icon.svg';
 
 const logoStyle = {
   width: '20px',
-  height: '21px'
+  height: '21px',
 };
 
 const cyflogoStyle = {
   width: '158px',
-  height: '50px'
+  height: '50px',
+};
+
+const login = {
+  display: 'inline-block',
+  width: '90px',
 };
 
 const handleLink = linkName => {
@@ -31,8 +39,8 @@ const handleLink = linkName => {
     case 'linkedin':
       URL = 'https://www.linkedin.com/company/codeyourfuture';
       break;
-    case "email":
-      URL="mailto:contact@codeyourfuture.io"
+    case 'email':
+      URL = 'mailto:contact@codeyourfuture.io';
       break;
     case 'blog':
       URL = 'https://medium.com/@CodeYourFuture';
@@ -45,7 +53,11 @@ const handleLink = linkName => {
   window.open(URL, '_blank');
 };
 
-const Navigation = () => (
+type Props = {
+  auth: Auth,
+};
+
+const Navigation = ({ auth }: Props) => (
   <Navbar collapseOnSelect>
     <Navbar.Header>
       <Link to="/">
@@ -54,7 +66,7 @@ const Navigation = () => (
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
-      <Nav pullRight onSelect={handleLink.bind(this)}>
+      <Nav pullRight onSelect={handleLink}>
         <LinkContainer to="/about">
           <NavItem eventKey={1}>About</NavItem>
         </LinkContainer>
@@ -64,30 +76,47 @@ const Navigation = () => (
         <LinkContainer to="/volunteers">
           <NavItem eventKey={1}>Volunteers</NavItem>
         </LinkContainer>
-        {/* <LinkContainer to="/events">
-          <NavItem eventKey={1}>Events</NavItem>
-        </LinkContainer> */}
+        {auth.isAuthenticated() && (
+          <LinkContainer to="/events">
+            <NavItem eventKey={1}>Events</NavItem>
+          </LinkContainer>
+        )}
+
         <LinkContainer to="/partners">
           <NavItem eventKey={1}>Partners</NavItem>
         </LinkContainer>
         <LinkContainer to="/meet-the-team">
           <NavItem eventKey={1}>Meet the team</NavItem>
         </LinkContainer>
-        <NavItem className="nav-icon" eventKey={'blog'}>
+        <NavItem className="nav-icon" eventKey="blog">
           Blog
         </NavItem>
-        <NavItem className="nav-icon" eventKey={'facebook'}>
+        <NavItem className="nav-icon" eventKey="facebook">
           <img src={fblogo} style={logoStyle} alt="facebook" />
         </NavItem>
-        <NavItem className="nav-icon" eventKey={'twitter'}>
+        <NavItem className="nav-icon" eventKey="twitter">
           <img src={twitterlogo} style={logoStyle} alt="twitter" />
         </NavItem>
-        <NavItem className="nav-icon" eventKey={'linkedin'}>
+        <NavItem className="nav-icon" eventKey="linkedin">
           <img src={linkedinlogo} style={logoStyle} alt="linkedin" />
         </NavItem>
-        <NavItem className="nav-icon" eventKey={'email'}>
+        <NavItem className="nav-icon" eventKey="email">
           <img src={emaillogo} style={logoStyle} alt="email" />
         </NavItem>
+        {setFeatures().active('login') && (
+          <div style={login}>
+            {!auth.isAuthenticated() && (
+              <button type="button" onClick={auth.login}>
+                Log In
+              </button>
+            )}
+            {auth.isAuthenticated() && (
+              <button type="button" onClick={auth.logout}>
+                Log Out
+              </button>
+            )}
+          </div>
+        )}
       </Nav>
     </Navbar.Collapse>
   </Navbar>

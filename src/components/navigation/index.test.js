@@ -5,6 +5,10 @@ import Navigation from './';
 
 describe('Navigation Component', () => {
   it('renders', () => {
-    expect(shallow(<Navigation />)).toMatchSnapshot();
+    const mockAuth = {
+      isAuthenticated: jest.fn(() => true),
+    };
+
+    expect(shallow(<Navigation auth={mockAuth} />)).toMatchSnapshot();
   });
 });

@@ -11,23 +11,23 @@ describe('LogoList', () => {
         name: 'Featured Company',
         url: 'url-to-featured-company',
         logo: 'logoForFeaturedCompany.png',
-        featured: true
+        featured: true,
       },
       {
         id: 'nonFeaturedCompany1',
         name: 'Non-featured Company 1',
         url: 'url-to-non-featured-company-1',
         logo: 'logoForNonFeaturedCompany1.png',
-        featured: false
+        featured: false,
       },
       {
         id: 'nonFeaturedCompany2',
         name: 'Non-featured Company 2',
         url: 'url-to-non-featured-company-2',
         logo: 'logoForNonFeaturedCompany2.png',
-        featured: false
-      }
-    ]
+        featured: false,
+      },
+    ],
   };
 
   let logoList;

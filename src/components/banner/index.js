@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../../stylesheets/index.scss';
-//TODO: change hrefs to react-bootstrap links
+
 const Banner = () => (
   <div className="page-title">
     <div className="page-title-text">

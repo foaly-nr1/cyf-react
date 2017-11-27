@@ -1,8 +1,9 @@
+// @flow
 import React from 'react';
 import LogoList from './LogoList';
 
-const renderLogoListSections = partners => {
-  return Object.keys(partners).map(section => {
+const renderLogoListSections = partners =>
+  Object.keys(partners).map(section => {
     const className = `container partners__${section}`;
     const sectionLabel =
       section === 'tech' ? '< Tech Supporters />' : `< ${section} />`;
@@ -17,10 +18,14 @@ const renderLogoListSections = partners => {
       </div>
     );
   });
-};
 
-export const PartnerLogos = ({ partners }) => (
+type Props = {
+  partners: Object,
+};
+const PartnerLogos = ({ partners }: Props) => (
   <section className="section-container section-container-gray">
     <div className="container partners">{renderLogoListSections(partners)}</div>
   </section>
 );
+
+export default PartnerLogos;

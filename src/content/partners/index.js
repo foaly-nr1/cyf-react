@@ -13,8 +13,8 @@ const partners = {
       name: 'GitHub',
       url: 'http://github.com/',
       logo: github,
-      featured: false
-    }
+      featured: false,
+    },
   ],
 
   london: [
@@ -23,15 +23,15 @@ const partners = {
       name: 'Ticketmaster',
       url: 'http://www.ticketmaster.com/',
       logo: ticketmaster,
-      featured: true
+      featured: true,
     },
     {
       id: 'geckoboard',
       name: 'Geckoboard',
       url: 'http://www.geckoboard.com/',
       logo: geckoboard,
-      featured: false
-    }
+      featured: false,
+    },
   ],
 
   scotland: [
@@ -40,8 +40,8 @@ const partners = {
       name: 'Kinning Park Complex',
       url: 'http://kinningparkcomplex.org',
       logo: kinningParkComplex,
-      featured: false
-    }
+      featured: false,
+    },
   ],
 
   manchester: [
@@ -50,8 +50,8 @@ const partners = {
       name: 'Co-op',
       url: 'http://www.coop.co.uk',
       logo: coop,
-      featured: false
-    }
+      featured: false,
+    },
   ],
 
   tech: [
@@ -60,16 +60,16 @@ const partners = {
       name: 'Pipedrive',
       url: 'http://www.pipedrive.com',
       logo: pipedrive,
-      featured: false
+      featured: false,
     },
     {
       id: 'slack',
       name: 'Slack',
       url: 'http://slack.com/',
       logo: slack,
-      featured: false
-    }
-  ]
+      featured: false,
+    },
+  ],
 };
 
 export default partners;

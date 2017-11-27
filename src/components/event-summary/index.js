@@ -5,10 +5,17 @@ import { Link } from 'react-router-dom';
 const containerStyle = {
   borderBottom: '1px solid #ddd',
   paddingBottom: '10px',
-  paddingLeft: 0
+  paddingLeft: 0,
 };
 
-const EventSummary = ({ description, id, date, title, location }) => (
+type Event = {
+  description: string,
+  id: string,
+  date: string,
+  title: string,
+  location: string,
+};
+const EventSummary = ({ description, id, date, title, location }: Event) => (
   <ul className="no-bullet" style={containerStyle}>
     <div className="row grouped_events">
       <div className="event">
