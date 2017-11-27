@@ -1,11 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Panel, ControlLabel, Glyphicon } from 'react-bootstrap';
-
-type Auth = {
-  userProfile: Function,
-  getProfile: Function,
-};
+import type { Auth } from '../../types';
 
 type Props = {
   auth: Auth,

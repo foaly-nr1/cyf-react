@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import setFeatures from 'feature-toggle';
+import type { Auth } from '../../types';
 
 import cyflogo from '../../img/cyf_brand.png';
 import fblogo from '../../img/ico/fb_logo.svg';
@@ -53,7 +54,7 @@ const handleLink = linkName => {
 };
 
 type Props = {
-  auth: Object,
+  auth: Auth,
 };
 
 const Navigation = ({ auth }: Props) => (
