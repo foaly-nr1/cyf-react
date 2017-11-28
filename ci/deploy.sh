@@ -9,8 +9,10 @@ if [ "$#" -ne 1 ]; then
 fi
 
 if [ $BRANCH == "staging" ]; then
+    export REACT_APP_HOST=$HOST_STAGING
 	REPO_NAME="web-static-staging"
 elif [ $BRANCH == "production" ]; then
+    export REACT_APP_HOST=$HOST_PRODUCTION
 	REPO_NAME="web-static-production"
 else
 	echo "Please provide a valid branch"
