@@ -57,7 +57,7 @@ const StudentApplicationForm = props => (
         .map(key => props.validationErrors[key].length)
         .some(length => length > 0) && (
         <SubmitErrorSpan>
-          There are some errors in the form, please correct them before
+          There are some incomplete fields in the form, please correct them before
           submitting :)
         </SubmitErrorSpan>
       )}
