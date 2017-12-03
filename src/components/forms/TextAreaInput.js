@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import { ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
 import ValidationErrors from './ValidationErrors';
 
-const countWords = textString => textString.split(' ').length;
+const countWords = textString => textString.trim().split(/\s+/).length;
 
 const Container = styled('Container')`
   display: flex;

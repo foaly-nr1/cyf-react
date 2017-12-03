@@ -22,11 +22,11 @@ The non-trivial parts of `/lambda`'s file structure are:
 - `serverless.yml` contains the definitions of the names, triggers and code locations of the lambdas to deploy. Each definition will lead to two lambdas created: one for `production` and one for `staging`.
 - `/testEvents` contains test events to test the lambdas locally. You can copy-paste those test events in the AWS console to test the lambdas once deployed.   
 
-=> Command to test locally:
+Command to test locally:
 ```
 serverless invoke local -s {stage} --path testEvents/{testEvent}.json --function {functionNameInConfigFile}
 ```
-=> Command to test remotely
+Command to test remotely:
 ```
 serverless invoke -s {stage} --path testEvents/{testEvent}.json --function {functionNameInConfigFile}
 ```
