@@ -10,7 +10,7 @@ const isNumeric = value =>
   value.length === 0 || value.match(/^[0-9\+]+$/) != null;
 const required = value => !!value;
 const minimum100Words = value =>
-  required(value) && value.split(' ').length >= 100;
+  required(value) && value.trim().split(/\s+/).length >= 100;
 const email = value => value.length === 0 || value.match(emailRegexp) != null;
 const ukPhone = value =>
   value.length === 0 || value.match(ukPhoneRegexp) != null;
