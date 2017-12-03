@@ -1,16 +1,15 @@
 import checks from './checks';
 
-
 // On construction, transform the rules object setup in the page's validation
 // file for a more efficient lookup.
-const createRulesObject = (rules) => {
+const createRulesObject = rules => {
   const rulesObject = {};
-  Object.keys(rules).forEach((field) => {
+  Object.keys(rules).forEach(field => {
     rulesObject[field] = {};
-    rules[field].forEach((rule) => {
+    rules[field].forEach(rule => {
       const castRule = Object.assign({}, rule);
       castRule.check = checks[rule.check];
-      castRule.events.forEach((event) => {
+      castRule.events.forEach(event => {
         if (!rulesObject[field][event]) rulesObject[field][event] = [];
         rulesObject[field][event].push(castRule);
       });
@@ -19,6 +18,17 @@ const createRulesObject = (rules) => {
   return rulesObject;
 };
 
+// For a field, get updated array of validation errors
+// given the previous array of errors.
+const getErrorsForField = (previousArray, rule, value) => {
+  let fieldErrors = previousArray && previousArray.slice();
+  if (!fieldErrors) fieldErrors = [];
+  const idx = fieldErrors.find(errorMessage => rule.errorMessage === errorMessage);
+  const passed = rule.check(value);
+  if (passed && idx) fieldErrors.splice(idx, 1);
+  else if (!passed && !idx) fieldErrors.push(rule.errorMessage);
+  return fieldErrors;
+};
 
 // Class to get the two validation functions for a component.
 class Validator {
@@ -31,34 +41,28 @@ class Validator {
     this.rulesObject = createRulesObject(rules);
   }
 
+
   // Apply a validation rule by setting/unsetting it error message in the component's
   // state and returning the corresponding boolean.
-  _applyRule(rule, field, value) {
-    const state = this.getState();
-    let fieldErrors = state.validationErrors[field] && state.validationErrors[field].slice();
-    if (!fieldErrors) fieldErrors = [];
-    const idx = fieldErrors.find(errorMessage => rule.errorMessage === errorMessage);
-    const passed = rule.check(value);
-
-    if (passed && idx) fieldErrors.splice(idx, 1);
-    else if (!passed && !idx) fieldErrors.push(rule.errorMessage);
+  applyRule(rule, field, value) {
     this.setState(previousState => ({
       ...previousState,
       validationErrors: {
         ...previousState.validationErrors,
-        [field]: fieldErrors,
+        [field]: getErrorsForField(previousState.validationErrors[field], rule, value),
       },
     }));
-    return passed;
+    return rule.check(value);
   }
-
 
   // Apply all validation rules for a field/event combination
   // and return false if at least one failed.
   // In practice this is used for onChange/onBlur behaviour.
   validateSingleField(field, event, value) {
     try {
-      const checkResults = this.rulesObject[field][event].map(rule => this._applyRule(rule, field, value));
+      const checkResults = this.rulesObject[field][event].map(rule =>
+        this.applyRule(rule, field, value),
+      );
       return checkResults.every(result => result);
     } catch (e) {
       return true;
@@ -71,7 +75,9 @@ class Validator {
   validateAllFields(event) {
     const state = this.getState();
     try {
-      const validationResults = Object.keys(this.rulesObject).map(field => this.validateSingleField(field, event, state[field]));
+      const validationResults = Object.keys(this.rulesObject).map(field =>
+        this.validateSingleField(field, event, state[field]),
+      );
       return validationResults.every(result => result);
     } catch (e) {
       return true;

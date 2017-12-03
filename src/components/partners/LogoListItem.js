@@ -17,7 +17,7 @@ LogoListItem.propTypes = {
   href: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  additionalClass: PropTypes.string.isRequired
+  additionalClass: PropTypes.string.isRequired,
 };
 
 export default LogoListItem;

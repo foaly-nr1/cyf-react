@@ -6,43 +6,19 @@ import {
   ControlLabel,
   Button,
   Row,
-  Col
+  Col,
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 class DonationPicker extends React.Component {
   propTypes = {
-    onTokenCapture: PropTypes.func
+    onTokenCapture: PropTypes.func,
   };
 
   state = {
     amount: 20,
-    token: null
-  };
-
-  updateAmount = e => {
-    this.setState({
-      amount: e.target.value
-    });
-  };
-
-  checkout = () => {
-    if (!window.StripeCheckout || !this.stripeHandler) {
-      alert('Could not checkout, please try again soon!');
-    }
-
-    this.stripeHandler.open({
-      name: 'CYF',
-      description: 'Donation',
-      zipCode: true,
-      amount: this.state.amount * 100
-    });
-  };
-
-  onTokenSuccess = token => {
-    if (this.props.onTokenCapture) {
-      this.props.onTokenCapture(token.id, this.state.amount);
-    }
+    // eslint-disable-next-line react/no-unused-state
+    token: null,
   };
 
   componentDidMount() {
@@ -53,10 +29,36 @@ class DonationPicker extends React.Component {
         locale: 'auto',
         token: this.onTokenSuccess,
         currency: 'GBP',
-        bitcoin: true
+        bitcoin: true,
       });
     }, 1000);
   }
+
+  onTokenSuccess = token => {
+    if (this.props.onTokenCapture) {
+      this.props.onTokenCapture(token.id, this.state.amount);
+    }
+  };
+
+  checkout = () => {
+    if (!window.StripeCheckout || !this.stripeHandler) {
+      // eslint-disable-next-line no-alert
+      alert('Could not checkout, please try again soon!');
+    }
+
+    this.stripeHandler.open({
+      name: 'CYF',
+      description: 'Donation',
+      zipCode: true,
+      amount: this.state.amount * 100,
+    });
+  };
+
+  updateAmount = e => {
+    this.setState({
+      amount: e.target.value,
+    });
+  };
 
   render() {
     const { amount } = this.state;

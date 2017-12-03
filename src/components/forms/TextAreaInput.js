@@ -1,14 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import {
-  ControlLabel,
-  FormControl,
-  FormGroup,
-} from 'react-bootstrap';
+import { ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
 import ValidationErrors from './ValidationErrors';
 
-const countWords = textString => textString.split(' ').length;
+const countWords = textString => textString.trim().split(/\s+/).length;
 
 const Container = styled('Container')`
   display: flex;
@@ -19,8 +15,7 @@ const Container = styled('Container')`
   justify-content: flex-start;
 `;
 
-const StyledFormControl = styled(FormControl)`
-`;
+const StyledFormControl = styled(FormControl)``;
 
 const StyledControlLabel = styled(ControlLabel)`
   margin-bottom: 20px;
@@ -36,9 +31,11 @@ const TextAreaInput = props => (
   <Container>
     <FormGroup>
       {props.label && <StyledControlLabel>{props.label}</StyledControlLabel>}
-      {
-        props.wordCount && <WordCountContainer><span>Number of words: {countWords(props.value)}</span></WordCountContainer>
-      }
+      {props.wordCount && (
+        <WordCountContainer>
+          <span>Number of words: {countWords(props.value)}</span>
+        </WordCountContainer>
+      )}
       <StyledFormControl
         componentClass="textarea"
         rows="20"

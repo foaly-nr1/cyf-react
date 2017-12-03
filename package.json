@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "auth0-js": "^8.11.3",
     "axios": "^0.17.0",
     "babel-plugin-emotion": "^8.0.9",
     "country-list": "^1.1.0",
     "emotion": "^8.0.9",
+    "feature-toggle": "^0.3.0",
     "firebase": "^4.3.0",
     "moment": "^2.19.1",
     "prop-types": "^15.6.0",
@@ -25,10 +27,12 @@
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.0.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-app": "^3.0.0",
     "babel-runtime": "6.23.0",
     "case-sensitive-paths-webpack-plugin": "1.1.4",
@@ -40,19 +44,24 @@
     "enzyme-to-json": "^3.2.0",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-flowtype": "2.33.0",
+    "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "0.11.1",
+    "flow-bin": "^0.59.0",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.28.0",
     "jest": "20.0.3",
+    "jsonwebtoken": "^8.1.0",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.5",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.6.1",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
@@ -66,21 +75,22 @@
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
   },
+  "precommit": ["format", "flow"],
   "scripts": {
     "format": "prettier --write \"src/**/*.js\"",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "flow": "flow",
+    "lint": "yarn lint:js",
+    "lint:js": "eslint '**/*.js'"
   },
   "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/browserMocks.js"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "testMatch": [
@@ -94,19 +104,12 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "presets": ["react-app", "flow"]
   }
 }

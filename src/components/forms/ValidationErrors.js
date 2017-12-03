@@ -16,11 +16,7 @@ const Container = styled('div')`
 
 const ValidationErrors = props => (
   <Container>
-    {props.errors.map(error => (
-      <ErrorSpan key={error}>
-        {error}
-      </ErrorSpan>
-    ))}
+    {props.errors.map(error => <ErrorSpan key={error}>{error}</ErrorSpan>)}
   </Container>
 );
 

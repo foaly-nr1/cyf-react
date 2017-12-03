@@ -9,7 +9,7 @@ describe('MentorCard Component', () => {
       firstName: 'Germán',
       lastName: 'Bencci',
       photo: 'german.jpg',
-      title: 'Organiser'
+      title: 'Organiser',
     };
     expect(shallow(<MentorCard {...mentor} />)).toMatchSnapshot();
   });

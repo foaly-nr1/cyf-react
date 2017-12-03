@@ -29,9 +29,9 @@ LogoList.propTypes = {
       name: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       logo: PropTypes.string.isRequired,
-      featured: PropTypes.bool.isRequired
-    })
-  ).isRequired
+      featured: PropTypes.bool.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default LogoList;
