@@ -18,6 +18,18 @@ const createRulesObject = rules => {
   return rulesObject;
 };
 
+// For a field, get updated array of validation errors
+// given the previous array of errors.
+const getErrorsForField = (previousArray, rule, value) => {
+  let fieldErrors = previousArray && previousArray.slice();
+  if (!fieldErrors) fieldErrors = [];
+  const idx = fieldErrors.find(errorMessage => rule.errorMessage === errorMessage);
+  const passed = rule.check(value);
+  if (passed && idx) fieldErrors.splice(idx, 1);
+  else if (!passed && !idx) fieldErrors.push(rule.errorMessage);
+  return fieldErrors;
+};
+
 // Class to get the two validation functions for a component.
 class Validator {
   // Constructor to bind the instance to the component.
@@ -29,28 +41,18 @@ class Validator {
     this.rulesObject = createRulesObject(rules);
   }
 
+
   // Apply a validation rule by setting/unsetting it error message in the component's
   // state and returning the corresponding boolean.
   applyRule(rule, field, value) {
-    const state = this.getState();
-    let fieldErrors =
-      state.validationErrors[field] && state.validationErrors[field].slice();
-    if (!fieldErrors) fieldErrors = [];
-    const idx = fieldErrors.find(
-      errorMessage => rule.errorMessage === errorMessage,
-    );
-    const passed = rule.check(value);
-
-    if (passed && idx) fieldErrors.splice(idx, 1);
-    else if (!passed && !idx) fieldErrors.push(rule.errorMessage);
     this.setState(previousState => ({
       ...previousState,
       validationErrors: {
         ...previousState.validationErrors,
-        [field]: fieldErrors,
+        [field]: getErrorsForField(previousState.validationErrors[field], rule, value),
       },
     }));
-    return passed;
+    return rule.check(value);
   }
 
   // Apply all validation rules for a field/event combination
