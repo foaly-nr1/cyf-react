@@ -51,7 +51,7 @@ export default class Apply extends Component {
   }
 
   onChange(field) {
-    return (value) => {
+    return value => {
       this.validator.validateSingleField(field, 'onChange', value);
       if (field === 'phone') {
         if (!checks.isNumeric(value)) return;
@@ -125,8 +125,8 @@ export default class Apply extends Component {
         this.setState(initialState);
         this.props.history.push('/apply/success/student');
       })
-      .catch((error) => {
-        window.grecaptcha.reset()
+      .catch(error => {
+        window.grecaptcha.reset();
         if (error.response.status === 401) {
           this.setState({
             submitMessage:

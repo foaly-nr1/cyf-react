@@ -23,7 +23,9 @@ const createRulesObject = rules => {
 const getErrorsForField = (previousArray, rule, value) => {
   let fieldErrors = previousArray && previousArray.slice();
   if (!fieldErrors) fieldErrors = [];
-  const idx = fieldErrors.find(errorMessage => rule.errorMessage === errorMessage);
+  const idx = fieldErrors.find(
+    errorMessage => rule.errorMessage === errorMessage,
+  );
   const passed = rule.check(value);
   if (passed && idx) fieldErrors.splice(idx, 1);
   else if (!passed && !idx) fieldErrors.push(rule.errorMessage);
@@ -41,7 +43,6 @@ class Validator {
     this.rulesObject = createRulesObject(rules);
   }
 
-
   // Apply a validation rule by setting/unsetting it error message in the component's
   // state and returning the corresponding boolean.
   applyRule(rule, field, value) {
@@ -49,7 +50,11 @@ class Validator {
       ...previousState,
       validationErrors: {
         ...previousState.validationErrors,
-        [field]: getErrorsForField(previousState.validationErrors[field], rule, value),
+        [field]: getErrorsForField(
+          previousState.validationErrors[field],
+          rule,
+          value,
+        ),
       },
     }));
     return rule.check(value);
