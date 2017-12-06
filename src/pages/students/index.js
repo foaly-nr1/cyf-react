@@ -93,16 +93,23 @@ const Students = () => {
                   &nbsp;and complete Intro to HTML/CSS: Making webpages
                 </li>
                 <li>
-                  Join&nbsp;
+                  Complete the Codecademy &nbsp;
                   <Link
-                    to="https://www.freecodecamp.com/"
+                    to="https://www.codecademy.com/learn/learn-html"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    FreeCodeCamp
-                  </Link>
-                  &nbsp;and complete a minimum of 20 hours on Front End
-                  Development
+                    HTML
+                  </Link>{' '}
+                  and{' '}
+                  <Link
+                    to="https://www.codecademy.com/learn/learn-css"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    CSS
+                  </Link>{' '}
+                  courses
                 </li>
               </ul>
 

@@ -3,8 +3,7 @@
 
 [![CircleCI](https://circleci.com/gh/CodeYourFuture/cyf-react.svg?style=svg)](https://circleci.com/gh/CodeYourFuture/cyf-react)
 
-__NOTE__: Currently reactifying the old repo, instructions not up to date
-
+This is the official CYF website live at [codeyourfuture.io](https://codeyourfuture.io)
 
 ## Requirements
 
