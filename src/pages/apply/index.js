@@ -26,8 +26,8 @@ const initialState = {
   motivation: '',
   submitMessage: '',
   validationErrors: {},
-  reCaptchaWidgetId: '',
-  reCaptchaResponse: '',
+  // reCaptchaWidgetId: '',
+  // reCaptchaResponse: '',
 };
 
 export default class Apply extends Component {
@@ -43,12 +43,12 @@ export default class Apply extends Component {
     this.validator = new Validator(rules, this);
   }
 
-  componentDidMount() {
-    this.state.reCaptchaWidgetId = window.grecaptcha.render('reCaptcha', {
-      sitekey: '6LdnZDsUAAAAAPQMvvtdsMnD8dTghWV_mkwyaph3',
-      callback: this.addStudent,
-    });
-  }
+  // componentDidMount() {
+    // this.state.reCaptchaWidgetId = window.grecaptcha.render('reCaptcha', {
+    //   sitekey: '6LdnZDsUAAAAAPQMvvtdsMnD8dTghWV_mkwyaph3',
+    //   callback: this.addStudent,
+    // });
+  // }
 
   onChange(field) {
     return value => {
@@ -67,7 +67,8 @@ export default class Apply extends Component {
 
   onSubmit() {
     if (this.validator.validateAllFields('onSubmit')) {
-      window.grecaptcha.execute();
+      this.addStudent()
+      // window.grecaptcha.execute();
     } else {
       scrollToElement('.title', { align: 'top' });
     }
@@ -102,10 +103,10 @@ export default class Apply extends Component {
     return formURL;
   }
 
-  addStudent(response) {
-    this.setState({
-      reCaptchaResponse: response,
-    });
+  addStudent() {
+    // this.setState({
+    //   reCaptchaResponse: response,
+    // });
     const data = {
       name: this.state.name,
       email: this.state.email,
@@ -115,25 +116,25 @@ export default class Apply extends Component {
       programming: this.state.programming,
       phone: this.state.phone,
       motivation: this.state.motivation,
-      reCaptchaResponse: this.state.reCaptchaResponse,
+      // reCaptchaResponse: this.state.reCaptchaResponse,
     };
 
     pipedriveApi
       .addStudent(data)
       .then(() => {
-        window.grecaptcha.reset();
+        // window.grecaptcha.reset();
         this.setState(initialState);
         this.props.history.push('/apply/success/student');
       })
       .catch(error => {
-        window.grecaptcha.reset();
+        // window.grecaptcha.reset();
         if (error.response.status === 401) {
           this.setState({
             submitMessage:
               'Woops! Looks like recaptcha verification failed. Please try submitting again.',
           });
         }
-        window.grecaptcha.reset();
+        // window.grecaptcha.reset();
         this.setState({
           submitMessage:
             'Woops! Sorry, there was an error while handling your application. Please try again.',
@@ -177,7 +178,7 @@ export default class Apply extends Component {
             src={this.getFormUrl()}
           />
         )}
-        <div id="reCaptcha" data-size="invisible" />
+        {/* <div id="reCaptcha" data-size="invisible" /> */}
       </Container>
     );
   }
