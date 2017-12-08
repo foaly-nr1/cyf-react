@@ -44,10 +44,10 @@ export default class Apply extends Component {
   }
 
   // componentDidMount() {
-    // this.state.reCaptchaWidgetId = window.grecaptcha.render('reCaptcha', {
-    //   sitekey: '6LdnZDsUAAAAAPQMvvtdsMnD8dTghWV_mkwyaph3',
-    //   callback: this.addStudent,
-    // });
+  // this.state.reCaptchaWidgetId = window.grecaptcha.render('reCaptcha', {
+  //   sitekey: '6LdnZDsUAAAAAPQMvvtdsMnD8dTghWV_mkwyaph3',
+  //   callback: this.addStudent,
+  // });
   // }
 
   onChange(field) {
@@ -67,7 +67,7 @@ export default class Apply extends Component {
 
   onSubmit() {
     if (this.validator.validateAllFields('onSubmit')) {
-      this.addStudent()
+      this.addStudent();
       // window.grecaptcha.execute();
     } else {
       scrollToElement('.title', { align: 'top' });
