@@ -1,7 +1,7 @@
-import axios from 'axios';
-import querystring from 'querystring';
+// import axios from 'axios';
+// import querystring from 'querystring';
 import { peopleFrontendToPipedrive } from '../pipedriveTransformer';
-import { getSSMParameter } from '../../../tools';
+// import { getSSMParameter } from '../../../tools';
 
 const fields = [
   'name',
