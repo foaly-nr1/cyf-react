@@ -1,11 +1,6 @@
 import Pipedrive from 'pipedrive';
 import { getSSMParameter } from '../../tools';
-import addStudent from './actions';
-
-// Get the right pipedrive action depending on the `type` sent.
-const pipedriveActions = {
-  addStudent,
-};
+import pipedriveActions from './actions';
 
 // The Lambda
 export default (event, context, callback) => {

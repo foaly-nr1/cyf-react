@@ -11,7 +11,6 @@ const fields = [
   'city',
   'refugee',
   'programming',
-  'motivation',
 ];
 
 // Add a new student in PipeDrive: Clean the data and make the post request
@@ -49,7 +48,11 @@ const addStudent = (data, pipedrive, callback) => {
         console.error(error2);
         return callback(new Error('[400] Error while adding student.'));
       }
-      return callback(null, '[200] Student added successfully.');
+      return callback(null, {
+        status: 200,
+        message: 'Student added successfully.',
+        personId: successData.id,
+      });
     });
   });
 }

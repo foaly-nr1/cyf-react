@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import scrollToElement from 'scroll-to-element';
 import { Validator, checks } from 'form-validation';
-import { StudentApplicationForm } from 'components';
+import {
+  FirstStudentApplicationForm,
+  SecondStudentApplicationForm,
+} from 'components';
 import { Persist } from 'react-persist';
-import pipedriveApi from '../../lib/pipedrive';
+import pipedriveApi from 'lib/pipedrive';
 import rules from './Apply.validation.js';
 
 const Container = styled('div')`
@@ -26,6 +29,7 @@ const initialState = {
   motivation: '',
   submitMessage: '',
   validationErrors: {},
+  personId: null,
   // reCaptchaWidgetId: '',
   // reCaptchaResponse: '',
 };
@@ -66,12 +70,28 @@ export default class Apply extends Component {
   }
 
   onSubmit() {
-    if (this.validator.validateAllFields('onSubmit')) {
+    if (
+      !this.state.personId &&
+      this.validator.validateAllFields('onSubmitFirstForm')
+    ) {
       this.addStudent();
       // window.grecaptcha.execute();
+    } else if (
+      this.state.personId &&
+      this.validator.validateAllFields('onSubmitSecondForm')
+    ) {
+      this.addStudentMotivation();
     } else {
       scrollToElement('.title', { align: 'top' });
     }
+  }
+
+  getTopErrorMessage() {
+    const hasErrors = Object.keys(this.state.validationErrors)
+      .map(key => this.state.validationErrors[key].length)
+      .some(length => length > 0);
+    if (!hasErrors) return undefined;
+    return 'There are some incomplete fields in the form, please correct them before submitting :)';
   }
 
   getFormUrl() {
@@ -115,16 +135,18 @@ export default class Apply extends Component {
       refugee: this.state.refugee,
       programming: this.state.programming,
       phone: this.state.phone,
-      motivation: this.state.motivation,
       // reCaptchaResponse: this.state.reCaptchaResponse,
     };
 
     pipedriveApi
       .addStudent(data)
-      .then(() => {
+      .then(response => {
         // window.grecaptcha.reset();
-        this.setState(initialState);
-        this.props.history.push('/apply/success/student');
+        this.setState({
+          ...initialState,
+          personId: response.data.personId,
+        });
+        scrollToElement('.title', { align: 'top' });
       })
       .catch(error => {
         // window.grecaptcha.reset();
@@ -142,8 +164,31 @@ export default class Apply extends Component {
       });
   }
 
+  addStudentMotivation() {
+    const data = {
+      motivation: this.state.motivation,
+      personId: this.state.personId,
+    };
+
+    pipedriveApi
+      .addStudentMotivation(data)
+      .then(() => {
+        this.setState(initialState);
+        this.props.history.push('/apply/success/student');
+      })
+      .catch(() => {
+        this.setState({
+          submitMessage:
+            'Woops! Sorry, there was an error while handling your application. Please try again.',
+        });
+      });
+  }
+
   render() {
     const { formType } = this.props.match.params;
+    const StudentFormToRender = this.state.personId
+      ? SecondStudentApplicationForm
+      : FirstStudentApplicationForm;
     return (
       <Container>
         <Persist
@@ -153,7 +198,7 @@ export default class Apply extends Component {
           onMount={data => this.setState(data)}
         />
         {formType === 'student' ? (
-          <StudentApplicationForm
+          <StudentFormToRender
             name={this.state.name}
             email={this.state.email}
             country={this.state.country}
@@ -166,6 +211,7 @@ export default class Apply extends Component {
             onChange={this.onChange}
             onBlur={this.onBlur}
             onSubmit={this.onSubmit}
+            validationErrorMessage={this.getTopErrorMessage()}
             validationErrors={this.state.validationErrors}
           />
         ) : (

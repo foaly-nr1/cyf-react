@@ -1,10 +1,4 @@
-import StudentApplicationForm from './student-application';
-import { DropdownInput, TextAreaInput, RadioInput, TextInput } from './forms';
+import FirstStudentApplicationForm from './student-application/FirstForm';
+import SecondStudentApplicationForm from './student-application/SecondForm';
 
-export {
-  StudentApplicationForm,
-  TextAreaInput,
-  RadioInput,
-  TextInput,
-  DropdownInput,
-};
+export { FirstStudentApplicationForm, SecondStudentApplicationForm };
