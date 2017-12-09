@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import checks from 'form-validation/checks';
 import { ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
 import ValidationErrors from './ValidationErrors';
-
-const countWords = textString => textString.trim().split(/\s+/).length;
 
 const Container = styled('Container')`
   display: flex;
@@ -33,7 +32,7 @@ const TextAreaInput = props => (
       {props.label && <StyledControlLabel>{props.label}</StyledControlLabel>}
       {props.wordCount && (
         <WordCountContainer>
-          <span>Number of words: {countWords(props.value)}</span>
+          <span>Number of words: {checks.countWords(props.value)}</span>
         </WordCountContainer>
       )}
       <StyledFormControl

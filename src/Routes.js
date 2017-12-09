@@ -3,17 +3,17 @@ import { Route, Router } from 'react-router-dom';
 import history from './lib/history';
 
 import {
-  Home,
-  Event,
-  ApplySuccess,
-  Apply,
-  Volunteers,
-  Students,
-  Events,
-  Partners,
   About,
-  MeetTheTeam,
+  Apply,
+  ApplySuccess,
   Donate,
+  Event,
+  Events,
+  Home,
+  MeetTheTeam,
+  Partners,
+  Students,
+  Volunteers,
 } from './pages';
 
 import Auth from './lib/auth';

@@ -26,7 +26,7 @@ const peopleFieldsMapper = {
 
 // In data, transform field names from frontend names to associated
 // pipedrive API field ids. Returned object only contains fields whose
-// names are in `requiredFields`.
+// names are in `fields`.
 const peopleFrontendToPipedrive = (data, fields) => {
   const mapper = peopleFieldsMapper[process.env.PIPEDRIVE_ACCOUNT];
   const transformedData = {};
@@ -38,7 +38,7 @@ const peopleFrontendToPipedrive = (data, fields) => {
 
 // In data, transform field names from pipedrive API field ids to associated
 // frontend field names.  Returned object only contains fields whose
-// names are in `askedFields`.
+// names are in `fields`.
 const peoplePipedriveToFrontend = (data, fields) => {
   const mapper = peopleFieldsMapper[process.env.PIPEDRIVE_ACCOUNT];
   const transformedData = {};
