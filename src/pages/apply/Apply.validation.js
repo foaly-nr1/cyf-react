@@ -61,11 +61,19 @@ const rules = {
       events: ['onSubmitFirstForm', 'onBlur', 'onChange'],
     },
   ],
+  realReferrer: [
+    {
+      check: 'required',
+      errorMessage:
+        'Please tell us the place, person or website where you first heard about us',
+      events: ['onSubmitFirstForm', 'onChange', 'onBlur'],
+    },
+  ],
   motivation: [
     {
-      check: 'minimum100Words',
+      check: 'minimum50Words',
       errorMessage:
-        'Please tell us a bit more about your motivation (100 words)',
+        'Please tell us a bit more about your motivation (50 words)',
       events: ['onSubmitSecondForm', 'onBlur'],
     },
   ],

@@ -36,6 +36,7 @@ const initialState = {
   refugee: '',
   programming: '',
   phone: '',
+  realReferrer: '',
   motivation: '',
   submitMessage: '',
   validationErrors: {},
@@ -145,6 +146,7 @@ export default class Apply extends Component {
       refugee: this.state.refugee,
       programming: this.state.programming,
       phone: this.state.phone,
+      realReferrer: this.state.realReferrer,
       // reCaptchaResponse: this.state.reCaptchaResponse,
     };
 
@@ -217,8 +219,8 @@ export default class Apply extends Component {
                 <br />
                 <br />
                 <br />
-                If your tell us your motivation below, you will already have
-                completed the first part of the process :)
+                If you want, you can start telling us about your motivation
+                below :)
               </span>
             </SuccessMessageContainer>
           )}
@@ -231,6 +233,7 @@ export default class Apply extends Component {
             refugee={this.state.refugee}
             programming={this.state.programming}
             phone={this.state.phone}
+            realReferrer={this.state.realReferrer}
             motivation={this.state.motivation}
             submitMessage={this.state.submitMessage}
             onChange={this.onChange}
