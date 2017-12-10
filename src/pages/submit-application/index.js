@@ -17,7 +17,7 @@ const ApplySuccess = props => {
     case 'student':
       SuccessContent = (
         <span>
-          We have received your Motivation letter!
+          We have received your motivation text!
           <br />
           <br />
           <b>We will send you instructions for the next steps.</b>
