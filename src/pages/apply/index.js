@@ -18,6 +18,16 @@ const Container = styled('div')`
   width: 100%;
 `;
 
+const SuccessMessageContainer = styled('div')`
+  margin: 50px 20px 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-align: left;
+  max-width: 768px;
+`;
+
 const initialState = {
   name: '',
   email: '',
@@ -90,7 +100,7 @@ export default class Apply extends Component {
     const hasErrors = Object.keys(this.state.validationErrors)
       .map(key => this.state.validationErrors[key].length)
       .some(length => length > 0);
-    if (!hasErrors) return undefined;
+    if (!hasErrors) return '';
     return 'There are some incomplete fields in the form, please correct them before submitting :)';
   }
 
@@ -146,7 +156,7 @@ export default class Apply extends Component {
           ...initialState,
           personId: response.data.personId,
         });
-        scrollToElement('.title', { align: 'top' });
+        scrollToElement('.success-message', { align: 'top' });
       })
       .catch(error => {
         // window.grecaptcha.reset();
@@ -179,7 +189,7 @@ export default class Apply extends Component {
       .catch(() => {
         this.setState({
           submitMessage:
-            'Woops! Sorry, there was an error while handling your application. Please try again.',
+            'Woops! Sorry, there was an error while sending your motivation. Please try again.',
         });
       });
   }
@@ -197,6 +207,21 @@ export default class Apply extends Component {
           debounce={500}
           onMount={data => this.setState(data)}
         />
+        {formType === 'student' &&
+          this.state.personId && (
+            <SuccessMessageContainer>
+              <span className="success-message">
+                Many thanks for submitting your application!
+                <br />
+                <b> We will send you instructions for the next steps.</b>
+                <br />
+                <br />
+                <br />
+                If your tell us your motivation below, you will already have
+                completed the first part of the process :)
+              </span>
+            </SuccessMessageContainer>
+          )}
         {formType === 'student' ? (
           <StudentFormToRender
             name={this.state.name}

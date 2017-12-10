@@ -32,11 +32,14 @@ const FormInnerContainer = styled('div')`
 `;
 
 const Form = styled('form')`
-  margin-top: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+`;
+
+const SubtitleContainer = styled('div')`
+  margin-bottom: 40px;
 `;
 
 const SubmitErrorSpan = styled('span')`
@@ -47,9 +50,13 @@ const SubmitErrorSpan = styled('span')`
 
 const FormFrame = props => (
   <FormOuterContainer>
-    <h3>{props.title}</h3>
+    {!!props.title && <h3 className="title">{props.title}</h3>}
     <FormInnerContainer>
-      <span className="title">{props.subTitle}</span>
+      {!!props.subTitle && (
+        <SubtitleContainer>
+          <span>{props.subTitle}</span>
+        </SubtitleContainer>
+      )}
       {!!props.topErrorMessage && (
         <SubmitErrorSpan>{props.topErrorMessage}</SubmitErrorSpan>
       )}
@@ -63,7 +70,10 @@ const FormFrame = props => (
 );
 
 FormFrame.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]).isRequired,
   title: PropTypes.string,
   subTitle: PropTypes.string,
   topErrorMessage: PropTypes.string,

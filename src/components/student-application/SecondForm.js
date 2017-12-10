@@ -2,20 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TextAreaInput, FormFrame } from 'components/forms';
 
-const subTitle = (
-  <span>
-    Many thanks for submitting your application! <br /> <br /> Write to{' '}
-    <b>applicants@codeyourfuture.io</b> to notify us of your submission. We will
-    send you instructions for the next steps. If you provide us with your
-    motivation below, you will already have completed the first step of the
-    application!
-  </span>
-);
-
 const SecondForm = props => (
   <FormFrame
-    title="Student Application"
-    subTitle={subTitle}
+    title="Motivation"
     topErrorMessage={props.validationErrorMessage}
     submitMessage={props.submitMessage}
     onSubmit={props.onSubmit}
@@ -39,7 +28,7 @@ SecondForm.propTypes = {
   onBlur: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   validationErrors: PropTypes.object.isRequired,
-  validationErrorMessage: PropTypes.object.isRequired,
+  validationErrorMessage: PropTypes.string.isRequired,
 };
 
 export default SecondForm;
