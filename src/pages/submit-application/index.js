@@ -17,9 +17,10 @@ const ApplySuccess = props => {
     case 'student':
       SuccessContent = (
         <span>
-          Many thanks for submitting your application! <br /> <br /> Write to{' '}
-          <b>applicants@codeyourfuture.io</b> to notify us of your submission.
-          We will send you instructions for the next steps.
+          We have received your Motivation letter!
+          <br />
+          <br />
+          <b>We will send you instructions for the next steps.</b>
         </span>
       );
       break;

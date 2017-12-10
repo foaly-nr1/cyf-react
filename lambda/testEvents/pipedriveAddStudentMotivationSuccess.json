@@ -1,0 +1,12 @@
+{
+    "resource": "/",
+    "path": "/database",
+    "httpMethod": "POST",
+    "body": {
+        "type": "addStudentMotivation",
+        "data": {
+            "personId": "1",
+            "motivation": "hello test works update"
+        }
+    }
+}
