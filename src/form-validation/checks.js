@@ -10,7 +10,7 @@ const countWords = textString => textString.trim().split(/\s+/).length;
 const isNumeric = value =>
   value.length === 0 || value.match(/^[0-9\+]+$/) != null;
 const required = value => !!value;
-const minimum100Words = value => required(value) && countWords(value) >= 100;
+const minimum50Words = value => required(value) && countWords(value) >= 50;
 const email = value => value.length === 0 || value.match(emailRegexp) != null;
 const ukPhone = value =>
   value.length === 0 || value.match(ukPhoneRegexp) != null;
@@ -18,7 +18,7 @@ const ukPhone = value =>
 export default {
   isNumeric,
   required,
-  minimum100Words,
+  minimum50Words,
   email,
   ukPhone,
   countWords,

@@ -9,6 +9,7 @@ const FirstForm = props => (
     topErrorMessage={props.validationErrorMessage}
     submitMessage={props.submitMessage}
     onSubmit={props.onSubmit}
+    submitLabel="Submit your information"
   >
     <TextInput
       label="What is your name? (First and Last Name) *"
@@ -79,7 +80,7 @@ const FirstForm = props => (
       onChange={props.onChange('realReferrer')}
       onBlur={props.onBlur('realReferrer')}
       value={props.realReferrer}
-      placeholder="For example: City of Glasgow College"
+      placeholder="For example: Refugee Council"
       type="text"
       errors={props.validationErrors.realReferrer}
     />

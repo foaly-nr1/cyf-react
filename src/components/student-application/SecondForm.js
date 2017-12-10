@@ -8,9 +8,10 @@ const SecondForm = props => (
     topErrorMessage={props.validationErrorMessage}
     submitMessage={props.submitMessage}
     onSubmit={props.onSubmit}
+    submitLabel="Send your motivation"
   >
     <TextAreaInput
-      label="Why do you want to join CYF and learn programming? (Please write at least 100 words) *"
+      label="Why do you want to join CYF and learn programming? (Please write at least 50 words) *"
       onChange={props.onChange('motivation')}
       onBlur={props.onBlur('motivation')}
       value={props.motivation}

@@ -42,10 +42,11 @@ const SubtitleContainer = styled('div')`
   margin-bottom: 40px;
 `;
 
-const SubmitErrorSpan = styled('span')`
+const SubmitErrorContainer = styled('div')`
   color: red;
   font-size: 1.7rem;
   margin: 20px 0 20px 0;
+  max-width: 500px;
 `;
 
 const FormFrame = props => (
@@ -58,13 +59,17 @@ const FormFrame = props => (
         </SubtitleContainer>
       )}
       {!!props.topErrorMessage && (
-        <SubmitErrorSpan>{props.topErrorMessage}</SubmitErrorSpan>
+        <SubmitErrorContainer>
+          <span>{props.topErrorMessage}</span>
+        </SubmitErrorContainer>
       )}
       <Form>{props.children}</Form>
       {!!props.submitMessage && (
-        <SubmitErrorSpan>{props.submitMessage}</SubmitErrorSpan>
+        <SubmitErrorContainer>
+          <span>{props.submitMessage}</span>
+        </SubmitErrorContainer>
       )}
-      <Button onClick={props.onSubmit}>Submit</Button>
+      <Button onClick={props.onSubmit}>{props.submitLabel}</Button>
     </FormInnerContainer>
   </FormOuterContainer>
 );
@@ -79,6 +84,7 @@ FormFrame.propTypes = {
   topErrorMessage: PropTypes.string,
   submitMessage: PropTypes.string,
   onSubmit: PropTypes.func.isRequired,
+  submitLabel: PropTypes.func.isRequired,
 };
 
 FormFrame.defaultProps = {
