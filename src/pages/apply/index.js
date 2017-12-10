@@ -219,8 +219,8 @@ export default class Apply extends Component {
                 <br />
                 <br />
                 <br />
-                If your tell us your motivation below, you will already have
-                completed the first part of the process :)
+                If you want, you can start telling us about your motivation
+                below :)
               </span>
             </SuccessMessageContainer>
           )}
