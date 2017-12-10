@@ -61,6 +61,14 @@ const rules = {
       events: ['onSubmitFirstForm', 'onBlur', 'onChange'],
     },
   ],
+  realReferrer: [
+    {
+      check: 'required',
+      errorMessage:
+        'Please tell us the place, person or website where you first heard about us',
+      events: ['onSubmitFirstForm', 'onChange', 'onBlur'],
+    },
+  ],
   motivation: [
     {
       check: 'minimum100Words',

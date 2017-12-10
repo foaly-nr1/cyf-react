@@ -33,7 +33,7 @@ const FirstForm = props => (
       onChange={props.onChange('country')}
       onBlur={props.onBlur('country')}
       value={props.country}
-      placeholder="e.g. Iran"
+      placeholder="For example: Iran"
       errors={props.validationErrors.country}
     />
     <TextInput
@@ -41,7 +41,7 @@ const FirstForm = props => (
       onChange={props.onChange('city')}
       onBlur={props.onBlur('city')}
       value={props.city}
-      placeholder="e.g. London"
+      placeholder="For example: London"
       errors={props.validationErrors.city}
     />
     <RadioInput
@@ -70,9 +70,18 @@ const FirstForm = props => (
       onChange={props.onChange('phone')}
       onBlur={props.onBlur('phone')}
       value={props.phone}
-      placeholder="e.g. 07489398381"
+      placeholder="For example: 07489398381"
       type="tel"
       errors={props.validationErrors.phone}
+    />
+    <TextInput
+      label="How did you hear about us? *"
+      onChange={props.onChange('realReferrer')}
+      onBlur={props.onBlur('realReferrer')}
+      value={props.realReferrer}
+      placeholder="For example: City of Glasgow College"
+      type="text"
+      errors={props.validationErrors.realReferrer}
     />
   </FormFrame>
 );
@@ -82,6 +91,7 @@ FirstForm.propTypes = {
   email: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
+  realReferrer: PropTypes.string.isRequired,
   refugee: PropTypes.string.isRequired,
   programming: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
