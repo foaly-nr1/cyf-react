@@ -43,8 +43,8 @@ class Donate extends React.Component {
           alive!
         </p>
         <p>
-          By donating below, you can help us continue to run classes, set up job
-          opportunties and XXXX. We accept bitcoin.
+          All donations will help cover transportation, childcare, meals,
+          laptops and mobile internet to our students most in need.
         </p>
 
         <div>
