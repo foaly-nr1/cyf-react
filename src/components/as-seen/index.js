@@ -1,30 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const mediaOutlets = [
-  {
-    url: 'http://www.wired.co.uk/article/codeyourfuture-refugee-coding-school',
-    src: 'img/media-logos/wired.svg',
-    alt: 'Wired',
-  },
-  {
-    url:
-      'http://www.unhcr.org/news/stories/2017/1/586e420c7/volunteers-train-refugees-to-crack-into-london-tech-industry.html',
-    src: 'img/media-logos/unhcr.png',
-    alt: 'UNHCR',
-  },
-  {
-    url:
-      'https://www.newsdeeply.com/refugees/articles/2016/10/19/welcome-to-londons-refugee-coding-school',
-    src: 'img/media-logos/refugees-deeply.jpeg',
-    alt: 'Refugees Deeply',
-  },
-  {
-    url: 'http://www.bbc.co.uk/programmes/p04yzrrg',
-    src: 'img/media-logos/BBC.svg',
-    alt: 'BBC',
-  },
-];
+import mediaOutlets from '../../content/media-outlets';
 
 type Props = {
   url: string,
