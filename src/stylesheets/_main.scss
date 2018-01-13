@@ -307,7 +307,7 @@ ul.navbar-nav li a.big-link-1:hover {
 .page-title {
   margin-top: 55px;
   padding: 260px 0 210px 0;
-  background: url('../img/backgrounds/1.jpg');
+  background: url('../assets/images/1.jpg');
   @include background-img();
 }
 
@@ -499,7 +499,7 @@ ul.navbar-nav li a.big-link-1:hover {
 }
 
 .index-hero {
-  background: url('img/backgrounds/1.jpg');
+  background: url('assets/images/1.jpg');
   @include hero-background(40em);
 }
 

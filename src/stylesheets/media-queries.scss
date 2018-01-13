@@ -12,7 +12,7 @@
 
   .page-title {
     padding: 160px 0 210px 0;
-    background: url(../img/backgrounds/1-768.jpg);
+    background: url(../assets/images/1-768.jpg);
     @include background-img();
   }
 }
@@ -32,7 +32,7 @@
 
   .page-title {
     padding: 50px 0 210px 0;
-    background: url(../img/backgrounds/1-320.jpg);
+    background: url(../assets/images/1-320.jpg);
     @include hero-background(36em);
   }
 }
