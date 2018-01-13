@@ -6,7 +6,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import setFeatures from 'feature-toggle';
 import type { Auth } from '../../types';
 
-import cyflogo from '../../img/cyf_brand.png';
+import cyflogo from '../../assets/images/logos/cyf_brand.png';
 
 const cyflogoStyle = {
   width: '158px',

@@ -1,7 +1,7 @@
 import React from 'react';
-import codeIcon from '../../content/icons/code.svg';
-import conferenceHallIcon from '../../content/icons/conference-hall.svg';
-import laptopIcon from '../../content/icons/laptop.svg';
+import codeIcon from '../../assets/images/icons/code.svg';
+import conferenceHallIcon from '../../assets/images/icons/conference-hall.svg';
+import laptopIcon from '../../assets/images/icons/laptop.svg';
 
 const Support = () => (
   <div className="section-container">
