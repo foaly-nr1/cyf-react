@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import TopSection from '../../components/top-section';
 import BottomSection from '../../components/bottom-section';
+import mentors from '../../assets/images/mentors-group.jpg';
 
 const Volunteers = () => {
   const volunteersText = (
@@ -44,7 +44,9 @@ const Volunteers = () => {
   return (
     <div>
       <TopSection title="Join Us" content={volunteersText} />
-      <div className="mentors-hero-wrap" />
+      <div>
+        <img src={mentors} alt="code-your-future-mentors" />
+      </div>
     </div>
   );
 };

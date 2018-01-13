@@ -9869,9 +9869,6 @@ ul.navbar-nav li a.big-link-1:hover {
 .help-section h3 {
   color: #000; }
 
-.hack-your-future {
-  padding-top: 45px; }
-
 .block-2-box ul span.list-icon img {
   padding-right: 10px;
   vertical-align: middle;
@@ -9922,38 +9919,11 @@ ul.navbar-nav li a.big-link-1:hover {
   margin-top: 10px;
   margin-left: 20px; }
 
-.student-hero-wrap {
-  background: url(../img/students/students-group.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 40em; }
-
-.mentors-hero-wrap {
-  background: url(../img/mentors/mentors-group.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 40em; }
-
-.hack-your-future-hero-wrap {
-  background: url(../img/partners/hack_your_future_working.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 40em; }
-
 .index-hero {
   background: url("img/backgrounds/1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 40em; }
-
-.hack-your-future-hero-wrap h1 {
-  color: #fff; }
-
-.hack-your-future-hero-wrap p {
-  font-size: 15px;
-  color: #fff;
-  font-size: 1.5em;
-  text-shadow: 2px 1px 1px #a9a9a9; }
 
 .clients-text {
   text-align: left; }
@@ -10273,16 +10243,7 @@ footer .vendor-license a {
     background: url(../img/backgrounds/1-768.jpg);
     background-size: cover;
     background-repeat: no-repeat; }
-  .student-hero-wrap {
-    background: url(../img/students/students-group.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 30em; }
-  .mentors-hero-wrap {
-    background: url(../img/mentors/mentors-group-768.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 30em; } }
+  }
 
 /* smartphone */
 @media (max-width: 767px) {
@@ -10298,13 +10259,4 @@ footer .vendor-license a {
     background-size: cover;
     background-repeat: no-repeat;
     height: 36em; }
-  .student-hero-wrap {
-    background: url(../img/students/students-group.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 19em; }
-  .mentors-hero-wrap {
-    background: url(../img/mentors/mentors-group-768.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 15em; } }
+  }
