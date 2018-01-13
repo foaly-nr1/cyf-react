@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import teaching from '../../assets/images/1.jpg';
 
 import '../../stylesheets/index.scss';
 
 const Banner = () => (
   <div className="page-title">
+    <img src={teaching} alt="teaching=refugees-to-code" />
     <div className="page-title-text">
       <h1>Coding School for Refugees</h1>
       <p>Learn to code and find a job</p>

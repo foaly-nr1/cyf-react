@@ -4,6 +4,10 @@ exports[`Banner Component renders 1`] = `
 <div
   className="page-title"
 >
+  <img
+    alt="teaching=refugees-to-code"
+    src="1.jpg"
+  />
   <div
     className="page-title-text"
   >
