@@ -72,7 +72,7 @@ const Navigation = ({ auth }: Props) => (
         </NavItem>
         <LinkContainer to="/donate">
           <NavItem className="nav-icon" eventKey={1}>
-            <strong style={{color: '#2ba560'}}>Donate</strong>
+            <strong style={{ color: '#2ba560' }}>Donate</strong>
           </NavItem>
         </LinkContainer>
         {setFeatures().active('login') && (
