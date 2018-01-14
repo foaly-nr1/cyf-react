@@ -58,7 +58,7 @@ const Footer = () => (
           </div>
           <ContentContainer>
             <OurVendorContainer className="our-vendor">
-                &copy; All rights reserved&nbsp;|&nbsp;Photos by &copy;&nbsp;
+              &copy; All rights reserved&nbsp;|&nbsp;Photos by &copy;&nbsp;
               <strong>
                 <Link
                   to="http://www.alicerowsome.com/"
@@ -84,10 +84,7 @@ const Footer = () => (
               >
                 <img src={fblogo} style={logoStyle} alt="facebook" />
               </Link>
-              <Link
-                to="https://twitter.com/CodeYourFuture_"
-                target="_blank"
-              >
+              <Link to="https://twitter.com/CodeYourFuture_" target="_blank">
                 <img src={twitterlogo} style={logoStyle} alt="twitter" />
               </Link>
               <Link
@@ -96,10 +93,7 @@ const Footer = () => (
               >
                 <img src={linkedinlogo} style={logoStyle} alt="linkedin" />
               </Link>
-              <Link
-                to="mailto:contact@codeyourfuture.io"
-                target="_blank"
-              >
+              <Link to="mailto:contact@codeyourfuture.io" target="_blank">
                 <img src={emaillogo} style={logoStyle} alt="email" />
               </Link>
             </SocialContainer>
