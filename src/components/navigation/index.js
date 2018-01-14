@@ -7,15 +7,6 @@ import setFeatures from 'feature-toggle';
 import type { Auth } from '../../types';
 
 import cyflogo from '../../img/cyf_brand.png';
-import fblogo from '../../img/ico/fb_logo.svg';
-import twitterlogo from '../../img/ico/twitter-silhouette.svg';
-import linkedinlogo from '../../img/ico/linkedin-logo.svg';
-import emaillogo from '../../img/ico/email-icon.svg';
-
-const logoStyle = {
-  width: '20px',
-  height: '21px',
-};
 
 const cyflogoStyle = {
   width: '158px',
