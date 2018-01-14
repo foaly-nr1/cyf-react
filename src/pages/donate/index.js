@@ -1,8 +1,59 @@
 import React from 'react';
 import * as axios from 'axios';
-import { Col, Row } from 'react-bootstrap';
-import TopSection from '../../components/top-section';
+import styled from 'react-emotion';
 import DonationPicker from '../../components/donation-picker';
+
+const Container = styled('div')`
+  display: flex;
+  padding: 48px 24px 0 24px;
+  margin-bottom: 48px;
+  width: 100%;
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+const PickerContainer = styled('div')`
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  margin: 0 0 0 0;
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+`;
+
+const TextContainer = styled('div')`
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+  margin: 0 100px 0 100px;
+  color: black;
+  text-align: left;
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 24px 0 0 0;
+  }
+`;
+
+const Image = styled('div')`
+  background: url(../img/mentors/mentors-group.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40em;
+  background-size: cover;
+  @media (max-width: 1023px) {
+    background-size: contain;
+  }
+`;
 
 class Donate extends React.Component {
   state = {
@@ -34,43 +85,36 @@ class Donate extends React.Component {
     const { tokenSuccess, tokenError } = this.state;
     const donateText = (
       <div>
+        <h3>We work on a 100% donation model</h3>
+        <br />
         <p>
-          We are a non-profit organisation supporting refugees with the dream of
-          becoming developers.
+          That means that all support from individuals will go entirely to
+          support our students.
         </p>
         <p>
-          We rely soely on donations, in both time and money to keep this dream
-          alive!
+          This will help cover for childcare, transportation, laptops and
+          internet for our students most in need.
         </p>
-        <p>
-          All donations will help cover transportation, childcare, meals,
-          laptops and mobile internet to our students most in need.
-        </p>
-
-        <div>
-          <Row>
-            <Col xs={12} md={12}>
-              {tokenSuccess && <div>Thank you for your donation!</div>}
-              {tokenError && (
-                <div>
-                  Sorry, there was a problem processing your donation. Please
-                  try again!
-                </div>
-              )}
-              {!tokenSuccess &&
-                !tokenError && (
-                  <DonationPicker onTokenCapture={this.onTokenSuccess} />
-                )}
-            </Col>
-          </Row>
-        </div>
       </div>
     );
-
     return (
       <div>
-        <TopSection title="Donate" content={donateText} />
-        <div className="mentors-hero-wrap" />
+        {tokenError && (
+          <h4>
+            Sorry, there was a problem processing your donation. Please try
+            again!
+          </h4>
+        )}
+        <Container>
+          {tokenSuccess && <h2>Thank you for your donation!</h2>}
+          <PickerContainer>
+            {!tokenSuccess && (
+              <DonationPicker onTokenCapture={this.onTokenSuccess} />
+            )}
+          </PickerContainer>
+          {!tokenSuccess && <TextContainer>{donateText}</TextContainer>}
+        </Container>
+        <Image />
       </div>
     );
   }
