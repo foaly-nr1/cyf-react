@@ -30,18 +30,6 @@ const login = {
 const handleLink = linkName => {
   let URL = '';
   switch (linkName) {
-    case 'facebook':
-      URL = 'https://www.facebook.com/codeyourfuture.io';
-      break;
-    case 'twitter':
-      URL = 'https://twitter.com/CodeYourFuture_';
-      break;
-    case 'linkedin':
-      URL = 'https://www.linkedin.com/company/codeyourfuture';
-      break;
-    case 'email':
-      URL = 'mailto:contact@codeyourfuture.io';
-      break;
     case 'blog':
       URL = 'https://medium.com/@CodeYourFuture';
       break;
@@ -90,18 +78,6 @@ const Navigation = ({ auth }: Props) => (
         </LinkContainer>
         <NavItem className="nav-icon" eventKey="blog">
           Blog
-        </NavItem>
-        <NavItem className="nav-icon" eventKey="facebook">
-          <img src={fblogo} style={logoStyle} alt="facebook" />
-        </NavItem>
-        <NavItem className="nav-icon" eventKey="twitter">
-          <img src={twitterlogo} style={logoStyle} alt="twitter" />
-        </NavItem>
-        <NavItem className="nav-icon" eventKey="linkedin">
-          <img src={linkedinlogo} style={logoStyle} alt="linkedin" />
-        </NavItem>
-        <NavItem className="nav-icon" eventKey="email">
-          <img src={emaillogo} style={logoStyle} alt="email" />
         </NavItem>
         {setFeatures().active('login') && (
           <div style={login}>
