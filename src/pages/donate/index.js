@@ -85,15 +85,15 @@ class Donate extends React.Component {
     const { tokenSuccess, tokenError } = this.state;
     const donateText = (
       <div>
-        <h3>
-          We work on a 100% donation model
-        </h3>
+        <h3>We work on a 100% donation model</h3>
         <br />
         <p>
-          That means that all support from individuals will go entirely to support our students.
+          That means that all support from individuals will go entirely to
+          support our students.
         </p>
         <p>
-          This will help cover for childcare, transportation, laptops and internet for our students most in need.
+          This will help cover for childcare, transportation, laptops and
+          internet for our students most in need.
         </p>
       </div>
     );
