@@ -86,16 +86,14 @@ class Donate extends React.Component {
     const donateText = (
       <div>
         <h3>
-          We are a non-profit organisation supporting refugees with the dream of
-          becoming developers.
+          We work on a 100% donation model
         </h3>
+        <br />
         <p>
-          We rely solely on donations, in both time and money to keep this dream
-          alive!
+          That means that all support from individuals will go entirely to support our students.
         </p>
         <p>
-          All donations will help cover transportation, childcare, meals,
-          laptops and mobile internet to our students most in need.
+          This will help cover for childcare, transportation, laptops and internet for our students most in need.
         </p>
       </div>
     );
