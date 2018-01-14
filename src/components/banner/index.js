@@ -1,13 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'react-emotion';
 import teaching from '../../assets/images/1.jpg';
 
 import '../../stylesheets/index.scss';
 
+const BannerImage = styled('img')`
+  border: 1px solid red;
+  width: 100%;
+  object-fit: cover;
+  height: 600px;
+`;
+
+const BannerText = styled('div')`
+  margin: 0 auto;
+  background-color: rgba(62, 100, 132, 0.42);
+  padding: 10px;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  top: 20%;
+
+  > h1 {
+    color: #fff;
+  }
+`;
+
 const Banner = () => (
   <div className="page-title">
-    <img src={teaching} alt="teaching=refugees-to-code" />
-    <div className="page-title-text">
+    <BannerImage src={teaching} alt="teaching=refugees-to-code" />
+    <BannerText>
       <h1>Coding School for Refugees</h1>
       <p>Learn to code and find a job</p>
       <div className="page-title-bottom-link">
@@ -23,7 +45,7 @@ const Banner = () => (
           Become a volunteer
         </Link>
       </div>
-    </div>
+    </BannerText>
   </div>
 );
 

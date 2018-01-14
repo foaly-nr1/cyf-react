@@ -303,14 +303,6 @@ ul.navbar-nav li a.big-link-1:hover {
   letter-spacing: 2px;
 }
 
-/***** Page title *****/
-.page-title {
-  margin-top: 55px;
-  padding: 260px 0 210px 0;
-  // background: url('../assets/images/1.jpg');
-  @include background-img();
-}
-
 .page-title-text {
   margin: 0 auto;
   background-color: rgba(62, 100, 132, 0.42);
