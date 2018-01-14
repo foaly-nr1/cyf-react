@@ -130,6 +130,30 @@ exports[`Navigation Component renders 1`] = `
       >
         Blog
       </NavItem>
+      <LinkContainer
+        activeClassName="active"
+        exact={false}
+        replace={false}
+        strict={false}
+        to="/donate"
+      >
+        <NavItem
+          active={false}
+          className="nav-icon"
+          disabled={false}
+          eventKey={1}
+        >
+          <strong
+            style={
+              Object {
+                "color": "#2ba560",
+              }
+            }
+          >
+            Donate
+          </strong>
+        </NavItem>
+      </LinkContainer>
     </Nav>
   </NavbarCollapse>
 </Uncontrolled(Navbar)>
