@@ -8,62 +8,112 @@ exports[`Footer Component renders correctly 1`] = `
     <div
       className="container"
     >
-      <div
-        className="row"
-      >
+      <Styled(div)>
         <div
-          className="col-sm-12"
+          className="scroll-to-top"
         >
-          <div
-            className="scroll-to-top"
+          <a
+            href="#top"
           >
-            <a
-              href="#top"
-            >
-              <i
-                className="fa fa-chevron-up"
-              />
-            </a>
-          </div>
+            <i
+              className="fa fa-chevron-up"
+            />
+          </a>
         </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="credits"
-        >
-          <div
-            className="col-sm-12"
+        <Styled(div)>
+          <Styled(div)
+            className="our-vendor"
           >
-            <div
-              className="our-vendor"
-            >
-              © All rights reserved | Photos by © 
-              <strong>
-                <Link
-                  rel="noopener noreferrer"
-                  replace={false}
-                  target="_blank"
-                  to="http://www.alicerowsome.com/"
-                >
-                  Alice Rowsome
-                </Link>
-              </strong>
-               |  Registered charity number 
+            © All rights reserved | Photos by © 
+            <strong>
               <Link
                 rel="noopener noreferrer"
                 replace={false}
                 target="_blank"
-                to="http://apps.charitycommission.gov.uk/Showcharity/RegisterOfCharities/CharityFramework.aspx?RegisteredCharityNumber=1174929&SubsidiaryNumber=0"
+                to="http://www.alicerowsome.com/"
               >
-                1174929
+                Alice Rowsome
               </Link>
-              .
-            </div>
-          </div>
-        </div>
-      </div>
+            </strong>
+             |  Registered charity number 
+            <Link
+              rel="noopener noreferrer"
+              replace={false}
+              target="_blank"
+              to="http://apps.charitycommission.gov.uk/Showcharity/RegisterOfCharities/CharityFramework.aspx?RegisteredCharityNumber=1174929&SubsidiaryNumber=0"
+            >
+              1174929
+            </Link>
+            .
+          </Styled(div)>
+          <Styled(div)>
+            <Link
+              replace={false}
+              target="_blank"
+              to="https://www.facebook.com/codeyourfuture.io"
+            >
+              <img
+                alt="facebook"
+                src="fb_logo.svg"
+                style={
+                  Object {
+                    "height": "21px",
+                    "width": "20px",
+                  }
+                }
+              />
+            </Link>
+            <Link
+              replace={false}
+              target="_blank"
+              to="https://twitter.com/CodeYourFuture_"
+            >
+              <img
+                alt="twitter"
+                src="twitter-silhouette.svg"
+                style={
+                  Object {
+                    "height": "21px",
+                    "width": "20px",
+                  }
+                }
+              />
+            </Link>
+            <Link
+              replace={false}
+              target="_blank"
+              to="https://www.linkedin.com/company/codeyourfuture"
+            >
+              <img
+                alt="linkedin"
+                src="linkedin-logo.svg"
+                style={
+                  Object {
+                    "height": "21px",
+                    "width": "20px",
+                  }
+                }
+              />
+            </Link>
+            <Link
+              replace={false}
+              target="_blank"
+              to="mailto:contact@codeyourfuture.io"
+            >
+              <img
+                alt="email"
+                src="email-icon.svg"
+                style={
+                  Object {
+                    "height": "21px",
+                    "width": "20px",
+                  }
+                }
+              />
+            </Link>
+          </Styled(div)>
+        </Styled(div)>
+      </Styled(div)>
     </div>
   </footer>
 </div>
