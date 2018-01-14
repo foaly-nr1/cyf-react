@@ -7,15 +7,6 @@ import setFeatures from 'feature-toggle';
 import type { Auth } from '../../types';
 
 import cyflogo from '../../img/cyf_brand.png';
-import fblogo from '../../img/ico/fb_logo.svg';
-import twitterlogo from '../../img/ico/twitter-silhouette.svg';
-import linkedinlogo from '../../img/ico/linkedin-logo.svg';
-import emaillogo from '../../img/ico/email-icon.svg';
-
-const logoStyle = {
-  width: '20px',
-  height: '21px',
-};
 
 const cyflogoStyle = {
   width: '158px',
@@ -30,18 +21,6 @@ const login = {
 const handleLink = linkName => {
   let URL = '';
   switch (linkName) {
-    case 'facebook':
-      URL = 'https://www.facebook.com/codeyourfuture.io';
-      break;
-    case 'twitter':
-      URL = 'https://twitter.com/CodeYourFuture_';
-      break;
-    case 'linkedin':
-      URL = 'https://www.linkedin.com/company/codeyourfuture';
-      break;
-    case 'email':
-      URL = 'mailto:contact@codeyourfuture.io';
-      break;
     case 'blog':
       URL = 'https://medium.com/@CodeYourFuture';
       break;
@@ -90,18 +69,6 @@ const Navigation = ({ auth }: Props) => (
         </LinkContainer>
         <NavItem className="nav-icon" eventKey="blog">
           Blog
-        </NavItem>
-        <NavItem className="nav-icon" eventKey="facebook">
-          <img src={fblogo} style={logoStyle} alt="facebook" />
-        </NavItem>
-        <NavItem className="nav-icon" eventKey="twitter">
-          <img src={twitterlogo} style={logoStyle} alt="twitter" />
-        </NavItem>
-        <NavItem className="nav-icon" eventKey="linkedin">
-          <img src={linkedinlogo} style={logoStyle} alt="linkedin" />
-        </NavItem>
-        <NavItem className="nav-icon" eventKey="email">
-          <img src={emaillogo} style={logoStyle} alt="email" />
         </NavItem>
         {setFeatures().active('login') && (
           <div style={login}>
