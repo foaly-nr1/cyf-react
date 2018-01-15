@@ -1,59 +1,19 @@
-//
-// screen: 1024px
-// ipad:   768px
-// phone   320px
-//
-
-
-/* ipad */
 @media (min-width: 768px) and (max-width: 991px) {
-    iframe {
-        height: 35em;
-    }
-
-    .page-title {
-        padding: 160px 0 210px 0;
-        background: url(../img/backgrounds/1-768.jpg);
-        @include background-img();
-    }
-    .student-hero-wrap{
-        background: url(../img/students/students-group.jpg);
-        @include hero-background(30em);
-    }
-
-    .mentors-hero-wrap{
-        background: url(../img/mentors/mentors-group-768.jpg);
-        @include hero-background(30em);
-    }
+  iframe {
+    height: 35em;
+  }
 }
-/* smartphone */
+
 @media (max-width: 767px) {
-
-    .nav {
-      > li.nav-icon {
-        display: inline-flex;
-        padding: 0 10px;
-      }
+  .nav {
+    > li.nav-icon {
+      display: inline-flex;
+      padding: 0 10px;
     }
+  }
 
-    #typeform-full {
-        height: 38em;
-        display: inline-block;
-    }
-
-    .page-title {
-        padding: 50px 0 210px 0;
-        background: url(../img/backgrounds/1-320.jpg);
-        @include hero-background(36em);
-    }
-
-    .student-hero-wrap{
-        background: url(../img/students/students-group.jpg);
-        @include hero-background(19em);
-    }
-
-    .mentors-hero-wrap{
-        background: url(../img/mentors/mentors-group-768.jpg);
-        @include hero-background(15em);
-    }
+  #typeform-full {
+    height: 38em;
+    display: inline-block;
+  }
 }

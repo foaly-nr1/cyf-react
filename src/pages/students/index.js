@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import TopSection from '../../components/top-section';
+import students from '../../assets/images/students-group.jpg';
 
 const Students = () => {
   const studentText = (
@@ -37,7 +37,9 @@ const Students = () => {
         title="The beginning of your programming career"
         content={studentText}
       />
-      <div className="student-hero-wrap" />
+      <div>
+        <img src={students} alt="code-your-future-students" />
+      </div>
 
       <div id="info" className="block-2-container section-container">
         <div className="container">

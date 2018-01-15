@@ -1,14 +1,14 @@
-import german from './photos/german.jpg';
-import mozafar from './photos/mozafar.jpg';
-import kash from './photos/kash.jpg';
-import amit from './photos/amit.jpg';
-import simon from './photos/simon.jpg';
-import james from './photos/james.png';
-import bex from './photos/bex.jpg';
-import claudia from './photos/claudia.jpg';
-import nate from './photos/nate.jpg';
-import will from './photos/will.jpg';
-import rob from './photos/rob.jpg';
+import german from '../../assets/images/mentors/german.jpg';
+import mozafar from '../../assets/images/mentors/mozafar.jpg';
+import kash from '../../assets/images/mentors/kash.jpg';
+import amit from '../../assets/images/mentors/amit.jpg';
+import simon from '../../assets/images/mentors/simon.jpg';
+import james from '../../assets/images/mentors/james.png';
+import bex from '../../assets/images/mentors/bex.jpg';
+import claudia from '../../assets/images/mentors/claudia.jpg';
+import nate from '../../assets/images/mentors/nate.jpg';
+import will from '../../assets/images/mentors/will.jpg';
+import rob from '../../assets/images/mentors/rob.jpg';
 
 const mentors = [
   {

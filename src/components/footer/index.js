@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'react-emotion';
-import fblogo from '../../img/ico/fb_logo.svg';
-import twitterlogo from '../../img/ico/twitter-silhouette.svg';
-import linkedinlogo from '../../img/ico/linkedin-logo.svg';
-import emaillogo from '../../img/ico/email-icon.svg';
+import fblogo from '../../assets/images/logos/fb_logo.svg';
+import twitterlogo from '../../assets/images/logos/twitter-silhouette.svg';
+import linkedinlogo from '../../assets/images/logos/linkedin-logo.svg';
+import emaillogo from '../../assets/images/logos/email-icon.svg';
 
 const logoStyle = {
   width: '20px',

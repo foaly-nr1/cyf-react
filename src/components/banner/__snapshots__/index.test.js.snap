@@ -4,9 +4,11 @@ exports[`Banner Component renders 1`] = `
 <div
   className="page-title"
 >
-  <div
-    className="page-title-text"
-  >
+  <Styled(img)
+    alt="teaching=refugees-to-code"
+    src="1.jpg"
+  />
+  <Styled(div)>
     <h1>
       Coding School for Refugees
     </h1>
@@ -33,6 +35,6 @@ exports[`Banner Component renders 1`] = `
         Become a volunteer
       </Link>
     </div>
-  </div>
+  </Styled(div)>
 </div>
 `;

@@ -35,7 +35,7 @@ exports[`WhatWeTeach renders the component 1`] = `
         >
           <img
             alt="Tablet"
-            src="img/ico/tablet.svg"
+            src="tablet.svg"
           />
         </div>
         <h4>
@@ -53,7 +53,7 @@ exports[`WhatWeTeach renders the component 1`] = `
         >
           <img
             alt="Code"
-            src="img/ico/code.svg"
+            src="code.svg"
           />
         </div>
         <h4>
@@ -71,7 +71,7 @@ exports[`WhatWeTeach renders the component 1`] = `
         >
           <img
             alt="NodeJS"
-            src="img/ico/nodejs.svg"
+            src="nodejs.svg"
           />
         </div>
         <h4>
@@ -89,7 +89,7 @@ exports[`WhatWeTeach renders the component 1`] = `
         >
           <img
             alt="React"
-            src="img/ico/react.svg"
+            src="react.svg"
           />
         </div>
         <h4>

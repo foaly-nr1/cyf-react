@@ -1,10 +1,10 @@
-import pipedrive from './logos/pipedrive.png';
-import ticketmaster from './logos/ticketmaster.png';
-import github from './logos/github.png';
-import geckoboard from './logos/geckoboard.png';
-import slack from './logos/slack.png';
-import kinningParkComplex from './logos/kinningparkcomplex.png';
-import coop from './logos/coop.png';
+import pipedrive from '../../assets/images/logos/pipedrive.png';
+import ticketmaster from '../../assets/images/logos/ticketmaster.png';
+import github from '../../assets/images/logos/github.png';
+import geckoboard from '../../assets/images/logos/geckoboard.png';
+import slack from '../../assets/images/logos/slack.png';
+import kinningParkComplex from '../../assets/images/logos/kinningparkcomplex.png';
+import coop from '../../assets/images/logos/coop.png';
 
 const partners = {
   general: [
