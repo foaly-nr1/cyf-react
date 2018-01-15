@@ -24,3 +24,12 @@ git config --global user.name "Automated bot"
 git add .
 git commit -m "Rebuilt on $DATE"
 git push
+
+## purge cloudflare cache
+curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_IDENTIFIER/purge_cache" \
+-H "Content-Type:application/json" \
+-H "X-Auth-Key:$CLOUDFLARE_API_KEY" \
+-H "X-Auth-Email:$CLOUDFLARE_EMAIL" \
+--data '{"purge_everything":true}'
+
+
