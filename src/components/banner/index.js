@@ -6,7 +6,6 @@ import teaching from '../../assets/images/1.jpg';
 import '../../stylesheets/index.scss';
 
 const BannerImage = styled('img')`
-  border: 1px solid red;
   width: 100%;
   object-fit: cover;
   height: 600px;
