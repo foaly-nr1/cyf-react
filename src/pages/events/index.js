@@ -1,13 +1,37 @@
+// @flow
 import React from 'react';
-import TopSection from '../../components/top-section';
+import styled from 'react-emotion';
+import InnerContainer from '../../components/inner-container';
+import SectionHeading from '../../components/section-heading';
+import EventCard from '../../components/event-card';
+import Content from '../../content/events';
+import eventsArray from './mockData';
+
+const Page = styled('div')`
+  background-color: #f8f8f8;
+`;
+
+const CardContainer = styled('div')`
+  margin-bottom: 8px;
+`;
+
+const EventsHeading = styled(SectionHeading)`
+  text-transform: none; !important
+`;
 
 const Events = () => (
-  <div>
-    <TopSection
-      title="Events"
-      content="Our current classes are done every Sunday in London and Edinburgh"
-    />
-  </div>
+  <Page>
+    <InnerContainer>
+      <EventsHeading>
+        <h3>{Content.Events.Heading}</h3>
+      </EventsHeading>
+      {eventsArray.map(event => (
+        <CardContainer>
+          <EventCard {...event} />
+        </CardContainer>
+      ))}
+    </InnerContainer>
+  </Page>
 );
 
 export default Events;
