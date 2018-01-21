@@ -11,5 +11,6 @@ export default async (fetchFn: AxiosPromise = axios): Promise<CYFEvent> => {
     );
   }
   const res = await fetchFn(`${process.env.REACT_APP_EVENTS_URL}`);
-  return res.json();
+
+  return res;
 };

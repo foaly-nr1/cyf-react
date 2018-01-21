@@ -1,6 +1,11 @@
+// @flow
+
 export type Auth = {
   userProfile: Function,
   getProfile: Function,
+  isAuthenticated: Function,
+  login: Function,
+  logout: Function,
 };
 
 type CYFCity = 'London' | 'Manchester' | 'Glasgow';
@@ -10,9 +15,10 @@ type Mentor = {
   avatar: string,
 };
 
-export type Event = {
+export type CYFEvent = {
   city: CYFCity,
   description: string,
+  endDate: string,
   intake: string,
   links: Array<Object>,
   location: string,
