@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import styled from 'react-emotion';
-import { Event } from '../../types';
+import type { CYFEvent } from '../../types';
 
 const Container = styled('div')`
   background-color: white;
@@ -21,6 +21,7 @@ const Attendance = styled('span')`
 const EventLink = styled('a')`
   text-decoration: underline;
 `;
+
 const EventCard = ({
   intake,
   topic,
@@ -29,7 +30,7 @@ const EventCard = ({
   mentors,
   startDate,
   endDate,
-}: Event) => (
+}: CYFEvent) => (
   <Container>
     <h4>{intake}</h4>
     <Topic>{topic}</Topic>
