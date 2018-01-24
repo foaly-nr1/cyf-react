@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "deploy-staging":
-      "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY serverless deploy -s staging"
+    "deploy-staging": "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY serverless deploy -s staging"
   },
   "license": "MIT",
   "devDependencies": {
@@ -14,6 +13,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "serverless": "^1.25.0",
     "serverless-webpack": "^4.0.0",
     "webpack": "^3.8.1",
     "webpack-node-externals": "^1.6.0"
