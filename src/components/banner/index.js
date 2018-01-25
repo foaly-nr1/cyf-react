@@ -5,6 +5,9 @@ import teaching from '../../assets/images/1.jpg';
 
 import '../../stylesheets/index.scss';
 
+const Hero = styled('div')`
+  position: relative;
+`;
 const BannerImage = styled('img')`
   width: 100%;
   object-fit: cover;
@@ -26,7 +29,7 @@ const BannerText = styled('div')`
 `;
 
 const Banner = () => (
-  <div className="page-title">
+  <Hero>
     <BannerImage src={teaching} alt="teaching=refugees-to-code" />
     <BannerText>
       <h1>Coding School for Refugees</h1>
@@ -45,7 +48,7 @@ const Banner = () => (
         </Link>
       </div>
     </BannerText>
-  </div>
+  </Hero>
 );
 
 export default Banner;

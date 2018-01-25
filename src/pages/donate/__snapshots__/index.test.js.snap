@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Component renders 1`] = `
+<div>
+  <Styled(div)>
+    <Styled(div)>
+      <DonationPicker
+        onTokenCapture={[Function]}
+      />
+    </Styled(div)>
+    <Styled(div)>
+      <div>
+        <h3>
+          We work on a 100% donation model
+        </h3>
+        <br />
+        <p>
+          That means that all support from individuals will go entirely to support our students.
+        </p>
+        <p>
+          This will help cover for childcare, transportation, laptops and internet for our students most in need.
+        </p>
+      </div>
+    </Styled(div)>
+  </Styled(div)>
+  <div>
+    <img
+      alt="code-your-future-mentors"
+      src="mentors-group.jpg"
+    />
+  </div>
+</div>
+`;

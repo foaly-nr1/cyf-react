@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Banner Component renders 1`] = `
-<div
-  className="page-title"
->
+<Styled(div)>
   <Styled(img)
     alt="teaching=refugees-to-code"
     src="1.jpg"
@@ -36,5 +34,5 @@ exports[`Banner Component renders 1`] = `
       </Link>
     </div>
   </Styled(div)>
-</div>
+</Styled(div)>
 `;
