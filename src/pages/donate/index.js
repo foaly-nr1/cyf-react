@@ -2,6 +2,7 @@ import React from 'react';
 import * as axios from 'axios';
 import styled from 'react-emotion';
 import DonationPicker from '../../components/donation-picker';
+import mentors from '../../assets/images/mentors-group.jpg';
 
 const Container = styled('div')`
   display: flex;
@@ -41,17 +42,6 @@ const TextContainer = styled('div')`
     justify-content: center;
     width: 100%;
     margin: 24px 0 0 0;
-  }
-`;
-
-const Image = styled('div')`
-  background: url(../img/mentors/mentors-group.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 40em;
-  background-size: cover;
-  @media (max-width: 1023px) {
-    background-size: contain;
   }
 `;
 
@@ -114,7 +104,10 @@ class Donate extends React.Component {
           </PickerContainer>
           {!tokenSuccess && <TextContainer>{donateText}</TextContainer>}
         </Container>
-        <Image />
+        <div>
+          <img src={mentors} alt="code-your-future-mentors" />
+        </div>
+        {/* <Image /> */}
       </div>
     );
   }
