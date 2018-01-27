@@ -6,7 +6,7 @@ export async function main(event, context, callback) {
   const params = {
     TableName: 'events',
     Key: {
-      userId: event.requestContext.identity.cognitoIdentityId,
+      userId: 'CYFMentor',
       eventId: event.pathParameters.id,
     },
   };
