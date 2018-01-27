@@ -29,9 +29,10 @@ exports[`EventCard Component renders correctly 1`] = `
     <span>
       1515851599504
     </span>
+    <span />
   </p>
   <Styled(a)
-    href=""
+    href="/events/undefined"
   >
     View event
   </Styled(a)>

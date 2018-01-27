@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navigation Component renders 1`] = `
+exports[`Donate Component renders 1`] = `
 <div>
   <Styled(div)>
     <Styled(div)>
