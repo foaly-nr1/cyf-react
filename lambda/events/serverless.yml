@@ -54,7 +54,6 @@ functions:
           path: events/{id}
           method: get
           cors: true
-          authorizer: aws_iam
 
   list:
     name: "${self:service}-list-${self:provider.stage}"
