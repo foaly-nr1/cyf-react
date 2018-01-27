@@ -1,9 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Event Component renders 1`] = `
-<div>
-  <p>
-    An event
-  </p>
-</div>
+<Styled(div)>
+  <Styled(div)>
+    <h4>
+      London Class 3
+    </h4>
+    <Styled(p)>
+      Week 4 - Hello Javascript
+    </Styled(p)>
+    <p>
+      <span>
+        London
+      </span>
+      <span>
+        , 
+      </span>
+      <span>
+        Ticketmaster
+      </span>
+    </p>
+    <p>
+      <span>
+        1515851599504
+      </span>
+      <span>
+         -
+      </span>
+      <span>
+        1515851599504
+      </span>
+      <span />
+    </p>
+  </Styled(div)>
+</Styled(div)>
 `;
