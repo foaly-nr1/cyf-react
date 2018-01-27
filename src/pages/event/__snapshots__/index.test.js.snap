@@ -3,35 +3,46 @@
 exports[`Event Component renders 1`] = `
 <Styled(div)>
   <Styled(div)>
-    <h4>
-      London Class 3
-    </h4>
-    <Styled(p)>
-      Week 4 - Hello Javascript
-    </Styled(p)>
-    <p>
-      <span>
-        London
-      </span>
-      <span>
-        , 
-      </span>
-      <span>
-        Ticketmaster
-      </span>
-    </p>
-    <p>
-      <span>
-        1515851599504
-      </span>
-      <span>
-         -
-      </span>
-      <span>
-        1515851599504
-      </span>
-      <span />
-    </p>
+    <EventDetail
+      city="London"
+      description="First bit of javascript"
+      endDate="1515851599504"
+      intake="London Class 3"
+      links={
+        Array [
+          Object {
+            "course materials": "https://codeyourfuture.github.io/syllabus-master/js-core/week-04/lesson.html",
+          },
+        ]
+      }
+      location="Ticketmaster"
+      mentors={
+        Array [
+          Object {
+            "avatar": "www.something.com",
+            "name": "Matt",
+          },
+          Object {
+            "avatar": "www.somthing.com",
+            "name": "Jun",
+          },
+          Object {
+            "avatar": "www.somthing.com",
+            "name": "Felix",
+          },
+        ]
+      }
+      moduleLeaders={
+        Array [
+          Object {
+            "avatar": "something",
+            "name": "Kash",
+          },
+        ]
+      }
+      startDate="1515851599504"
+      topic="Week 4 - Hello Javascript"
+    />
   </Styled(div)>
 </Styled(div)>
 `;
