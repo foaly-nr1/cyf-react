@@ -4,14 +4,11 @@ import styled from 'react-emotion';
 import v4 from 'uuid';
 import InnerContainer from '../../components/inner-container';
 import SectionHeading from '../../components/section-heading';
+import Page from '../../components/page';
 import EventCard from '../../components/event-card';
 import Content from '../../content/events';
-import fetchEvents from '../../lib/events';
+import { fetchEvents } from '../../lib/events';
 import type { CYFEvent } from '../../types';
-
-const Page = styled('div')`
-  background-color: #f8f8f8;
-`;
 
 const CardContainer = styled('div')`
   margin-bottom: 8px;

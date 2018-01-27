@@ -19,6 +19,7 @@ export type CYFEvent = {
   city: CYFCity,
   description: string,
   endDate: string,
+  eventId: string,
   intake: string,
   links: Array<Object>,
   location: string,
