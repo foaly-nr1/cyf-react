@@ -1,39 +1,14 @@
 import React, { Component } from 'react';
-import styled from 'react-emotion';
 import Page from '../../components/page';
 import InnerContainer from '../../components/inner-container';
+import EventDetail from '../../components/event-detail';
 import { fetchEvent } from '../../lib/events';
 import type { CYFEvent } from '../../types';
 
-const Topic = styled('p')`
-  font-weight: 700;
-`;
-
-export const Event = ({
-  city,
-  intake,
-  eventId,
-  topic,
-  location,
-  // mentors,
-  startDate,
-  endDate,
-}: CYFEvent) => (
+export const Event = (event: CYFEvent) => (
   <Page>
     <InnerContainer>
-      <h4>{intake}</h4>
-      <Topic>{topic}</Topic>
-      <p>
-        <span>{city}</span>
-        <span>, </span>
-        <span>{location}</span>
-      </p>
-      <p>
-        <span>{startDate}</span>
-        <span> -</span>
-        <span>{endDate}</span>
-        <span>{eventId}</span>
-      </p>
+      <EventDetail {...event} />
     </InnerContainer>
   </Page>
 );
@@ -46,17 +21,21 @@ type State = {
 
 class EventContainer extends Component<Props, State> {
   state = {
-    event: {},
+    event: {
+      startDate: '1515951599504',
+    },
   };
 
   componentDidMount() {
     const [eventId] = window.location.pathname.split('/').slice(-1);
     fetchEvent(eventId).then(event => {
+      console.log(this.state.event.startDate);
       this.setState({ event: event.data });
     });
   }
 
   render() {
+    // console.log(this.state.event);
     return <Event {...this.state.event} />;
   }
 }
