@@ -5,7 +5,7 @@ import EventDetail from '../../components/event-detail';
 import { fetchEvent } from '../../lib/events';
 import type { CYFEvent } from '../../types';
 
-export const Event = (event: CYFEvent) => (
+export const EventPage = (event: CYFEvent) => (
   <Page>
     <InnerContainer>
       <EventDetail {...event} />
@@ -29,13 +29,12 @@ class EventContainer extends Component<Props, State> {
   componentDidMount() {
     const [eventId] = window.location.pathname.split('/').slice(-1);
     fetchEvent(eventId).then(event => {
-      console.log(this.state.event.startDate);
       this.setState({ event: event.data });
     });
   }
 
   render() {
-    return <Event {...this.state.event} />;
+    return <EventPage {...this.state.event} />;
   }
 }
 

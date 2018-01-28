@@ -17,14 +17,15 @@ type Mentor = {
 
 export type CYFEvent = {
   city: CYFCity,
+  date: string,
   description: string,
-  endDate: string,
+  endTime: string,
   eventId: string,
   intake: string,
   links: Array<Object>,
   location: string,
   mentors: Array<Mentor>,
   moduleLeaders: Array<Mentor>,
-  startDate: string,
+  startTime: string,
   topic: string,
 };

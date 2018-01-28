@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Event } from './';
+import { EventPage } from './';
 
 const mockEvent = {
   city: 'London',
@@ -27,6 +27,6 @@ const mockEvent = {
 
 describe('Event Component', () => {
   it('renders', () => {
-    expect(shallow(<Event {...mockEvent} />)).toMatchSnapshot();
+    expect(shallow(<EventPage {...mockEvent} />)).toMatchSnapshot();
   });
 });
