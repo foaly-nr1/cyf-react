@@ -18,6 +18,8 @@ export async function main(event, context, callback) {
       location: data.body.location,
       intake: data.body.intake,
       topic: data.body.topic,
+      week: data.body.week,
+      module: data.body.module,
       description: data.body.description,
       moduleLeaders: data.body.moduleLeaders,
       mentors: data.body.mentors,
