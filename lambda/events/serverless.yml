@@ -37,7 +37,7 @@ functions:
           method: post
           authorizer: auth
           cors:
-            origins:
+            origin:
               - '*'
             headers:
               - Content-Type
@@ -45,6 +45,8 @@ functions:
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
 
   get:
     name: "${self:service}-get-${self:provider.stage}"
