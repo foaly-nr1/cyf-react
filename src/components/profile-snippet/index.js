@@ -9,29 +9,40 @@ type Props = {
 };
 
 const container = css({
-  outline: '1px solid red',
+  p: {
+    margin: '0',
+  },
 });
 
 const avatarStyle = css({
   width: '48px',
-  height: '48px',
+  maxHeight: '48px',
   borderRadius: '50%',
   verticleAlign: 'middle',
 });
 
 const textContainer = css({
   display: 'inline-block',
+  verticalAlign: 'middle',
+  paddingLeft: '8px',
+});
+
+const imgHelper = css({
+  verticalAlign: 'middle',
+  display: 'inline-block',
+  height: '100%',
 });
 
 const ProfileSnippet = ({ avatar, name, cyfRole }: Props) => (
   <div className={container}>
-    {/* <div> */}
-    <img
-      className={avatarStyle}
-      src={avatar}
-      alt={`Avatar for Code Your Future volunteer ${name}`}
-    />
-    {/* </div> */}
+    <div className={css({ height: '56px', display: 'inline-block' })}>
+      <span className={imgHelper} />
+      <img
+        className={avatarStyle}
+        src={avatar}
+        alt={`Avatar for Code Your Future volunteer ${name}`}
+      />
+    </div>
     <div className={textContainer}>
       <p>{name}</p>
       <p>{cyfRole}</p>
