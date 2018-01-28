@@ -29,6 +29,10 @@ const container = css({
   },
 });
 
+const attendeesContainer = css({
+  // outline: '1px solid red',
+});
+
 const EventDetail = ({
   city,
   description,
@@ -36,6 +40,7 @@ const EventDetail = ({
   topic,
   location,
   mentors,
+  moduleLeaders,
   startDate,
 }: // endDate,
 CYFEvent) => {
@@ -57,16 +62,32 @@ CYFEvent) => {
         <span>{location}</span>
       </p>
       <p> Add the address here too </p>
-      <p>
-        <span>Attendees </span>
-        <span>({mentors && mentors.length})</span>
-      </p>
-      {mentors &&
-        mentors.map(mentor => (
-          <div>
-            <ProfileSnippet {...mentor} />
-          </div>
-        ))}
+      <div className={attendeesContainer}>
+        <p>
+          <span>Attendees </span>
+          <span>({mentors && mentors.length + moduleLeaders.length})</span>
+        </p>
+        {moduleLeaders &&
+          moduleLeaders.map(mentor => (
+            <div>
+              <ProfileSnippet
+                avatar={mentor.avatar}
+                name={mentor.name}
+                cyfRole="Module leader"
+              />
+            </div>
+          ))}
+        {mentors &&
+          mentors.map(mentor => (
+            <div>
+              <ProfileSnippet
+                avatar={mentor.avatar}
+                name={mentor.name}
+                cyfRole="Mentor"
+              />
+            </div>
+          ))}
+      </div>
       <p>{description}</p>
       <div>
         <button>Attend this event</button>
