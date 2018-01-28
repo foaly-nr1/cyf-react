@@ -38,7 +38,7 @@ exports[`EventCard Component renders correctly 1`] = `
   </Styled(a)>
   <Styled(span)>
     <span>
-      3
+      4
     </span>
     <span>
        attending

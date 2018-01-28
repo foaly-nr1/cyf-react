@@ -35,7 +35,6 @@ class EventContainer extends Component<Props, State> {
   }
 
   render() {
-    // console.log(this.state.event);
     return <Event {...this.state.event} />;
   }
 }

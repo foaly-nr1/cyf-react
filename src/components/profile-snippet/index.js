@@ -1,20 +1,40 @@
 // @flow
 import React from 'react';
+import { css } from 'emotion';
 
 type Props = {
   avatar: string,
   name: string,
-  role: string,
+  cyfRole: string,
 };
 
-const ProfileSnippet = ({ avatar, name, role }: Props) => (
-  <div>
-    <div>
-      <img src={avatar} alt={`Avatar for Code Your Future volunteer ${name}`} />
-    </div>
-    <div>
+const container = css({
+  outline: '1px solid red',
+});
+
+const avatarStyle = css({
+  width: '48px',
+  height: '48px',
+  borderRadius: '50%',
+  verticleAlign: 'middle',
+});
+
+const textContainer = css({
+  display: 'inline-block',
+});
+
+const ProfileSnippet = ({ avatar, name, cyfRole }: Props) => (
+  <div className={container}>
+    {/* <div> */}
+    <img
+      className={avatarStyle}
+      src={avatar}
+      alt={`Avatar for Code Your Future volunteer ${name}`}
+    />
+    {/* </div> */}
+    <div className={textContainer}>
       <p>{name}</p>
-      <p>{role}</p>
+      <p>{cyfRole}</p>
     </div>
   </div>
 );
