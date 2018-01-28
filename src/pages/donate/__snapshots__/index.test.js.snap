@@ -23,11 +23,11 @@ exports[`Navigation Component renders 1`] = `
       </div>
     </Styled(div)>
   </Styled(div)>
-  <div>
+  <Styled(div)>
     <img
       alt="code-your-future-mentors"
       src="mentors-group.jpg"
     />
-  </div>
+  </Styled(div)>
 </div>
 `;
