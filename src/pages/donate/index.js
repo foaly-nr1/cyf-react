@@ -45,6 +45,16 @@ const TextContainer = styled('div')`
   }
 `;
 
+const ImageContainer = styled('div')`
+  overflow: hidden;
+  max-height: 450px;
+  margin: 0 auto;
+  & img {
+    width: 100%;
+    max-width: 1800px;
+  }
+`;
+
 class Donate extends React.Component {
   state = {
     tokenSuccess: null,
@@ -104,10 +114,9 @@ class Donate extends React.Component {
           </PickerContainer>
           {!tokenSuccess && <TextContainer>{donateText}</TextContainer>}
         </Container>
-        <div>
+        <ImageContainer>
           <img src={mentors} alt="code-your-future-mentors" />
-        </div>
-        {/* <Image /> */}
+        </ImageContainer>
       </div>
     );
   }

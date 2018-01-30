@@ -1,0 +1,87 @@
+service: cyf-events-api
+
+plugins:
+  - serverless-webpack
+
+custom:
+  webpackIncludeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: "${env:ENVIRONMENT}"
+  region: "${env:REGION}"
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:${env:REGION}:*:*"
+
+functions:
+  auth:
+    name: "${self:service}-auth-${self:provider.stage}"
+    handler: functions/auth.authorize
+  create:
+    name: "${self:service}-create-${self:provider.stage}"
+    handler: functions/create.main
+    events:
+      - http:
+          path: events
+          method: post
+          authorizer: auth
+          cors:
+            origin:
+              - '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+
+  get:
+    name: "${self:service}-get-${self:provider.stage}"
+    handler: functions/get.main
+    events:
+      - http:
+          path: events/{id}
+          method: get
+          cors: true
+
+  list:
+    name: "${self:service}-list-${self:provider.stage}"
+    handler: functions/list.main
+    events:
+      - http:
+          path: events
+          method: get
+          cors: true
+
+  update:
+    name: "${self:service}-update-${self:provider.stage}"
+    handler: functions/update.main
+    events:
+       - http:
+           path: events/{id}
+           method: put
+           cors: true
+           authorizer: aws_iam
+
+  delete:
+    name: "${self:service}-delete-${self:provider.stage}"
+    handler: functions/delete.main
+    events:
+       - http:
+           path: events/{id}
+           method: delete
+           cors: true
+           authorizer: aws_iam
