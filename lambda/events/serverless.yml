@@ -27,7 +27,7 @@ provider:
 functions:
   auth:
     name: "${self:service}-auth-${self:provider.stage}"
-    handler: functions/auth.authorize
+    handler: functions/auth.main
   create:
     name: "${self:service}-create-${self:provider.stage}"
     handler: functions/create.main
