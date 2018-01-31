@@ -8,11 +8,11 @@ if [ $BRANCH == "production" ]; then
 	sed -i -e "s#__REACT_APP_DONATION_ENDPOINT__#https://ivc9bvmb2d.execute-api.eu-west-1.amazonaws.com/production/donate#g" .env
 	sed -i -e "s#__REACT_APP_PIPEDRIVE_ENDPOINT__#https://ivc9bvmb2d.execute-api.eu-west-1.amazonaws.com/production/database#g" .env
 	export ENVIRONMENT=production
-	cd lambda && yarn && yarn deploy-production && cd events && yarn && yarn deploy
+	cd lambda && yarn --frozen-lockfile && yarn deploy-production && cd events && yarn --frozen-lockfile && yarn deploy
 else
 	sed -i -e "s#__REACT_APP_STRIPE_PUBLIC_KEY__#pk_test_noH4KPBQ7w5U3wZaRVo6NbmS#g" .env
 	sed -i -e "s#__REACT_APP_DONATION_ENDPOINT__#https://fsdynf2mse.execute-api.eu-west-1.amazonaws.com/staging/donate#g" .env
 	sed -i -e "s#__REACT_APP_PIPEDRIVE_ENDPOINT__#https://fsdynf2mse.execute-api.eu-west-1.amazonaws.com/staging/database#g" .env
 	export ENVIRONMENT=staging
-	cd lambda && yarn && yarn deploy-staging && cd events && yarn && yarn deploy
+	cd lambda && yarn --frozen-lockfile && yarn deploy-staging && cd events && yarn --frozen-lockfile && yarn deploy
 fi
