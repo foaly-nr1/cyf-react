@@ -5,9 +5,10 @@ import type { CYFEvent } from '../../types';
 
 const Container = styled('div')({
   backgroundColor: 'white',
-  textAlign: 'left',
   boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.5)',
+  maxWidth: '415px',
   padding: '12px',
+  textAlign: 'left',
   '*': {
     margin: '0' /* Overide all global css horribleness from legacy.css */,
   },
@@ -30,8 +31,8 @@ const Location = styled('div')({
 });
 
 const Topic = styled('p')({
-  fontWeight: '700',
   fontSize: '16px',
+  fontWeight: '700',
 });
 
 const Attendance = styled('span')({
@@ -40,20 +41,20 @@ const Attendance = styled('span')({
 });
 
 const EventLink = styled('a')({
-  textDecoration: 'underline',
   fontSize: '16px',
+  textDecoration: 'underline',
 });
 
 const EventCard = ({
   city,
+  endTime,
+  // eventId,
   intake,
-  eventId,
-  topic,
   location,
   mentors,
   moduleLeaders,
   startTime,
-  endTime,
+  topic,
 }: CYFEvent) => (
   <Container>
     <h4>{intake}</h4>
@@ -70,7 +71,8 @@ const EventCard = ({
         <span>{endTime}</span>
       </p>
     </Location>
-    <EventLink href={`/events/${eventId}`}>View event</EventLink>
+    {/* <EventLink href={`/events/${eventId}`}>View event</EventLink> */}
+    <EventLink href="">View event</EventLink>
     <Attendance>
       <span>{mentors.length + moduleLeaders.length}</span>
       <span> attending</span>

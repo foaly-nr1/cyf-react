@@ -1,7 +1,7 @@
 import styled from 'react-emotion';
 
-const Page = styled('div')`
-  background-color: #f8f8f8;
-`;
+const Page = styled('div')({
+  backgroundColor: '#f8f8f8',
+});
 
 export default Page;
