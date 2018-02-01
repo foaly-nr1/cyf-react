@@ -10,13 +10,13 @@ import Content from '../../content/events';
 import { fetchEvents } from '../../lib/events';
 import type { CYFEvent } from '../../types';
 
-const CardContainer = styled('div')`
-  margin-bottom: 8px;
-`;
+const CardContainer = styled('div')({
+  paddingBottom: '16px',
+});
 
-const EventsHeading = styled(SectionHeading)`
-  text-transform: none; !important
-`;
+const Heading = styled('h3')({
+  textTransform: 'none',
+});
 
 type EventsProps = {
   events: Array<CYFEvent>,
@@ -25,9 +25,9 @@ type EventsProps = {
 const Events = ({ events }: EventsProps) => (
   <Page>
     <InnerContainer>
-      <EventsHeading>
-        <h3>{Content.Events.Heading}</h3>
-      </EventsHeading>
+      <SectionHeading>
+        <Heading>{Content.Events.Heading}</Heading>
+      </SectionHeading>
       {events &&
         events.length > 0 &&
         events.map(event => (
