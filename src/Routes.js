@@ -34,6 +34,7 @@ const Routes = () => (
     <div>
       <Navigation auth={auth} />
       <Route exact path="/" component={Home} />
+      <Route exact path="/index.html" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={Events} />
       <Route exact path="/events/:event_id" component={Event} />
