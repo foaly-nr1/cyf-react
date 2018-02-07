@@ -9,9 +9,6 @@ const Container = styled('div')({
   maxWidth: '415px',
   padding: '12px',
   textAlign: 'left',
-  '*': {
-    margin: '0' /* Overide all global css horribleness from legacy.css */,
-  },
   h4: {
     color: '#333333',
     fontSize: '18px',
