@@ -4,6 +4,7 @@ import github from '../../assets/images/logos/github.png';
 import geckoboard from '../../assets/images/logos/geckoboard.png';
 import slack from '../../assets/images/logos/slack.png';
 import kinningParkComplex from '../../assets/images/logos/kinningparkcomplex.png';
+import skyscannerLogo from '../../assets/images/logos/skyscanner.svg';
 import coop from '../../assets/images/logos/coop.png';
 
 const partners = {
@@ -35,6 +36,13 @@ const partners = {
   ],
 
   scotland: [
+    {
+      id: 'skyscanner-scotland',
+      name: 'Skyscanner',
+      url: 'https://skyscanner.net',
+      logo: skyscannerLogo,
+      featured: true,
+    },
     {
       id: 'kinningParkComplex',
       name: 'Kinning Park Complex',
