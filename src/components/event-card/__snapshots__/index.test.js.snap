@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventCard Component renders correctly 1`] = `
+<Styled(div)>
+  <h4>
+    London Class 3
+  </h4>
+  <Styled(p)>
+    Week 4 - Hello Javascript
+  </Styled(p)>
+  <Styled(div)>
+    <p>
+      <span>
+        London
+      </span>
+      <span>
+        , 
+      </span>
+      <span>
+        Ticketmaster
+      </span>
+    </p>
+    <p>
+      <span />
+      <span>
+         -
+      </span>
+      <span />
+    </p>
+  </Styled(div)>
+  <Styled(a)
+    href=""
+  >
+    View event
+  </Styled(a)>
+  <Styled(span)>
+    <span>
+      4
+    </span>
+    <span>
+       attending
+    </span>
+  </Styled(span)>
+</Styled(div)>
+`;

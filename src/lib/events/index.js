@@ -1,0 +1,55 @@
+import axios from 'axios';
+import type { AxiosPromise } from 'axios';
+import type { CYFEvent } from '../../types';
+
+export type FetchEvents = string => Promise<CYFEvent>;
+
+export async function fetchEvents(
+  fetchFn: AxiosPromise = axios,
+): Promise<CYFEvent> {
+  if (!process.env.REACT_APP_EVENTS_URL) {
+    throw new Error(
+      'Oi Oi Please specify a valid environmental variable for EVENTS_URL',
+    );
+  }
+  const res = await fetchFn(`${process.env.REACT_APP_EVENTS_URL}`);
+
+  return res;
+}
+
+export async function fetchEvent(
+  eventId: string,
+  fetchFn: AxiosPromise = axios,
+): Promise<CYFEvent> {
+  if (!process.env.REACT_APP_EVENTS_URL) {
+    throw new Error(
+      'Oi Please specify a valid environmental variable from EVENTS_URL',
+    );
+  }
+  const res = await fetchFn(`${process.env.REACT_APP_EVENTS_URL}/${eventId}`);
+  return res;
+}
+
+export const sortEventsByDate = events => {
+  const array = events.reduce((acc, event) => {
+    const eventDate = event.date;
+    const foundDate = acc.findIndex(date => date.date === eventDate);
+    if (foundDate > -1) {
+      acc[foundDate].events = acc[foundDate].events.concat([event]);
+      return acc;
+    }
+    return acc.concat([{ date: event.date, events: [event] }]);
+  }, []);
+
+  const getTime = event => new Date(event.date).getTime();
+
+  return array.sort((a, b) => {
+    if (getTime(a) < getTime(b)) {
+      return -1;
+    }
+    if (getTime(a) > getTime(b)) {
+      return 1;
+    }
+    return 0;
+  });
+};
