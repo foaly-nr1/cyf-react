@@ -9,7 +9,7 @@ const container = css({
   padding: '16px',
   textAlign: 'left',
   h1: {
-    color: '#44444',
+    color: '#444',
     fontSize: '32px',
     fontWeight: 'normal',
     lineHeight: '1.13',
@@ -18,36 +18,75 @@ const container = css({
     textTransform: 'none',
   },
   h2: {
-    color: '#444444',
+    color: '#444',
     fontSize: '22px',
     lineHeight: '1.45',
     margin: 0,
     paddingBottom: '16px',
     textTransform: 'none',
   },
-  p: {
-    fontSize: '18px',
-    margin: 0,
-  },
 });
 
 const dateContainer = css({
-  color: '#333333',
+  color: '#333',
+  'span:last-child': {
+    display: 'block',
+  },
 });
 
 const addressContainer = css({
-  color: '#777777',
-  paddingBottom: '32px',
+  color: '#777',
+  marginBottom: '32px',
+  lineHeight: '1.4',
+  fontSize: '18px',
+  fontWeight: '400',
 });
 
 const attendeeContainer = css({
+  marginBottom: '36px',
   h3: {
     fontWeight: '500',
-    color: '#333333',
+    color: '#333',
+    lineHeight: '1.33',
     fontSize: '18px',
     margin: 0,
-    paddingBottom: '4px',
+    marginBottom: '12px',
+    textTransform: 'none',
   },
+});
+
+const eventDescription = css({
+  marginBottom: '16px',
+  fontSize: '16px',
+  lineHeight: '1.5',
+});
+
+const attendButton = css({
+  fontSize: '18px',
+  fontWeight: '400',
+  lineHeight: '1.33',
+  color: '#2ba560',
+  padding: '8px 16px',
+  backgroundColor: 'white',
+  border: '1px solid #2ba560',
+  borderRadius: '8px',
+  ':hover': {
+    backgroundColor: '#207e49',
+    color: '#fff',
+  },
+  ':active': {
+    backgroundColor: '#2ba560',
+    color: '#fff',
+  },
+});
+
+const backToEventLink = css({
+  lineHeight: '1.5',
+  fontSize: '16px',
+  fontWeight: '400',
+  color: '#333',
+  marginTop: '32px',
+  display: 'block',
 });
 
 const EventDetail = ({
@@ -60,6 +99,7 @@ const EventDetail = ({
   mentors,
   moduleLeaders,
   startTime,
+  endTime,
 }: // endDate,
 CYFEvent) => (
   <div className={container}>
@@ -67,8 +107,9 @@ CYFEvent) => (
     <h2>{intake}</h2>
     <p className={dateContainer}>
       <span>{moment(date).format('dddd, Do MMMM')}</span>
-      <span>, </span>
-      <span>{startTime}</span>
+      <span>
+        {startTime} - {endTime}
+      </span>
     </p>
     <div className={addressContainer}>
       <p>
@@ -104,12 +145,14 @@ CYFEvent) => (
           </div>
         ))}
     </section>
-    <p>{description}</p>
+    <p className={eventDescription}>{description}</p>
     <div>
-      <button>Attend this event</button>
+      <button className={attendButton}>Attend this event</button>
     </div>
     <div>
-      <a href="/events">Back to event listing</a>
+      <a href="/events" className={backToEventLink}>
+        Back to event listing
+      </a>
     </div>
   </div>
 );

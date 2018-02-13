@@ -9,6 +9,7 @@ type Props = {
 };
 
 const container = css({
+  marginBottom: '10px',
   p: {
     margin: '0',
   },
@@ -24,7 +25,13 @@ const avatarStyle = css({
 const textContainer = css({
   display: 'inline-block',
   verticalAlign: 'middle',
-  paddingLeft: '8px',
+  marginLeft: '8px',
+  lineHeight: '1.5',
+  fontSize: '16px',
+  color: '#333',
+  'p:last-child': {
+    color: '#666',
+  },
 });
 
 const imgHelper = css({
