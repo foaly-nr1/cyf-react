@@ -8,10 +8,15 @@ type Props = {
   cyfRole: string,
 };
 
+const desktopMq = `@media (min-width: 840px)`;
+
 const container = css({
   marginBottom: '10px',
   p: {
     margin: '0',
+  },
+  [desktopMq]: {
+    marginBottom: '16px',
   },
 });
 
@@ -25,12 +30,15 @@ const avatarStyle = css({
 const textContainer = css({
   display: 'inline-block',
   verticalAlign: 'middle',
-  marginLeft: '8px',
+  marginLeft: '12px',
   lineHeight: '1.5',
   fontSize: '16px',
   color: '#333',
   'p:last-child': {
     color: '#666',
+  },
+  [desktopMq]: {
+    marginLeft: '16px',
   },
 });
 

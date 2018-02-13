@@ -4,6 +4,8 @@ import moment from 'moment';
 import ProfileSnippet from '../../components/profile-snippet';
 import type { CYFEvent } from '../../types';
 
+const desktopMq = `@media (min-width: 840px)`;
+
 const container = css({
   backgroundColor: '#f8f8f8',
   padding: '16px',
@@ -16,21 +18,38 @@ const container = css({
     margin: 0,
     paddingBottom: '4px',
     textTransform: 'none',
+    [desktopMq]: {
+      fontSize: '40px',
+      lineHeight: '1.3',
+    },
   },
   h2: {
     color: '#444',
     fontSize: '22px',
+    fontWeight: '400',
     lineHeight: '1.45',
     margin: 0,
     paddingBottom: '16px',
     textTransform: 'none',
+    [desktopMq]: {
+      fontSize: '32px',
+      lineHeight: '1.13',
+    },
+  },
+  [desktopMq]: {
+    padding: '60px 88px',
   },
 });
 
 const dateContainer = css({
   color: '#333',
+  fontWeight: '500',
   'span:last-child': {
     display: 'block',
+  },
+  [desktopMq]: {
+    fontSize: '18px',
+    lineHeight: '1.56',
   },
 });
 
@@ -40,18 +59,27 @@ const addressContainer = css({
   lineHeight: '1.4',
   fontSize: '18px',
   fontWeight: '400',
+  [desktopMq]: {
+    fontSize: '18px',
+    lineHeight: '1.56',
+  },
 });
 
 const attendeeContainer = css({
   marginBottom: '36px',
   h3: {
-    fontWeight: '500',
+    fontWeight: '400',
     color: '#333',
     lineHeight: '1.33',
     fontSize: '18px',
     margin: 0,
     marginBottom: '12px',
     textTransform: 'none',
+    [desktopMq]: {
+      fontSize: '22px',
+      lineHeight: '1.45',
+      marginBottom: '16px',
+    },
   },
 });
 
@@ -59,6 +87,7 @@ const eventDescription = css({
   marginBottom: '16px',
   fontSize: '16px',
   lineHeight: '1.5',
+  maxWidth: '580px',
 });
 
 const attendButton = css({
@@ -86,7 +115,35 @@ const backToEventLink = css({
   fontWeight: '400',
   color: '#333',
   marginTop: '32px',
-  display: 'block',
+  borderBottom: '1px solid',
+  display: 'inline-block',
+  paddingBottom: '3px',
+});
+
+const attendeeList = css({
+  display: 'flex',
+  listStyle: 'none',
+  flexDirection: 'column',
+  flexWrap: 'wrap',
+  padding: 0,
+  maxWidth: '580px',
+  '@media (min-width: 510px)': {
+    flexDirection: 'row',
+  },
+});
+
+const attendeeListItem = css({
+  '@media (min-width: 510px)': {
+    width: '50%',
+  },
+});
+
+const divider = css({
+  marginBottom: '10px',
+  borderTop: '1px solid #ddd',
+  [desktopMq]: {
+    marginBottom: '30px',
+  },
 });
 
 const EventDetail = ({
@@ -124,27 +181,30 @@ CYFEvent) => (
         <span>Attendees </span>
         <span>({mentors && mentors.length + moduleLeaders.length})</span>
       </h3>
-      {moduleLeaders &&
-        moduleLeaders.map(mentor => (
-          <div>
-            <ProfileSnippet
-              avatar={mentor.avatar}
-              name={mentor.name}
-              cyfRole="Module leader"
-            />
-          </div>
-        ))}
-      {mentors &&
-        mentors.map(mentor => (
-          <div>
-            <ProfileSnippet
-              avatar={mentor.avatar}
-              name={mentor.name}
-              cyfRole="Mentor"
-            />
-          </div>
-        ))}
+      <ul className={attendeeList}>
+        {moduleLeaders &&
+          moduleLeaders.map(mentor => (
+            <li className={attendeeListItem}>
+              <ProfileSnippet
+                avatar={mentor.avatar}
+                name={mentor.name}
+                cyfRole="Module leader"
+              />
+            </li>
+          ))}
+        {mentors &&
+          mentors.map(mentor => (
+            <li className={attendeeListItem}>
+              <ProfileSnippet
+                avatar={mentor.avatar}
+                name={mentor.name}
+                cyfRole="Mentor"
+              />
+            </li>
+          ))}
+      </ul>
     </section>
+    <hr className={divider} />
     <p className={eventDescription}>{description}</p>
     <div>
       <button className={attendButton}>Attend this event</button>
