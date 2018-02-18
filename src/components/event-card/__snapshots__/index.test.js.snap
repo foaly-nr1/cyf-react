@@ -29,7 +29,7 @@ exports[`EventCard Component renders correctly 1`] = `
     </p>
   </Styled(div)>
   <Styled(a)
-    href=""
+    href="/events/1"
   >
     View event
   </Styled(a)>
