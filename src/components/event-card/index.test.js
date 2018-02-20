@@ -9,6 +9,7 @@ describe('EventCard Component', () => {
       city: 'London',
       description: 'First bit of javascript',
       endDate: '1515851599504',
+      eventId: '1',
       intake: 'London Class 3',
       links: [
         {
