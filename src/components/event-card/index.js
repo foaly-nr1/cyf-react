@@ -45,7 +45,7 @@ const EventLink = styled('a')({
 const EventCard = ({
   city,
   endTime,
-  // eventId,
+  eventId,
   intake,
   location,
   mentors,
@@ -68,8 +68,7 @@ const EventCard = ({
         <span>{endTime}</span>
       </p>
     </Location>
-    {/* <EventLink href={`/events/${eventId}`}>View event</EventLink> */}
-    <EventLink href="">View event</EventLink>
+    <EventLink href={`/events/${eventId}`}>View event</EventLink>
     <Attendance>
       <span>{mentors.length + moduleLeaders.length}</span>
       <span> attending</span>
