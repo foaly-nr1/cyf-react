@@ -37,6 +37,14 @@ type EventsProps = {
   dates: Array<any>,
 };
 
+const today = moment()
+  .toISOString()
+  .slice(0, 10)
+  .replace(/-/g, '');
+
+const futureEventsFilter = events =>
+  events.filter(event => event.date.replace(/-/g, '') >= today);
+
 const Events = ({ dates }: EventsProps) => (
   <Page>
     <InnerContainer>
@@ -47,13 +55,15 @@ const Events = ({ dates }: EventsProps) => (
         dates.map(date => (
           <DateEventContainer key={v4()}>
             <DateHeading>
-              {moment(date.date).format('dddd Do MMMM')}
+              {date.date.replace(/-/g, '') >= today &&
+                moment(date.date).format('dddd Do MMMM')}
             </DateHeading>
-            {date.events.map(event => (
-              <CardContainer>
-                <EventCard {...event} key={v4()} />
-              </CardContainer>
-            ))}
+            {date.events &&
+              futureEventsFilter(date.events).map(event => (
+                <CardContainer key={v4()}>
+                  <EventCard {...event} key={v4()} />
+                </CardContainer>
+              ))}
           </DateEventContainer>
         ))}
     </InnerContainer>
