@@ -90,24 +90,24 @@ const eventDescription = css({
   maxWidth: '580px',
 });
 
-const attendButton = css({
-  fontSize: '18px',
-  fontWeight: '400',
-  lineHeight: '1.33',
-  color: '#2ba560',
-  padding: '8px 16px',
-  backgroundColor: 'white',
-  border: '1px solid #2ba560',
-  borderRadius: '8px',
-  ':hover': {
-    backgroundColor: '#207e49',
-    color: '#fff',
-  },
-  ':active': {
-    backgroundColor: '#2ba560',
-    color: '#fff',
-  },
-});
+// const attendButton = css({
+//   fontSize: '18px',
+//   fontWeight: '400',
+//   lineHeight: '1.33',
+//   color: '#2ba560',
+//   padding: '8px 16px',
+//   backgroundColor: 'white',
+//   border: '1px solid #2ba560',
+//   borderRadius: '8px',
+//   ':hover': {
+//     backgroundColor: '#207e49',
+//     color: '#fff',
+//   },
+//   ':active': {
+//     backgroundColor: '#2ba560',
+//     color: '#fff',
+//   },
+// });
 
 const backToEventLink = css({
   lineHeight: '1.5',
@@ -207,7 +207,8 @@ CYFEvent) => (
     <hr className={divider} />
     <p className={eventDescription}>{description}</p>
     <div>
-      <button className={attendButton}>Attend this event</button>
+      {/* This is being hidden until the 'attend an event function is up and running */}
+      {/* <button className={attendButton}>Attend this event</button> */}
     </div>
     <div>
       <a href="/events" className={backToEventLink}>
