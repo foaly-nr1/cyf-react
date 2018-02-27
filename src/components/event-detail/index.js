@@ -174,7 +174,6 @@ CYFEvent) => (
         <span>, </span>
         <span>{location}</span>
       </p>
-      <p> Add the address here too </p>
     </div>
     <section className={attendeeContainer}>
       <h3>
