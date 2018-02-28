@@ -8,22 +8,9 @@ DATE="$3"
 yarn build
 
 ## Some weird github pages requirement
-if [ $BRANCH == "production" ]; then
-	echo "codeyourfuture.io" > ./build/CNAME
-else
-	echo "$BRANCH.codeyourfuture.io" > ./build/CNAME
-fi
-
-##
-git clone git@github.com:Code-Your-Future/$REPO_NAME.git
-cd $REPO_NAME
-git rm -r ./*
-cp -a ../build/* .
-git config --global user.email "admin@codeyourfuture.io"
-git config --global user.name "Automated bot"
-git add .
-git commit -m "Rebuilt on $DATE"
-git push
+export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+aws s3 cp build/ s3://cyf-web --acl public-read  --recursive
 
 ## purge cloudflare cache
 curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_IDENTIFIER/purge_cache" \
