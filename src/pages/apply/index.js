@@ -45,6 +45,14 @@ const initialState = {
   // reCaptchaResponse: '',
 };
 
+const trackStudents = () => {
+  const { gtag } = window;
+  gtag('event', 'submit', {
+    event_category: 'student-lead',
+    event_label: 'form-completion',
+  });
+};
+
 export default class Apply extends Component {
   constructor(props) {
     super(props);
@@ -160,6 +168,7 @@ export default class Apply extends Component {
         });
         scrollToElement('.success-message', { align: 'top' });
       })
+      .then(() => trackStudents())
       .catch(error => {
         // window.grecaptcha.reset();
         if (error.response.status === 401) {

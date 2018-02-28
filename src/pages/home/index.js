@@ -5,7 +5,7 @@ import Banner from '../../components/banner';
 import WhatWeTeach from '../../components/what-we-teach';
 import Video from '../../components/video';
 
-const Home = () => (
+export default () => (
   <div className="Home">
     <div className="App-intro">
       <Banner />
@@ -15,5 +15,3 @@ const Home = () => (
     <AsSeen />
   </div>
 );
-
-export default Home;
