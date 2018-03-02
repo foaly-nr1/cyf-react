@@ -5,6 +5,7 @@ import v4 from 'uuid';
 import moment from 'moment';
 import InnerContainer from '../../components/inner-container';
 import SectionHeading from '../../components/section-heading';
+import Spinner from '../../components/spinner';
 import Page from '../../components/page';
 import EventCard from '../../components/event-card';
 import Content from '../../content/events';
@@ -74,6 +75,7 @@ type Props = {};
 
 type State = {
   events: Array<CYFEvent>,
+  loading: boolean,
 };
 
 class EventsContainer extends Component<Props, State> {
@@ -83,16 +85,24 @@ class EventsContainer extends Component<Props, State> {
 
   state = {
     events: [],
+    loading: true,
   };
 
   componentDidMount() {
     fetchEvents().then(events => {
-      this.setState({ events: sortEventsByDate(events.data) });
+      this.setState({
+        events: sortEventsByDate(events.data),
+        loading: false,
+      });
     });
   }
 
   render() {
-    return <Events dates={this.state.events} />;
+    return this.state.loading ? (
+      <Spinner name="circle" />
+    ) : (
+      <Events dates={this.state.events} />
+    );
   }
 }
 
