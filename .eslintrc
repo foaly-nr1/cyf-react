@@ -3,7 +3,14 @@
   "parser": "babel-eslint",
   "plugins": ["flowtype"],
   "rules": {
-    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [],
+        "specialLink": ["to"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ],
     "react/forbid-prop-types": "off",
     "react/jsx-filename-extension": [
       1,

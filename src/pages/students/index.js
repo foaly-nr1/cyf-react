@@ -1,33 +1,7 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import TopSection from '../../components/top-section';
 import students from '../../assets/images/students-group.jpg';
-
-const trackStudents = () => {
-  const { gtag } = window;
-  gtag('event', 'submit', {
-    event_category: 'student-lead',
-    event_label: 'students',
-  });
-};
-
-const ApplyStudents = withRouter(({ history }) => (
-  <a
-    role="button"
-    tabIndex={0}
-    className="big-link-2 btn"
-    onClick={() => {
-      trackStudents();
-      history.push('/students');
-    }}
-    onKeyPress={() => {
-      trackStudents();
-      history.push('/students');
-    }}
-  >
-    Apply Now
-  </a>
-));
 
 const Students = () => {
   const studentText = (
@@ -85,7 +59,14 @@ const Students = () => {
                       <strong>Interested?</strong>
                     </div>
                     <div className="col-sm-2">
-                      <ApplyStudents />
+                      <Link
+                        className="big-link-3 btn block-2-box-btn"
+                        to="/apply/student"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Apply now
+                      </Link>
                     </div>
                   </div>
                 </div>

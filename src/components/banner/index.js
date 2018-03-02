@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'react-emotion';
 import teaching from '../../assets/images/1.jpg';
 
@@ -28,44 +28,6 @@ const BannerText = styled('div')`
   }
 `;
 
-const trackStudents = () => {
-  const { gtag } = window;
-  gtag('event', 'submit', {
-    event_category: 'student-lead',
-    event_label: 'homepage',
-  });
-};
-
-const ApplyStudentsHomePage = withRouter(({ history }) => (
-  <a
-    role="button"
-    tabIndex={0}
-    className="big-link-2 btn"
-    onClick={() => {
-      trackStudents();
-      history.push('/students');
-    }}
-    onKeyPress={() => {
-      trackStudents();
-      history.push('/students');
-    }}
-  >
-    Apply Now
-  </a>
-));
-
-const ApplyVolunteers = withRouter(({ history }) => (
-  <a
-    role="button"
-    tabIndex={-1}
-    className="big-link-2 btn"
-    onClick={() => history.push('/volunteers')}
-    onKeyPress={() => history.push('/volunteers')}
-  >
-    Become a volunteer
-  </a>
-));
-
 const Banner = () => (
   <Hero>
     <BannerImage src={teaching} alt="teaching=refugees-to-code" />
@@ -73,8 +35,17 @@ const Banner = () => (
       <h1>Coding School for Refugees</h1>
       <p>Learn to code and find a job</p>
       <div className="page-title-bottom-link">
-        <ApplyStudentsHomePage />
-        <ApplyVolunteers />
+        <Link to="students" className="big-link-2 btn">
+          Apply Now
+        </Link>
+        <Link
+          className="big-link-2 btn"
+          to="volunteers"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Become a volunteer
+        </Link>
       </div>
     </BannerText>
   </Hero>
