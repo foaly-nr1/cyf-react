@@ -12,8 +12,8 @@ export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 export CLOUDFRONT_DISTRO_ID=E3VCH8Y8STIF56
 
-aws s3 cp build/ s3://cyf-web  \
-  --acl public-read  --recursive \
+aws s3 sync build/ s3://cyf-web  \
+  --acl public-read --delete \
   --cache-control max-age=3600
 
 # invalidate cache in cloudfront
