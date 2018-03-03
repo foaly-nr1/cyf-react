@@ -41,7 +41,9 @@ class EventContainer extends Component<Props, State> {
 
   render() {
     return this.state.loading ? (
-      <Spinner name="circle" />
+      <Page>
+        <Spinner name="circle" />
+      </Page>
     ) : (
       <EventPage {...this.state.event} />
     );
