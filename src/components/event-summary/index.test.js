@@ -2,6 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import EventSummary from './';
 
+jest.mock('moment', () => () => ({ format: () => 'February 26th, 00:01am' }));
+
 describe('EventSummary', () => {
   it('renders correctly', () => {
     const event = {
