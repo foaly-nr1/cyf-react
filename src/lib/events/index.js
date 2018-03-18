@@ -1,8 +1,36 @@
 import axios from 'axios';
 import type { AxiosPromise } from 'axios';
 import type { CYFEvent } from '../../types';
+import Auth from '../../lib/auth';
 
 export type FetchEvents = string => Promise<CYFEvent>;
+
+export async function createEvent(
+  payload: Object,
+  fetchFn: AxiosPromise = axios,
+): Promise<CYFEvent> {
+  if (!process.env.REACT_APP_EVENTS_URL) {
+    throw new Error(
+      'Oi Oi Please specify a valid environmental variable for EVENTS_URL',
+    );
+  }
+  const auth = new Auth();
+  const idToken = auth.getIDToken();
+
+  if (!idToken) {
+    throw new Error('User is not logged in');
+  }
+
+  const res = await fetchFn(`${process.env.REACT_APP_EVENTS_URL}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${idToken}`,
+    },
+    data: JSON.stringify(payload),
+  });
+  return res;
+}
 
 export async function fetchEvents(
   fetchFn: AxiosPromise = axios,

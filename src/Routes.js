@@ -9,6 +9,7 @@ import {
   Donate,
   Event,
   Events,
+  CreateEvent,
   Home,
   MeetTheTeam,
   Partners,
@@ -37,6 +38,7 @@ const Routes = () => (
       <Route exact path="/index.html" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={Events} />
+      <Route exact path="/event/create" component={CreateEvent} />
       <Route exact path="/events/:event_id" component={Event} />
       <Route exact path="/students" component={Students} />
       <Route exact path="/students.html" component={Students} />

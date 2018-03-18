@@ -1,116 +1,122 @@
 // @flow
-// import React from 'react';
-// import AuthLogin from '../../components/auth-login';
-// import { Button, ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
-// import TopSection from '../../components/top-section';
+import React, { Component } from 'react';
+import { Button, ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
+import TopSection from '../../components/top-section';
+import { createEvent } from '../../lib/events';
 
-// const COLOR = { color: '#555' };
+const COLOR = { color: '#555' };
 
-// function FieldGroup({
-//   id, label, help, ...props
-// }) {
-//   return (
-//     <FormGroup controlId={id}>
-//       <ControlLabel>{label}</ControlLabel>
-//       <FormControl {...props} style={COLOR} />
-//     </FormGroup>
-//   );
-// }
+function FieldGroup({ id, label, help, ...props }: Object) {
+  return (
+    <FormGroup controlId={id}>
+      <ControlLabel>{label}</ControlLabel>
+      <FormControl {...props} style={COLOR} />
+    </FormGroup>
+  );
+}
 
-// class CreateEvent extends React.Component {
-//   constructor(props) {
-//     super(props);
+type State = {
+  description: string,
+  location: string,
+  date: string,
+  startTime: string,
+  endTime: string,
+  title: string,
+};
+class CreateEvent extends Component<{}, State> {
+  state = {
+    description: '',
+    location: '',
+    date: '',
+    startTime: '',
+    endTime: '',
+    title: '',
+  };
 
-//     this.handleChange = this.handleChange.bind(this);
-//     this.handleSubmit = this.handleSubmit.bind(this);
+  handleSubmit = async (event: Event) => {
+    event.preventDefault();
+    await createEvent(this.state);
+    this.setState({
+      description: '',
+      location: '',
+      date: '',
+      startTime: '',
+      endTime: '',
+      title: '',
+    });
+  };
 
-//     this.state = {};
-//   }
+  handleChange = (event: SyntheticEvent<HTMLInputElement>) => {
+    this.setState({ [event.currentTarget.name]: event.currentTarget.value });
+  };
 
-//   handleSubmit(event) {
-//     event.preventDefault();
+  render() {
+    return (
+      <main className="container">
+        <TopSection title="Create Event" />
 
-//     const { date, ...otherState } = this.state;
+        <div className="col-sm-8 col-sm-offset-2 block-2-box">
+          <form onSubmit={this.handleSubmit}>
+            <FieldGroup
+              required
+              name="title"
+              type="text"
+              label="Title (required)"
+              placeholder="Enter text"
+              onChange={this.handleChange}
+              value={this.state.title}
+            />
 
-//     window.FirebaseInitialized
-//       .database()
-//       .ref('events')
-//       .push({
-//         ...otherState,
-//         date: new Date(date).getTime(),
-//         attendees: {},
-//         mentors: {},
-//       })
-//       .then((response) => {
-//         this.props.history.push('/events');
-//       });
-//   }
+            <FormGroup controlId="description">
+              <ControlLabel>Description (required)</ControlLabel>
+              <FormControl
+                componentClass="textarea"
+                name="description"
+                onChange={this.handleChange}
+                placeholder="Description..."
+                style={COLOR}
+                value={this.state.description}
+              />
+            </FormGroup>
 
-//   handleChange(event) {
-//     this.setState({ [event.target.name]: event.target.value });
-//   }
+            <FieldGroup
+              label="When (required)"
+              name="date"
+              onChange={this.handleChange}
+              type="date"
+              value={this.state.date}
+            />
 
-//   render() {
-//     return (
-//       <main className="container">
-//         <TopSection title="Create Event" />
+            <FieldGroup
+              label="Start time"
+              name="startTime"
+              onChange={this.handleChange}
+              type="time"
+              value={this.state.startTime}
+            />
 
-//         <AuthLogin>
-//           <div className="col-sm-8 col-sm-offset-2 block-2-box">
-//             <form onSubmit={this.handleSubmit}>
-//               <FieldGroup
-//                 required
-//                 name="title"
-//                 type="text"
-//                 label="Title (required)"
-//                 placeholder="Enter text"
-//                 onChange={this.handleChange}
-//                 value={this.state.title}
-//               />
+            <FieldGroup
+              label="End time"
+              name="endTime"
+              onChange={this.handleChange}
+              type="time"
+              value={this.state.endTime}
+            />
 
-//               <FormGroup controlId="description">
-//                 <ControlLabel>Description (required)</ControlLabel>
-//                 <FormControl
-//                   componentClass="textarea"
-//                   name="description"
-//                   onChange={this.handleChange}
-//                   placeholder="Description..."
-//                   style={COLOR}
-//                   value={this.state.description}
-//                 />
-//               </FormGroup>
+            <FieldGroup
+              label="Where (required)"
+              name="location"
+              onChange={this.handleChange}
+              type="text"
+              value={this.state.location}
+            />
 
-//               <FieldGroup
-//                 label="When (required)"
-//                 name="date"
-//                 onChange={this.handleChange}
-//                 type="datetime-local"
-//                 value={this.state.date}
-//               />
+            <Button type="submit">Create</Button>
+          </form>
+        </div>
+      </main>
+    );
+  }
+}
 
-//               <FieldGroup
-//                 label="Where (required)"
-//                 name="location"
-//                 onChange={this.handleChange}
-//                 type="text"
-//                 value={this.state.location}
-//               />
-
-//               <FieldGroup
-//                 label="Sponsors"
-//                 name="sponsors"
-//                 onChange={this.handleChange}
-//                 type="text"
-//                 value={this.state.sponsors}
-//               />
-
-//               <Button type="submit">Create</Button>
-//             </form>
-//           </div>
-//         </AuthLogin>
-//       </main>
-//     );
-//   }
-// }
-
-// export default CreateEvent;
+export default CreateEvent;
