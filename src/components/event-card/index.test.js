@@ -8,7 +8,7 @@ describe('EventCard Component', () => {
     const mockEvent = {
       city: 'London',
       description: 'First bit of javascript',
-      endDate: '1515851599504',
+      endTime: '15:00',
       eventId: '1',
       intake: 'London Class 3',
       links: [
@@ -24,7 +24,8 @@ describe('EventCard Component', () => {
         { name: 'Felix', avatar: 'www.somthing.com' },
       ],
       moduleLeaders: [{ name: 'Kash', avatar: 'something' }],
-      startDate: '1515851599504',
+      startTime: '12:00',
+      date: '2018-01-01',
       topic: 'Week 4 - Hello Javascript',
     };
 

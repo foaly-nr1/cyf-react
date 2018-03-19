@@ -14,15 +14,18 @@ exports[`EventCard Component renders correctly 1`] = `
     </p>
     <p>
       <span>
-        March 18, 2018
+        January 1, 2018
       </span>
       <span>
          
+        12:00
       </span>
       <span>
          - 
       </span>
-      <span />
+      <span>
+        15:00
+      </span>
     </p>
   </Styled(div)>
   <Styled(a)
