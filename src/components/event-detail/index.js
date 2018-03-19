@@ -147,39 +147,35 @@ const divider = css({
 });
 
 const EventDetail = ({
-  city,
   date,
   description,
-  intake,
   topic,
   location,
   mentors,
   moduleLeaders,
   startTime,
   endTime,
-}: // endDate,
-CYFEvent) => (
+}: CYFEvent) => (
   <div className={container}>
     <h1>{topic}</h1>
-    <h2>{intake}</h2>
     <p className={dateContainer}>
-      <span>{moment(date).format('dddd, Do MMMM')}</span>
+      <span>{moment(date).format('LL')}</span>
       <span>
         {startTime} - {endTime}
       </span>
     </p>
     <div className={addressContainer}>
       <p>
-        <span>{city}</span>
-        <span>, </span>
         <span>{location}</span>
       </p>
     </div>
     <section className={attendeeContainer}>
-      <h3>
+      {/* <h3>
         <span>Attendees </span>
-        <span>({mentors && mentors.length + moduleLeaders.length})</span>
-      </h3>
+        <span>
+          ({mentors && moduleLeaders && mentors.length + moduleLeaders.length})
+        </span>
+      </h3> */}
       <ul className={attendeeList}>
         {moduleLeaders &&
           moduleLeaders.map(mentor => (
@@ -204,7 +200,15 @@ CYFEvent) => (
       </ul>
     </section>
     <hr className={divider} />
-    <p className={eventDescription}>{description}</p>
+    <p className={eventDescription}>
+      {description &&
+        description.split('\n').map(text => (
+          <React.Fragment>
+            {text}
+            <br />
+          </React.Fragment>
+        ))}
+    </p>
     <div>
       {/* This is being hidden until the 'attend an event function is up and running */}
       {/* <button className={attendButton}>Attend this event</button> */}
