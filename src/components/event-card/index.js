@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import styled from 'react-emotion';
+import moment from 'moment';
 import type { CYFEvent } from '../../types';
 
 const Container = styled('div')({
@@ -32,10 +33,10 @@ const Topic = styled('p')({
   fontWeight: '700',
 });
 
-const Attendance = styled('span')({
-  float: 'right',
-  fontSize: '16px',
-});
+// const Attendance = styled('span')({
+//   float: 'right',
+//   fontSize: '16px',
+// });
 
 const EventLink = styled('a')({
   fontSize: '16px',
@@ -43,36 +44,33 @@ const EventLink = styled('a')({
 });
 
 const EventCard = ({
-  city,
   endTime,
   eventId,
-  intake,
+  title,
+  description,
   location,
-  mentors,
-  moduleLeaders,
   startTime,
-  topic,
+  date,
 }: CYFEvent) => (
   <Container>
-    <h4>{intake}</h4>
-    <Topic>{topic}</Topic>
+    <Topic>{title}</Topic>
+    <p>{description}</p>
     <Location>
       <p>
-        <span>{city}</span>
-        <span>, </span>
         <span>{location}</span>
       </p>
       <p>
-        <span>{startTime}</span>
-        <span> -</span>
+        <span>{moment(date).format('LL')}</span>
+        <span> {startTime}</span>
+        <span> - </span>
         <span>{endTime}</span>
       </p>
     </Location>
     <EventLink href={`/events/${eventId}`}>View event</EventLink>
-    <Attendance>
+    {/* <Attendance>
       <span>{mentors.length + moduleLeaders.length}</span>
       <span> attending</span>
-    </Attendance>
+    </Attendance> */}
   </Container>
 );
 

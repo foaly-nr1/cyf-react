@@ -29,6 +29,9 @@
       }
     }
   },
+  "globals": {
+    "SyntheticEvent"
+  },
   "env": {
     "browser": true,
     "node": true,

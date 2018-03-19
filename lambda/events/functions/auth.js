@@ -35,12 +35,11 @@ export async function main(event, context, cb) {
     // Make a request to the iss + .well-known/jwks.json URL:
     request(
       { url: `${iss}.well-known/jwks.json`, json: true },
-      (error, response, body) => {
+      (error, response, keys) => {
         if (error || response.statusCode !== 200) {
           console.log('Request error:', error);
           cb('Unauthorized');
         }
-        const keys = body;
         // Based on the JSON of `jwks` create a Pem:
         const k = keys.keys[0];
         const jwkArray = {
@@ -65,4 +64,4 @@ export async function main(event, context, cb) {
     console.log('No authorizationToken found in the header.');
     cb('Unauthorized');
   }
-};
+}

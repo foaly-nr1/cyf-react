@@ -6,7 +6,6 @@ export async function main(event, context, callback) {
   const params = {
     TableName: 'events',
     Key: {
-      userId: 'CYFMentor',
       eventId: event.pathParameters.id,
     },
   };

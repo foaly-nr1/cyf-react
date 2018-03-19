@@ -2,9 +2,12 @@ service: cyf-events-api
 
 plugins:
   - serverless-webpack
+  - serverless-offline
 
 custom:
   webpackIncludeModules: true
+  serverless-offline:
+    port: 3001
 
 provider:
   name: aws

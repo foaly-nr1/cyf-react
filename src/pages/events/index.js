@@ -38,13 +38,10 @@ type EventsProps = {
   dates: Array<any>,
 };
 
-const today = moment()
-  .toISOString()
-  .slice(0, 10)
-  .replace(/-/g, '');
+const today = moment();
 
 const futureEventsFilter = events =>
-  events.filter(event => event.date.replace(/-/g, '') >= today);
+  events.filter(event => moment(event.date).isAfter(today));
 
 const Events = ({ dates }: EventsProps) => (
   <Page>
@@ -55,10 +52,7 @@ const Events = ({ dates }: EventsProps) => (
       {dates &&
         dates.map(date => (
           <DateEventContainer key={v4()}>
-            <DateHeading>
-              {date.date.replace(/-/g, '') >= today &&
-                moment(date.date).format('dddd Do MMMM')}
-            </DateHeading>
+            <DateHeading>{moment(date.date).format('LL')}</DateHeading>
             {date.events &&
               futureEventsFilter(date.events).map(event => (
                 <CardContainer key={v4()}>
@@ -79,10 +73,6 @@ type State = {
 };
 
 class EventsContainer extends Component<Props, State> {
-  static defaultProps = {
-    fetchEventsFn: fetchEvents,
-  };
-
   state = {
     events: [],
     loading: true,

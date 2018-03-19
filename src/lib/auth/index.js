@@ -60,6 +60,14 @@ class Auth {
     return accessToken;
   }
 
+  getIDToken() {
+    const token = localStorage.getItem('id_token');
+    if (!token) {
+      throw new Error('No ID token found');
+    }
+    return token;
+  }
+
   getProfile(cb) {
     const accessToken = this.getAccessToken();
     this.auth0.client.userInfo(accessToken, (err, profile) => {
