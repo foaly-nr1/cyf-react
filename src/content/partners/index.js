@@ -6,6 +6,8 @@ import slack from '../../assets/images/logos/slack.png';
 import kinningParkComplex from '../../assets/images/logos/kinningparkcomplex.png';
 import skyscannerLogo from '../../assets/images/logos/skyscanner.svg';
 import coop from '../../assets/images/logos/coop.png';
+import airtame from '../../assets/images/logos/airtame.png';
+import honeycomb from '../../assets/images/logos/honeycombworks.png';
 
 const partners = {
   general: [
@@ -14,6 +16,13 @@ const partners = {
       name: 'GitHub',
       url: 'http://github.com/',
       logo: github,
+      featured: false,
+    },
+    {
+      id: 'airtame',
+      name: 'Airtame',
+      url: 'https://airtame.com',
+      logo: airtame,
       featured: false,
     },
   ],
@@ -31,6 +40,13 @@ const partners = {
       name: 'Geckoboard',
       url: 'http://www.geckoboard.com/',
       logo: geckoboard,
+      featured: false,
+    },
+    {
+      id: 'thehoneycombworks',
+      name: 'The Honeycomb works',
+      url: 'http://www.thehoneycombworks.com/',
+      logo: honeycomb,
       featured: false,
     },
   ],
