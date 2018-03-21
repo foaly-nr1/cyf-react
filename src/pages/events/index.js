@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
 import styled from 'react-emotion';
-import v4 from 'uuid';
 import moment from 'moment';
 import InnerContainer from '../../components/inner-container';
 import SectionHeading from '../../components/section-heading';
@@ -43,6 +42,29 @@ const today = moment();
 const futureEventsFilter = events =>
   events.filter(event => moment(event.date).isAfter(today));
 
+const EventGroup = ({ eventGroup }: any) => {
+  const { date, events } = eventGroup;
+  if (!events) {
+    return null;
+  }
+
+  const futureEvents = futureEventsFilter(events);
+  if (futureEvents.length === 0) {
+    return null;
+  }
+
+  return (
+    <DateEventContainer key={date}>
+      <DateHeading>{moment(date).format('LL')}</DateHeading>
+      {futureEvents.map(event => (
+        <CardContainer key={event.eventId}>
+          <EventCard {...event} />
+        </CardContainer>
+      ))}
+    </DateEventContainer>
+  );
+};
+
 const Events = ({ dates }: EventsProps) => (
   <Page>
     <InnerContainer>
@@ -50,16 +72,8 @@ const Events = ({ dates }: EventsProps) => (
         <Heading>{Content.Events.Heading}</Heading>
       </SectionHeading>
       {dates &&
-        dates.map(date => (
-          <DateEventContainer key={v4()}>
-            <DateHeading>{moment(date.date).format('LL')}</DateHeading>
-            {date.events &&
-              futureEventsFilter(date.events).map(event => (
-                <CardContainer key={v4()}>
-                  <EventCard {...event} key={v4()} />
-                </CardContainer>
-              ))}
-          </DateEventContainer>
+        dates.map(eventGroup => (
+          <EventGroup key={eventGroup.date} eventGroup={eventGroup} />
         ))}
     </InnerContainer>
   </Page>
