@@ -1,19 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-const Mentor = styled.div`
+const Mentor = styled('div')`
   margin-bottom: 2em;
 `;
 
-const Photo = styled.img`
+const Photo = styled('img')`
   max-width: 100%;
 `;
 
-const Name = styled.h4`
+const Name = styled('h4')`
   margin-bottom: 0.2em;
 `;
 
-const FirstName = styled.span`
+const FirstName = styled('span')`
   &::before,
   &::after {
     display: inline;
@@ -30,7 +30,7 @@ const FirstName = styled.span`
   }
 `;
 
-const Title = styled.div`
+const Title = styled('div')`
   color: gray;
 `;
 

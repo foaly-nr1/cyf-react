@@ -22,7 +22,6 @@
     "react-spinkit": "^3.0.0",
     "react-stripe-elements": "^1.6.0",
     "scroll-to-element": "^2.0.0",
-    "styled-components": "^3.2.3",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
@@ -75,13 +74,9 @@
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
   },
-  "precommit": [
-    "format",
-    "lint",
-    "flow"
-  ],
+  "precommit": ["format", "lint", "flow"],
   "scripts": {
-    "format": "prettier --write \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.js\" package.json",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
@@ -90,12 +85,8 @@
     "lint:js": "eslint '**/*.js'"
   },
   "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
     "setupFiles": [
       "<rootDir>/config/polyfills.js",
       "<rootDir>/config/browserMocks.js"
@@ -112,17 +103,12 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": [
-      "react-app",
-      "flow"
-    ]
+    "presets": ["react-app", "flow"]
   }
 }

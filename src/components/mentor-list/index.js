@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 import MentorCard from '../mentor-card';
 import mentors from '../../content/mentors';
 import mediaQueries from '../../stylesheets/variables/media-queries';
 
-const Mentors = styled.section`
+const Mentors = styled('section')`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -20,7 +20,7 @@ const Mentor = styled(MentorCard)`
   }
 `;
 
-const CallToActionContainer = styled.div`
+const CallToActionContainer = styled('div')`
   display: flex;
   justify-content: center;
   align-items: flex-start;
