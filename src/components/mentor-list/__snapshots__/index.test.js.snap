@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MentorList Component renders correctly 1`] = `
-<styled.section
+<Styled(section)
   id="mentors"
 >
   <Styled(MentorCard)
@@ -81,13 +81,13 @@ exports[`MentorList Component renders correctly 1`] = `
     photo="rob.jpg"
     title="Employment, Company Links"
   />
-  <styled.div>
+  <Styled(div)>
     <Styled(Link)
       className="big-link-3 btn"
       to="/volunteers"
     >
       Become a volunteer
     </Styled(Link)>
-  </styled.div>
-</styled.section>
+  </Styled(div)>
+</Styled(section)>
 `;
