@@ -10,12 +10,13 @@ yarn build
 ## Some weird github pages requirement
 export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-export CLOUDFRONT_DISTRO_ID=E3VCH8Y8STIF56
 
 if [ $BRANCH == "production" ]; then
   BUCKET=cyf-web
+  export CLOUDFRONT_DISTRO_ID=E3VCH8Y8STIF56
 else
   BUCKET=cyf-web-staging
+  export CLOUDFRONT_DISTRO_ID=E3H0AQH4D6N7TA
 fi
 
 sudo apt-get -y -qq install awscli
