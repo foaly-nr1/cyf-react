@@ -8,6 +8,10 @@ custom:
   webpackIncludeModules: true
   serverless-offline:
     port: 3001
+  myEnvironment:
+    ENVIRONMENT:
+      production: "production"
+      staging: "staging"
 
 provider:
   name: aws
