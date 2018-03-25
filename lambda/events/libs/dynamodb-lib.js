@@ -7,3 +7,13 @@ export function call(action, params) {
   const dynamoDb = new AWS.DynamoDB.DocumentClient();
   return dynamoDb[action](params).promise();
 }
+
+export function tableName() {
+  if (process.env.ENVIRONMENT === 'production') {
+    return 'production-events'
+  } else if (process.env.ENVIRONMENT === 'staging') {
+    return 'staging-events'
+  }
+
+  return 'events';
+}

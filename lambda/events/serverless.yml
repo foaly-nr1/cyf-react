@@ -29,9 +29,25 @@ provider:
 
 resources:
   Resources:
+    StagingEventsTable:
+      Type: 'AWS::DynamoDB::Table'
+      Properties:
+        TableName: staging-events
+        KeySchema:
+          -
+            AttributeName: eventId
+            KeyType: HASH
+        AttributeDefinitions:
+          -
+            AttributeName: eventId
+            AttributeType: S
+        ProvisionedThroughput:
+            ReadCapacityUnits: 10
+            WriteCapacityUnits: 10
     EventsTable:
       Type: 'AWS::DynamoDB::Table'
       Properties:
+        TableName: production-events
         KeySchema:
           -
             AttributeName: eventId

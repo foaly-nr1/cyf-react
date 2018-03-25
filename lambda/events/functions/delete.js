@@ -4,7 +4,7 @@ import { success, failure } from '../libs/response-lib';
 /* eslint-disable import/prefer-default-export */
 export async function main(event, context, callback) {
   const params = {
-    TableName: 'events',
+    TableName: dynamoDbLib.tableName(),
     Key: {
       userId: event.requestContext.identity.cognitoIdentityId,
       eventId: event.pathParameters.id,
