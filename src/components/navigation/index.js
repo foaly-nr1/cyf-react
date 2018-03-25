@@ -55,12 +55,9 @@ const Navigation = ({ auth }: Props) => (
         <LinkContainer to="/volunteers">
           <NavItem eventKey={1}>Volunteers</NavItem>
         </LinkContainer>
-        {auth.isAuthenticated() && (
-          <LinkContainer to="/events">
-            <NavItem eventKey={1}>Events</NavItem>
-          </LinkContainer>
-        )}
-
+        <LinkContainer to="/events">
+          <NavItem eventKey={1}>Events</NavItem>
+        </LinkContainer>
         <LinkContainer to="/partners">
           <NavItem eventKey={1}>Partners</NavItem>
         </LinkContainer>
