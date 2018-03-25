@@ -10,10 +10,19 @@ fi
 
 if [ $BRANCH == "staging" ]; then
     export REACT_APP_HOST=$HOST_STAGING
-	REPO_NAME="web-static-staging"
+    export REACT_APP_EVENTS_URL="https://53z7caimcf.execute-api.eu-west-1.amazonaws.com/staging/events"
+    export REACT_APP_STRIPE_PUBLIC_KEY=pk_test_noH4KPBQ7w5U3wZaRVo6NbmS
+    export REACT_APP_DONATION_ENDPOINT=https://ivc9bvmb2d.execute-api.eu-west-1.amazonaws.com/production/donate
+    export REACT_APP_PIPEDRIVE_ENDPOINT=https://ivc9bvmb2d.execute-api.eu-west-1.amazonaws.com/production/database
+    REPO_NAME="web-static-staging"
 elif [ $BRANCH == "production" ]; then
     export REACT_APP_HOST=$HOST_PRODUCTION
-	REPO_NAME="web-static-production"
+    export REACT_APP_EVENTS_URL="https://malsy22v0j.execute-api.eu-west-1.amazonaws.com/production/events"
+    export REACT_APP_STRIPE_PUBLIC_KEY=pk_live_wvm6YFWTG1FrYAGVuzCLIPx8
+    export REACT_APP_DONATION_ENDPOINT=https://fsdynf2mse.execute-api.eu-west-1.amazonaws.com/staging/donate
+    export REACT_APP_PIPEDRIVE_ENDPOINT=https://fsdynf2mse.execute-api.eu-west-1.amazonaws.com/staging/database
+
+    REPO_NAME="web-static-production"
 else
 	echo "Please provide a valid branch"
 	exit 1

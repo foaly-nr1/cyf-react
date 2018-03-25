@@ -5,6 +5,7 @@
 /lambda/node_modules
 /lambda/test-POST.yml
 /lambda/.serverless
+/lambda/.webpack
 
 # IDEs
 .idea/
