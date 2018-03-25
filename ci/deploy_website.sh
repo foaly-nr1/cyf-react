@@ -18,6 +18,10 @@ aws s3 sync build/ s3://cyf-web  \
   --acl public-read --delete \
   --cache-control max-age=3600
 
+
+TIMESTAMP=$(date '+%Y-%m-%d-%H-%M-%S')
+sed -i -e "s/__TIMESTAMP__/${TIMESTAMP}/g" ci/invalidation-batch.json
+
 # invalidate cache in cloudfront
 aws cloudfront create-invalidation \
     --distribution-id $CLOUDFRONT_DISTRO_ID \

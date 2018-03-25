@@ -27,6 +27,23 @@ provider:
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:${env:REGION}:*:*"
 
+resources:
+  Resources:
+    EventsTable:
+      Type: 'AWS::DynamoDB::Table'
+      Properties:
+        KeySchema:
+          -
+            AttributeName: eventId
+            KeyType: HASH
+        AttributeDefinitions:
+          -
+            AttributeName: eventId
+            AttributeType: S
+        ProvisionedThroughput:
+            ReadCapacityUnits: 10
+            WriteCapacityUnits: 10
+
 functions:
   auth:
     name: "${self:service}-auth-${self:provider.stage}"
