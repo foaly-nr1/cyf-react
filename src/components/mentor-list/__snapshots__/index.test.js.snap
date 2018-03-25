@@ -6,77 +6,88 @@ exports[`MentorList Component renders correctly 1`] = `
 >
   <Styled(MentorCard)
     firstName="Germán"
-    key="1"
+    id="german_bencci"
+    key="german_bencci"
     lastName="Bencci"
     photo="german.jpg"
     title="Organiser"
   />
   <Styled(MentorCard)
     firstName="Mozafar"
-    key="1"
+    id="mozafar_haider"
+    key="mozafar_haider"
     lastName="Haider"
     photo="mozafar.jpg"
     title="Scotland Organiser & React"
   />
   <Styled(MentorCard)
     firstName="Kash"
-    key="1"
+    id="kash_karimi"
+    key="kash_karimi"
     lastName="Karimi"
     photo="kash.jpg"
     title="Javascript & React"
   />
   <Styled(MentorCard)
     firstName="Amit"
-    key="1"
+    id="amit_shah"
+    key="amit_shah"
     lastName="Shah"
     photo="amit.jpg"
     title="Javascript and Final Project"
   />
   <Styled(MentorCard)
     firstName="Simon"
-    key="1"
+    id="simon_legg"
+    key="simon_legg"
     lastName="Legg"
     photo="simon.jpg"
     title="Javascript and Final Project"
   />
   <Styled(MentorCard)
     firstName="Bex"
-    key="1"
+    id="bex_bolton"
+    key="bex_bolton"
     lastName="Bolton"
     photo="bex.jpg"
     title="Javascript & NodeJS"
   />
   <Styled(MentorCard)
     firstName="Claudia"
-    key="1"
+    id="claudia_matosa"
+    key="claudia_matosa"
     lastName="Matosa"
     photo="claudia.jpg"
     title="HTML, CSS & React"
   />
   <Styled(MentorCard)
     firstName="James"
-    key="1"
+    id="james_wright"
+    key="james_wright"
     lastName="Wright"
     photo="james.png"
     title="NodeJS and Databases"
   />
   <Styled(MentorCard)
     firstName="Nate"
-    key="1"
+    id="nate_wright"
+    key="nate_wright"
     lastName="Wright"
     photo="nate.jpg"
     title="HTML & CSS"
   />
   <Styled(MentorCard)
     firstName="Will"
-    key="1"
+    id="will_wright"
+    key="will_wright"
     lastName="Wright"
     photo="will.jpg"
     title="HTML, CSS & Javascript"
   />
   <Styled(MentorCard)
     firstName="Rob"
-    key="1"
+    id="rob_gelb"
+    key="rob_gelb"
     lastName="Gelb"
     photo="rob.jpg"
     title="Employment, Company Links"
