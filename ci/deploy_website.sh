@@ -21,7 +21,7 @@ aws s3 sync build/ s3://cyf-web  \
 # invalidate cache in cloudfront
 aws cloudfront create-invalidation \
     --distribution-id $CLOUDFRONT_DISTRO_ID \
-    --paths "/*"
+    --invalidation-batch file://ci/invalidation-batch.json
 
 ## purge cloudflare cache
 curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_IDENTIFIER/purge_cache" \

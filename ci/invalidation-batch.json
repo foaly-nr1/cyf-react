@@ -1,0 +1,7 @@
+{
+  "Paths": {
+    "Quantity": 1,
+    "Items": ["/*"]
+  },
+  "CallerReference": "website-invalidation-2018-03-25"
+}
