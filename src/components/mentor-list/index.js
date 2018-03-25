@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
 import { Link } from 'react-router-dom';
-import { v4 } from 'uuid';
 import MentorCard from '../mentor-card';
 import mentors from '../../content/mentors';
 import mediaQueries from '../../stylesheets/variables/media-queries';
@@ -40,7 +39,7 @@ const CallToAction = styled(Link)`
 
 const MentorList = () => (
   <Mentors id="mentors">
-    {mentors.map(mentor => <Mentor key={v4()} {...mentor} />)}
+    {mentors.map(mentor => <Mentor key={mentor.id} {...mentor} />)}
 
     <CallToActionContainer>
       <CallToAction className="big-link-3 btn" to="/volunteers">

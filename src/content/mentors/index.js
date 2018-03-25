@@ -12,6 +12,7 @@ import rob from '../../assets/images/mentors/rob.jpg';
 
 const mentors = [
   {
+    id: 'german_bencci',
     firstName: 'Germán',
     lastName: 'Bencci',
     photo: german,
@@ -19,6 +20,7 @@ const mentors = [
   },
 
   {
+    id: 'mozafar_haider',
     firstName: 'Mozafar',
     lastName: 'Haider',
     photo: mozafar,
@@ -26,6 +28,7 @@ const mentors = [
   },
 
   {
+    id: 'kash_karimi',
     firstName: 'Kash',
     lastName: 'Karimi',
     photo: kash,
@@ -33,6 +36,7 @@ const mentors = [
   },
 
   {
+    id: 'amit_shah',
     firstName: 'Amit',
     lastName: 'Shah',
     photo: amit,
@@ -40,6 +44,7 @@ const mentors = [
   },
 
   {
+    id: 'simon_legg',
     firstName: 'Simon',
     lastName: 'Legg',
     photo: simon,
@@ -47,6 +52,7 @@ const mentors = [
   },
 
   {
+    id: 'bex_bolton',
     firstName: 'Bex',
     lastName: 'Bolton',
     photo: bex,
@@ -54,6 +60,7 @@ const mentors = [
   },
 
   {
+    id: 'claudia_matosa',
     firstName: 'Claudia',
     lastName: 'Matosa',
     photo: claudia,
@@ -61,6 +68,7 @@ const mentors = [
   },
 
   {
+    id: 'james_wright',
     firstName: 'James',
     lastName: 'Wright',
     photo: james,
@@ -68,6 +76,7 @@ const mentors = [
   },
 
   {
+    id: 'nate_wright',
     firstName: 'Nate',
     lastName: 'Wright',
     photo: nate,
@@ -75,6 +84,7 @@ const mentors = [
   },
 
   {
+    id: 'will_wright',
     firstName: 'Will',
     lastName: 'Wright',
     photo: will,
@@ -82,6 +92,7 @@ const mentors = [
   },
 
   {
+    id: 'rob_gelb',
     firstName: 'Rob',
     lastName: 'Gelb',
     photo: rob,
