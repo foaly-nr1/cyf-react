@@ -12,9 +12,15 @@ export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 export CLOUDFRONT_DISTRO_ID=E3VCH8Y8STIF56
 
+if [ $BRANCH == "production" ]; then
+  BUCKET=cyf-web
+else
+  BUCKET=cyf-web-staging
+fi
+
 sudo apt-get -y -qq install awscli
 aws configure set preview.cloudfront true
-aws s3 sync build/ s3://cyf-web  \
+aws s3 sync build/ s3://${BUCKET} \
   --acl public-read --delete \
   --cache-control max-age=3600
 
