@@ -18,13 +18,6 @@ const partners = {
       logo: github,
       featured: false,
     },
-    {
-      id: 'airtame',
-      name: 'Airtame',
-      url: 'https://airtame.com',
-      logo: airtame,
-      featured: false,
-    },
   ],
 
   london: [
@@ -91,6 +84,13 @@ const partners = {
       name: 'Slack',
       url: 'http://slack.com/',
       logo: slack,
+      featured: false,
+    },
+    {
+      id: 'airtame',
+      name: 'Airtame',
+      url: 'https://airtame.com',
+      logo: airtame,
       featured: false,
     },
   ],
