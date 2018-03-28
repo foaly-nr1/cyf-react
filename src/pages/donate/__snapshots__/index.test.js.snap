@@ -25,8 +25,13 @@ exports[`Donate Component renders 1`] = `
   </Styled(div)>
   <Styled(div)>
     <img
-      alt="code-your-future-mentors"
-      src="mentors-group.jpg"
+      alt="code-your-future-students"
+      src="donate.jpg"
+      style={
+        Object {
+          "maxWidth": 650,
+        }
+      }
     />
   </Styled(div)>
 </div>

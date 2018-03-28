@@ -6,7 +6,7 @@ import SectionHeading from '../../components/section-heading';
 import CYFLink from '../../components/link';
 import Divider from '../../components/divider';
 import Content from '../../content/volunteers';
-import mentors from '../../assets/images/mentors-group.jpg';
+import mentors from '../../assets/images/mentors.jpg';
 
 const Volunteers = () => (
   <div>

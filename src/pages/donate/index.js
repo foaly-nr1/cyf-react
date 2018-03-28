@@ -2,7 +2,7 @@ import React from 'react';
 import * as axios from 'axios';
 import styled from 'react-emotion';
 import DonationPicker from '../../components/donation-picker';
-import mentors from '../../assets/images/mentors-group.jpg';
+import donate from '../../assets/images/donate.jpg';
 
 const Container = styled('div')`
   display: flex;
@@ -115,7 +115,11 @@ class Donate extends React.Component {
           {!tokenSuccess && <TextContainer>{donateText}</TextContainer>}
         </Container>
         <ImageContainer>
-          <img src={mentors} alt="code-your-future-mentors" />
+          <img
+            src={donate}
+            alt="code-your-future-students"
+            style={{ maxWidth: 650 }}
+          />
         </ImageContainer>
       </div>
     );

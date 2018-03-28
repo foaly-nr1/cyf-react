@@ -37,7 +37,7 @@ exports[`Volunteers Page renders correctly 1`] = `
   <div>
     <img
       alt="code-your-future-mentors"
-      src="mentors-group.jpg"
+      src="mentors.jpg"
     />
   </div>
 </div>
