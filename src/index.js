@@ -9,10 +9,5 @@ stripe.setAttribute('src', 'https://checkout.stripe.com/checkout.js');
 stripe.setAttribute('async', true);
 document.head.appendChild(stripe);
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Routes />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+ReactDOM.render(<Routes />, document.getElementById('root'));
 registerServiceWorker();
