@@ -112,7 +112,7 @@ functions:
            authorizer: aws_iam
 
   event_users:
-    name: "${self:service}-update-${self:provider.stage}"
+    name: "${self:service}-event-users-${self:provider.stage}"
     handler: functions/event_users.main
     events:
        - http:
