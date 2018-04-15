@@ -108,7 +108,7 @@ functions:
            path: events/{id}
            method: put
            cors: true
-           authorizer: aws_iam
+           authorizer: auth
 
   delete:
     name: "${self:service}-delete-${self:provider.stage}"
