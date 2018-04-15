@@ -5,7 +5,8 @@ import type Auth from '../lib/auth';
 
 const LoginWrapper = styled('div')`
   display: inline-block;
-  width: 90px;
+  width: 0px;
+  margin-top: 2px;
 `;
 
 export default ({ auth }: { auth: Auth }) => (
