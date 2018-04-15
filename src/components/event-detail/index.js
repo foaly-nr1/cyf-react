@@ -146,12 +146,14 @@ class EventDetail extends React.Component<Props, { mentors: string[] }> {
     } = this.props;
 
     const { mentors } = this.state;
+    console.log(this.props);
+    console.log(description);
 
     return (
       <div className={container}>
         <h1>{topic}</h1>
         <p className={dateContainer}>
-          <span>{moment(date).format('LL')}</span>
+          <span>{date && moment(date).format('LL')}</span>
           <span>
             {startTime} - {endTime}
           </span>

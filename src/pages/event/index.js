@@ -47,7 +47,7 @@ class EventContainer extends Component<Props, State> {
     ) : (
       <Page>
         <InnerContainer>
-          <EventPage {...this.state.event} auth={this.props.auth} />
+          <EventPage event={this.state.event} auth={this.props.auth} />
         </InnerContainer>
       </Page>
     );
