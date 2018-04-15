@@ -84,18 +84,16 @@ export async function fetchEvent(
   return res;
 }
 
-export async function fetchUsers(
-  eventId: string,
+export async function fetchUser(
+  userId: string,
   fetchFn: AxiosPromise = axios,
 ): Promise<CYFEvent> {
-  if (!process.env.REACT_APP_EVENTS_URL) {
+  if (!process.env.REACT_APP_USER_URL) {
     throw new Error(
-      'Oi Please specify a valid environmental variable from EVENTS_URL',
+      'Oi Please specify a valid environmental variable from USER_URL',
     );
   }
-  const res = await fetchFn(
-    `${process.env.REACT_APP_EVENTS_URL}/${eventId}/users`,
-  );
+  const res = await fetchFn(`${process.env.REACT_APP_USER_URL}/${userId}`);
   return res;
 }
 

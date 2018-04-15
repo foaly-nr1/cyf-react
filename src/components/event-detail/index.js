@@ -3,14 +3,14 @@ import React from 'react';
 import { css } from 'emotion';
 import moment from 'moment';
 import { Button } from 'react-bootstrap';
-import { addMentor, fetchUsers } from '../../lib/events';
+import { addMentor } from '../../lib/events';
 import type { CYFEvent } from '../../types';
 import type Auth from '../../lib/auth';
 import BackToEvent from './BackToEvent';
 import Description from './Description';
 import Location from './Location';
 import LoginButton from '../LoginButton';
-import Voluneers from './Volunteers';
+import Volunteers from './Volunteers';
 
 const desktopMq = `@media (min-width: 840px)`;
 
@@ -125,28 +125,16 @@ function renderAttending(auth: Auth, mentors: string[], attendClick: Function) {
 }
 
 type Props = CYFEvent & { auth: Auth };
-type State = { mentors: string[], users: Object[] };
+type State = { mentors: string[] };
 
 class EventDetail extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { mentors: this.props.mentors || [], users: [] };
-    this.refreshUsers(props.eventId);
-  }
-
-  refreshUsers = (eventId: string) => {
-    fetchUsers(eventId).then(response => {
-      this.setState({ users: response.data.users });
-    });
-  };
+  state = { mentors: this.props.mentors || [] };
 
   attendClick = () => {
     const { mentors = [], auth, eventId } = this.props;
     const newMentors = [...mentors, auth.getUserID()];
     this.setState({ mentors: newMentors });
-    addMentor(newMentors, eventId).then(() => {
-      this.refreshUsers(eventId);
-    });
+    addMentor(newMentors, eventId);
   };
 
   render() {
@@ -160,7 +148,7 @@ class EventDetail extends React.Component<Props, State> {
       auth,
     } = this.props;
 
-    const { mentors, users } = this.state;
+    const { mentors } = this.state;
 
     return (
       <div className={container}>
@@ -174,7 +162,7 @@ class EventDetail extends React.Component<Props, State> {
         <Location location={location} />
         <section className={attendeeContainer}>
           <h5>Volunteers: {(mentors || []).length}</h5>
-          <Voluneers users={users} />
+          <Volunteers users={mentors} />
           {renderAttending(auth, mentors, this.attendClick)}
         </section>
         <hr className={divider} />

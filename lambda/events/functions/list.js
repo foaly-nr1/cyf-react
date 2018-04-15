@@ -9,6 +9,8 @@ export async function main(event, context, callback) {
     const result = await dynamoDbLib.call('scan', params);
     callback(null, success(result.Items));
   } catch (e) {
+    // eslint-disable-next-line no-console
+    console.log(e);
     callback(null, failure({ status: false }));
   }
 }

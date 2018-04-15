@@ -2,7 +2,6 @@
 import React from 'react';
 import styled from 'react-emotion';
 import DisplayPicture from './DisplayPicture';
-import type { User as UserType } from './types';
 
 const Container = styled('div')`
   display: flex;
@@ -10,8 +9,8 @@ const Container = styled('div')`
   padding-bottom: 10px;
 `;
 
-export default ({ users }: { users: UserType[] }) => (
+export default ({ users }: { users: string[] }) => (
   <Container>
-    {users.map(user => <DisplayPicture key={user.user_id} {...user} />)}
+    {users.map(user => <DisplayPicture key={user} userId={user} />)}
   </Container>
 );

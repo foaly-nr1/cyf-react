@@ -3,7 +3,7 @@ service: cyf-events-api
 plugins:
   - serverless-webpack
   - serverless-offline
-  - serverless-dynamodb-local
+  # - serverless-dynamodb-local
 
 custom:
   webpackIncludeModules: true
@@ -73,6 +73,15 @@ functions:
               - X-Amz-User-Agent
               - Access-Control-Allow-Origin
 
+  event_users:
+    name: "${self:service}-event-users-${self:provider.stage}"
+    handler: functions/event_users.main
+    events:
+       - http:
+           path: user/{id}
+           method: get
+           cors: true
+
   get:
     name: "${self:service}-get-${self:provider.stage}"
     handler: functions/get.main
@@ -111,12 +120,4 @@ functions:
            cors: true
            authorizer: aws_iam
 
-  event_users:
-    name: "${self:service}-event-users-${self:provider.stage}"
-    handler: functions/event_users.main
-    events:
-       - http:
-           path: events/{id}/users
-           method: get
-           cors: true
-           authorizer: aws_iam
+
