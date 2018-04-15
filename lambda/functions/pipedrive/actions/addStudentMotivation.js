@@ -1,8 +1,6 @@
 import { peopleFrontendToPipedrive } from '../pipedriveTransformer';
 
-const fields = [
-  'motivation',
-];
+const fields = ['motivation'];
 
 // Add a motivation text to student in PipeDrive: Clean the data and make the post request
 const addStudentMotivation = (data, pipedrive, callback) => {
@@ -12,15 +10,21 @@ const addStudentMotivation = (data, pipedrive, callback) => {
     visible_to: 3,
   };
 
-  return pipedrive.Persons.update(data.personId, updatePersonRequestBody, (error) => {
-    if (error) {
-      // eslint-disable-next-line no-console
-      console.error(error);
-      return callback(new Error('[400] Error while adding student motivation.'));
-    }
-    return callback(null, '[200] Student motivation added successfully.');
-  });
-}
-  // });
+  return pipedrive.Persons.update(
+    data.personId,
+    updatePersonRequestBody,
+    error => {
+      if (error) {
+        // eslint-disable-next-line no-console
+        console.error(error);
+        return callback(
+          new Error('[400] Error while adding student motivation.'),
+        );
+      }
+      return callback(null, '[200] Student motivation added successfully.');
+    },
+  );
+};
+// });
 
 export default addStudentMotivation;

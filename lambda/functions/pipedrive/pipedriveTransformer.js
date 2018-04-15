@@ -32,7 +32,7 @@ const peopleFieldsMapper = {
 const peopleFrontendToPipedrive = (data, fields) => {
   const mapper = peopleFieldsMapper[process.env.PIPEDRIVE_ACCOUNT];
   const transformedData = {};
-  fields.forEach((key) => {
+  fields.forEach(key => {
     transformedData[mapper[key]] = data[key];
   });
   return transformedData;
@@ -44,13 +44,10 @@ const peopleFrontendToPipedrive = (data, fields) => {
 const peoplePipedriveToFrontend = (data, fields) => {
   const mapper = peopleFieldsMapper[process.env.PIPEDRIVE_ACCOUNT];
   const transformedData = {};
-  fields.forEach((key) => {
+  fields.forEach(key => {
     transformedData[key] = data[mapper[key]];
   });
   return transformedData;
 };
 
-export {
-  peopleFrontendToPipedrive,
-  peoplePipedriveToFrontend,
-};
+export { peopleFrontendToPipedrive, peoplePipedriveToFrontend };

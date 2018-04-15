@@ -75,7 +75,8 @@
   },
   "precommit": ["format", "lint", "flow"],
   "scripts": {
-    "format": "prettier --write \"src/**/*.js\" package.json",
+    "format":
+      "prettier --write \"src/**/*.js\" \"lambda/**/*.js\" package.json",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",

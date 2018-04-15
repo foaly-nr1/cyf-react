@@ -16,13 +16,13 @@ const fields = [
 
 // Add a new student in PipeDrive: Clean the data and make the post request
 const addStudent = (data, pipedrive, callback) => {
-// getSSMParameter('recaptcha_secret')
+  // getSSMParameter('recaptcha_secret')
   // .then(secret => axios.post(
   //   'https://www.google.com/recaptcha/api/siteverify?',
   //   querystring.stringify({ secret, response: data.reCaptchaResponse }),
   // ))
   // .then((response) => {
-    // if (!response.data.success) return callback(new Error('[401] ReCaptcha failed.'))
+  // if (!response.data.success) return callback(new Error('[401] ReCaptcha failed.'))
   const addPersonRequestBody = {
     ...peopleFrontendToPipedrive(data, fields),
     owner_id: process.env.PIPEDRIVE_GENERAL_USER_ID,
@@ -43,7 +43,7 @@ const addStudent = (data, pipedrive, callback) => {
       return callback(new Error('[400] Error while adding student.'));
     }
     addDealRequestBody.person_id = successData.id;
-    return pipedrive.Deals.add(addDealRequestBody, (error2) => {
+    return pipedrive.Deals.add(addDealRequestBody, error2 => {
       if (error2) {
         // eslint-disable-next-line no-console
         console.error(error2);
@@ -56,7 +56,7 @@ const addStudent = (data, pipedrive, callback) => {
       });
     });
   });
-}
-  // });
+};
+// });
 
 export default addStudent;
