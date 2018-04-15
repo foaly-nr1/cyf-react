@@ -10,7 +10,7 @@ fi
 
 if [ $BRANCH == "staging" ]; then
     export REACT_APP_HOST=$HOST_STAGING
-    export REACT_APP_EVENTS_URL="https://ijg1gf9exa.execute-api.eu-west-1.amazonaws.com/staging/events"
+    export REACT_APP_EVENTS_URL="https://itxv1a0pva.execute-api.eu-west-1.amazonaws.com/staging/events"
     export REACT_APP_STRIPE_PUBLIC_KEY=pk_test_noH4KPBQ7w5U3wZaRVo6NbmS
     export REACT_APP_DONATION_ENDPOINT=https://ivc9bvmb2d.execute-api.eu-west-1.amazonaws.com/production/donate
     export REACT_APP_PIPEDRIVE_ENDPOINT=https://ivc9bvmb2d.execute-api.eu-west-1.amazonaws.com/production/database
