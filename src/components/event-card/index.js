@@ -54,7 +54,6 @@ const EventCard = ({
 }: CYFEvent) => (
   <Container>
     <Topic>{title}</Topic>
-    <p>{description}</p>
     <Location>
       <p>
         <span>{location}</span>
@@ -66,6 +65,8 @@ const EventCard = ({
         <span>{endTime}</span>
       </p>
     </Location>
+    <br />
+    <p>{description}</p>
     <EventLink href={`/events/${eventId}`}>View event</EventLink>
     {/* <Attendance>
       <span>{mentors.length + moduleLeaders.length}</span>

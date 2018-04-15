@@ -3,9 +3,6 @@
 exports[`EventCard Component renders correctly 1`] = `
 <Styled(div)>
   <Styled(p) />
-  <p>
-    First bit of javascript
-  </p>
   <Styled(div)>
     <p>
       <span>
@@ -28,6 +25,10 @@ exports[`EventCard Component renders correctly 1`] = `
       </span>
     </p>
   </Styled(div)>
+  <br />
+  <p>
+    First bit of javascript
+  </p>
   <Styled(a)
     href="/events/1"
   >
