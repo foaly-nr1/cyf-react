@@ -5,8 +5,17 @@ import LogoList from './LogoList';
 const renderLogoListSections = partners =>
   Object.keys(partners).map(section => {
     const className = `container partners__${section}`;
-    const sectionLabel =
-      section === 'tech' ? '< Tech Supporters />' : `< ${section} />`;
+    let sectionLabel = `< ${section} />`;
+    switch (section) {
+      case 'tech':
+        sectionLabel = '< Tech Supporters />';
+        break;
+      case 'soft':
+        sectionLabel = '< Soft skills />';
+        break;
+      default:
+        break;
+    }
 
     return (
       <div key={section} className={className}>

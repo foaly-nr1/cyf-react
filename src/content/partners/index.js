@@ -35,13 +35,6 @@ const partners = {
       logo: geckoboard,
       featured: false,
     },
-    {
-      id: 'thehoneycombworks',
-      name: 'The Honeycomb works',
-      url: 'http://www.thehoneycombworks.com/',
-      logo: honeycomb,
-      featured: false,
-    },
   ],
 
   scotland: [
@@ -67,6 +60,16 @@ const partners = {
       name: 'Co-op',
       url: 'http://www.coop.co.uk',
       logo: coop,
+      featured: false,
+    },
+  ],
+
+  soft: [
+    {
+      id: 'thehoneycombworks',
+      name: 'The Honeycomb works',
+      url: 'http://www.thehoneycombworks.com/',
+      logo: honeycomb,
       featured: false,
     },
   ],
