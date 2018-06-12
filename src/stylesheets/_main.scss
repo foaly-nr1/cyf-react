@@ -1,12 +1,6 @@
 /* todo:
   - standardize font sizes
 */
-.BG{
-  width:100vw;
-  height: 400px;
-  background-image: url(../assets/images/CYF_conf_BG.jpg);
-  background-color: #2ba560
-}
 
 body {
   min-width: 320px;
@@ -496,10 +490,10 @@ ul.navbar-nav li a.big-link-1:hover {
   margin-left: 20px;
 }
 
-// .index-hero {
-//   background: url('assets/images/1.jpg');
-//   @include hero-background(40em);
-// }
+.index-hero {
+  background: url('assets/images/1.jpg');
+  @include hero-background(40em);
+}
 
 .clients-text {
   text-align: left;

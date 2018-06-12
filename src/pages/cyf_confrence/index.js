@@ -1,5 +1,4 @@
 import React from 'react';
-// import TopSection from '../../components/top-section';
 import CyfConfBg from '../../assets/images/CYF_conf_BG.jpg';
 import CyfWhiteLogo from '../../assets/images/logos/CYF_white_logo.png';
 import coop from '../../assets/images/logos/COOP_white_logo.png';

@@ -1,13 +1,6 @@
 /* todo:
   - standardize font sizes
 */
-.BG {
-  width: 100vw;
-  height: 400px;
-  background-image: url(../assets/images/CYF_conf_BG.jpg);
-  background-color: #2ba560;
-}
-
 body {
   min-width: 320px;
   background: #fff;
