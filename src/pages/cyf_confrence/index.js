@@ -34,7 +34,6 @@ const styles = {
     width: '100vw',
     height: window.innerWidth < 500 ? '600px' : '815px',
     backgroundImage: `url(${CyfConfBg})`,
-    zIndex: 99,
   },
   date: {
     fontSize: window.innerWidth < 500 ? '1.3em' : '3em',
@@ -53,19 +52,20 @@ const styles = {
 
 const Confrence = () => (
   <main>
-    <div className="container-fluid" style={styles.cyfConf}>
+    <div className="container-fluid img-fluid" style={styles.cyfConf}>
       <p style={styles.firstTitle} className="text-center col">
         The first event to support refugees joining the tech industry
       </p>
-      <p style={styles.welcom} className="text-center">
+      <p style={styles.welcom} className="text-center col-lg-offset-4 col-sm-offset-4">
         Welcome to the
       </p>
       <img
+        className='img-fluid'
         style={styles.cyfLogo}
         src={CyfWhiteLogo}
         alt="code you future logo"
       />
-      <p style={styles.summit}>summit</p>
+      <p style={styles.summit}className='text-center col' >summit</p>
       <p style={styles.date}>
         30th of June - 1st of July<br />Manchester
       </p>
