@@ -9,11 +9,11 @@ const styles = {
   firstTitle: {
     marginTop: 100,
     color: 'white',
-    fontSize: window.innerWidth < 500 ? '1.5em' :'3em',
+    fontSize: window.innerWidth < 500 ? '1.5em' : '3em',
     fontWeight: 'bold',
   },
   cyfLogo: {
-    width: window.innerWidth < 500 ? "80%" : '37%',
+    width: window.innerWidth < 500 ? '80%' : '37%',
   },
   welcom: {
     width: 334,
@@ -24,21 +24,21 @@ const styles = {
     fontWeight: 'bold',
   },
   summit: {
-    fontSize: window.innerWidth < 500 ? '4.3em' :'6em',
+    fontSize: window.innerWidth < 500 ? '4.3em' : '6em',
     alignContent: 'center',
     color: 'white',
     fontWeight: 'bold',
-    paddingLeft: window.innerWidth < 500 ? '95px' :250,
-    marginTop: window.innerWidth < 500 ? '-10px' :"-20px"
+    paddingLeft: window.innerWidth < 500 ? '95px' : 250,
+    marginTop: window.innerWidth < 500 ? '-10px' : '-20px',
   },
   cyfConf: {
     width: '100vw',
-    height:window.innerWidth < 500 ? '600px' : '815px',
+    height: window.innerWidth < 500 ? '600px' : '815px',
     backgroundImage: `url(${CyfConfBg})`,
-    zIndex: 99
+    zIndex: 99,
   },
   date: {
-    fontSize:window.innerWidth < 500 ? '1.3em' : '3em',
+    fontSize: window.innerWidth < 500 ? '1.3em' : '3em',
     letterSpacing: 4,
     fontWeight: 'bold',
     TextAligen: 'center',
@@ -47,7 +47,7 @@ const styles = {
     lineHeight: 1,
   },
   logo: {
-    marginTop: window.innerWidth < 500 ? '70px' :120,
+    marginTop: window.innerWidth < 500 ? '70px' : 120,
     padding: 50,
   },
 };
@@ -55,11 +55,12 @@ const styles = {
 const Confrence = () => (
   <main>
     <div className="container-fluid" style={styles.cyfConf}>
-      {/* <img src={CyfConfBg} alt="code your future confrence" /> */}
       <p style={styles.firstTitle} className="text-center col">
         The first event to support refugees joining the tech industry
       </p>
-      <p style={styles.welcom} className='text-center'>Welcome to the</p>
+      <p style={styles.welcom} className="text-center">
+        Welcome to the
+      </p>
       <img
         style={styles.cyfLogo}
         src={CyfWhiteLogo}
@@ -72,14 +73,14 @@ const Confrence = () => (
       <div style={styles.logo} className="col">
         <img
           src={coop}
-          width={window.innerWidth < 500 ? 20 :40}
-          height={window.innerWidth < 500 ? 20 :40}
+          width={window.innerWidth < 500 ? 20 : 40}
+          height={window.innerWidth < 500 ? 20 : 40}
           alt="CoOp logo"
         />
         <img
           src={citiec}
-          width={window.innerWidth < 500 ? 50 :100}
-          height={window.innerWidth < 500 ? 15 :30}
+          width={window.innerWidth < 500 ? 50 : 100}
+          height={window.innerWidth < 500 ? 15 : 30}
           alt="cititec logo"
           style={{ paddingLeft: '10px' }}
         />
