@@ -122,6 +122,21 @@ exports[`Navigation Component renders 1`] = `
           Meet the team
         </NavItem>
       </LinkContainer>
+      <LinkContainer
+        activeClassName="active"
+        exact={false}
+        replace={false}
+        strict={false}
+        to="/confrence"
+      >
+        <NavItem
+          active={false}
+          disabled={false}
+          eventKey={1}
+        >
+          Confrence
+        </NavItem>
+      </LinkContainer>
       <NavItem
         active={false}
         className="nav-icon"
