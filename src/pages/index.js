@@ -10,7 +10,7 @@ import MeetTheTeam from './team';
 import Donate from './donate';
 import Students from './students';
 import Volunteers from './volunteers';
-import Confrence from './cyf_confrence';
+import Conference from './cyf_confrence';
 
 export {
   Home,
@@ -25,5 +25,5 @@ export {
   About,
   MeetTheTeam,
   Donate,
-  Confrence,
+  Conference,
 };

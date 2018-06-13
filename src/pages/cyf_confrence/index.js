@@ -48,17 +48,17 @@ const styles = {
     marginTop: window.innerWidth < 500 ? '-20px' : 0,
     padding: 50,
   },
-  register:{
-    color:'white',
-    fontSize:window.innerWidth < 500 ? '1.5em' : '2em'
+  register: {
+    color: 'white',
+    fontSize: window.innerWidth < 500 ? '1.5em' : '2em',
   },
-  btn:{
-    marginTop:40,
-    backgroundColor:'#d12f30',
-  }
+  btn: {
+    marginTop: 40,
+    backgroundColor: '#d12f30',
+  },
 };
 
-const Confrence = () => (
+const Conference = () => (
   <main>
     <div className="container-fluid img-fluid" style={styles.cyfConf}>
       <p style={styles.firstTitle} className="text-center col">
@@ -82,7 +82,14 @@ const Confrence = () => (
       <p style={styles.date}>
         30th of June - 1st of July<br />Manchester
       </p>
-      <p className='btn'style={styles.btn} ><a href='https://www.eventbrite.co.uk/e/the-inaugural-code-your-future-summit-tickets-46873336411' style={styles.register} > register here</a></p>
+      <p className="btn" style={styles.btn}>
+        <a
+          href="https://www.eventbrite.co.uk/e/the-inaugural-code-your-future-summit-tickets-46873336411"
+          style={styles.register}
+        >
+          register here
+        </a>
+      </p>
       <div style={styles.logo} className="col">
         <img
           src={coop}
@@ -102,4 +109,4 @@ const Confrence = () => (
   </main>
 );
 
-export default Confrence;
+export default Conference;
