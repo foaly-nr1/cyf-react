@@ -127,14 +127,14 @@ exports[`Navigation Component renders 1`] = `
         exact={false}
         replace={false}
         strict={false}
-        to="/confrence"
+        to="/conference"
       >
         <NavItem
           active={false}
           disabled={false}
           eventKey={1}
         >
-          Confrence
+          Conference
         </NavItem>
       </LinkContainer>
       <NavItem

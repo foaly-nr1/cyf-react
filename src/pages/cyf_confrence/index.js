@@ -6,7 +6,7 @@ import citiec from '../../assets/images/logos/cititec_white_logo.png';
 
 const styles = {
   firstTitle: {
-    marginTop: 100,
+    marginTop: window.innerWidth < 500 ? 40 : 70,
     color: 'white',
     fontSize: window.innerWidth < 500 ? '1.5em' : '3em',
     fontWeight: 'bold',
@@ -45,9 +45,17 @@ const styles = {
     lineHeight: 1,
   },
   logo: {
-    marginTop: window.innerWidth < 500 ? '70px' : 120,
+    marginTop: window.innerWidth < 500 ? '-20px' : 0,
     padding: 50,
   },
+  register:{
+    color:'white',
+    fontSize:window.innerWidth < 500 ? '1.5em' : '2em'
+  },
+  btn:{
+    marginTop:40,
+    backgroundColor:'#d12f30',
+  }
 };
 
 const Confrence = () => (
@@ -56,19 +64,25 @@ const Confrence = () => (
       <p style={styles.firstTitle} className="text-center col">
         The first event to support refugees joining the tech industry
       </p>
-      <p style={styles.welcom} className="text-center col-lg-offset-4 col-sm-offset-4">
+      <p
+        style={styles.welcom}
+        className="text-center col-lg-offset-4 col-sm-offset-4"
+      >
         Welcome to the
       </p>
       <img
-        className='img-fluid'
+        className="img-fluid"
         style={styles.cyfLogo}
         src={CyfWhiteLogo}
         alt="code you future logo"
       />
-      <p style={styles.summit}className='text-center col' >summit</p>
+      <p style={styles.summit} className="text-center col">
+        summit
+      </p>
       <p style={styles.date}>
         30th of June - 1st of July<br />Manchester
       </p>
+      <p className='btn'style={styles.btn} ><a href='https://www.eventbrite.co.uk/e/the-inaugural-code-your-future-summit-tickets-46873336411' style={styles.register} > register here</a></p>
       <div style={styles.logo} className="col">
         <img
           src={coop}
