@@ -55,65 +55,65 @@ class CreateEvent extends Component<{}, State> {
       <main className="container">
         <TopSection title="Create Event" />
 
-          <div className="col-sm-8 col-sm-offset-2 block-2-box">
-            <form onSubmit={this.handleSubmit}>
-              <FieldGroup
-                required
-                name="title"
-                type="text"
-                label="Title (required)"
-                placeholder="Enter text"
+        <div className="col-sm-8 col-sm-offset-2 block-2-box">
+          <form onSubmit={this.handleSubmit}>
+            <FieldGroup
+              required
+              name="title"
+              type="text"
+              label="Title (required)"
+              placeholder="Enter text"
+              onChange={this.handleChange}
+              value={this.state.title}
+            />
+
+            <FormGroup controlId="description">
+              <ControlLabel>Description (required)</ControlLabel>
+              <FormControl
+                componentClass="textarea"
+                name="description"
                 onChange={this.handleChange}
-                value={this.state.title}
+                placeholder="Description..."
+                style={COLOR}
+                value={this.state.description}
               />
+            </FormGroup>
 
-                <FormGroup controlId="description">
-                  <ControlLabel>Description (required)</ControlLabel>
-                    <FormControl
-                      componentClass="textarea"
-                      name="description"
-                      onChange={this.handleChange}
-                      placeholder="Description..."
-                      style={COLOR}
-                      value={this.state.description}
-                    />
-                </FormGroup>
+            <FieldGroup
+              label="When (required)"
+              name="date"
+              onChange={this.handleChange}
+              type="date"
+              value={this.state.date}
+            />
 
-                  <FieldGroup
-                    label="When (required)"
-                    name="date"
-                    onChange={this.handleChange}
-                    type="date"
-                    value={this.state.date}
-                  />
+            <FieldGroup
+              label="Start time"
+              name="startTime"
+              onChange={this.handleChange}
+              type="time"
+              value={this.state.startTime}
+            />
 
-                    <FieldGroup
-                      label="Start time"
-                      name="startTime"
-                      onChange={this.handleChange}
-                      type="time"
-                      value={this.state.startTime}
-                    />
+            <FieldGroup
+              label="End time"
+              name="endTime"
+              onChange={this.handleChange}
+              type="time"
+              value={this.state.endTime}
+            />
 
-                      <FieldGroup
-                        label="End time"
-                        name="endTime"
-                        onChange={this.handleChange}
-                        type="time"
-                        value={this.state.endTime}
-                      />
+            <FieldGroup
+              label="Where (required)"
+              name="location"
+              onChange={this.handleChange}
+              type="text"
+              value={this.state.location}
+            />
 
-                        <FieldGroup
-                          label="Where (required)"
-                          name="location"
-                          onChange={this.handleChange}
-                          type="text"
-                          value={this.state.location}
-                        />
-
-                          <Button type="submit">Create</Button>
-            </form>
-          </div>
+            <Button type="submit">Create</Button>
+          </form>
+        </div>
       </main>
     );
   }

@@ -42,15 +42,15 @@ const PrivacyPolicy = (
     </p>
     <h3>What are cookies?</h3>
     <p>
-      Cookies are small files saved to the hard drives of user&apos;s computers that
-      track, save and store information about the user&apos;s interactions and usage
-      of the website. This allows the website, through its server to provide the
-      users with a tailored experience within this website. Users are advised
-      that if they wish to deny the use and saving of cookies from this website
-      on to their computers hard drive they should take necessary steps within
-      their web browsers security settings to block all cookies from this
-      website and its external serving vendors or use the cookie control system
-      if available upon their first visit.
+      Cookies are small files saved to the hard drives of user&apos;s computers
+      that track, save and store information about the user&apos;s interactions
+      and usage of the website. This allows the website, through its server to
+      provide the users with a tailored experience within this website. Users
+      are advised that if they wish to deny the use and saving of cookies from
+      this website on to their computers hard drive they should take necessary
+      steps within their web browsers security settings to block all cookies
+      from this website and its external serving vendors or use the cookie
+      control system if available upon their first visit.
     </p>
     <h3>Website Visitor Tracking</h3>
     <p>
@@ -88,13 +88,13 @@ const PrivacyPolicy = (
       products, services and/or news we supply/publish. Users can subscribe
       through an online automated process where they have given their explicit
       permission. Subscriber personal details are collected, processed, managed
-      and stored in accordance with the regulations named in &apos;The policy&apos; above.
-      Subscribers can unsubscribe at any time through an automated online
-      service, or if not available, other means as detailed in the footer of
-      sent marketing messages. The type and content of marketing messages
-      subscribers receive, and if it may contain third party content, is clearly
-      outlined at the point of subscription. Email marketing messages may
-      contain tracking beacons / tracked clickable links or similar server
+      and stored in accordance with the regulations named in &apos;The
+      policy&apos; above. Subscribers can unsubscribe at any time through an
+      automated online service, or if not available, other means as detailed in
+      the footer of sent marketing messages. The type and content of marketing
+      messages subscribers receive, and if it may contain third party content,
+      is clearly outlined at the point of subscription. Email marketing messages
+      may contain tracking beacons / tracked clickable links or similar server
       technologies in order to track subscriber activity within email marketing
       messages. Where used, such marketing messages may record a range of
       subscriber data relating to engagement, geographic, demographics and
@@ -109,15 +109,15 @@ const PrivacyPolicy = (
       external web links mentioned throughout this website. (External links are
       clickable text / banner / image links to other websites, similar
       to; Google or www.google.co.uk) Shortened URL&apos;s; URL shortening is a
-      technique used on the web to shorten URL&apos;s (Uniform Resource Locators) to
-      something substantially shorter. This technique is especially used in
-      social media and looks similar to this (example: https://bit.ly/IDFuAk).
-      Users should take caution before clicking on shortened URL links and
-      verify their authenticity before proceeding. We cannot guarantee or verify
-      the contents of any externally linked website despite our best efforts.
-      Users should therefore note they click on external links at their own risk
-      and we cannot be held liable for any damages or implications caused by
-      visiting any external links mentioned.
+      technique used on the web to shorten URL&apos;s (Uniform Resource
+      Locators) to something substantially shorter. This technique is especially
+      used in social media and looks similar to this (example:
+      https://bit.ly/IDFuAk). Users should take caution before clicking on
+      shortened URL links and verify their authenticity before proceeding. We
+      cannot guarantee or verify the contents of any externally linked website
+      despite our best efforts. Users should therefore note they click on
+      external links at their own risk and we cannot be held liable for any
+      damages or implications caused by visiting any external links mentioned.
     </p>
     <h3>Social Media Policy & Usage</h3>
     <p>
@@ -137,7 +137,7 @@ const PrivacyPolicy = (
     </p>
     <h3>Data Protection Policy</h3>
     <p>Definitions</p>
-    <table style={{width: 1000}}>
+    <table style={{ width: 1000 }}>
       <tr>
         <th>Charity</th>
         <th>means Code Your Future, a registered charity.</th>
@@ -160,118 +160,144 @@ const PrivacyPolicy = (
     </table>
     <h3>1. Data protection principles</h3>
     <p>
-    The Charity is committed to processing data in accordance with its responsibilities under the GDPR.     
+      The Charity is committed to processing data in accordance with its
+      responsibilities under the GDPR.
     </p>
     <h3>Article 5 of the GDPR requires that personal data shall be:</h3>
     <ol type="a">
       <li>
-        processed lawfully, fairly and in a transparent manner in relation to individuals;
+        processed lawfully, fairly and in a transparent manner in relation to
+        individuals;
       </li>
       <li>
-        collected for specified, explicit and legitimate purposes and not further processed in a manner
-        that is incompatible with those purposes; further processing for archiving purposes in the public
-        interest, scientific or historical research purposes or statistical purposes shall not be considered
-        to be incompatible with the initial purposes;
+        collected for specified, explicit and legitimate purposes and not
+        further processed in a manner that is incompatible with those purposes;
+        further processing for archiving purposes in the public interest,
+        scientific or historical research purposes or statistical purposes shall
+        not be considered to be incompatible with the initial purposes;
       </li>
       <li>
-        adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed;
+        adequate, relevant and limited to what is necessary in relation to the
+        purposes for which they are processed;
       </li>
       <li>
-        accurate and, where necessary, kept up to date; every reasonable step must be taken to ensure that personal
-        data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay
+        accurate and, where necessary, kept up to date; every reasonable step
+        must be taken to ensure that personal data that are inaccurate, having
+        regard to the purposes for which they are processed, are erased or
+        rectified without delay
       </li>
       <li>
-        kept in a form which permits identification of data subjects for no longer than is necessary for
-        the purposes for which the personal data are processed; personal data may be stored for longer periods
-        insofar as the personal data will be processed solely for archiving purposes in the public interest,
-        scientific or historical research purposes or statistical purposes subject to implementation of the appropriate
-        technical and organisational measures required by the GDPR in order to safeguard the rights and freedoms of individuals; and
+        kept in a form which permits identification of data subjects for no
+        longer than is necessary for the purposes for which the personal data
+        are processed; personal data may be stored for longer periods insofar as
+        the personal data will be processed solely for archiving purposes in the
+        public interest, scientific or historical research purposes or
+        statistical purposes subject to implementation of the appropriate
+        technical and organisational measures required by the GDPR in order to
+        safeguard the rights and freedoms of individuals; and
       </li>
       <li>
-        processed in a manner that ensures appropriate security of the personal data, including protection
-        against unauthorised or unlawful processing and against accidental loss, destruction or damage,
-        using appropriate technical or organisational measures.”
+        processed in a manner that ensures appropriate security of the personal
+        data, including protection against unauthorised or unlawful processing
+        and against accidental loss, destruction or damage, using appropriate
+        technical or organisational measures.”
       </li>
     </ol>
     <h3>2. General provisions</h3>
     <ol type="a">
       <li>
-        This policy applies to all personal data processed by the Charity. 
+        This policy applies to all personal data processed by the Charity.
       </li>
       <li>
-        The Responsible Person shall take responsibility for the Charity’s ongoing compliance with this policy.
+        The Responsible Person shall take responsibility for the Charity’s
+        ongoing compliance with this policy.
       </li>
+      <li>This policy shall be reviewed at least annually.</li>
       <li>
-      This policy shall be reviewed at least annually. 
-      </li>
-      <li>
-      The Charity shall register with the Information Commissioner’s Office as an organisation that processes personal data.
+        The Charity shall register with the Information Commissioner’s Office as
+        an organisation that processes personal data.
       </li>
     </ol>
     <h3>3. Lawful, fair and transparent processing</h3>
     <ol type="a">
       <li>
-      To ensure its processing of data is lawful, fair and transparent, the Charity shall maintain a Register of Systems.
+        To ensure its processing of data is lawful, fair and transparent, the
+        Charity shall maintain a Register of Systems.
       </li>
+      <li>The Register of Systems shall be reviewed at least annually.</li>
       <li>
-      The Register of Systems shall be reviewed at least annually.
-      </li>
-      <li>
-        Individuals have the right to access their personal data and any such requests made to the charity shall be dealt with in a timely manner.
+        Individuals have the right to access their personal data and any such
+        requests made to the charity shall be dealt with in a timely manner.
       </li>
     </ol>
     <h3>4. Lawful purposes</h3>
     <ol type="a">
       <li>
-        All data processed by the charity must be done on one of the following lawful bases: consent, contract, legal obligation, vital interests,
-        public task or legitimate interests (see ICO guidance for more information). 
+        All data processed by the charity must be done on one of the following
+        lawful bases: consent, contract, legal obligation, vital interests,
+        public task or legitimate interests (see ICO guidance for more
+        information).
       </li>
       <li>
-        The Charity shall note the appropriate lawful basis in the Register of Systems.
+        The Charity shall note the appropriate lawful basis in the Register of
+        Systems.
       </li>
       <li>
-        Where consent is relied upon as a lawful basis for processing data, evidence of opt-in  consent shall be kept with the personal data.
+        Where consent is relied upon as a lawful basis for processing data,
+        evidence of opt-in consent shall be kept with the personal data.
       </li>
       <li>
-        Where communications are sent to individuals based on their consent, the option for the individual to revoke their consent should be
-        clearly available and systems should be in place to ensure such revocation is reflected accurately in the Charity’s systems.
+        Where communications are sent to individuals based on their consent, the
+        option for the individual to revoke their consent should be clearly
+        available and systems should be in place to ensure such revocation is
+        reflected accurately in the Charity’s systems.
       </li>
     </ol>
     <h3>5. Data minimisation</h3>
     <ol type="a">
       <li>
-        The Charity shall ensure that personal data are adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed. 
+        The Charity shall ensure that personal data are adequate, relevant and
+        limited to what is necessary in relation to the purposes for which they
+        are processed.
       </li>
     </ol>
     <h3>6. Accuracy</h3>
     <ol type="a">
       <li>
-        The Charity shall take reasonable steps to ensure personal data is accurate.
+        The Charity shall take reasonable steps to ensure personal data is
+        accurate.
       </li>
       <li>
-        Where necessary for the lawful basis on which data is processed, steps shall be put in place to ensure that personal data is kept up to date.
+        Where necessary for the lawful basis on which data is processed, steps
+        shall be put in place to ensure that personal data is kept up to date.
       </li>
     </ol>
     <h3>7. Archiving / removal</h3>
     <ol type="a">
       <li>
-        To ensure that personal data is kept for no longer than necessary, the Charity shall put in place an archiving policy for
-        each area in which personal data is processed and review this process annually. 
+        To ensure that personal data is kept for no longer than necessary, the
+        Charity shall put in place an archiving policy for each area in which
+        personal data is processed and review this process annually.
       </li>
       <li>
-        The archiving policy shall consider what data should/must be retained, for how long, and why.
+        The archiving policy shall consider what data should/must be retained,
+        for how long, and why.
       </li>
     </ol>
     <h3>8. Security</h3>
     <ol type="a">
       <li>
-        The Charity shall ensure that personal data is stored securely using modern software that is kept-up-to-date.
+        The Charity shall ensure that personal data is stored securely using
+        modern software that is kept-up-to-date.
       </li>
       <li>
-        Access to personal data shall be limited to personnel who need access and appropriate security should be in place to avoid unauthorised sharing of information.
+        Access to personal data shall be limited to personnel who need access
+        and appropriate security should be in place to avoid unauthorised
+        sharing of information.
       </li>
       <li>
-        When personal data is deleted this should be done safely such that the data is irrecoverable.
+        When personal data is deleted this should be done safely such that the
+        data is irrecoverable.
       </li>
       <li>
         Appropriate back-up and disaster recovery solutions shall be in place.
@@ -279,9 +305,11 @@ const PrivacyPolicy = (
     </ol>
     <h3>9. Breach</h3>
     <p>
-      In the event of a breach of security leading to the accidental or unlawful destruction, loss, alteration,
-      unauthorised disclosure of, or access to, personal data, the Charity shall promptly assess the risk to people’s rights
-      and freedoms and if appropriate report this breach to the ICO (more information on the ICO website). 
+      In the event of a breach of security leading to the accidental or unlawful
+      destruction, loss, alteration, unauthorised disclosure of, or access to,
+      personal data, the Charity shall promptly assess the risk to people’s
+      rights and freedoms and if appropriate report this breach to the ICO (more
+      information on the ICO website).
     </p>
     <h3>Resources & Further Information</h3>
     <ul>

@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import DonationPicker from '../../components/donation-picker';
 import donate from '../../assets/images/donate.jpg';
 
-const Container = styled('div') `
+const Container = styled('div')`
   display: flex;
   padding: 48px 24px 0 24px;
   margin-bottom: 48px;
@@ -16,7 +16,7 @@ const Container = styled('div') `
   }
 `;
 
-const PickerContainer = styled('div') `
+const PickerContainer = styled('div')`
   display: flex;
   width: 50%;
   justify-content: flex-end;
@@ -29,7 +29,7 @@ const PickerContainer = styled('div') `
   }
 `;
 
-const TextContainer = styled('div') `
+const TextContainer = styled('div')`
   display: flex;
   width: 50%;
   justify-content: flex-start;
@@ -45,7 +45,7 @@ const TextContainer = styled('div') `
   }
 `;
 
-const ImageContainer = styled('div') `
+const ImageContainer = styled('div')`
   overflow: hidden;
   max-height: 450px;
   margin: 0 auto;
@@ -86,15 +86,15 @@ class Donate extends React.Component {
     const donateText = (
       <div>
         <h3>We work on a 100% donation model</h3>
-          <br />
-            <p>
+        <br />
+        <p>
           That means that all support from individuals will go entirely to
           support our students.
-            </p>
-              <p>
+        </p>
+        <p>
           This will help cover for childcare, transportation, laptops and
           internet for our students most in need.
-              </p>
+        </p>
       </div>
     );
     return (
@@ -105,22 +105,22 @@ class Donate extends React.Component {
             again!
           </h4>
         )}
-          <Container>
-            {tokenSuccess && <h2>Thank you for your donation!</h2>}
-              <PickerContainer>
-                {!tokenSuccess && (
-                <DonationPicker onTokenCapture={this.onTokenSuccess} />
+        <Container>
+          {tokenSuccess && <h2>Thank you for your donation!</h2>}
+          <PickerContainer>
+            {!tokenSuccess && (
+              <DonationPicker onTokenCapture={this.onTokenSuccess} />
             )}
-              </PickerContainer>
-            {!tokenSuccess && <TextContainer>{donateText}</TextContainer>}
-          </Container>
-            <ImageContainer>
-              <img
-                src={donate}
-                alt="code-your-future-students"
-                style={{ maxWidth: 650 }}
-              />
-            </ImageContainer>
+          </PickerContainer>
+          {!tokenSuccess && <TextContainer>{donateText}</TextContainer>}
+        </Container>
+        <ImageContainer>
+          <img
+            src={donate}
+            alt="code-your-future-students"
+            style={{ maxWidth: 650 }}
+          />
+        </ImageContainer>
       </div>
     );
   }

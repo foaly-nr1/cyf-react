@@ -215,10 +215,10 @@ export default class Apply extends Component {
               <span className="success-message">
                 Many thanks for submitting your application!
                 <br />
-                  <b> We will send you instructions for the next steps.</b>
-                    <br />
-                      <br />
-                        <br />
+                <b> We will send you instructions for the next steps.</b>
+                <br />
+                <br />
+                <br />
                 If you want, you can start telling us about your motivation
                 below :)
               </span>
