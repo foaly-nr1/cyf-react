@@ -141,16 +141,16 @@ class DonationPicker extends React.Component {
           >
             GIVE ONCE
           </PeriodButton>
-          <PeriodButton
-            active={!this.state.isOnceButtonSelected}
-            onClick={() => this.setState({ isOnceButtonSelected: false })}
-          >
+            <PeriodButton
+              active={!this.state.isOnceButtonSelected}
+              onClick={() => this.setState({ isOnceButtonSelected: false })}
+            >
             MONTHLY
-          </PeriodButton>
+            </PeriodButton>
         </PeriodButtonsContainer>
-        <PickerContainer>
-          <DonationLabel>{labelText}</DonationLabel>
-          {this.state.isOnceButtonSelected && (
+          <PickerContainer>
+            <DonationLabel>{labelText}</DonationLabel>
+            {this.state.isOnceButtonSelected && (
             <DonationBox>
               <InputContainer>
                 <InputGroup
@@ -165,38 +165,38 @@ class DonationPicker extends React.Component {
                   >
                     &pound;
                   </InputGroup.Addon>
-                  <FormControl
-                    type="number"
-                    value={amount}
-                    onChange={this.updateAmount}
-                    style={{
+                    <FormControl
+                      type="number"
+                      value={amount}
+                      onChange={this.updateAmount}
+                      style={{
                       height: '60px',
                       'font-size': '2.2rem',
                     }}
-                  />
+                    />
                 </InputGroup>
               </InputContainer>
-              <DonateButton
-                onClick={this.checkout}
-                bsStyle={{
+                <DonateButton
+                  onClick={this.checkout}
+                  bsStyle={{
                   height: '200px',
                   'font-weight': '900',
                 }}
-              >
+                >
                 DONATE
-              </DonateButton>
+                </DonateButton>
             </DonationBox>
           )}
-          {!this.state.isOnceButtonSelected && (
+            {!this.state.isOnceButtonSelected && (
             <DonationBox>
               <MonthlyMessageContainer>
                 Monthly donations will be available soon! <br />
-                <br /> You can do a one-off donation in the meantime by clicking
+                  <br /> You can do a one-off donation in the meantime by clicking
                 GIVE ONCE.
               </MonthlyMessageContainer>
             </DonationBox>
           )}
-        </PickerContainer>
+          </PickerContainer>
       </Container>
     );
   }

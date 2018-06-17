@@ -153,23 +153,23 @@ class EventDetail extends React.Component<Props, State> {
     return (
       <div className={container}>
         <h1>{topic}</h1>
-        <p className={dateContainer}>
-          <span>{date && moment(date).format('LL')}</span>
-          <span>
-            {startTime} - {endTime}
-          </span>
-        </p>
-        <Location location={location} />
-        <section className={attendeeContainer}>
-          <h5>Volunteers: {(mentors || []).length}</h5>
-          <Volunteers users={mentors} />
-          {renderAttending(auth, mentors, this.attendClick)}
-        </section>
-        <hr className={divider} />
-        <Description description={description} />
-        <div>
-          <BackToEvent />
-        </div>
+          <p className={dateContainer}>
+            <span>{date && moment(date).format('LL')}</span>
+              <span>
+                {startTime} - {endTime}
+              </span>
+          </p>
+            <Location location={location} />
+              <section className={attendeeContainer}>
+                <h5>Volunteers: {(mentors || []).length}</h5>
+                  <Volunteers users={mentors} />
+                {renderAttending(auth, mentors, this.attendClick)}
+              </section>
+                <hr className={divider} />
+                  <Description description={description} />
+                    <div>
+                      <BackToEvent />
+                    </div>
       </div>
     );
   }
