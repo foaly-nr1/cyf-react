@@ -83,18 +83,43 @@ class Donate extends React.Component {
 
   render() {
     const { tokenSuccess, tokenError } = this.state;
+    const style = {
+      listStyleType: 'none',
+      fontSize: '18px',
+      lineHeight: '32px',
+      padding: '0',
+      fontFamily: 'Roboto',
+      fontWeight: '100',
+      color: '#555',
+    };
     const donateText = (
       <div>
-        <h3>We work on a 100% donation model</h3>
+        <h3>100% donation model</h3>
         <br />
-        <p>
-          That means that all support from individuals will go entirely to
-          support our students.
+        <p style={style}>
+          All the support from individuals goes towards covering our student
+          expenses including childcare, meals, transportation and mobile
+          internet.
         </p>
-        <p>
-          This will help cover for childcare, transportation, laptops and
-          internet for our students most in need.
-        </p>
+        <ul style={style}>
+          <li>
+            <strong>£300</strong> Covers the childcare of a student for 3 months
+          </li>
+          <li>
+            <strong>£600</strong> Covers the meals of the class for 3 months
+            <li>
+              <strong>£1,000</strong> Covers of training a student for 3-months
+            </li>
+          </li>
+          <li>
+            <strong>£2,000</strong> Average cost of training a student at CYF
+            (student expenses included){' '}
+          </li>
+          <li>
+            <strong>£5,000</strong> Become a Class Sponsor and cover expenses
+            for 5 students (edited)
+          </li>
+        </ul>
       </div>
     );
     return (
