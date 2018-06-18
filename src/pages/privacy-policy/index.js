@@ -15,8 +15,8 @@ const PrivacyPolicy = (
     <p>
       This policy will explain areas of this website that may affect your
       privacy and personal details, how we process, collect, manage and store
-      those details and how your rights under the GDPR, DPA &amp; PECR are adhere
-      to. Additionally, it will explain the use of cookies or software,
+      those details and how your rights under the GDPR, DPA &amp; PECR are
+      adhere to. Additionally, it will explain the use of cookies or software,
       advertising or commercial sponsorship from third parties and the download
       of any documents, files or software made available to you (if any) on this
       website. Further explanations may be provided for specific pages or
