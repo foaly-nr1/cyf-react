@@ -15,7 +15,7 @@ const PrivacyPolicy = (
     <p>
       This policy will explain areas of this website that may affect your
       privacy and personal details, how we process, collect, manage and store
-      those details and how your rights under the GDPR, DPA & PECR are adhere
+      those details and how your rights under the GDPR, DPA &amp; PECR are adhere
       to. Additionally, it will explain the use of cookies or software,
       advertising or commercial sponsorship from third parties and the download
       of any documents, files or software made available to you (if any) on this
@@ -25,7 +25,7 @@ const PrivacyPolicy = (
       / device in order to serve it to you. Our contact information is provided
       if you have any questions.
     </p>
-    <h3>The DPA & GDPR May 2018</h3>
+    <h3>The DPA &amp; GDPR May 2018</h3>
     <p>
       We and this website complies to the DPA (Data Protection Act 1998) and
       already complies to the GDPR (General Data Protection Regulation) which
@@ -60,7 +60,7 @@ const PrivacyPolicy = (
       usage of the website, but will not store, save or collect personal
       information.
     </p>
-    <h3>Downloads & Media Files</h3>
+    <h3>Downloads &amp; Media Files</h3>
     <p>
       Any downloadable documents, files or media made available on this website
       are provided to users at their own risk. While all precautions have been
@@ -71,7 +71,7 @@ const PrivacyPolicy = (
       advise users to verify their authenticity using third-party anti-virus
       software or similar applications.
     </p>
-    <h3>Contact & Communication With us</h3>
+    <h3>Contact &amp; Communication With us</h3>
     <p>
       Users contacting this us through this website do so at their own
       discretion and provide any such personal details requested at their own
@@ -82,7 +82,7 @@ const PrivacyPolicy = (
       information through a mailing list system. This is done in accordance with
       the regulations named in &apos;The policy&apos; above.
     </p>
-    <h3>Email Mailing List & Marketing Messages</h3>
+    <h3>Email Mailing List &amp; Marketing Messages</h3>
     <p>
       We operate an email mailing list program, used to inform subscribers about
       products, services and/or news we supply/publish. Users can subscribe
@@ -99,10 +99,10 @@ const PrivacyPolicy = (
       messages. Where used, such marketing messages may record a range of
       subscriber data relating to engagement, geographic, demographics and
       already stored subscriber data. Our EMS (email marketing service)
-      providers are; Mailchimp & Pipedrive and you can read their privacy
+      providers are; Mailchimp &amp; Pipedrive and you can read their privacy
       policies in the resources section.
     </p>
-    <h3>External Website Links & Third Parties</h3>
+    <h3>External Website Links &amp; Third Parties</h3>
     <p>
       Although we only look to include quality, safe and relevant external
       links, users are advised to adopt a policy of caution before clicking any
@@ -119,7 +119,7 @@ const PrivacyPolicy = (
       external links at their own risk and we cannot be held liable for any
       damages or implications caused by visiting any external links mentioned.
     </p>
-    <h3>Social Media Policy & Usage</h3>
+    <h3>Social Media Policy &amp; Usage</h3>
     <p>
       We adopt a Social Media Policy to ensure our business and our staff
       conduct themselves accordingly online. While we may have official profiles
@@ -137,7 +137,7 @@ const PrivacyPolicy = (
     </p>
     <h3>Data Protection Policy</h3>
     <p>Definitions</p>
-    <table style={{ width: 1000 }}>
+    <table>
       <tr>
         <th>Charity</th>
         <th>means Code Your Future, a registered charity.</th>
@@ -311,7 +311,7 @@ const PrivacyPolicy = (
       rights and freedoms and if appropriate report this breach to the ICO (more
       information on the ICO website).
     </p>
-    <h3>Resources & Further Information</h3>
+    <h3>Resources &amp; Further Information</h3>
     <ul>
       <li>Overview of the GDPR - General Data Protection Regulation</li>
       <li>Data Protection Act 1998</li>

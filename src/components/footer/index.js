@@ -77,7 +77,7 @@ const Footer = () => (
                 1174929
               </Link>. |{' '}
               <Link
-                to="http://localhost:3000/privacy-policy"
+                to="/privacy-policy"
                 target="_blank"
                 rel="noopener noreferrer"
               >
