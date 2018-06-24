@@ -16,6 +16,7 @@ import {
   Students,
   Volunteers,
   Privacy,
+  Conference,
 } from './pages';
 
 import Auth from './lib/auth';
@@ -56,6 +57,7 @@ const Routes = () => (
       <Route exact path="/partners.html" component={Partners} />
       <Route exact path="/meet-the-team" component={MeetTheTeam} />
       <Route exact path="/meet-the-team.html" component={MeetTheTeam} />
+      <Route exact path="/conference" component={Conference} />
       <Route exact path="/donate" component={Donate} />
       <Route
         path="/callback"
