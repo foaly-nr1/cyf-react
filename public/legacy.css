@@ -9662,6 +9662,7 @@ img {
 
 .icon--large img {
   max-width: 200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto; }
 
