@@ -7,7 +7,7 @@ import TopSection from '../../components/top-section';
 const AboutText = (
   <div>
     <p>
-      This is a test. We are a non-profit organisation supporting refugees with
+      We are a non-profit organisation supporting refugees with
       the dream of becoming developers.
     </p>
     <p>

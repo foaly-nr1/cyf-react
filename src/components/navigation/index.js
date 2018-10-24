@@ -65,7 +65,6 @@ const Navigation = ({ auth }: Props) => (
         <NavItem className="nav-icon" eventKey="blog">
           Blog
         </NavItem>
-        
 
         <LinkContainer to="/donate">
           <NavItem className="nav-icon" eventKey={1}>
