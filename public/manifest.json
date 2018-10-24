@@ -1,11 +1,16 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CYF",
+  "name": "Code Your Future",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": "./index.html",
