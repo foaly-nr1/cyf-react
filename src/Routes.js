@@ -15,6 +15,8 @@ import {
   Partners,
   Students,
   Volunteers,
+  Conference,
+  SouthAfrica,
 } from './pages';
 
 import Auth from './lib/auth';
@@ -38,6 +40,7 @@ const Routes = () => (
       <Route exact path="/index.html" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={Events} />
+       <Route exact path="/south-africa" component={SouthAfrica} />
       <Route exact path="/event/create" component={CreateEvent} />
       <Route
         exact
@@ -54,6 +57,7 @@ const Routes = () => (
       <Route exact path="/partners.html" component={Partners} />
       <Route exact path="/meet-the-team" component={MeetTheTeam} />
       <Route exact path="/meet-the-team.html" component={MeetTheTeam} />
+      <Route exact path="/conference" component={Conference} />
       <Route exact path="/donate" component={Donate} />
       <Route
         path="/callback"

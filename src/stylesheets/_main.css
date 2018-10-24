@@ -1,7 +1,6 @@
 /* todo:
   - standardize font sizes
 */
-
 body {
   min-width: 320px;
   background: #fff;
@@ -65,6 +64,7 @@ img {
   color: #fff;
   text-shadow: none;
 }
+
 ::selection {
   background: #2ba560;
   color: #fff;
@@ -77,7 +77,6 @@ img {
 }
 
 /***** General style, all sections *****/
-
 .section-container {
   margin: 0 auto;
   padding: 30px 0;
@@ -97,9 +96,6 @@ img {
 .section-container-blue p,
 .section-container-blue strong {
   color: #fff;
-}
-
-.section-description {
 }
 
 .section-description p {
@@ -152,6 +148,7 @@ img {
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
+
 .big-link-2:hover,
 .big-link-2:focus,
 .big-link-2:active,
@@ -205,7 +202,6 @@ img {
 }
 
 /***** Dividers *****/
-
 .divider-1 {
   text-align: left;
 }
@@ -223,7 +219,6 @@ img {
 }
 
 /***** Top menu *****/
-
 .navbar {
   margin-bottom: 0;
   background: #fff;
@@ -330,7 +325,6 @@ ul.navbar-nav li a.big-link-1:hover {
 }
 
 /****** Top section ******/
-
 .top-section {
   padding-top: 60px;
 }
@@ -342,7 +336,6 @@ ul.navbar-nav li a.big-link-1:hover {
 }
 
 /***** Block definition *****/
-
 .block-container {
   padding-top: 50px;
 }
@@ -374,13 +367,9 @@ ul.navbar-nav li a.big-link-1:hover {
 
 /***** Block 2 *****/
 /* Use for two columns with lists */
-
 /* @DEPRECATED
  instead block-2-container
  use block-container */
-.block-2-container {
-}
-
 .block-2-box {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -457,6 +446,7 @@ ul.navbar-nav li a.big-link-1:hover {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+
 .section-container-gray .block-2-img-container .img-container-line {
   background: #f8f8f8;
 }
@@ -465,10 +455,12 @@ ul.navbar-nav li a.big-link-1:hover {
   top: 63px;
   left: -27px;
 }
+
 .block-2-img-container .img-container-line.line-2 {
   top: 43px;
   left: -27px;
 }
+
 .block-2-img-container .img-container-line.line-3 {
   top: 23px;
   left: -27px;
@@ -488,11 +480,6 @@ ul.navbar-nav li a.big-link-1:hover {
 .block-2-box-btn {
   margin-top: 10px;
   margin-left: 20px;
-}
-
-.index-hero {
-  background: url('assets/images/1.jpg');
-  @include hero-background(40em);
 }
 
 .clients-text {
@@ -530,7 +517,6 @@ ul.navbar-nav li a.big-link-1:hover {
 }
 
 /***** Team *****/
-
 .team-container {
   padding-bottom: 80px;
 }
@@ -581,6 +567,7 @@ ul.navbar-nav li a.big-link-1:hover {
   background: rgba(51, 51, 51, 0.8);
   color: #fff;
 }
+
 .portfolio-box:hover .portfolio-box-text-container {
   bottom: 0;
 }
@@ -594,7 +581,6 @@ ul.navbar-nav li a.big-link-1:hover {
 }
 
 /***** Section hero *****/
-
 .section-hero {
   color: #fff;
 }
@@ -611,7 +597,6 @@ ul.navbar-nav li a.big-link-1:hover {
 }
 
 /***** Testimonials *****/
-
 .testimonials {
   text-align: left;
 }
@@ -681,14 +666,12 @@ ul.navbar-nav li a.big-link-1:hover {
 }
 
 /***** Call to action *****/
-
 .call-to-action p {
   margin-top: 10px;
   text-align: center;
 }
 
 /***** About us *****/
-
 .about-container {
   padding-bottom: 0;
 }
@@ -696,6 +679,7 @@ ul.navbar-nav li a.big-link-1:hover {
 .about-container .section-description {
   padding-bottom: 0;
 }
+
 .about-container .section-description p {
   margin-bottom: 0;
 }
@@ -713,6 +697,7 @@ ul.navbar-nav li a.big-link-1:hover {
   margin: 0 10px 0 0;
   color: #ddd;
 }
+
 .about-social a:hover,
 .about-social a:focus {
   color: #ddd;
@@ -720,7 +705,6 @@ ul.navbar-nav li a.big-link-1:hover {
 }
 
 /***** Contact us *****/
-
 .contact-container {
   padding-top: 0;
   background: #444;
@@ -772,6 +756,7 @@ ul.navbar-nav li a.big-link-1:hover {
   color: #fff;
   border: 0;
 }
+
 .contact-address p a:hover,
 .contact-address p a:focus {
   color: #fff;
@@ -810,7 +795,6 @@ ul.navbar-nav li a.big-link-1:hover {
 }
 
 /***** Footer *****/
-
 footer {
   padding: 10px 0 10px 0;
   text-align: right;
@@ -821,9 +805,11 @@ footer .scroll-to-top {
   font-size: 36px;
   text-align: center;
 }
+
 footer .scroll-to-top a {
   color: #666;
 }
+
 footer .scroll-to-top a:hover,
 footer .scroll-to-top a:focus,
 footer .scroll-to-top a:active {
@@ -862,6 +848,7 @@ footer .vendor-license a {
   color: #fff;
   border: 0;
 }
+
 .footer-copyright a:hover,
 .footer-copyright a:focus {
   color: #fff;
@@ -873,6 +860,7 @@ footer .vendor-license a {
   font-size: 39px;
   color: #666;
 }
+
 .footer-social a:hover,
 .footer-social a:focus {
   color: #666;
