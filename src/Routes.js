@@ -40,7 +40,7 @@ const Routes = () => (
       <Route exact path="/index.html" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={Events} />
-       <Route exact path="/south-africa" component={SouthAfrica} />
+      <Route exact path="/south-africa" component={SouthAfrica} />
       <Route exact path="/event/create" component={CreateEvent} />
       <Route
         exact
