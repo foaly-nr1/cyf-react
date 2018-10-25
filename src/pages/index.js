@@ -11,6 +11,8 @@ import Donate from './donate';
 import Students from './students';
 import Volunteers from './volunteers';
 import Conference from './cyf_confrence';
+import SouthAfrica from './south-africa';
+
 
 export {
   Home,
@@ -26,4 +28,5 @@ export {
   MeetTheTeam,
   Donate,
   Conference,
+  SouthAfrica,
 };
