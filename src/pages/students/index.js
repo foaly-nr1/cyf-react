@@ -7,19 +7,22 @@ const Students = () => {
   const studentText = (
     <div>
       <p>
-        Welcome to our community. Here, you will learn all the technical skills 
+        Welcome to our community. Here, you will learn all the technical skills
         needed to become a professional developer
       </p>
       <p>
-        During the course you will learn the whole web development stack, 
-        including HTML/CSS, JavaScript, React and Node technologies. We’ll 
-        complement the training with workshops on modern software methodologies and job interview practices.
+        During the course you will learn the whole web development stack,
+        including HTML/CSS, JavaScript, React and Node technologies. We’ll
+        complement the training with workshops on modern software methodologies
+        and job interview practices.
       </p>
 
       <p>
-        Our 8-month web development program has proven a success. For our next London course, 
-        we are partnering with Capgemini – a global consultancy organisation – to bring you the most 
-        comprehensive course possible. Exceptional graduates from the course will have an opportunity to join Capgemini.
+        Our 8-month web development program has proven a success. For our next
+        London course, we are partnering with Capgemini – a global consultancy
+        organisation – to bring you the most comprehensive course possible.
+        Exceptional graduates from the course will have an opportunity to join
+        Capgemini.
       </p>
 
       <div className="section-bottom-link">
