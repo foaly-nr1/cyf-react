@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'react-emotion';
-import teaching from '../../assets/images/1.jpg';
 import homepagebanner from '../../assets/images/new-homepage-banner.jpg';
 
 import '../../stylesheets/index.scss';

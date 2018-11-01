@@ -11,15 +11,69 @@ exports[`Donate Component renders 1`] = `
     <Styled(div)>
       <div>
         <h3>
-          We work on a 100% donation model
+          100% donation model
         </h3>
         <br />
-        <p>
-          That means that all support from individuals will go entirely to support our students.
+        <p
+          style={
+            Object {
+              "color": "#555",
+              "fontFamily": "Roboto",
+              "fontSize": "18px",
+              "fontWeight": "100",
+              "lineHeight": "32px",
+              "listStyleType": "none",
+              "padding": "0",
+            }
+          }
+        >
+          All the support from individuals goes towards covering our student expenses including childcare, meals, transportation and mobile internet.
         </p>
-        <p>
-          This will help cover for childcare, transportation, laptops and internet for our students most in need.
-        </p>
+        <ul
+          style={
+            Object {
+              "color": "#555",
+              "fontFamily": "Roboto",
+              "fontSize": "18px",
+              "fontWeight": "100",
+              "lineHeight": "32px",
+              "listStyleType": "none",
+              "padding": "0",
+            }
+          }
+        >
+          <li>
+            <strong>
+              £300
+            </strong>
+             Covers the childcare of a student for 3 months
+          </li>
+          <li>
+            <strong>
+              £600
+            </strong>
+             Covers the meals of the class for 3 months
+            <li>
+              <strong>
+                £1,000
+              </strong>
+               Covers of training a student for 3-months
+            </li>
+          </li>
+          <li>
+            <strong>
+              £2,000
+            </strong>
+             Average cost of training a student at CYF (student expenses included)
+             
+          </li>
+          <li>
+            <strong>
+              £5,000
+            </strong>
+             Become a Class Sponsor and cover expenses for 5 students (edited)
+          </li>
+        </ul>
       </div>
     </Styled(div)>
   </Styled(div)>
