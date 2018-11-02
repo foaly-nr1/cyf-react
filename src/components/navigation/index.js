@@ -59,9 +59,6 @@ const Navigation = ({ auth }: Props) => (
         <LinkContainer to="/meet-the-team">
           <NavItem eventKey={1}>Meet the team</NavItem>
         </LinkContainer>
-        <LinkContainer to="/conference">
-          <NavItem eventKey={1}>Conference</NavItem>
-        </LinkContainer>
         <NavItem className="nav-icon" eventKey="blog">
           Blog
         </NavItem>
