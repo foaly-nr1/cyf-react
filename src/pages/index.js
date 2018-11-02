@@ -13,7 +13,6 @@ import Volunteers from './volunteers';
 import Conference from './cyf_confrence';
 import SouthAfrica from './south-africa';
 
-
 export {
   Home,
   Event,

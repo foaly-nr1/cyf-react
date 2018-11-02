@@ -7,8 +7,8 @@ import TopSection from '../../components/top-section';
 const AboutText = (
   <div>
     <p>
-      We are a non-profit organisation supporting refugees with
-      the dream of becoming developers.
+      We are a non-profit organisation supporting refugees with the dream of
+      becoming developers.
     </p>
     <p>
       In their journey of interrupted lives, unfinished studies and integration
