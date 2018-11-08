@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'react-emotion';
-import homepagebanner from '../../assets/images/new-homepage-banner.jpg';
+import homepagebanner from '../../assets/images/CYF-homepage.png';
 
 import '../../stylesheets/index.scss';
 
