@@ -46,10 +46,7 @@ const Columbia = () => (
     <div>
       <img src={columbialogo} alt="Code Your Future Columbia" />
     </div>
-    <TopSection
-      title="Code Your Future Columbia"
-      content={ColumbiaText}
-    />
+    <TopSection title="Code Your Future Columbia" content={ColumbiaText} />
   </main>
 );
 

@@ -14,7 +14,6 @@ import Conference from './cyf_confrence';
 import SouthAfrica from './south-africa';
 import Columbia from './columbia';
 
-
 export {
   Home,
   Event,

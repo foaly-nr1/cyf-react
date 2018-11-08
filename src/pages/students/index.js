@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TopSection from '../../components/top-section';
-import students from '../../assets/images/students-group.jpg';
+import students from '../../assets/images/CYF-students.png';
 
 const Students = () => {
   const studentText = (
