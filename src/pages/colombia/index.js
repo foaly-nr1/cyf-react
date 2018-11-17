@@ -3,9 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import TopSection from '../../components/top-section';
-import columbialogo from '../../assets/images/cyf-columbia-logo.png';
+import colombialogo from '../../assets/images/cyf-colombia-logo.png';
 
-const ColumbiaText = (
+const ColombiaText = (
   <div>
     <p>
       Code Your Future is a non-profit organisation supporting refugees with the
@@ -32,8 +32,8 @@ const ColumbiaText = (
     </p>
     <p>
       For all other inquiries please contact us at{' '}
-      <Link to="mailto:columbia@codeyourfuture.io" title="Contact us">
-        columbia@codeyourfuture.io
+      <Link to="mailto:colombia@codeyourfuture.io" title="Contact us">
+        colombia@codeyourfuture.io
       </Link>
       <br />
       <br />
@@ -41,13 +41,13 @@ const ColumbiaText = (
   </div>
 );
 
-const Columbia = () => (
+const Colombia = () => (
   <main>
     <div>
-      <img src={columbialogo} alt="Code Your Future Columbia" />
+      <img src={colombialogo} alt="Code Your Future Colombia" />
     </div>
-    <TopSection title="Code Your Future Columbia" content={ColumbiaText} />
+    <TopSection title="Code Your Future Colombia" content={ColombiaText} />
   </main>
 );
 
-export default Columbia;
+export default Colombia;
