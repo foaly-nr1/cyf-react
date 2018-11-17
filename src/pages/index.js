@@ -12,7 +12,7 @@ import Students from './students';
 import Volunteers from './volunteers';
 import Conference from './cyf_confrence';
 import SouthAfrica from './south-africa';
-import Columbia from './columbia';
+import Colombia from './colombia';
 
 export {
   Home,
@@ -29,5 +29,5 @@ export {
   Donate,
   Conference,
   SouthAfrica,
-  Columbia,
+  Colombia,
 };
