@@ -4,7 +4,7 @@ exports[`Banner Component renders 1`] = `
 <Styled(div)>
   <Styled(img)
     alt="teaching=refugees-to-code"
-    src="1.jpg"
+    src="CYF-homepage.png"
   />
   <Styled(div)>
     <h1>

@@ -17,6 +17,8 @@ import {
   Volunteers,
   Privacy,
   Conference,
+  SouthAfrica,
+  Colombia,
 } from './pages';
 
 import Auth from './lib/auth';
@@ -40,6 +42,8 @@ const Routes = () => (
       <Route exact path="/index.html" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={Events} />
+      <Route exact path="/south-africa" component={SouthAfrica} />
+      <Route exact path="/colombia" component={Colombia} />
       <Route exact path="/event/create" component={CreateEvent} />
       <Route exact path="/privacy-policy" component={Privacy} />
       <Route

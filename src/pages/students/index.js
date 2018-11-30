@@ -1,26 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TopSection from '../../components/top-section';
-import students from '../../assets/images/students-group.jpg';
+import students from '../../assets/images/CYF-students.png';
 
 const Students = () => {
   const studentText = (
     <div>
       <p>
         Welcome to our community. Here, you will learn all the technical skills
-        needed to become a professional developer.
+        needed to become a professional developer
       </p>
       <p>
         During the course you will learn the whole web development stack,
-        including HTML/CSS, JavaScript and backend technologies. We’ll
+        including HTML/CSS, JavaScript, React and Node technologies. We’ll
         complement the training with workshops on modern software methodologies
         and job interview practices.
       </p>
 
       <p>
-        Our 6-month web development programme has proven a success, where 75% of
-        our graduates eligible to work have found permanent employment in the
-        industry.
+        Our 8-month web development program has proven a success. For our next
+        London course, we are partnering with Capgemini – a global consultancy
+        organisation – to bring you the most comprehensive course possible.
+        Exceptional graduates from the course will have an opportunity to join
+        Capgemini.
       </p>
 
       <div className="section-bottom-link">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'react-emotion';
-import teaching from '../../assets/images/1.jpg';
+import homepagebanner from '../../assets/images/CYF-homepage.png';
 
 import '../../stylesheets/index.scss';
 
@@ -30,7 +30,7 @@ const BannerText = styled('div')`
 
 const Banner = () => (
   <Hero>
-    <BannerImage src={teaching} alt="teaching=refugees-to-code" />
+    <BannerImage src={homepagebanner} alt="teaching=refugees-to-code" />
     <BannerText>
       <h1>Coding School for Refugees</h1>
       <p>Learn to code and find a job</p>

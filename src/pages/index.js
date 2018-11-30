@@ -12,6 +12,8 @@ import Students from './students';
 import Volunteers from './volunteers';
 import Privacy from './privacy-policy';
 import Conference from './cyf_confrence';
+import SouthAfrica from './south-africa';
+import Colombia from './colombia';
 
 export {
   Home,
@@ -28,4 +30,6 @@ export {
   Donate,
   Privacy,
   Conference,
+  SouthAfrica,
+  Colombia,
 };
