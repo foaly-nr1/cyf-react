@@ -13,6 +13,7 @@ import Volunteers from './volunteers';
 import Conference from './cyf_confrence';
 import SouthAfrica from './south-africa';
 import Columbia from './columbia';
+import Italy from './italy';
 
 export {
   Home,
@@ -30,4 +31,5 @@ export {
   Conference,
   SouthAfrica,
   Columbia,
+  Italy,
 };
