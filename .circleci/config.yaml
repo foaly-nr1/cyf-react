@@ -59,3 +59,18 @@ jobs:
           name: Update k8s deployments
           command: |
             KUBECONFIG=$(pwd)/config ./kubectl -n staging set image deployment/cyf-react-dep-fe cyf-react-fe=codeyourfuture/cyf-react-fe:$VERSION
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - frontend_build_test:
+          context: build
+      - deploy_staging:
+          context: deployments_staging
+          requires:
+            - frontend_build_test
+          filters:
+            branches:
+              only:
+                - staging
