@@ -17,6 +17,7 @@ import {
   Volunteers,
   Conference,
   SouthAfrica,
+  Italy,
   Colombia,
 } from './pages';
 
@@ -42,6 +43,7 @@ const Routes = () => (
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={Events} />
       <Route exact path="/south-africa" component={SouthAfrica} />
+      <Route exact path="/italy" component={Italy} />
       <Route exact path="/colombia" component={Colombia} />
       <Route exact path="/event/create" component={CreateEvent} />
       <Route
