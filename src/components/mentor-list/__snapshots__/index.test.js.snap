@@ -95,6 +95,7 @@ exports[`MentorList Component renders correctly 1`] = `
   <Styled(div)>
     <Styled(Link)
       className="big-link-3 btn"
+      replace={false}
       to="/volunteers"
     >
       Become a volunteer
