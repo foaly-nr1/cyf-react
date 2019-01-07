@@ -3,21 +3,21 @@ jobs:
   build:
     working_directory: ~/cyf-react
     docker:
-      - image: circleci/node:6.10.3
+      - image: circleci/node:10.15
     steps:
       - checkout
       - restore_cache:
           keys:
             - yarn-dependencies-{{ checksum "yarn.lock" }}
       - run:
-          name: "Update npm"
+          name: 'Update npm'
           command: |
             npm install npm@5.3.0
             sudo rm -rf /usr/local/lib/node_modules/npm
             sudo mv node_modules/npm /usr/local/lib/node_modules/npm
             sudo chown -R 500:500 /usr/local/lib/node_modules/npm
       - run:
-          name: "Checking Versions"
+          name: 'Checking Versions'
           command: |
             node --version
             npm --version
@@ -27,7 +27,7 @@ jobs:
       - save_cache:
           key: yarn-dependencies-{{ checksum "yarn.lock" }}
           paths:
-            - "node_modules"
+            - 'node_modules'
       - run:
           name: Lint project code
           command: yarn lint:js
@@ -55,4 +55,4 @@ jobs:
       - save_cache:
           key: yarn-lambda-dependencies-{{ checksum "lambda/yarn.lock" }}
           paths:
-            - "lambda/node_modules"
+            - 'lambda/node_modules'
