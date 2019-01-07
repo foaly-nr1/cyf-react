@@ -23,7 +23,7 @@ jobs:
             npm --version
       - run:
           name: Install project dependencies
-          command: yarn --frozen-lockfile
+          command: yarn
       - save_cache:
           key: yarn-dependencies-{{ checksum "yarn.lock" }}
           paths:
