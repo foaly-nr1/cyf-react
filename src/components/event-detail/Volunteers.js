@@ -11,6 +11,8 @@ const Container = styled('div')`
 
 export default ({ users }: { users: string[] }) => (
   <Container>
-    {users.map(user => <DisplayPicture key={user} userId={user} />)}
+    {users.map(user => (
+      <DisplayPicture key={user} userId={user} />
+    ))}
   </Container>
 );

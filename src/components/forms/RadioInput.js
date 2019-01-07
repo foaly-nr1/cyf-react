@@ -56,6 +56,8 @@ RadioInput.propTypes = {
   ).isRequired,
   checked: PropTypes.string,
   errors: PropTypes.arrayOf(PropTypes.string),
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func,
 };
 
 RadioInput.defaultProps = {
@@ -63,6 +65,7 @@ RadioInput.defaultProps = {
   checked: '',
   // eslint-disable-next-line
   onBlur: () => {},
+  onChange: () => {},
   errors: [],
 };
 

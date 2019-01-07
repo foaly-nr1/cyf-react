@@ -118,7 +118,8 @@ function renderAttending(auth: Auth, mentors: string[], attendClick: Function) {
   }
   return (
     <div>
-      Want to attend? Login to register.<br />
+      Want to attend? Login to register.
+      <br />
       <LoginButton auth={auth} />
     </div>
   );

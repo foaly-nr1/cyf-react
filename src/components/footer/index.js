@@ -75,7 +75,8 @@ const Footer = () => (
                 rel="noopener noreferrer"
               >
                 1174929
-              </Link>.
+              </Link>
+              .
             </OurVendorContainer>
             <SocialContainer>
               <Link

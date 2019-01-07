@@ -209,21 +209,20 @@ export default class Apply extends Component {
           debounce={500}
           onMount={data => this.setState(data)}
         />
-        {formType === 'student' &&
-          this.state.personId && (
-            <SuccessMessageContainer>
-              <span className="success-message">
-                Many thanks for submitting your application!
-                <br />
-                <b> We will send you instructions for the next steps.</b>
-                <br />
-                <br />
-                <br />
-                If you want, you can start telling us about your motivation
-                below :)
-              </span>
-            </SuccessMessageContainer>
-          )}
+        {formType === 'student' && this.state.personId && (
+          <SuccessMessageContainer>
+            <span className="success-message">
+              Many thanks for submitting your application!
+              <br />
+              <b> We will send you instructions for the next steps.</b>
+              <br />
+              <br />
+              <br />
+              If you want, you can start telling us about your motivation below
+              :)
+            </span>
+          </SuccessMessageContainer>
+        )}
         {formType === 'student' ? (
           <StudentFormToRender
             name={this.state.name}

@@ -62,21 +62,24 @@
     "pre-commit": "^1.2.2",
     "prettier": "^1.6.1",
     "promise": "7.1.1",
-    "react-dev-utils": "^5.0.0",
+    "react-dev-utils": "^7.0.1",
     "react-error-overlay": "^4.0.0",
     "react-test-renderer": "^16.2.0",
     "style-loader": "0.17.0",
     "sw-precache-webpack-plugin": "0.9.1",
-    "url-loader": "0.5.8",
+    "url-loader": "^1.1.2",
     "webpack": "2.6.1",
-    "webpack-dev-server": "2.4.5",
+    "webpack-dev-server": "^3.1.14",
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
   },
-  "precommit": ["format", "lint", "flow"],
+  "precommit": [
+    "format",
+    "lint",
+    "flow"
+  ],
   "scripts": {
-    "format":
-      "prettier --write \"src/**/*.js\" \"lambda/**/*.js\" package.json",
+    "format": "prettier --write \"src/**/*.js\" \"lambda/**/*.js\" package.json",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
@@ -86,8 +89,12 @@
     "lint:js": "eslint '**/*.js'"
   },
   "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
-    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js",
       "<rootDir>/config/browserMocks.js"
@@ -104,12 +111,17 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": ["react-app", "flow"]
+    "presets": [
+      "react-app",
+      "flow"
+    ]
   }
 }

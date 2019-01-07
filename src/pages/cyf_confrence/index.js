@@ -80,7 +80,9 @@ const Conference = () => (
         summit
       </p>
       <p style={styles.date}>
-        30th of June - 1st of July<br />Manchester
+        30th of June - 1st of July
+        <br />
+        Manchester
       </p>
       <p className="btn" style={styles.btn}>
         <a

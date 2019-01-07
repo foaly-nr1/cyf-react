@@ -17,17 +17,20 @@ const Support = () => (
             <li>
               <span className="list-icon">
                 <img src={conferenceHallIcon} alt="Space" />
-              </span>Space
+              </span>
+              Space
             </li>
             <li>
               <span className="list-icon">
                 <img src={codeIcon} alt="Mentors" />
-              </span>Mentors (Javascript)
+              </span>
+              Mentors (Javascript)
             </li>
             <li>
               <span className="list-icon">
                 <img src={laptopIcon} alt="Used Laptops" />
-              </span>Used Laptops
+              </span>
+              Used Laptops
             </li>
           </ul>
         </div>

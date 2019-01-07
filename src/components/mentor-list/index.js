@@ -39,7 +39,9 @@ const CallToAction = styled(Link)`
 
 const MentorList = () => (
   <Mentors id="mentors">
-    {mentors.map(mentor => <Mentor key={mentor.id} {...mentor} />)}
+    {mentors.map(mentor => (
+      <Mentor key={mentor.id} {...mentor} />
+    ))}
 
     <CallToActionContainer>
       <CallToAction className="big-link-3 btn" to="/volunteers">

@@ -31,5 +31,5 @@ export {
   Conference,
   SouthAfrica,
   Italy,
-  Colombia
+  Colombia,
 };
