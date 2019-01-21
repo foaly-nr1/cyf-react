@@ -18,11 +18,11 @@ const Students = () => {
       </p>
 
       <p>
-        Our 8-month web development program has proven a success. For our next
-        London course, we are partnering with Capgemini – a global consultancy
-        organisation – to bring you the most comprehensive course possible.
-        Exceptional graduates from the course will have an opportunity to join
-        Capgemini.
+        Our 8-month web development program has proven a success. For our
+        current course in London, we are partnering with Capgemini – a global
+        consultancy organisation – to bring you the most comprehensive course
+        possible. Exceptional graduates from the course will have an opportunity
+        to join Capgemini.
       </p>
 
       <div className="section-bottom-link">
@@ -49,7 +49,11 @@ const Students = () => {
             <div id="requirements" className="col-sm-6 col-md-6 block-2-box">
               <h3>Requirements</h3>
               <ul className="text-left">
-                <li>Live in the UK</li>
+                <li>
+                  Have the relevant documents to work in the country of
+                  residence.
+                </li>
+                <li>No previous coding experience is required!</li>
                 <li>Speak good English</li>
                 <li>Ready to commit to over 30 hours of learning per week</li>
                 <li>Availability for face to face sessions on weekends</li>
@@ -77,60 +81,49 @@ const Students = () => {
             <div className="col-sm-6 col-md-6 block-2-box">
               <h3 className="text-left">Start Learning Now</h3>
               <p>
-                As part of the selection process, applicants are asked to learn
-                the basics of coding. No previous experience is required!
+                Although previous coding experience is not required, however, as
+                part of the selection process, applicants are asked to learn the
+                basics of coding.
               </p>
 
               <h4>
-                <strong>From a computer/laptop:</strong>
+                <strong>From a computer/laptop/smartphone:</strong>
               </h4>
               <ul className="text-left">
                 <li>
-                  Join&nbsp;
+                  Step 1: Register your details on below link, where you can
+                  also check your progress throughout the initial selection
+                  process.
                   <Link
-                    to="https://www.khanacademy.org/computing/computer-programming/html-css"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    to="https://application-process.staging.codeyourfuture.io"
                   >
-                    Khan Academy
+                    https://application-process.staging.codeyourfuture.io
                   </Link>
-                  &nbsp;and complete Intro to HTML/CSS: Making webpages
                 </li>
                 <li>
-                  Complete the Codecademy &nbsp;
-                  <Link
-                    to="https://www.codecademy.com/learn/learn-html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    HTML
-                  </Link>{' '}
-                  and{' '}
-                  <Link
-                    to="https://www.codecademy.com/learn/learn-css"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    CSS
-                  </Link>{' '}
-                  courses
+                  Step 2: Complete a first basic tutorial on CSS/HTML/JavaScript
+                  using SoloLearn (https://www.sololearn.com) app via
+                  Smartphone.
                 </li>
-              </ul>
-
-              <h4>
-                <strong>From a smartphone:</strong>
-              </h4>
-              <ul className="text-left">
                 <li>
-                  Join&nbsp;
-                  <Link
-                    to="https://sololearn.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    SoloLearn app
+                  Step 3. Complete a second tutorial for HTML/CSS on
+                  freecodecamp (
+                  <Link target="_blank" to="https://www.freecodecamp.org">
+                    https://www.freecodecamp.org
                   </Link>
-                  &nbsp;and complete the modules on HTML and CSS Fundamentals
+                  ) Responsive Web Design Certification excl. CSS Grid and
+                  Responsive Web Design Projects
+                </li>
+                <li>
+                  Step 4. Complete Tribute Page challenge Step 5. Complete
+                  Product Landing Page and receive feedback from mentors on how
+                  to improve it. Applicant Guide: here. Step 6. Complete at
+                  least first iteration of the Product Landing Page based on the
+                  Applicant Guide and Webpage Checklist. After this step, you
+                  will be invited to attend an interview day. Step 7. Prepare a
+                  300 words motivation letter before the interview with focus on
+                  software development industry opportunities.
                 </li>
               </ul>
             </div>
