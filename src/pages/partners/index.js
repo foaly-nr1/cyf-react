@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 import TopSection from '../../components/top-section';
 import PartnerLogos from '../../components/partners/PartnerLogos';
 import Support from '../../components/support';
@@ -17,12 +15,12 @@ const PartnersText = (
     <p>Together we’ll help to solve both of these issues.</p>
 
     <div className="section-bottom-link">
-      <Link
+      <a
         className="big-link-3 btn"
-        to="mailto:contact@codeyourfuture.io?subject=Interested in partnership"
+        href="mailto:contact@codeyourfuture.io?subject=Interested in partnership"
       >
         Get in Touch
-      </Link>
+      </a>
     </div>
   </div>
 );
