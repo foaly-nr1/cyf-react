@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 import TopSection from '../../components/top-section';
 import PartnerLogos from '../../components/partners/PartnerLogos';
 import Support from '../../components/support';
@@ -10,19 +8,19 @@ const PartnersText = (
   <div>
     <p>
       The tech industry is facing a big challenge to find developers to fill the
-      ever increasing number of vacancies. At the same time, asylum seekers and
-      refugees lack the necessary opportunities to update their skills and
-      integrate better in society.
+      ever increasing number of vacancies. At the same time, underprivileged
+      individuals and refugees often lack the necessary opportunities to update
+      their skills and integrate better in society.
     </p>
     <p>Together we’ll help to solve both of these issues.</p>
 
     <div className="section-bottom-link">
-      <Link
+      <a
         className="big-link-3 btn"
-        to="mailto:contact@codeyourfuture.io?subject=Interested in partnership"
+        href="mailto:contact@codeyourfuture.io?subject=Interested in partnership"
       >
         Get in Touch
-      </Link>
+      </a>
     </div>
   </div>
 );

@@ -32,7 +32,9 @@ const Banner = () => (
   <Hero>
     <BannerImage src={homepagebanner} alt="teaching=refugees-to-code" />
     <BannerText>
-      <h1>Coding School for Refugees</h1>
+      <h1>
+        Coding School for Refugees, Disadvantaged and Underprivileged People
+      </h1>
       <p>Learn to code and find a job</p>
       <div className="page-title-bottom-link">
         <Link to="students" className="big-link-2 btn">
