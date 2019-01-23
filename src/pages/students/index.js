@@ -65,14 +65,14 @@ const Students = () => {
                       <strong>Interested?</strong>
                     </div>
                     <div className="col-sm-2">
-                      <Link
+                      <a
                         className="big-link-3 btn block-2-box-btn"
-                        to="/apply/student"
+                        href="https://application-process.codeyourfuture.io/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         Apply now
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
