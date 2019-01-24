@@ -7,21 +7,20 @@ import TopSection from '../../components/top-section';
 const AboutText = (
   <div>
     <p>
-      We are a non-profit organisation supporting refugees with the dream of
-      becoming developers.
+      We are a non-profit organisation supporting refugees and underprivileged
+      individuals with the dream of becoming developers.
     </p>
     <p>
       In their journey of interrupted lives, unfinished studies and integration
-      challenges, many asylum seekers and refugees yearn to update their tech
-      skills, but lack learning opportunities.{' '}
-      <strong>We want to change this.</strong>
+      challenges, many of these individuals yearn to update their tech skills,
+      but lack learning opportunities. <strong>We want to change this.</strong>
     </p>
     <p>
-      Last year we launched the first cohort of our 6-month web development
+      In 2016 we launched the first cohort of our 6-month web development
       programme, coached by a group of professional developers. Today we are
-      running new classes in London and Glasgow. This is{' '}
-      <strong>just the beginning</strong>. With your help we will be expanding
-      to other regions and cities.
+      running the fifth class in London and also new classes in Glasgow and
+      Manchester. This is <strong>just the beginning</strong>. With your help we
+      will be expanding to other regions and cities.
     </p>
     <p>
       If you are interested in participating as a{' '}

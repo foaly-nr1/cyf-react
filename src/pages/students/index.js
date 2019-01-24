@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import TopSection from '../../components/top-section';
 import students from '../../assets/images/CYF-students.png';
 
@@ -18,11 +17,11 @@ const Students = () => {
       </p>
 
       <p>
-        Our 8-month web development program has proven a success. For our next
-        London course, we are partnering with Capgemini – a global consultancy
-        organisation – to bring you the most comprehensive course possible.
-        Exceptional graduates from the course will have an opportunity to join
-        Capgemini.
+        Our 8-month web development program has proven a success. For our
+        current course in London, we are partnering with Capgemini – a global
+        consultancy organisation – to bring you the most comprehensive course
+        possible. Exceptional graduates from the course will have an opportunity
+        to join Capgemini.
       </p>
 
       <div className="section-bottom-link">
@@ -49,7 +48,11 @@ const Students = () => {
             <div id="requirements" className="col-sm-6 col-md-6 block-2-box">
               <h3>Requirements</h3>
               <ul className="text-left">
-                <li>Live in the UK</li>
+                <li>
+                  Have the relevant documents to work in the country of
+                  residence.
+                </li>
+                <li>No previous coding experience is required!</li>
                 <li>Speak good English</li>
                 <li>Ready to commit to over 30 hours of learning per week</li>
                 <li>Availability for face to face sessions on weekends</li>
@@ -61,14 +64,14 @@ const Students = () => {
                       <strong>Interested?</strong>
                     </div>
                     <div className="col-sm-2">
-                      <Link
+                      <a
                         className="big-link-3 btn block-2-box-btn"
-                        to="/apply/student"
+                        href="https://application-process.codeyourfuture.io/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         Apply now
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -77,60 +80,71 @@ const Students = () => {
             <div className="col-sm-6 col-md-6 block-2-box">
               <h3 className="text-left">Start Learning Now</h3>
               <p>
-                As part of the selection process, applicants are asked to learn
-                the basics of coding. No previous experience is required!
+                Although previous coding experience is not required, however, as
+                part of the selection process, applicants are asked to learn the
+                basics of coding.
               </p>
 
               <h4>
-                <strong>From a computer/laptop:</strong>
+                <strong>From a computer/laptop/smartphone:</strong>
               </h4>
               <ul className="text-left">
                 <li>
-                  Join&nbsp;
-                  <Link
-                    to="https://www.khanacademy.org/computing/computer-programming/html-css"
+                  <strong>Step 1:</strong> Register your details on below link,
+                  where you can also check your progress throughout the initial
+                  selection process.
+                  <a
                     target="_blank"
+                    href="https://application-process.codeyourfuture.io/"
                     rel="noopener noreferrer"
                   >
-                    Khan Academy
-                  </Link>
-                  &nbsp;and complete Intro to HTML/CSS: Making webpages
+                    https://application-process.codeyourfuture.io/
+                  </a>
                 </li>
                 <li>
-                  Complete the Codecademy &nbsp;
-                  <Link
-                    to="https://www.codecademy.com/learn/learn-html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    HTML
-                  </Link>{' '}
-                  and{' '}
-                  <Link
-                    to="https://www.codecademy.com/learn/learn-css"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    CSS
-                  </Link>{' '}
-                  courses
+                  <strong>Step 2:</strong> Complete a first basic tutorial on
+                  CSS/HTML/JavaScript using SoloLearn
+                  (https://www.sololearn.com) app via Smartphone.
                 </li>
-              </ul>
-
-              <h4>
-                <strong>From a smartphone:</strong>
-              </h4>
-              <ul className="text-left">
                 <li>
-                  Join&nbsp;
-                  <Link
-                    to="https://sololearn.com"
+                  <strong>Step 3.</strong> Complete a second tutorial for
+                  HTML/CSS on freecodecamp (
+                  <a
                     target="_blank"
+                    href="https://www.freecodecamp.org"
                     rel="noopener noreferrer"
                   >
-                    SoloLearn app
-                  </Link>
-                  &nbsp;and complete the modules on HTML and CSS Fundamentals
+                    https://www.freecodecamp.org
+                  </a>
+                  ) Responsive Web Design Certification excl. CSS Grid and
+                  Responsive Web Design Projects
+                </li>
+                <li>
+                  <strong>Step 4.</strong> Complete Tribute Page challenge
+                </li>
+                <li>
+                  <strong>Step 5.</strong> Complete Product Landing Page and
+                  receive feedback from mentors on how to improve it. Applicant
+                  Guide:{' '}
+                  <a
+                    href="https://docs.google.com/document/d/1-xXNRjxKPYOnuYzRQaE67XgrGNqgIXHx0WwGYF1QUBA/edit"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                  .
+                </li>
+                <li>
+                  <strong>Step 6.</strong> Complete at least first iteration of
+                  the Product Landing Page based on the Applicant Guide and
+                  Webpage Checklist. After this step, you will be invited to
+                  attend an interview day.
+                </li>
+                <li>
+                  <strong>Step 7.</strong> Prepare a 300 words motivation letter
+                  before the interview with focus on software development
+                  industry opportunities.
                 </li>
               </ul>
             </div>
