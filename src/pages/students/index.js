@@ -123,7 +123,7 @@ const Students = () => {
                   <strong>Step 4.</strong> Complete Tribute Page challenge
                 </li>
                 <li>
-                  <strong>Step5.</strong> Complete Product Landing Page and
+                  <strong>Step 5.</strong> Complete Product Landing Page and
                   receive feedback from mentors on how to improve it. Applicant
                   Guide:{' '}
                   <a
