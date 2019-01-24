@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import TopSection from '../../components/top-section';
 import students from '../../assets/images/CYF-students.png';
 
@@ -91,39 +90,61 @@ const Students = () => {
               </h4>
               <ul className="text-left">
                 <li>
-                  Step 1: Register your details on below link, where you can
-                  also check your progress throughout the initial selection
-                  process.
-                  <Link
+                  <strong>Step 1:</strong> Register your details on below link,
+                  where you can also check your progress throughout the initial
+                  selection process.
+                  <a
                     target="_blank"
-                    to="https://application-process.staging.codeyourfuture.io"
+                    href="https://application-process.codeyourfuture.io/"
+                    rel="noopener noreferrer"
                   >
-                    https://application-process.staging.codeyourfuture.io
-                  </Link>
+                    https://application-process.codeyourfuture.io/
+                  </a>
                 </li>
                 <li>
-                  Step 2: Complete a first basic tutorial on CSS/HTML/JavaScript
-                  using SoloLearn (https://www.sololearn.com) app via
-                  Smartphone.
+                  <strong>Step 2:</strong> Complete a first basic tutorial on
+                  CSS/HTML/JavaScript using SoloLearn
+                  (https://www.sololearn.com) app via Smartphone.
                 </li>
                 <li>
-                  Step 3. Complete a second tutorial for HTML/CSS on
-                  freecodecamp (
-                  <Link target="_blank" to="https://www.freecodecamp.org">
+                  <strong>Step 3.</strong> Complete a second tutorial for
+                  HTML/CSS on freecodecamp (
+                  <a
+                    target="_blank"
+                    href="https://www.freecodecamp.org"
+                    rel="noopener noreferrer"
+                  >
                     https://www.freecodecamp.org
-                  </Link>
+                  </a>
                   ) Responsive Web Design Certification excl. CSS Grid and
                   Responsive Web Design Projects
                 </li>
                 <li>
-                  Step 4. Complete Tribute Page challenge Step 5. Complete
-                  Product Landing Page and receive feedback from mentors on how
-                  to improve it. Applicant Guide: here. Step 6. Complete at
-                  least first iteration of the Product Landing Page based on the
-                  Applicant Guide and Webpage Checklist. After this step, you
-                  will be invited to attend an interview day. Step 7. Prepare a
-                  300 words motivation letter before the interview with focus on
-                  software development industry opportunities.
+                  <strong>Step 4.</strong> Complete Tribute Page challenge
+                </li>
+                <li>
+                  <strong>Step 5.</strong> Complete Product Landing Page and
+                  receive feedback from mentors on how to improve it. Applicant
+                  Guide:{' '}
+                  <a
+                    href="https://docs.google.com/document/d/1-xXNRjxKPYOnuYzRQaE67XgrGNqgIXHx0WwGYF1QUBA/edit"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                  .
+                </li>
+                <li>
+                  <strong>Step 6.</strong> Complete at least first iteration of
+                  the Product Landing Page based on the Applicant Guide and
+                  Webpage Checklist. After this step, you will be invited to
+                  attend an interview day.
+                </li>
+                <li>
+                  <strong>Step 7.</strong> Prepare a 300 words motivation letter
+                  before the interview with focus on software development
+                  industry opportunities.
                 </li>
               </ul>
             </div>
