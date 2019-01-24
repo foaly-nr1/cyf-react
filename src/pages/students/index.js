@@ -1,13 +1,7 @@
 import React from 'react';
-import styled from 'react-emotion';
 import TopSection from '../../components/top-section';
 import students from '../../assets/images/CYF-students.png';
 
-const StepsList = styled('ul')`
-  li {
-    margin-bottom: 20px;
-  }
-`;
 
 const Students = () => {
   const studentText = (
@@ -95,7 +89,7 @@ const Students = () => {
               <h4>
                 <strong>From a computer/laptop/smartphone:</strong>
               </h4>
-              <StepsList className="text-left">
+              <ul className="text-left">
                 <li>
                   <strong>Step 1:</strong> Register your details on below link,
                   where you can also check your progress throughout the initial
@@ -127,16 +121,25 @@ const Students = () => {
                   Responsive Web Design Projects
                 </li>
                 <li>
-                  <strong>Step 4.</strong> Complete Tribute Page challenge Step
-                  5. Complete Product Landing Page and receive feedback from
-                  mentors on how to improve it. Applicant Guide: here. Step 6.
-                  Complete at least first iteration of the Product Landing Page
-                  based on the Applicant Guide and Webpage Checklist. After this
-                  step, you will be invited to attend an interview day. Step 7.
-                  Prepare a 300 words motivation letter before the interview
-                  with focus on software development industry opportunities.
+                  <strong>Step 4.</strong> Complete Tribute Page challenge
                 </li>
-              </StepsList>
+                <li>
+                  <strong>Step5.</strong> Complete Product Landing Page and
+                  receive feedback from mentors on how to improve it. Applicant
+                  Guide: here.
+                </li>
+                <li>
+                  <strong>Step 6.</strong> Complete at least first iteration of
+                  the Product Landing Page based on the Applicant Guide and
+                  Webpage Checklist. After this step, you will be invited to
+                  attend an interview day.
+                </li>
+                <li>
+                  <strong>Step 7.</strong> Prepare a 300 words motivation letter
+                  before the interview with focus on software development
+                  industry opportunities.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
