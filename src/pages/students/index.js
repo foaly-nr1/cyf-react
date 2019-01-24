@@ -2,7 +2,6 @@ import React from 'react';
 import TopSection from '../../components/top-section';
 import students from '../../assets/images/CYF-students.png';
 
-
 const Students = () => {
   const studentText = (
     <div>
@@ -126,7 +125,15 @@ const Students = () => {
                 <li>
                   <strong>Step5.</strong> Complete Product Landing Page and
                   receive feedback from mentors on how to improve it. Applicant
-                  Guide: here.
+                  Guide:{' '}
+                  <a
+                    href="https://docs.google.com/document/d/1-xXNRjxKPYOnuYzRQaE67XgrGNqgIXHx0WwGYF1QUBA/edit"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                  .
                 </li>
                 <li>
                   <strong>Step 6.</strong> Complete at least first iteration of
