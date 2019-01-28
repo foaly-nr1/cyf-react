@@ -20,14 +20,6 @@ const ActionLink = styled('h2')`
 
 const ColombiaText = (
   <div>
-    <div>
-      <img
-        src={colombiaFlyer}
-        alt="Code Your Future Colombia"
-        style={{ margin: '75px 0' }}
-      />
-    </div>
-
     <ActionLink>
       <a href={studentLink}>Quiero ser estudiante</a>
     </ActionLink>
@@ -35,26 +27,12 @@ const ColombiaText = (
     <ActionLink>
       <a href={volunteerLink}>Quiero ser voluntario</a>
     </ActionLink>
-
-    <p>
-      For all other inquiries please contact us at{' '}
-      <Link to="mailto:colombia@codeyourfuture.io" title="Contact us">
-        colombia@codeyourfuture.io
-      </Link>
-      <br />
-      <br />
-    </p>
   </div>
 );
 
 const Colombia = () => (
   <main>
     <TopSection title="Code Your Future Colombia" content={ColombiaText} />
-    <img
-      src={colombiaLogo}
-      alt="Code Your Future Colombia"
-      style={{ width: '200px' }}
-    />
   </main>
 );
 
