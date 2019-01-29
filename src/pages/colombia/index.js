@@ -20,20 +20,19 @@ const StyledLink = styled('a')`
 
 const Buttons = styled('div')`
   display: flex;
+  justify-content: space-around;
 `;
 
 const InfoBox = ({ className, title, items }) => (
   <div className={className}>
-    <ul>
-      <h4>{title}</h4>
-      {items.map((item, i) => <li key={i}>{item}</li>)}
-    </ul>
+    <p>
+      <ul>
+        <h3>{title}</h3>
+        {items.map((item, i) => <li key={i}>{item}</li>)}
+      </ul>
+    </p>
   </div>
 );
-
-const StyledInfoBox = styled(InfoBox)`
-  text-align: left;
-`;
 
 const FAQ = ({ question, answer }) => (
   <div>
@@ -86,7 +85,16 @@ const listFaq = [
 ];
 
 const ColombiaText = (
-  <div>
+  <div className="section-container">
+    <InfoBox
+      className="text-left"
+      title="¿Quienes somos?"
+      items={[
+        'La iniciativa surge de la fundación Code your Future Inglaterra la cual ya está creada hace varios años en londres y que se dedica a ayudar a refugiados para que aprendan desarrollo de software y luego esto se vuelva una fuente de trabajo para ellos.',
+        'En colombia queremos llegar a las personas que más necesitan nuestro apoya brindándoles la oportunidad de aprender desarrollo de software y debido que en este país no existen las mismas problemáticas nos enfocamos en personas que por su propia cuenta no tienen la posibilidad de acceder a una carrera universitaria',
+      ]}
+    />
+
     <Buttons>
       <StyledLink
         href={studentLink}
@@ -103,41 +111,38 @@ const ColombiaText = (
       </StyledLink>
     </Buttons>
 
-    <StyledInfoBox
-      title="¿Quienes somos?"
-      items={[
-        'La iniciativa surge de la fundación Code your Future Inglaterra la cual ya está creada hace varios años en londres y que se dedica a ayudar a refugiados para que aprendan desarrollo de software y luego esto se vuelva una fuente de trabajo para ellos.',
-        'En colombia queremos llegar a las personas que más necesitan nuestro apoya brindándoles la oportunidad de aprender desarrollo de software y debido que en este país no existen las mismas problemáticas nos enfocamos en personas que por su propia cuenta no tienen la posibilidad de acceder a una carrera universitaria',
-      ]}
-    />
-
-    <StyledInfoBox
+    <InfoBox
+      className="text-left"
       title="Lenguajes de programación que se ensañarán"
       items={['JavaScript (React.js)', 'HTML', 'CSS']}
     />
 
-    <StyledInfoBox
+    <InfoBox
+      className="text-left"
       title="Preguntas frecuentes"
       items={listFaq.map(({ question, answer }, i) => (
         <FAQ question={question} answer={answer} key={i} />
       ))}
     />
 
-    <StyledInfoBox
+    <InfoBox
+      className="text-left"
       title="Tutores"
       items={[
         'Los tutores son personas profesionales en esta área desarrolladores de software que tienen años trabajando en empresas de este medio y que aportan su tiempo y conocimiento para esta buena causa.',
       ]}
     />
 
-    <StyledInfoBox
+    <InfoBox
+      className="text-left"
       title="Voluntarios"
       items={[
         'Tenemos voluntarios de todas partes de Colombia y el mundo que conocen el proyecto y saben que vale la pena apostar para contribuir un poco de lo que ellos han recibido, estos son algunos de ellos.',
       ]}
     />
 
-    <StyledInfoBox
+    <InfoBox
+      className="text-left"
       title="Patrocinadores"
       items={[
         'Yuxy global',
