@@ -6,6 +6,10 @@ import styled from 'react-emotion';
 import TopSection from '../../components/top-section';
 import colombiaLogo from '../../assets/images/cyf-colombia-logo.png';
 import photo from '../../assets/images/cyf-colombia.png';
+import cssLogo from '../../assets/images/css-logo.svg';
+import jsLogo from '../../assets/images/js-logo.svg';
+import reactLogo from '../../assets/images/react-logo.svg';
+import htmlLogo from '../../assets/images/html-logo.svg';
 
 const studentLink = 'https://airtable.com/shr8vflbZQkh5hAe4';
 const volunteerLink = 'https://airtable.com/shroNkIefDJfFksXa';
@@ -24,14 +28,16 @@ const Buttons = styled('div')`
   margin-top: 30px;
 `;
 
+const StyledUl = styled('ul')`
+  display: inline-block;
+`;
+
 const InfoBox = styled(({ className, title, items }) => (
   <div className={className}>
-    <p>
-      <ul>
-        <h3>{title}</h3>
-        {items.map((item, i) => <li key={i}>{item}</li>)}
-      </ul>
-    </p>
+    <h3>{title}</h3>
+    <StyledUl>
+      <p>{items.map((item, i) => <li key={i}>{item}</li>)} </p>
+    </StyledUl>
   </div>
 ))`
   :not(:last-child) {
@@ -89,8 +95,30 @@ const listFaq = [
   },
 ];
 
-const StyledImg = styled('img')`
+const StyledImg = styled('img')(({ left = '0' }) => ({
+  left,
+  width: '50px',
+  height: '50px',
+}));
+
+const BottomMarginImg = styled('img')`
   margin-bottom: 30px;
+`;
+
+const LearnItem = styled('div')`
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+`;
+
+const LearnText = styled('div')`
+  width: 200px;
+`;
+
+const LearnLogos = styled('div')`
+  display: flex;
+  flex-grow: 1;
+  justify-content: start;
 `;
 
 const CTA = () => (
@@ -121,12 +149,32 @@ const ColombiaText = (
       ]}
     />
 
-    <StyledImg src={photo} alt="code-your-future-colombia" />
+    <BottomMarginImg src={photo} alt="code-your-future-colombia" />
 
     <InfoBox
       className="text-left"
       title="Lenguajes de programación que se ensañarán"
-      items={['JavaScript (React.js)', 'HTML', 'CSS']}
+      items={[
+        <LearnItem>
+          <LearnText>JavaScript (React.js)</LearnText>
+          <LearnLogos>
+            <StyledImg src={jsLogo} alt="javascript-logo" />
+            <StyledImg src={reactLogo} alt="react-logo" />
+          </LearnLogos>
+        </LearnItem>,
+        <LearnItem>
+          <LearnText>HTML</LearnText>
+          <LearnLogos>
+            <StyledImg src={htmlLogo} alt="html-logo" left="3px" />
+          </LearnLogos>
+        </LearnItem>,
+        <LearnItem>
+          <LearnText>CSS</LearnText>
+          <LearnLogos>
+            <StyledImg src={cssLogo} alt="css-logo" left="3px" />
+          </LearnLogos>
+        </LearnItem>,
+      ]}
     />
 
     <InfoBox
