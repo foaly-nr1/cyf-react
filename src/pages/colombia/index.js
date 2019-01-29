@@ -21,10 +21,11 @@ const StyledLink = styled('a')`
 const Buttons = styled('div')`
   display: flex;
   justify-content: space-around;
+  margin-top: 30px;
 `;
 
-const InfoBox = ({ className, title, items }) => (
-  <div className={`section-container ${className}`}>
+const InfoBox = styled(({ className, title, items }) => (
+  <div className={className}>
     <p>
       <ul>
         <h3>{title}</h3>
@@ -32,7 +33,11 @@ const InfoBox = ({ className, title, items }) => (
       </ul>
     </p>
   </div>
-);
+))`
+  :not(:last-child) {
+    margin-bottom: 30px;
+  }
+`;
 
 const FAQ = ({ question, answer }) => (
   <div>
@@ -88,34 +93,35 @@ const StyledImg = styled('img')`
   margin-bottom: 30px;
 `;
 
+const CTA = () => (
+  <Buttons>
+    <StyledLink href={studentLink} className="big-link-3 button btn green-text">
+      Quiero ser estudiante
+    </StyledLink>
+
+    <StyledLink
+      href={volunteerLink}
+      className="big-link-3 button btn green-text"
+    >
+      Quiero ser voluntario
+    </StyledLink>
+  </Buttons>
+);
+
 const ColombiaText = (
   <div>
+    <CTA />
     <InfoBox
       className="text-left"
       title="¿Quienes somos?"
       items={[
-        'La iniciativa surge de la fundación Code your Future Inglaterra la cual ya está creada hace varios años en londres y que se dedica a ayudar a refugiados para que aprendan desarrollo de software y luego esto se vuelva una fuente de trabajo para ellos.',
-        'En colombia queremos llegar a las personas que más necesitan nuestro apoya brindándoles la oportunidad de aprender desarrollo de software y debido que en este país no existen las mismas problemáticas nos enfocamos en personas que por su propia cuenta no tienen la posibilidad de acceder a una carrera universitaria',
+        'Somos una organización non-profit empezada en Inglaterra',
+        'Ayudamos a refugiados para que aprendan desarrollo de software',
+        'Nos enfocamos en personas que por su propia cuenta no tienen la posibilidad de acceder a una carrera universitaria',
       ]}
     />
 
     <StyledImg src={photo} alt="code-your-future-colombia" />
-
-    <Buttons>
-      <StyledLink
-        href={studentLink}
-        className="big-link-3 button btn green-text"
-      >
-        Quiero ser estudiante
-      </StyledLink>
-
-      <StyledLink
-        href={volunteerLink}
-        className="big-link-3 button btn green-text"
-      >
-        Quiero ser voluntario
-      </StyledLink>
-    </Buttons>
 
     <InfoBox
       className="text-left"
