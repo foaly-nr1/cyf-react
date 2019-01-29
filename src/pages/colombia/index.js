@@ -61,7 +61,7 @@ const listFaq = [
   },
   {
     question: '¿Que incluye la beca?',
-    answer: () => (
+    answer: (
       <ul>
         <li>
           6 meses GRATIS curso profesional por desarrollador web full-stack.
