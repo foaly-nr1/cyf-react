@@ -26,6 +26,7 @@ const Buttons = styled('div')`
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  margin-bottom: 50px;
 `;
 
 const StyledUl = styled('ul')`
@@ -35,9 +36,7 @@ const StyledUl = styled('ul')`
 const InfoBox = styled(({ className, title, items }) => (
   <div className={className}>
     <h3>{title}</h3>
-    <StyledUl>
-      <p>{items.map((item, i) => <li key={i}>{item}</li>)} </p>
-    </StyledUl>
+    <StyledUl>{items.map((item, i) => <li key={i}>{item}</li>)}</StyledUl>
   </div>
 ))`
   :not(:last-child) {
@@ -95,11 +94,10 @@ const listFaq = [
   },
 ];
 
-const StyledImg = styled('img')(({ left = '0' }) => ({
-  left,
+const StyledImg = styled('img')`
   width: '50px',
   height: '50px',
-}));
+`;
 
 const BottomMarginImg = styled('img')`
   margin-bottom: 30px;
@@ -136,8 +134,8 @@ const CTA = () => (
   </Buttons>
 );
 
-const ColombiaText = (
-  <div>
+const ColombiaText = styled(({ className }) => (
+  <div className={className}>
     <CTA />
     <InfoBox
       className="text-left"
@@ -165,13 +163,13 @@ const ColombiaText = (
         <LearnItem>
           <LearnText>HTML</LearnText>
           <LearnLogos>
-            <StyledImg src={htmlLogo} alt="html-logo" left="3px" />
+            <StyledImg src={htmlLogo} alt="html-logo" />
           </LearnLogos>
         </LearnItem>,
         <LearnItem>
           <LearnText>CSS</LearnText>
           <LearnLogos>
-            <StyledImg src={cssLogo} alt="css-logo" left="3px" />
+            <StyledImg src={cssLogo} alt="css-logo" />
           </LearnLogos>
         </LearnItem>,
       ]}
@@ -213,11 +211,13 @@ const ColombiaText = (
       ]}
     />
   </div>
-);
+))`
+  font-size: 18px;
+`;
 
 const Colombia = () => (
   <main>
-    <TopSection title="Code Your Future Colombia" content={ColombiaText} />
+    <TopSection title="Code Your Future Colombia" content={<ColombiaText />} />
   </main>
 );
 
