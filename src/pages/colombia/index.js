@@ -10,12 +10,16 @@ import colombiaLogo from '../../assets/images/cyf-colombia-logo.png';
 const studentLink = 'https://airtable.com/shr8vflbZQkh5hAe4';
 const volunteerLink = 'https://airtable.com/shroNkIefDJfFksXa';
 
-const ActionLink = styled('h2')`
-  color: #6067af;
+const StyledLink = styled('a')`
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-color: #2ba560;
+`;
+
+const Buttons = styled('div')`
+  display: flex;
 `;
 
 const InfoBox = ({ className, title, items }) => (
@@ -83,13 +87,21 @@ const listFaq = [
 
 const ColombiaText = (
   <div>
-    <ActionLink>
-      <a href={studentLink}>Quiero ser estudiante</a>
-    </ActionLink>
+    <Buttons>
+      <StyledLink
+        href={studentLink}
+        className="big-link-3 button btn green-text"
+      >
+        Quiero ser estudiante
+      </StyledLink>
 
-    <ActionLink>
-      <a href={volunteerLink}>Quiero ser voluntario</a>
-    </ActionLink>
+      <StyledLink
+        href={volunteerLink}
+        className="big-link-3 button btn green-text"
+      >
+        Quiero ser voluntario
+      </StyledLink>
+    </Buttons>
 
     <StyledInfoBox
       title="¿Quienes somos?"
