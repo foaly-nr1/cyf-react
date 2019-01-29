@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import styled from 'react-emotion';
 
 import TopSection from '../../components/top-section';
-import colombiaFlyer from '../../assets/images/cyf-colombia-flyer.jpg';
 import colombiaLogo from '../../assets/images/cyf-colombia-logo.png';
+import photo from '../../assets/images/cyf-colombia.png';
 
 const studentLink = 'https://airtable.com/shr8vflbZQkh5hAe4';
 const volunteerLink = 'https://airtable.com/shroNkIefDJfFksXa';
@@ -24,7 +24,7 @@ const Buttons = styled('div')`
 `;
 
 const InfoBox = ({ className, title, items }) => (
-  <div className={className}>
+  <div className={`section-container ${className}`}>
     <p>
       <ul>
         <h3>{title}</h3>
@@ -84,8 +84,12 @@ const listFaq = [
   },
 ];
 
+const StyledImg = styled('img')`
+  margin-bottom: 30px;
+`;
+
 const ColombiaText = (
-  <div className="section-container">
+  <div>
     <InfoBox
       className="text-left"
       title="¿Quienes somos?"
@@ -94,6 +98,8 @@ const ColombiaText = (
         'En colombia queremos llegar a las personas que más necesitan nuestro apoya brindándoles la oportunidad de aprender desarrollo de software y debido que en este país no existen las mismas problemáticas nos enfocamos en personas que por su propia cuenta no tienen la posibilidad de acceder a una carrera universitaria',
       ]}
     />
+
+    <StyledImg src={photo} alt="code-your-future-colombia" />
 
     <Buttons>
       <StyledLink
