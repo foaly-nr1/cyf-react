@@ -42,6 +42,9 @@ const InfoBox = styled(({ className, title, items }) => (
   :not(:last-child) {
     margin-bottom: 30px;
   }
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
 `;
 
 const FAQ = ({ question, answer }) => (
@@ -95,8 +98,8 @@ const listFaq = [
 ];
 
 const StyledImg = styled('img')`
-  width: '50px',
-  height: '50px',
+  width: 50px;
+  height: 50px;
 `;
 
 const BottomMarginImg = styled('img')`
