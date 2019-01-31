@@ -4,6 +4,7 @@ import history from './lib/history';
 
 import {
   About,
+  Apply,
   ApplySuccess,
   Donate,
   Event,
@@ -56,12 +57,13 @@ const Routes = () => (
       <Route exact path="/volunteers.html" component={Volunteers} />
       <Route
         exact
-        path="/apply/:formType"
+        path="/apply/student"
         component={() => {
           window.location = 'https://application-process.codeyourfuture.io/';
           return null;
         }}
       />
+      <Route exact path="/apply/:formType" component={Apply} />
       <Route exact path="/apply/success/:formType" component={ApplySuccess} />
       <Route exact path="/partners" component={Partners} />
       <Route exact path="/partners.html" component={Partners} />
