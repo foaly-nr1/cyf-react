@@ -70,7 +70,7 @@ const listFaq = [
   {
     question: '¿Soy menor de edad puedo aplicar?',
     answer:
-      'NO, nos enfocamos en edades de 18 en adelante sin embargo existen fundaciones como coderise que trabajan con chicos de ……',
+      'NO, nos enfocamos en edades de 18 en adelante sin embargo existen fundaciones como coderise que trabajan con chicos de 12 a 18 años',
   },
   {
     question: '¿Que incluye la beca?',
@@ -145,7 +145,7 @@ const ColombiaText = styled(({ className }) => (
       title="¿Quienes somos?"
       items={[
         'Somos una organización non-profit empezada en Inglaterra',
-        'Ayudamos a refugiados para que aprendan desarrollo de software',
+        'Ayudamos a personas a aprender desarrollo de software que mejorara sus vidas.'
         'Nos enfocamos en personas que por su propia cuenta no tienen la posibilidad de acceder a una carrera universitaria',
       ]}
     />
