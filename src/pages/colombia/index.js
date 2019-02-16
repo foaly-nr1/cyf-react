@@ -145,7 +145,7 @@ const ColombiaText = styled(({ className }) => (
       title="¿Quienes somos?"
       items={[
         'Somos una organización non-profit empezada en Inglaterra',
-        'Ayudamos a personas a aprender desarrollo de software que mejorara sus vidas.'
+        'Ayudamos a personas a aprender desarrollo de software que mejorara sus vidas.',
         'Nos enfocamos en personas que por su propia cuenta no tienen la posibilidad de acceder a una carrera universitaria',
       ]}
     />
