@@ -1,10 +1,8 @@
 // @flow
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'react-emotion';
 
 import TopSection from '../../components/top-section';
-import colombiaLogo from '../../assets/images/cyf-colombia-logo.png';
 import photo from '../../assets/images/cyf-colombia.png';
 import cssLogo from '../../assets/images/css-logo.svg';
 import jsLogo from '../../assets/images/js-logo.svg';
@@ -36,7 +34,9 @@ const StyledUl = styled('ul')`
 const InfoBox = styled(({ className, title, items }) => (
   <div className={className}>
     <h3>{title}</h3>
-    <StyledUl>{items.map((item, i) => <li key={i}>{item}</li>)}</StyledUl>
+    <StyledUl>
+      {items.map((item, i) => <li key={`info-item-${i}`}>{item}</li>)}
+    </StyledUl>
   </div>
 ))`
   :not(:last-child) {
